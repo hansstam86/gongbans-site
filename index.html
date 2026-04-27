@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GONGBANS — A database of Chinese reference designs</title>
+<meta name="description" content="A working database of Chinese factory reference designs (gongbans / 公板) — the off-the-shelf hardware that quietly powers consumer electronics. Curated by Hans Stam.">
+<meta property="og:title" content="GONGBANS — A database of Chinese reference designs">
+<meta property="og:description" content="The off-the-shelf hardware that quietly powers consumer electronics, with sourcing notes from a 20-year veteran.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a3d22'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23d4b06a' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%230a3d22'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">GONGBANS<span style="color: var(--silkscreen);">/</span>DB</span>
+      <span class="brand-sub">公板数据库</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="https://hansolo42.gumroad.com/l/gongbans" target="_blank" rel="noopener">The Book ↗</a>
+      <a href="https://hansstam.eu" target="_blank" rel="noopener">Hans</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-revision">
+      <span>REV 0.1.0</span>
+      <span>2026-04-27</span>
+      <span id="entry-count">16 ENTRIES</span>
+    </div>
+    <h1>The hardware that <em>quietly</em> powers everything.</h1>
+    <p class="hero-lede">
+      A <strong>gongban</strong> (公板, "public board") is a Chinese factory reference design — a working PCB you can copy, brand, and ship. Most consumer electronics from China are built on a small library of these. Here's the start of that library, with sourcing notes from twenty years inside the supply chain.
+    </p>
+  </section>
+
+  <section class="filter-bar" aria-label="Filters">
+    <div class="filter-group">
+      <span class="filter-label">Category:</span>
+      <button class="filter-chip active" data-filter="category" data-value="all">All</button>
+      <button class="filter-chip" data-filter="category" data-value="IoT">IoT</button>
+      <button class="filter-chip" data-filter="category" data-value="Wearable">Wearable</button>
+      <button class="filter-chip" data-filter="category" data-value="E-Lock">E-Lock</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">Status:</span>
+      <button class="filter-chip" data-filter="files" data-value="has-files">Full pack</button>
+      <button class="filter-chip" data-filter="files" data-value="metadata-only">Metadata only</button>
+    </div>
+    <div class="search-box">
+      <input type="search" id="search-input" placeholder="Search chip, application, supplier…" aria-label="Search gongbans">
+    </div>
+  </section>
+
+  <section class="gongban-grid" id="gongban-grid" aria-label="Gongban catalog">
+    <!-- populated by app.js -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      Maintained by <a href="https://hansstam.eu" target="_blank" rel="noopener">Hans Stam</a> · Berlin · Shenzhen
+    </div>
+    <div>
+      Companion to <a href="https://hansolo42.gumroad.com/l/gongbans" target="_blank" rel="noopener">GONGBANS — the book</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
