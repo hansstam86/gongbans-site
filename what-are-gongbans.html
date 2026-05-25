@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What are gongbans? — The white-label reference design system from China</title>
+<meta name="description" content="A plain-language explainer of the gongban (公板) system — the public board library that powers most consumer electronics from China. For founders, product managers, and anyone curious about how Chinese hardware actually gets built.">
+<meta property="og:title" content="What are gongbans?">
+<meta property="og:description" content="The white-label reference design system that powers most consumer electronics from China — explained plainly.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gongbans.com/what-are-gongbans.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#0a6847;
+  --green-dark:#053d2a;
+  --green-deeper:#021e14;
+  --gold:#c9a84c;
+  --gold-dim:#8a7535;
+  --copper:#b87333;
+  --cream:#f5f2eb;
+  --white:#fff;
+  --text:#1a1a18;
+  --text-mid:#4a4a45;
+  --text-light:#7a7a72;
+  --red-bg:#fdf0ef;
+  --red:#b33a2a;
+  --green-bg:#eef6f0;
+  --green-accent:#2e7d32;
+  --font-display:'DM Serif Display',Georgia,serif;
+  --font-body:'IBM Plex Sans',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',monospace;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);color:var(--text);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* NAV — match homepage exactly */
+nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between;background:var(--green-deeper);border-bottom:2px solid var(--gold-dim);backdrop-filter:blur(12px)}
+nav.site-nav .logo{font-family:var(--font-mono);font-weight:500;font-size:14px;color:var(--gold);letter-spacing:2px}
+nav.site-nav .logo span{color:var(--gold-dim)}
+nav.site-nav .links{display:flex;gap:24px;align-items:center}
+nav.site-nav .links a{font-size:13px;color:rgba(255,255,255,0.6);letter-spacing:0.5px;transition:color 0.2s}
+nav.site-nav .links a:hover{color:var(--gold)}
+nav.site-nav .links a.cta{color:var(--green-deeper);background:var(--gold);padding:6px 16px;border-radius:4px;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+nav.site-nav .links a.cta:hover{background:var(--copper)}
+nav.site-nav .links a.active{color:var(--gold)}
+
+/* HEADER */
+.page-header{padding:120px 2rem 60px;background:var(--green-deeper);position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(201,168,76,0.04) 39px,rgba(201,168,76,0.04) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(201,168,76,0.04) 39px,rgba(201,168,76,0.04) 40px);pointer-events:none}
+.page-header-inner{max-width:780px;margin:0 auto;position:relative}
+.page-header-tag{font-family:var(--font-mono);font-size:12px;color:var(--gold-dim);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}
+.page-header h1{font-family:var(--font-display);font-size:clamp(36px,5.5vw,54px);color:var(--white);line-height:1.15;margin-bottom:20px}
+.page-header h1 em{font-style:normal;color:var(--gold)}
+.page-header .sub{font-size:18px;color:rgba(255,255,255,0.6);max-width:640px;line-height:1.6}
+
+/* ARTICLE BODY */
+article{max-width:720px;margin:0 auto;padding:60px 2rem 80px}
+article h2{font-family:var(--font-display);font-size:clamp(26px,3.5vw,34px);color:var(--text);line-height:1.25;margin-top:64px;margin-bottom:20px}
+article h2:first-of-type{margin-top:0}
+article h3{font-family:var(--font-body);font-weight:600;font-size:20px;color:var(--text);margin-top:36px;margin-bottom:12px;letter-spacing:-0.01em}
+article p{font-size:17px;color:var(--text);margin-bottom:20px;line-height:1.75}
+article p.lead{font-size:20px;color:var(--text-mid);line-height:1.65;margin-bottom:32px;font-weight:400}
+article em{color:var(--copper);font-style:italic}
+article strong{color:var(--text);font-weight:600}
+article ul{margin:20px 0 28px 0;padding-left:24px}
+article ul li{font-size:17px;color:var(--text);margin-bottom:12px;line-height:1.7}
+article ul li strong{color:var(--green-dark)}
+article a:not(.cta-inline){color:var(--copper);border-bottom:1px solid rgba(184,115,51,0.3);transition:all 0.2s}
+article a:not(.cta-inline):hover{color:var(--green-dark);border-bottom-color:var(--green-dark)}
+
+/* PULL QUOTE */
+.pullquote{margin:48px 0;padding:32px 36px;background:var(--white);border-left:4px solid var(--gold);font-family:var(--font-display);font-size:22px;color:var(--text);line-height:1.45;font-style:italic}
+.pullquote::before{content:'"';color:var(--gold);font-size:48px;line-height:0;vertical-align:-12px;margin-right:6px}
+.pullquote-attr{display:block;margin-top:16px;font-family:var(--font-body);font-size:13px;font-style:normal;color:var(--text-light);letter-spacing:0.5px}
+
+/* DEFINITION BOX */
+.def-box{margin:32px 0;padding:28px 32px;background:var(--green-deeper);color:var(--white);border-radius:4px}
+.def-box .def-term{font-family:var(--font-mono);font-size:13px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.def-box .def-body{font-family:var(--font-display);font-size:20px;line-height:1.5;color:rgba(255,255,255,0.92)}
+
+/* COMPARISON TABLE */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:36px 0}
+.compare-col{padding:24px 28px;border-radius:6px;background:var(--white);border:1px solid rgba(0,0,0,0.06)}
+.compare-col.red{background:var(--red-bg);border-color:rgba(179,58,42,0.15)}
+.compare-col.green{background:var(--green-bg);border-color:rgba(46,125,50,0.15)}
+.compare-col h4{font-family:var(--font-mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.compare-col.red h4{color:var(--red)}
+.compare-col.green h4{color:var(--green-accent)}
+.compare-col ul{margin:0;padding-left:18px}
+.compare-col ul li{font-size:14.5px;line-height:1.55;margin-bottom:8px;color:var(--text-mid)}
+
+/* CTA SECTION */
+.cta-section{margin:64px 0 0;padding:40px 36px;background:var(--green-deeper);color:var(--white);border-radius:6px;text-align:center}
+.cta-section h3{font-family:var(--font-display);font-size:24px;color:var(--white);margin-bottom:12px}
+.cta-section p{color:rgba(255,255,255,0.65);margin-bottom:24px;font-size:15.5px}
+.cta-section a{display:inline-block;background:var(--gold);color:var(--green-deeper);padding:12px 28px;border-radius:4px;font-weight:600;font-size:14px;letter-spacing:0.5px;border:none}
+.cta-section a:hover{background:var(--copper);color:var(--white)}
+.cta-section a + a{margin-left:12px;background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7)}
+.cta-section a + a:hover{border-color:var(--gold);color:var(--gold);background:transparent}
+
+/* FOOTER */
+footer{background:var(--green-deeper);color:rgba(255,255,255,0.5);padding:40px 2rem;text-align:center;font-size:13.5px}
+footer a{color:var(--gold-dim);border-bottom:1px solid transparent}
+footer a:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
+
+@media (max-width:720px){
+  nav.site-nav{padding:0 1rem}
+  nav.site-nav .links{gap:12px}
+  nav.site-nav .links a:not(.cta){display:none}
+  article{padding:48px 1.25rem 60px}
+  article p,article ul li{font-size:16px}
+  .compare{grid-template-columns:1fr}
+  .pullquote{padding:24px 24px;font-size:19px}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="logo">GONGBANS<span>/公板</span></a>
+  <div class="links">
+    <a href="/what-are-gongbans.html" class="active">What are gongbans?</a>
+    <a href="/boards.html">Boards</a>
+    <a href="https://hansolo42.gumroad.com/l/gongbans">The book</a>
+    <a href="https://hansstam.eu">Hans Stam</a>
+    <a href="/#download" class="cta">Download PDF</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-header-tag">gōngbǎn 公板 — public board</div>
+    <h1>What is a <em>gongban</em>?</h1>
+    <p class="sub">The white-label reference design system that powers most consumer electronics from China — explained plainly, for founders and anyone who needs to understand how the hardware actually gets built.</p>
+  </div>
+</div>
+
+<article>
+
+<p class="lead">A gongban (公板, pronounced <em>gōng bǎn</em>, literally "public board") is a working factory reference design — a complete electronics product, ready to manufacture, that any Chinese factory can clone, brand, and ship.</p>
+
+<p>Most consumer electronics you see on shelves in Europe and the US — the BLE locks, the air quality sensors, the smart plugs, the kids' tablets, the kitchen scales, the cheap action cameras, the budget e-bike controllers — were not designed from scratch. They started as a gongban.</p>
+
+<p>This system runs in plain sight in Shenzhen but is almost invisible to Western founders. Understanding it changes how you think about hardware: pricing, timelines, suppliers, defensibility, and what your competitors are actually doing.</p>
+
+<h2>The plain definition</h2>
+
+<div class="def-box">
+  <div class="def-term">gongban  ·  公板  ·  noun</div>
+  <div class="def-body">A complete, manufacturable reference design — schematic, PCB layout, BOM, firmware, and often enclosure files — that any Chinese ODM or factory can take, brand as their own, certify, and ship as a product. Designs are typically owned by IDH (Independent Design House) firms, chip distributors, or established factories, and are licensed, shared, or sold across the supply chain.</div>
+</div>
+
+<h2>The everyday reality</h2>
+
+<p>Imagine a Western founder pitches an investor: "We're building a smart indoor air quality monitor with WiFi and a phone app." The investor pictures a hardware startup with electrical engineers, mechanical engineers, firmware developers, and 18 months of development.</p>
+
+<p>The reality, in most cases, looks more like this: the founder flies to Shenzhen, walks through Huaqiangbei, and within three days has been shown <strong>four nearly identical air quality monitors</strong>, each made by a different factory, each based on the same gongban from a sensor manufacturer's IDH partner. The differences are cosmetic: the enclosure, the colors, the logo, the app branding. The PCB, the chips, the firmware structure — identical.</p>
+
+<p>The founder picks one, places an order for 5,000 units with their logo, gets CE/FCC certifications (often pre-existing for the gongban), and ships in 90 days.</p>
+
+<p>This is not a fringe case. <strong>This is the dominant production model for consumer hardware in the $1–500 price range coming out of China.</strong></p>
+
+<h2>Who creates gongbans?</h2>
+
+<p>Three main types of organizations design and distribute gongbans:</p>
+
+<ul>
+  <li><strong>IDH firms (Independent Design Houses)</strong> — engineering shops whose entire business is designing gongbans and licensing them to factories. Some specialize in Bluetooth audio, some in IoT sensors, some in industrial SOMs. They make money on licensing fees, NRE (non-recurring engineering), or per-unit royalties.</li>
+  <li><strong>Chip vendors and their reference design teams</strong> — Realtek, Espressif, Rockchip, Allwinner, MediaTek, and similar Chinese silicon companies produce reference designs around their chips specifically to seed the gongban ecosystem. The more gongbans built on their chip, the more units they sell.</li>
+  <li><strong>Established factories with internal engineering</strong> — large EMS providers (Foxlink, Kingbrother, BYD Electronic) maintain libraries of their own gongbans, sometimes licensed in, sometimes designed in-house. These get offered to customers who walk in with a product idea.</li>
+</ul>
+
+<h2>How are they different from open hardware?</h2>
+
+<div class="compare">
+  <div class="compare-col red">
+    <h4>Gongbans (closed)</h4>
+    <ul>
+      <li>Owned by the IDH or factory</li>
+      <li>Licensed, not freely redistributable</li>
+      <li>BOM and firmware often opaque to the customer</li>
+      <li>Optimized for high-volume manufacturing</li>
+      <li>No community, no public documentation</li>
+      <li>Discovered through factory relationships</li>
+    </ul>
+  </div>
+  <div class="compare-col green">
+    <h4>Open hardware (Arduino, Seeed, etc.)</h4>
+    <ul>
+      <li>Owned by the community / publisher</li>
+      <li>Freely redistributable under open licenses</li>
+      <li>BOM and firmware fully public</li>
+      <li>Optimized for hacking and small batches</li>
+      <li>Community-supported with public documentation</li>
+      <li>Discovered through GitHub, Hackaday, etc.</li>
+    </ul>
+  </div>
+</div>
+
+<p>Both systems exist. They serve different audiences and different volume tiers. Open hardware is genuinely open — gongbans are <em>commercially shared</em>, which is a different thing. A gongban can become a product with millions of units shipped without any of its design ever being publicly documented.</p>
+
+<h2>Why this matters for Western founders</h2>
+
+<p>If you're a Western hardware founder and you didn't know gongbans existed, three things are probably true:</p>
+
+<ul>
+  <li><strong>You're overpaying for development.</strong> Quotes you got from US or EU design houses for "$200K NRE and 12 months" are pricing custom engineering. The equivalent gongban, properly sourced, can be available for licensing or per-unit royalty within 2–4 weeks.</li>
+  <li><strong>Your competitors already know.</strong> The hardware brands that seem to ship faster, undercut your pricing, and pivot faster — they're almost certainly building on gongbans. You're not being out-engineered. You're being out-systemized.</li>
+  <li><strong>Your "defensibility" claims to investors are weaker than you think.</strong> If your product can be cloned from a gongban inside three months, no amount of branding protects your margin once a competitor finds the same design house.</li>
+</ul>
+
+<div class="pullquote">
+  Most consumer electronics from China are not designed — they are <em>selected</em>. The skill is knowing the catalog.
+  <span class="pullquote-attr">— Hans Stam, GONGBANS (the book)</span>
+</div>
+
+<h2>What you can do with this knowledge</h2>
+
+<p>Once you understand the system, three options open up:</p>
+
+<ul>
+  <li><strong>Buy in.</strong> License a gongban that fits your product idea, customize the enclosure and branding, and skip 12 months of development. You ship faster and cheaper than founders trying to invent from scratch. This is the dominant strategy for consumer hardware in the $20–200 retail range.</li>
+  <li><strong>Build around it.</strong> Use a gongban as the core electronics, but invest the saved development time and budget into software, brand, distribution, or a genuinely differentiated user experience. The IP is in the layer your competitors can't easily copy.</li>
+  <li><strong>Avoid the trap deliberately.</strong> If your product genuinely needs custom electronics — high-volume cost reduction, unusual sensors, specific industrial certifications — you can now negotiate with full information rather than being sold a gongban dressed up as bespoke engineering.</li>
+</ul>
+
+<p>The point of this site is not to romanticize gongbans or to dismiss original engineering. The point is that the system exists, it's enormous, and ignoring it puts Western founders at a structural disadvantage they don't even know they have.</p>
+
+<h2>What's on this site</h2>
+
+<p>This site catalogs gongbans — both the commodity reference designs from the IDH ecosystem, and the industrial SOM platforms from established factories like Kingbrother. Each entry has technical specs, a category, and Hans's notes on what it's good for, where it fails, and how to think about sourcing it.</p>
+
+<p>The catalog is small today and growing. The book — <a href="https://hansolo42.gumroad.com/l/gongbans" target="_blank" rel="noopener">GONGBANS</a> — covers the system, the economics, and how to navigate it as a founder. Hans is reachable at <a href="https://hansstam.eu" target="_blank" rel="noopener">hansstam.eu</a> for direct advisory work.</p>
+
+<div class="cta-section">
+  <h3>See the catalog</h3>
+  <p>Industrial SOM platforms and commodity reference designs, with specs and sourcing notes.</p>
+  <a href="/boards.html">Browse boards →</a>
+  <a href="https://hansolo42.gumroad.com/l/gongbans">Get the book</a>
+</div>
+
+</article>
+
+<footer>
+  <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
