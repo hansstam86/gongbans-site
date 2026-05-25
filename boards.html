@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Boards — Industrial SOM Platforms from Kingbrother (IDH) — GONGBANS</title>
-<meta name="description" content="Industrial SOM (System-on-Module) and evaluation board platforms from Kingbrother IDH. ARM-based platforms from Rockchip, NXP, Allwinner, and Xilinx FPGA-based options. With specs, interfaces, and platform notes.">
+<meta name="description" content="Industrial SOM (System-on-Module) and evaluation board platforms from Kingbrother IDH. ARM-based platforms from Rockchip, NXP, Allwinner, and NVIDIA Jetson, plus a Xilinx FPGA option. With specs, interfaces, and platform notes.">
 <meta property="og:title" content="Boards — Industrial SOM Platforms from Kingbrother IDH">
 <meta property="og:description" content="ARM-based and FPGA-based industrial SOM platforms catalogued with full specifications.">
 <meta property="og:type" content="website">
@@ -137,7 +137,7 @@ footer a:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
   <div class="page-header-inner">
     <div class="page-header-tag">CATALOG · INDUSTRIAL SOM PLATFORMS</div>
     <h1>Industrial SOM platforms <em>from Kingbrother IDH</em></h1>
-    <p class="sub">A catalogue of System-on-Module (SOM) and evaluation board platforms from Kingbrother, a Shenzhen-based Independent Design House. ARM-based platforms from Rockchip, NXP, and Allwinner, plus a Xilinx FPGA option. For industrial control, edge computing, smart terminals, and AI-at-the-edge applications.</p>
+    <p class="sub">A catalogue of System-on-Module (SOM) and evaluation board platforms from Kingbrother, a Shenzhen-based Independent Design House. ARM-based platforms from Rockchip, NXP, Allwinner, and NVIDIA, plus a Xilinx FPGA option. For industrial control, edge computing, smart terminals, and AI-at-the-edge applications.</p>
   </div>
 </div>
 
@@ -328,20 +328,41 @@ footer a:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
     <article class="board">
       <div class="board-id">KB_iMX93_SOM/EVK</div>
       <h3 class="board-name">i.MX 93 Platform</h3>
-      <div class="board-tag">NXP Semiconductors · ARM-based · Low Power</div>
+      <div class="board-tag">NXP Semiconductors · ARM-based · Low Power · AI</div>
       <div class="board-perf">
         <div class="board-perf-label">Performance</div>
         <div class="board-perf-spec"><em>2× Cortex-A55</em> @ 1.7 GHz + Cortex-M33 @ 250 MHz · <em>0.5 TOPS</em> NPU</div>
       </div>
-      <p class="board-desc">NXP i.MX 93 — the most recent in this catalog. Dual-core Cortex-A55 plus a real-time Cortex-M33, with a 0.5 TOPS NPU. Designed for cost-sensitive industrial IoT, smart sensors, and edge applications that need a small NPU footprint with NXP-grade long lifecycle.</p>
-      <div class="board-section-label">Notes</div>
+      <p class="board-desc">NXP i.MX 93 — the newest NXP platform in this catalog. Dual-core Cortex-A55 at 1.7 GHz plus a real-time Cortex-M33 at 250 MHz, with a 0.5 TOPS NPU supporting mixed INT8/INT16. Designed for cost-sensitive industrial IoT, smart sensors, building automation, HMI, and edge applications that need a small NPU footprint with NXP-grade long lifecycle.</p>
+      <div class="board-section-label">Memory &amp; Storage</div>
       <ul class="spec-list">
-        <li><span class="label">Position</span><span class="value">Low-power edge platform</span></li>
-        <li><span class="label">Best for</span><span class="value">Industrial IoT, smart sensors</span></li>
-        <li><span class="label">Form factor</span><span class="value">SOM + EVK</span></li>
-        <li><span class="label">Note</span><span class="value">Newest NXP option in catalog</span></li>
+        <li><span class="label">RAM</span><span class="value">LPDDR4/4x 1/2GB</span></li>
+        <li><span class="label">eMMC</span><span class="value">16GB</span></li>
+        <li><span class="label">Other</span><span class="value">1× TF card slot</span></li>
       </ul>
-      <p style="font-size:13px;color:var(--text-light);margin-top:16px;font-style:italic">Full specifications not detailed in the published manual page; contact Kingbrother for the complete EVK datasheet.</p>
+      <div class="board-section-label">Connectivity</div>
+      <ul class="spec-list">
+        <li><span class="label">Ethernet</span><span class="value">2× Gigabit</span></li>
+        <li><span class="label">USB</span><span class="value">1× OTG · 3× Host (via hub)</span></li>
+        <li><span class="label">WiFi/BT</span><span class="value">SDIO module</span></li>
+        <li><span class="label">Cellular</span><span class="value">4G module connector</span></li>
+        <li><span class="label">CAN</span><span class="value">1× CAN</span></li>
+      </ul>
+      <div class="board-section-label">Multimedia</div>
+      <ul class="spec-list">
+        <li><span class="label">MIPI DSI</span><span class="value">1× output</span></li>
+        <li><span class="label">LVDS</span><span class="value">1× output</span></li>
+        <li><span class="label">VPU decode</span><span class="value">H.265 4K@30 · H.264 1080p@60</span></li>
+        <li><span class="label">VPU encode</span><span class="value">H.264 / H.265 1080p@30</span></li>
+        <li><span class="label">GPU</span><span class="value">2D accelerator + PXP compositor</span></li>
+      </ul>
+      <div class="board-section-label">Form Factor</div>
+      <ul class="spec-list">
+        <li><span class="label">Module</span><span class="value">SOM + carrier board</span></li>
+        <li><span class="label">SOM size</span><span class="value">51 × 42 mm</span></li>
+        <li><span class="label">OS</span><span class="value">Linux</span></li>
+        <li><span class="label">Temp grade</span><span class="value">Commercial &amp; Industrial (-40 to +85°C)</span></li>
+      </ul>
     </article>
 
   </div>
@@ -384,19 +405,43 @@ footer a:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
     <article class="board">
       <div class="board-id">KB_T507_SOM/EVK</div>
       <h3 class="board-name">T507 Platform</h3>
-      <div class="board-tag">Allwinner Technology · ARM-based</div>
+      <div class="board-tag">Allwinner Technology · ARM-based · Automotive-grade</div>
       <div class="board-perf">
         <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>4× Cortex-A53</em> @ 1.5 GHz</div>
+        <div class="board-perf-spec"><em>4× Cortex-A53</em> @ 1.5 GHz · G31 MP2 GPU · <em>4K@60</em> H.265 decode</div>
       </div>
-      <p class="board-desc">Mid-tier Allwinner T507. Quad-core Cortex-A53 at 1.5 GHz — a step up from A40i in both architecture and performance. General-purpose industrial platform, HMI, smart kiosks, video applications.</p>
-      <div class="board-section-label">Notes</div>
+      <p class="board-desc">Allwinner T507H — quad-core Cortex-A53 meeting automotive-grade AEC-Q100 qualification. 4K@60fps H.265/VP9/AVS2 decode and 4K@25fps H.264 encode. Integrated 3D noise reduction, automatic color adjustment, and keystone correction. General-purpose industrial platform, HMI, smart kiosks, in-vehicle infotainment, digital signage.</p>
+      <div class="board-section-label">Memory &amp; Storage</div>
       <ul class="spec-list">
-        <li><span class="label">Position</span><span class="value">Mid-tier Allwinner platform</span></li>
-        <li><span class="label">Best for</span><span class="value">HMI, kiosks, industrial control</span></li>
-        <li><span class="label">Form factor</span><span class="value">SOM + EVK</span></li>
+        <li><span class="label">RAM</span><span class="value">LPDDR4 1/2/4GB</span></li>
+        <li><span class="label">eMMC</span><span class="value">16GB</span></li>
+        <li><span class="label">Other</span><span class="value">TF card + SATA 3.0</span></li>
       </ul>
-      <p style="font-size:13px;color:var(--text-light);margin-top:16px;font-style:italic">Full specifications not detailed in the published manual page; contact Kingbrother for the complete EVK datasheet.</p>
+      <div class="board-section-label">Connectivity</div>
+      <ul class="spec-list">
+        <li><span class="label">Ethernet</span><span class="value">1× Gigabit + 1× Fast</span></li>
+        <li><span class="label">USB</span><span class="value">1× OTG · 4× Host</span></li>
+        <li><span class="label">Cellular</span><span class="value">4G Mini PCIe</span></li>
+        <li><span class="label">WiFi/BT</span><span class="value">SDIO module</span></li>
+        <li><span class="label">CAN</span><span class="value">1× CAN</span></li>
+        <li><span class="label">Serial</span><span class="value">1× RS485 · 1× RS232</span></li>
+      </ul>
+      <div class="board-section-label">Multimedia</div>
+      <ul class="spec-list">
+        <li><span class="label">HDMI</span><span class="value">2.0</span></li>
+        <li><span class="label">LVDS</span><span class="value">1× 8-lane</span></li>
+        <li><span class="label">MIPI CSI</span><span class="value">1× 4-lane</span></li>
+        <li><span class="label">Parallel CSI</span><span class="value">1× 8-bit</span></li>
+        <li><span class="label">Video decode</span><span class="value">4K@60 H.265/VP9/AVS2</span></li>
+        <li><span class="label">Video encode</span><span class="value">4K@25 H.264</span></li>
+      </ul>
+      <div class="board-section-label">Form Factor</div>
+      <ul class="spec-list">
+        <li><span class="label">Module</span><span class="value">SOM + carrier board</span></li>
+        <li><span class="label">SOM size</span><span class="value">60 × 42 mm</span></li>
+        <li><span class="label">Qualification</span><span class="value">AEC-Q100 automotive</span></li>
+        <li><span class="label">Temp grade</span><span class="value">Commercial &amp; Industrial (-40 to +85°C)</span></li>
+      </ul>
     </article>
 
     <article class="board">
@@ -421,6 +466,59 @@ footer a:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
   </div>
 </section>
 
+<!-- NVIDIA CATEGORY -->
+<section class="category" id="nvidia">
+  <div class="category-head">
+    <h2 class="category-title">NVIDIA Jetson Platform</h2>
+    <span class="category-meta">ARM-BASED · PREMIUM AI · 1 BOARD</span>
+  </div>
+  <div class="boards-grid">
+
+    <article class="board">
+      <div class="board-id">KB-JTXavier-SOM/EVK</div>
+      <h3 class="board-name">Jetson AGX Xavier Platform</h3>
+      <div class="board-tag">NVIDIA · ARM-based · Premium AI · Industrial-only</div>
+      <div class="board-perf">
+        <div class="board-perf-label">Performance</div>
+        <div class="board-perf-spec"><em>8× Carmel ARMv8.2</em> @ 2.2 GHz · <em>32 TOPS</em> AI · 512-core Volta GPU + 64 Tensor Cores</div>
+      </div>
+      <p class="board-desc">The only NVIDIA option in this catalog. Eight-core Carmel ARMv8.2 paired with a 512-core Volta GPU and 64 Tensor Cores — 32 TOPS of AI compute, well beyond what Rockchip RK3588 or NXP i.MX 8M Plus offer. Industrial-grade only (-40 to +85°C). Built for autonomous machines, multi-camera vision AI, robotics, and heavy edge inference workloads where the silicon premium is justified.</p>
+      <div class="board-section-label">Memory &amp; Storage</div>
+      <ul class="spec-list">
+        <li><span class="label">RAM</span><span class="value">32GB LPDDR4x</span></li>
+        <li><span class="label">eMMC</span><span class="value">32GB</span></li>
+        <li><span class="label">Expansion</span><span class="value">M.2 SSD · 1× TF card</span></li>
+      </ul>
+      <div class="board-section-label">Connectivity</div>
+      <ul class="spec-list">
+        <li><span class="label">Ethernet</span><span class="value">1× Gigabit</span></li>
+        <li><span class="label">USB</span><span class="value">3× USB 3.0 Host</span></li>
+        <li><span class="label">Cellular</span><span class="value">5G M.2 + 4G Mini PCIe</span></li>
+        <li><span class="label">CAN</span><span class="value">2× CAN</span></li>
+        <li><span class="label">UART</span><span class="value">5× UART</span></li>
+        <li><span class="label">SDIO / SPI</span><span class="value">1× each</span></li>
+      </ul>
+      <div class="board-section-label">Multimedia</div>
+      <ul class="spec-list">
+        <li><span class="label">HDMI</span><span class="value">1.4 · 1080p@60fps</span></li>
+        <li><span class="label">MIPI CSI</span><span class="value">4× 4-lane CSI-2</span></li>
+        <li><span class="label">Video decode</span><span class="value">2× 8K@30 H.265</span></li>
+        <li><span class="label">Video encode</span><span class="value">8× 4K@30 H.265</span></li>
+        <li><span class="label">Audio</span><span class="value">3.5mm jack</span></li>
+      </ul>
+      <div class="board-section-label">Form Factor</div>
+      <ul class="spec-list">
+        <li><span class="label">Module</span><span class="value">SOM + carrier board</span></li>
+        <li><span class="label">Carrier size</span><span class="value">170 × 170 mm</span></li>
+        <li><span class="label">OS</span><span class="value">Linux (NVIDIA JetPack)</span></li>
+        <li><span class="label">Debug</span><span class="value">JTAG + USB-to-TTL</span></li>
+        <li><span class="label">Temp grade</span><span class="value">Industrial only (-40 to +85°C)</span></li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
 <!-- XILINX CATEGORY -->
 <section class="category" id="xilinx">
   <div class="category-head">
@@ -435,17 +533,38 @@ footer a:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
       <div class="board-tag">Xilinx (AMD) · FPGA-based · SoC</div>
       <div class="board-perf">
         <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>2× Cortex-A9</em> @ 766 MHz · 2.5 DMIPS/MHz per core · <em>1× Artix-7 FPGA fabric</em></div>
+        <div class="board-perf-spec"><em>2× Cortex-A9</em> @ 800 MHz · <em>Artix-7 FPGA</em> · 444K logic cells</div>
       </div>
-      <p class="board-desc">The outlier in this catalog. Xilinx Zynq-7020 SoC combines dual ARM Cortex-A9 cores with Artix-7 FPGA fabric on the same die. Designed for applications that need real-time deterministic logic alongside an embedded Linux SoC: machine vision, motor control, software-defined radio, custom protocol bridges.</p>
-      <div class="board-section-label">Notes</div>
+      <p class="board-desc">The outlier in this catalog. Xilinx Zynq-7020 (XC7Z020) combines dual ARM Cortex-A9 cores with Artix-7 FPGA fabric on the same 28nm die. PS and PL can be developed independently — the PS configures and loads programs into the PL. Designed for applications that need real-time deterministic logic alongside an embedded Linux SoC: machine vision, motor control, software-defined radio, custom protocol bridges.</p>
+      <div class="board-section-label">Memory &amp; Storage</div>
       <ul class="spec-list">
-        <li><span class="label">Architecture</span><span class="value">ARM + FPGA on same die</span></li>
-        <li><span class="label">FPGA fabric</span><span class="value">Artix-7</span></li>
-        <li><span class="label">Best for</span><span class="value">Vision, motor control, SDR</span></li>
-        <li><span class="label">Form factor</span><span class="value">SOM + EVK</span></li>
+        <li><span class="label">RAM</span><span class="value">1GB DDR3 (PS-side)</span></li>
+        <li><span class="label">eMMC</span><span class="value">8GB 5.1</span></li>
+        <li><span class="label">QSPI Flash</span><span class="value">256 Mb</span></li>
+        <li><span class="label">Other</span><span class="value">1× TF card slot</span></li>
       </ul>
-      <p style="font-size:13px;color:var(--text-light);margin-top:16px;font-style:italic">Full specifications not detailed in the published manual page; contact Kingbrother for the complete EVK datasheet.</p>
+      <div class="board-section-label">Connectivity</div>
+      <ul class="spec-list">
+        <li><span class="label">Ethernet</span><span class="value">1× Gigabit (onboard)</span></li>
+        <li><span class="label">USB</span><span class="value">1× USB 2.0 Host</span></li>
+        <li><span class="label">CAN</span><span class="value">2× CAN</span></li>
+        <li><span class="label">UART</span><span class="value">2× UART</span></li>
+        <li><span class="label">SPI</span><span class="value">1× SPI</span></li>
+        <li><span class="label">GPIO</span><span class="value">50× GPIO</span></li>
+      </ul>
+      <div class="board-section-label">Multimedia</div>
+      <ul class="spec-list">
+        <li><span class="label">HDMI</span><span class="value">1× output</span></li>
+      </ul>
+      <div class="board-section-label">Form Factor</div>
+      <ul class="spec-list">
+        <li><span class="label">Module</span><span class="value">SOM (DDR4 gold finger) + carrier</span></li>
+        <li><span class="label">SOM size</span><span class="value">50 × 50 mm</span></li>
+        <li><span class="label">Carrier width</span><span class="value">140 mm</span></li>
+        <li><span class="label">Process</span><span class="value">28 nm</span></li>
+        <li><span class="label">Debug</span><span class="value">JTAG + TTL UART</span></li>
+        <li><span class="label">Temp grade</span><span class="value">Commercial &amp; Industrial (-40 to +85°C)</span></li>
+      </ul>
     </article>
 
   </div>
