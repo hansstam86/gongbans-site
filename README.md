@@ -2,12 +2,18 @@
 
 A static, no-build database of Chinese factory reference designs (gongbans / 公板) — the off-the-shelf hardware that quietly powers consumer electronics. Companion to the book [GONGBANS](https://hansolo42.gumroad.com/l/gongbans).
 
+The catalogue lives at `boards.html`. It holds Hans's 16 hand-curated ATU gongban kits (3 with full design packs) plus 1,100+ boards imported from the private `gongban.db` master database (`build_catalog.py`). The hand-written Kingbrother industrial SOM page is kept at `boards-kingbrother.html`.
+
 ## What's here
 
 ```
-gongbans-db/
-├── index.html            ← catalog, all 16 entries, filter + search
-├── data/gongbans.json    ← the database (single source of truth)
+gongbans-site/
+├── index.html            ← landing page
+├── boards.html           ← catalogue: filter chips + search, cards rendered 60 at a time
+├── boards-kingbrother.html ← Kingbrother IDH industrial SOM platforms (hand-written)
+├── what-are-gongbans.html
+├── data/gongbans.json    ← the database (single source of truth; curated + imported entries)
+├── data/catalog.json     ← slim copy for the grid (generated, do not edit)
 ├── db/                   ← one HTML page per gongban (auto-generated)
 ├── files/                ← downloadable hardware packs
 │   ├── uv-sensor-veml6075-lpc824/        [SCH PCB Gerber BOM Spec PPT + 8 datasheets]
@@ -16,6 +22,7 @@ gongbans-db/
 ├── assets/
 │   ├── style.css         ← PCB-aesthetic theme (solder mask green, ENIG gold, copper)
 │   └── app.js            ← catalog filter / search (vanilla, no framework)
+├── build_catalog.py      ← imports public boards from ~/Projects/gongban-db/gongban.db into gongbans.json
 ├── build_detail_pages.py ← regenerates /db/*.html from gongbans.json
 └── README.md
 ```
@@ -23,23 +30,39 @@ gongbans-db/
 ## Run locally
 
 ```bash
-cd gongbans-db
+cd gongbans-site
 python3 -m http.server 8000
-# open http://localhost:8000
+# open http://localhost:8000/boards.html
 ```
 
 (Opening `index.html` directly via `file://` won't work — `fetch()` of `data/gongbans.json` needs a real HTTP origin.)
 
-## Adding a new gongban
+## Rebuilding from the master database
 
-1. Add an entry to `data/gongbans.json` following the schema (slug, project_no, name, category, chip, etc.).
+```bash
+python3 build_catalog.py        # reads ~/Projects/gongban-db/gongban.db (or pass a path)
+python3 build_detail_pages.py   # regenerates db/*.html, removes stale pages
+```
+
+`build_catalog.py` keeps every hand-curated entry (anything without `"origin": "db"`) byte-for-byte,
+drops and re-imports all database entries, and writes both `data/gongbans.json` and the slim
+`data/catalog.json` the grid loads. It only reads `boards`, `files` and `sources`; the contacts,
+outreach, fetch_log, fairs and solution_houses tables are never exported. Boards tied to shared
+mobility / GPS tracking / e-scooters / e-bikes are excluded, e-mail addresses and named contacts
+are scrubbed from notes, and OSHWHub author handles are not published. The ~30 database categories
+are grouped into the catalogue's ten chips (`CATEGORY_MAP` in the script); the original category is
+kept in `db_category`.
+
+## Adding a new hand-curated gongban
+
+1. Add an entry to `data/gongbans.json` following the schema (slug, project_no, name, category, chip, etc.). Do not set `origin`.
 2. If you have hardware files, drop them in `files/<slug>/` with conventional names: `schematic.sch`, `pcb.pcb`, `gerber.zip`, `bom.xlsx`, `spec.docx`, `presentation.pptx`, `datasheets/*.pdf`.
 3. Set `files_available: true` in the manifest.
-4. Run `python3 build_detail_pages.py` to regenerate detail pages.
+4. Run `python3 build_catalog.py` (to refresh `data/catalog.json`) and `python3 build_detail_pages.py`.
 
 ## Editing Hans's sourcing notes
 
-Right now most entries say `"hans_notes": "Hans note pending — ..."`. Each is a placeholder waiting for your real sourcing voice. The detail-page renderer flags pending notes visually so you can see at a glance which ones still need writing.
+Right now most curated entries say `"hans_notes": "Hans note pending — ..."` (imported entries have no note and render none). Each is a placeholder waiting for your real sourcing voice. The detail-page renderer flags pending notes visually so you can see at a glance which ones still need writing.
 
 When you write a real note, the markup automatically switches from "Sourcing Note — Pending" to "Hans's Sourcing Note" in red, with the note styled as a real callout.
 
@@ -66,6 +89,13 @@ When you write a real note, the markup automatically switches from "Sourcing Not
   "hans_notes": "Your sourcing intel goes here."
 }
 ```
+
+Entries imported from the database carry extra fields, all optional and left empty when unknown:
+`origin: "db"`, `db_slug`, `issuer`, `issuer_type`, `source_name`, `source_url`, `db_category`,
+`openness` / `openness_label`, `year`, `region`, `license`, `files_avail` (kinds the issuer publishes),
+`files_at_source` (links to the issuer's own files — nothing is re-hosted), `status`
+(`source-files` | `metadata-only`), `notes` (issuer/ingestion notes) and `hint` (product name taken
+from the schematic file name, DFRobot only).
 
 ## Deploy to GitHub Pages
 

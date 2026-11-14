@@ -788,6 +788,9 @@ h1 em {
   .site-header { padding: 1rem 1.25rem; }
   .site-header-inner { gap: 1rem; }
   .brand-sub { display: none; }
+  .site-nav { gap: 1rem; }
+  .site-nav a { font-size: 0.7rem; }
+  .site-nav .nav-secondary { display: none; }
 }
 
 /* Reduced motion */

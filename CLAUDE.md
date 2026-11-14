@@ -12,3 +12,4 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
 - Do not change `CNAME`, DNS or Pages settings without Hans's OK.
 - Draft only; don't invent content, prices or claims.
 - Regenerate detail pages with the script after changing data; commit the generated output.
+- Catalogue data: `python3 build_catalog.py` imports public boards from `~/Projects/gongban-db/gongban.db` into `data/gongbans.json` (curated entries are kept verbatim), then `python3 build_detail_pages.py`. The database itself is private and must never be committed; never export contacts, outreach, fetch_log, solution_houses, or anything shared-mobility / GPS-tracking related.

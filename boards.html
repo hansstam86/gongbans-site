@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boards — Industrial SOM Platforms from Kingbrother (IDH) — GONGBANS</title>
-<meta name="description" content="Industrial SOM (System-on-Module) and evaluation board platforms from Kingbrother IDH. ARM-based platforms from Rockchip, NXP, Allwinner, and NVIDIA Jetson, plus a Xilinx FPGA option. With specs, interfaces, and platform notes.">
-<meta property="og:title" content="Boards — Industrial SOM Platforms from Kingbrother IDH">
-<meta property="og:description" content="ARM-based and FPGA-based industrial SOM platforms catalogued with full specifications.">
+<title>Boards — The gongban catalogue — GONGBANS</title>
+<meta name="description" content="A searchable catalogue of Chinese reference designs (gongbans / 公板): dev boards, SBCs, modules and solution boards published by chip houses, distributors, module houses and open-hardware communities, plus Hans Stam's hand-curated ATU gongban kits.">
+<meta property="og:title" content="Boards — The gongban catalogue — GONGBANS">
+<meta property="og:description" content="Over a thousand Chinese reference designs, filterable by category and openness, with links to the publishers' own design files.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gongbans.com/boards.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="data/catalog.json" as="fetch" crossorigin="anonymous">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -118,6 +119,45 @@ footer a:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
   .info-banner{padding:24px 24px}
   .category-head{flex-direction:column;align-items:flex-start;gap:8px}
 }
+/* CATALOGUE FILTERS */
+.filter-bar{background:var(--white);border:1px solid rgba(0,0,0,0.06);border-radius:6px;padding:18px 22px;margin-bottom:32px;display:flex;flex-direction:column;gap:12px}
+.filter-group{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filter-label{font-family:var(--font-mono);font-size:11px;color:var(--text-light);letter-spacing:1.5px;text-transform:uppercase;margin-right:6px}
+.filter-chip{font-family:var(--font-mono);font-size:12px;letter-spacing:0.5px;padding:6px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.12);background:var(--cream);color:var(--text-mid);cursor:pointer;transition:all .15s;line-height:1.4}
+.filter-chip:hover{border-color:var(--gold-dim);color:var(--text)}
+.filter-chip.active{background:var(--green-deeper);border-color:var(--green-deeper);color:var(--gold)}
+.search-box{position:relative}
+.search-box input{width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px 12px 40px;border:1px solid rgba(0,0,0,0.12);border-radius:6px;background:var(--cream);color:var(--text);outline:none;-webkit-appearance:none}
+.search-box input:focus{border-color:var(--gold);background:var(--white)}
+.search-box::before{content:'⌕';position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text-light);font-size:18px;pointer-events:none}
+
+/* CATALOGUE CARDS (same .board look, as links) */
+a.board{display:flex;flex-direction:column;color:inherit}
+.board-desc.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1;min-height:0}
+.board-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 12px;padding-top:12px;border-top:1px solid rgba(0,0,0,0.06);font-family:var(--font-mono);font-size:11px;letter-spacing:0.5px;text-transform:uppercase;color:var(--text-light)}
+.board-foot .meta{text-align:right}
+.board-foot strong{color:var(--copper)}
+.status{white-space:nowrap}
+.status::before{content:'●';margin-right:6px;font-size:9px;vertical-align:1px}
+.status.full-pack{color:var(--green-accent)}
+.status.source-files{color:var(--copper)}
+.status.metadata-only{color:var(--text-light)}
+.show-more{display:block;margin:40px auto 0;font-family:var(--font-mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;border:2px solid var(--green-deeper);border-radius:4px;background:transparent;color:var(--green-deeper);cursor:pointer;transition:all .15s}
+.show-more:hover{background:var(--green-deeper);color:var(--gold)}
+.show-more[hidden]{display:none}
+.empty-state{grid-column:1/-1;background:var(--white);border:1px dashed rgba(0,0,0,0.15);border-radius:6px;padding:48px 24px;text-align:center;color:var(--text-mid);font-size:15px}
+.empty-state code{font-family:var(--font-mono);font-size:13px;background:var(--cream);padding:2px 6px;border-radius:3px}
+.grid-sentinel{height:1px}
+.catalogue-note{font-size:13px;color:var(--text-light);margin-top:14px;line-height:1.6}
+.catalogue-note a{color:var(--copper);border-bottom:1px solid transparent}
+.catalogue-note a:hover{border-bottom-color:var(--copper)}
+
+@media (max-width:720px){
+  .filter-bar{padding:14px 16px}
+  .filter-label{width:100%;margin:0 0 -2px}
+  .board-foot{flex-direction:column;align-items:flex-start;gap:6px}
+  .board-foot .meta{text-align:left}
+}
 </style>
 </head>
 <body>
@@ -135,448 +175,61 @@ footer a:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
 
 <div class="page-header">
   <div class="page-header-inner">
-    <div class="page-header-tag">CATALOG · INDUSTRIAL SOM PLATFORMS</div>
-    <h1>Industrial SOM platforms <em>from Kingbrother IDH</em></h1>
-    <p class="sub">A catalogue of System-on-Module (SOM) and evaluation board platforms from Kingbrother, a Shenzhen-based Independent Design House. ARM-based platforms from Rockchip, NXP, Allwinner, and NVIDIA, plus a Xilinx FPGA option. For industrial control, edge computing, smart terminals, and AI-at-the-edge applications.</p>
+    <div class="page-header-tag">CATALOG · GONGBAN DATABASE</div>
+    <h1>The gongban <em>catalogue</em></h1>
+    <p class="sub">Chinese reference designs — dev boards, SBCs and SOMs, modules, chip-house reference designs and solution boards — as published by chip houses, distributors, module houses and open-hardware communities, alongside Hans's hand-curated ATU gongban kits. Filter by category, search by chip or vendor, and follow each entry to the publisher's own design files.</p>
   </div>
 </div>
 
 <div class="context-bar">
   <div class="context-inner">
     <div class="context-note">
-      <strong>Different from commodity gongbans:</strong> these are professional-grade industrial platforms maintained by Kingbrother's IDH team. They're closer to the &ldquo;industrial reference platform&rdquo; tier than to the white-label consumer gongbans you'd find for sub-$50 products. Useful for founders building products that need real compute, edge AI, or industrial certifications.
+      <strong>How to read it:</strong> every card is one board. &ldquo;Full Design Pack&rdquo; entries carry schematic, PCB, Gerber and BOM downloads on this site; &ldquo;Design files at source&rdquo; entries link to the schematic or PCB files the publisher put online; &ldquo;Catalog entry&rdquo; means specs or enclosure files only. Looking for the industrial SOM platforms? See the <a href="/boards-kingbrother.html" style="color:var(--copper);border-bottom:1px solid var(--copper)">Kingbrother IDH catalogue</a>.
     </div>
-    <div class="context-source">Source · <span>Kingbrother IDH Product Manual 2026</span></div>
+    <div class="context-source">Source · <span>gongban.db · Nov 2026</span></div>
   </div>
 </div>
 
 <main>
 
-<!-- ROCKCHIP CATEGORY -->
-<section class="category" id="rockchip">
-  <div class="category-head">
-    <h2 class="category-title">Rockchip Platforms</h2>
-    <span class="category-meta">ARM-BASED · 2 BOARDS</span>
+<section class="filter-bar" aria-label="Filters">
+  <div class="filter-group" role="group" aria-label="Category">
+    <span class="filter-label">Category</span>
+    <button class="filter-chip active" data-filter="category" data-value="all" aria-pressed="true">All</button>
+    <button class="filter-chip" data-filter="category" data-value="IoT">IoT</button>
+    <button class="filter-chip" data-filter="category" data-value="Wearable">Wearable</button>
+    <button class="filter-chip" data-filter="category" data-value="E-Lock">E-Lock</button>
+    <button class="filter-chip" data-filter="category" data-value="Dev Board">Dev Board</button>
+    <button class="filter-chip" data-filter="category" data-value="Community">Community</button>
+    <button class="filter-chip" data-filter="category" data-value="SBC / SOM">SBC / SOM</button>
+    <button class="filter-chip" data-filter="category" data-value="Module">Module</button>
+    <button class="filter-chip" data-filter="category" data-value="Reference Design">Reference Design</button>
+    <button class="filter-chip" data-filter="category" data-value="Industrial &amp; Auto">Industrial &amp; Auto</button>
+    <button class="filter-chip" data-filter="category" data-value="Consumer">Consumer</button>
   </div>
-  <div class="boards-grid">
-
-    <article class="board">
-      <div class="board-id">KB_RK3568_SOM/EVK</div>
-      <h3 class="board-name">RK3568 Evaluation Platform</h3>
-      <div class="board-tag">Rockchip · ARM-based</div>
-      <div class="board-perf">
-        <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>4× Cortex-A55</em> @ 2.0 GHz · <em>1 TOPS</em> NPU · Mali-G52 GPU</div>
-      </div>
-      <p class="board-desc">Evaluation board around the Rockchip RK3568 SoC. Quad-core ARM Cortex-A55, integrated 1 TOPS NPU, Mali-G52 GPU. Mid-tier edge compute platform suitable for industrial control, smart terminals, and entry-level edge AI.</p>
-      <div class="board-section-label">Memory &amp; Storage</div>
-      <ul class="spec-list">
-        <li><span class="label">RAM</span><span class="value">2/4GB LPDDR4</span></li>
-        <li><span class="label">eMMC</span><span class="value">32GB eMMC 5.1</span></li>
-        <li><span class="label">Expansion</span><span class="value">M.2 SSD, SATA 3.0</span></li>
-      </ul>
-      <div class="board-section-label">Connectivity</div>
-      <ul class="spec-list">
-        <li><span class="label">Ethernet</span><span class="value">2× Gigabit</span></li>
-        <li><span class="label">USB</span><span class="value">2× USB 3.0 Host</span></li>
-        <li><span class="label">Cellular</span><span class="value">5G M.2 + 4G Mini PCIe</span></li>
-        <li><span class="label">CAN</span><span class="value">1× CAN</span></li>
-        <li><span class="label">UART</span><span class="value">2× UART</span></li>
-      </ul>
-      <div class="board-section-label">Multimedia</div>
-      <ul class="spec-list">
-        <li><span class="label">HDMI</span><span class="value">2.0a · up to 4K</span></li>
-        <li><span class="label">MIPI DSI</span><span class="value">1× 4-lane</span></li>
-        <li><span class="label">LVDS</span><span class="value">2× LVDS</span></li>
-        <li><span class="label">MIPI CSI</span><span class="value">2× 4-lane CSI-2</span></li>
-      </ul>
-      <div class="board-section-label">Form Factor</div>
-      <ul class="spec-list">
-        <li><span class="label">Module</span><span class="value">SOM + carrier board</span></li>
-        <li><span class="label">Connector</span><span class="value">314-pin gold finger</span></li>
-        <li><span class="label">SOM size</span><span class="value">82 × 53.5 mm</span></li>
-        <li><span class="label">OS</span><span class="value">Linux</span></li>
-        <li><span class="label">Temp grade</span><span class="value">Commercial 0–70°C</span></li>
-      </ul>
-    </article>
-
-    <article class="board">
-      <div class="board-id">KB_RK3588_SOM/EBC</div>
-      <h3 class="board-name">RK3588 Edge Computing Box</h3>
-      <div class="board-tag">Rockchip · ARM-based · Flagship</div>
-      <div class="board-perf">
-        <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>4× Cortex-A76</em> @ 2.4 GHz + <em>4× Cortex-A55</em> @ 1.8 GHz · <em>6 TOPS</em> NPU · Mali-G610</div>
-      </div>
-      <p class="board-desc">Flagship edge computing box built around the Rockchip RK3588. big.LITTLE 8-core architecture, 6 TOPS NPU with mixed-precision (INT4/INT8/INT16/FP16). Edge AI workloads, multi-camera AI inference, 8K video processing, industrial AI gateways.</p>
-      <div class="board-section-label">Memory &amp; Storage</div>
-      <ul class="spec-list">
-        <li><span class="label">RAM</span><span class="value">LPDDR4 8GB</span></li>
-        <li><span class="label">eMMC</span><span class="value">32GB</span></li>
-        <li><span class="label">Expansion</span><span class="value">NVMe M.2 + microSD</span></li>
-      </ul>
-      <div class="board-section-label">Connectivity</div>
-      <ul class="spec-list">
-        <li><span class="label">Ethernet</span><span class="value">3× Gigabit + 1× TSN</span></li>
-        <li><span class="label">USB</span><span class="value">USB 2.0 OTG + USB 3.0 Host</span></li>
-        <li><span class="label">Cellular</span><span class="value">4G Mini PCIe</span></li>
-        <li><span class="label">WiFi/BT</span><span class="value">SDIO module</span></li>
-        <li><span class="label">CAN</span><span class="value">3× CAN</span></li>
-        <li><span class="label">Serial</span><span class="value">2× RS485 · 2× RS232</span></li>
-      </ul>
-      <div class="board-section-label">Multimedia</div>
-      <ul class="spec-list">
-        <li><span class="label">HDMI</span><span class="value">2.0 · up to 8K@30fps</span></li>
-        <li><span class="label">Video decode</span><span class="value">8K@60 H.265/VP9</span></li>
-        <li><span class="label">MIPI CSI</span><span class="value">2× DVP 8-bit</span></li>
-      </ul>
-      <div class="board-section-label">Form Factor</div>
-      <ul class="spec-list">
-        <li><span class="label">Module</span><span class="value">SOM + carrier board</span></li>
-        <li><span class="label">SOM size</span><span class="value">82 × 55 mm</span></li>
-        <li><span class="label">OS</span><span class="value">Linux + Android</span></li>
-        <li><span class="label">Temp grade</span><span class="value">Commercial &amp; Industrial (-40 to +85°C)</span></li>
-      </ul>
-    </article>
-
+  <div class="filter-group" role="group" aria-label="Files">
+    <span class="filter-label">Files</span>
+    <button class="filter-chip" data-filter="files" data-value="full-pack">Full pack</button>
+    <button class="filter-chip" data-filter="files" data-value="source-files">Files at source</button>
+    <button class="filter-chip" data-filter="files" data-value="metadata-only">Catalog only</button>
+  </div>
+  <div class="search-box">
+    <input type="search" id="search-input" placeholder="Search chip, board, vendor, application…  (press / to focus)" aria-label="Search boards" autocomplete="off">
   </div>
 </section>
 
-<!-- NXP CATEGORY -->
-<section class="category" id="nxp">
+<section class="category" aria-label="Boards">
   <div class="category-head">
-    <h2 class="category-title">NXP i.MX Platforms</h2>
-    <span class="category-meta">ARM-BASED · 3 BOARDS</span>
+    <h2 class="category-title">Boards</h2>
+    <span class="category-meta" id="entry-count">LOADING…</span>
   </div>
-  <div class="boards-grid">
-
-    <article class="board">
-      <div class="board-id">KB_iMX6DL_SOM/EVK</div>
-      <h3 class="board-name">i.MX6 DualLite Platform</h3>
-      <div class="board-tag">NXP Semiconductors · ARM-based</div>
-      <div class="board-perf">
-        <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>2× Cortex-A9</em> @ 1.0 GHz · Vivante GPU · 1080p VPU</div>
-      </div>
-      <p class="board-desc">Long-lifecycle NXP i.MX6 DualLite platform. Dual-core ARM Cortex-A9, Vivante GPU, 1080p video codec. Well-suited for mid-tier industrial control, smart terminals, automotive infotainment, and applications requiring NXP's long-term silicon availability.</p>
-      <div class="board-section-label">Memory &amp; Storage</div>
-      <ul class="spec-list">
-        <li><span class="label">RAM</span><span class="value">DDR3 1/2GB</span></li>
-        <li><span class="label">eMMC</span><span class="value">8GB</span></li>
-        <li><span class="label">Other</span><span class="value">1× TF card slot</span></li>
-      </ul>
-      <div class="board-section-label">Connectivity</div>
-      <ul class="spec-list">
-        <li><span class="label">USB</span><span class="value">1× OTG · 4× Host (via hub)</span></li>
-        <li><span class="label">Ethernet</span><span class="value">1× Fast Ethernet</span></li>
-        <li><span class="label">WiFi/BT</span><span class="value">SDIO 2T2R module</span></li>
-        <li><span class="label">CAN / RS485</span><span class="value">1× each</span></li>
-      </ul>
-      <div class="board-section-label">Multimedia</div>
-      <ul class="spec-list">
-        <li><span class="label">HDMI</span><span class="value">2.0</span></li>
-        <li><span class="label">RGB LCD</span><span class="value">1× output</span></li>
-        <li><span class="label">CSI</span><span class="value">1× 8-bit parallel</span></li>
-      </ul>
-      <div class="board-section-label">Form Factor</div>
-      <ul class="spec-list">
-        <li><span class="label">Module</span><span class="value">SOM + carrier board</span></li>
-        <li><span class="label">SOM size</span><span class="value">67.63 × 36.81 mm</span></li>
-        <li><span class="label">OS</span><span class="value">Linux + Android</span></li>
-        <li><span class="label">Temp grade</span><span class="value">Commercial &amp; Industrial</span></li>
-      </ul>
-    </article>
-
-    <article class="board">
-      <div class="board-id">KB_iMX8MP_SOM/EVK</div>
-      <h3 class="board-name">i.MX 8M Plus Platform</h3>
-      <div class="board-tag">NXP Semiconductors · ARM-based · AI</div>
-      <div class="board-perf">
-        <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>4× Cortex-A53</em> @ 1.8 GHz + Cortex-M7 · <em>2.3 TOPS</em> NPU</div>
-      </div>
-      <p class="board-desc">NXP i.MX 8M Plus platform with integrated NPU. Quad-core Cortex-A53 plus a Cortex-M7 for real-time, 2.3 TOPS NPU, Vivante GC7000UL GPU. Designed for industrial AI applications: predictive maintenance, vision inspection, AI-enhanced HMI.</p>
-      <div class="board-section-label">Memory &amp; Storage</div>
-      <ul class="spec-list">
-        <li><span class="label">RAM</span><span class="value">3GB LPDDR4 (32-bit)</span></li>
-        <li><span class="label">eMMC</span><span class="value">8GB 5.1</span></li>
-        <li><span class="label">NOR Flash</span><span class="value">256 Mb SPI</span></li>
-        <li><span class="label">Expansion</span><span class="value">M.2 SSD</span></li>
-      </ul>
-      <div class="board-section-label">Connectivity</div>
-      <ul class="spec-list">
-        <li><span class="label">Ethernet</span><span class="value">1× Gigabit TSN + 1× RGMII</span></li>
-        <li><span class="label">USB</span><span class="value">2× USB 3.0 + 1× Type-C DRP</span></li>
-        <li><span class="label">Cellular</span><span class="value">5G M.2 + 4G Mini PCIe</span></li>
-        <li><span class="label">CAN</span><span class="value">2× CAN FD</span></li>
-      </ul>
-      <div class="board-section-label">Multimedia</div>
-      <ul class="spec-list">
-        <li><span class="label">HDMI</span><span class="value">2.0a · up to 4K</span></li>
-        <li><span class="label">MIPI DSI</span><span class="value">1× 4-lane</span></li>
-        <li><span class="label">LVDS</span><span class="value">2× LVDS</span></li>
-        <li><span class="label">MIPI CSI</span><span class="value">2× 4-lane CSI-2</span></li>
-      </ul>
-      <div class="board-section-label">Form Factor</div>
-      <ul class="spec-list">
-        <li><span class="label">Module</span><span class="value">SOM (gold finger) + carrier board</span></li>
-        <li><span class="label">OS</span><span class="value">Linux</span></li>
-        <li><span class="label">Temp grade</span><span class="value">Commercial &amp; Industrial (-40 to +85°C)</span></li>
-      </ul>
-    </article>
-
-    <article class="board">
-      <div class="board-id">KB_iMX93_SOM/EVK</div>
-      <h3 class="board-name">i.MX 93 Platform</h3>
-      <div class="board-tag">NXP Semiconductors · ARM-based · Low Power · AI</div>
-      <div class="board-perf">
-        <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>2× Cortex-A55</em> @ 1.7 GHz + Cortex-M33 @ 250 MHz · <em>0.5 TOPS</em> NPU</div>
-      </div>
-      <p class="board-desc">NXP i.MX 93 — the newest NXP platform in this catalog. Dual-core Cortex-A55 at 1.7 GHz plus a real-time Cortex-M33 at 250 MHz, with a 0.5 TOPS NPU supporting mixed INT8/INT16. Designed for cost-sensitive industrial IoT, smart sensors, building automation, HMI, and edge applications that need a small NPU footprint with NXP-grade long lifecycle.</p>
-      <div class="board-section-label">Memory &amp; Storage</div>
-      <ul class="spec-list">
-        <li><span class="label">RAM</span><span class="value">LPDDR4/4x 1/2GB</span></li>
-        <li><span class="label">eMMC</span><span class="value">16GB</span></li>
-        <li><span class="label">Other</span><span class="value">1× TF card slot</span></li>
-      </ul>
-      <div class="board-section-label">Connectivity</div>
-      <ul class="spec-list">
-        <li><span class="label">Ethernet</span><span class="value">2× Gigabit</span></li>
-        <li><span class="label">USB</span><span class="value">1× OTG · 3× Host (via hub)</span></li>
-        <li><span class="label">WiFi/BT</span><span class="value">SDIO module</span></li>
-        <li><span class="label">Cellular</span><span class="value">4G module connector</span></li>
-        <li><span class="label">CAN</span><span class="value">1× CAN</span></li>
-      </ul>
-      <div class="board-section-label">Multimedia</div>
-      <ul class="spec-list">
-        <li><span class="label">MIPI DSI</span><span class="value">1× output</span></li>
-        <li><span class="label">LVDS</span><span class="value">1× output</span></li>
-        <li><span class="label">VPU decode</span><span class="value">H.265 4K@30 · H.264 1080p@60</span></li>
-        <li><span class="label">VPU encode</span><span class="value">H.264 / H.265 1080p@30</span></li>
-        <li><span class="label">GPU</span><span class="value">2D accelerator + PXP compositor</span></li>
-      </ul>
-      <div class="board-section-label">Form Factor</div>
-      <ul class="spec-list">
-        <li><span class="label">Module</span><span class="value">SOM + carrier board</span></li>
-        <li><span class="label">SOM size</span><span class="value">51 × 42 mm</span></li>
-        <li><span class="label">OS</span><span class="value">Linux</span></li>
-        <li><span class="label">Temp grade</span><span class="value">Commercial &amp; Industrial (-40 to +85°C)</span></li>
-      </ul>
-    </article>
-
+  <div class="boards-grid" id="gongban-grid">
+    <!-- populated by assets/app.js from data/catalog.json -->
   </div>
+  <div class="grid-sentinel" id="grid-sentinel" aria-hidden="true"></div>
+  <button class="show-more" id="show-more" type="button" hidden>Show more</button>
+  <p class="catalogue-note">Catalogue entries are indexed from publishers' public pages; the site re-hosts nothing except the hand-curated design packs. Spotted an error or own a design that should be here? <a href="https://hansstam.eu">Get in touch via hansstam.eu</a>.</p>
 </section>
-
-<!-- ALLWINNER CATEGORY -->
-<section class="category" id="allwinner">
-  <div class="category-head">
-    <h2 class="category-title">Allwinner Platforms</h2>
-    <span class="category-meta">ARM-BASED · 3 BOARDS</span>
-  </div>
-  <div class="boards-grid">
-
-    <article class="board">
-      <div class="board-id">KB_A40I_SOM/EVK</div>
-      <h3 class="board-name">A40i Platform</h3>
-      <div class="board-tag">Allwinner Technology · ARM-based</div>
-      <div class="board-perf">
-        <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>4× Cortex-A7</em> @ 1.2 GHz</div>
-      </div>
-      <p class="board-desc">Entry-level Allwinner A40i platform. Quad-core Cortex-A7 — older but mature architecture. Cost-optimized for HMI, simple industrial controllers, and applications where Cortex-A7 performance is sufficient and BOM cost matters most.</p>
-      <div class="board-section-label">Interfaces &amp; Multimedia</div>
-      <ul class="spec-list">
-        <li><span class="label">Ethernet</span><span class="value">1× Gigabit + 1× Fast Ethernet</span></li>
-        <li><span class="label">USB</span><span class="value">USB 2.0 + Micro USB</span></li>
-        <li><span class="label">Cellular</span><span class="value">Mini PCIe (4G)</span></li>
-        <li><span class="label">Display</span><span class="value">HDMI, LVDS, MIPI DSI</span></li>
-        <li><span class="label">CSI</span><span class="value">2× 8-bit</span></li>
-        <li><span class="label">Storage</span><span class="value">SATA + TF card</span></li>
-        <li><span class="label">Industrial</span><span class="value">CAN, RS232, RS485</span></li>
-      </ul>
-      <div class="board-section-label">Form Factor</div>
-      <ul class="spec-list">
-        <li><span class="label">Module</span><span class="value">SOM + carrier board</span></li>
-        <li><span class="label">SOM size</span><span class="value">70 × 55 mm</span></li>
-      </ul>
-    </article>
-
-    <article class="board">
-      <div class="board-id">KB_T507_SOM/EVK</div>
-      <h3 class="board-name">T507 Platform</h3>
-      <div class="board-tag">Allwinner Technology · ARM-based · Automotive-grade</div>
-      <div class="board-perf">
-        <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>4× Cortex-A53</em> @ 1.5 GHz · G31 MP2 GPU · <em>4K@60</em> H.265 decode</div>
-      </div>
-      <p class="board-desc">Allwinner T507H — quad-core Cortex-A53 meeting automotive-grade AEC-Q100 qualification. 4K@60fps H.265/VP9/AVS2 decode and 4K@25fps H.264 encode. Integrated 3D noise reduction, automatic color adjustment, and keystone correction. General-purpose industrial platform, HMI, smart kiosks, in-vehicle infotainment, digital signage.</p>
-      <div class="board-section-label">Memory &amp; Storage</div>
-      <ul class="spec-list">
-        <li><span class="label">RAM</span><span class="value">LPDDR4 1/2/4GB</span></li>
-        <li><span class="label">eMMC</span><span class="value">16GB</span></li>
-        <li><span class="label">Other</span><span class="value">TF card + SATA 3.0</span></li>
-      </ul>
-      <div class="board-section-label">Connectivity</div>
-      <ul class="spec-list">
-        <li><span class="label">Ethernet</span><span class="value">1× Gigabit + 1× Fast</span></li>
-        <li><span class="label">USB</span><span class="value">1× OTG · 4× Host</span></li>
-        <li><span class="label">Cellular</span><span class="value">4G Mini PCIe</span></li>
-        <li><span class="label">WiFi/BT</span><span class="value">SDIO module</span></li>
-        <li><span class="label">CAN</span><span class="value">1× CAN</span></li>
-        <li><span class="label">Serial</span><span class="value">1× RS485 · 1× RS232</span></li>
-      </ul>
-      <div class="board-section-label">Multimedia</div>
-      <ul class="spec-list">
-        <li><span class="label">HDMI</span><span class="value">2.0</span></li>
-        <li><span class="label">LVDS</span><span class="value">1× 8-lane</span></li>
-        <li><span class="label">MIPI CSI</span><span class="value">1× 4-lane</span></li>
-        <li><span class="label">Parallel CSI</span><span class="value">1× 8-bit</span></li>
-        <li><span class="label">Video decode</span><span class="value">4K@60 H.265/VP9/AVS2</span></li>
-        <li><span class="label">Video encode</span><span class="value">4K@25 H.264</span></li>
-      </ul>
-      <div class="board-section-label">Form Factor</div>
-      <ul class="spec-list">
-        <li><span class="label">Module</span><span class="value">SOM + carrier board</span></li>
-        <li><span class="label">SOM size</span><span class="value">60 × 42 mm</span></li>
-        <li><span class="label">Qualification</span><span class="value">AEC-Q100 automotive</span></li>
-        <li><span class="label">Temp grade</span><span class="value">Commercial &amp; Industrial (-40 to +85°C)</span></li>
-      </ul>
-    </article>
-
-    <article class="board">
-      <div class="board-id">KB_T527_SOM/EVK</div>
-      <h3 class="board-name">T527 Platform</h3>
-      <div class="board-tag">Allwinner Technology · ARM-based · AI</div>
-      <div class="board-perf">
-        <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>4× Cortex-A55</em> @ 1.8 GHz + <em>4× Cortex-A55</em> @ 1.4 GHz · <em>2 TOPS</em> NPU</div>
-      </div>
-      <p class="board-desc">High-end Allwinner T527. Eight cores total (asymmetric big.LITTLE-style across A55 frequencies), 2 TOPS NPU. Positioned as Allwinner's answer to RK3568-class edge AI workloads, often at competitive BOM cost.</p>
-      <div class="board-section-label">Notes</div>
-      <ul class="spec-list">
-        <li><span class="label">Position</span><span class="value">High-end Allwinner with NPU</span></li>
-        <li><span class="label">Best for</span><span class="value">Edge AI, video analytics</span></li>
-        <li><span class="label">Form factor</span><span class="value">SOM + EVK</span></li>
-        <li><span class="label">Competes with</span><span class="value">RK3568</span></li>
-      </ul>
-      <p style="font-size:13px;color:var(--text-light);margin-top:16px;font-style:italic">Full specifications not detailed in the published manual page; contact Kingbrother for the complete EVK datasheet.</p>
-    </article>
-
-  </div>
-</section>
-
-<!-- NVIDIA CATEGORY -->
-<section class="category" id="nvidia">
-  <div class="category-head">
-    <h2 class="category-title">NVIDIA Jetson Platform</h2>
-    <span class="category-meta">ARM-BASED · PREMIUM AI · 1 BOARD</span>
-  </div>
-  <div class="boards-grid">
-
-    <article class="board">
-      <div class="board-id">KB-JTXavier-SOM/EVK</div>
-      <h3 class="board-name">Jetson AGX Xavier Platform</h3>
-      <div class="board-tag">NVIDIA · ARM-based · Premium AI · Industrial-only</div>
-      <div class="board-perf">
-        <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>8× Carmel ARMv8.2</em> @ 2.2 GHz · <em>32 TOPS</em> AI · 512-core Volta GPU + 64 Tensor Cores</div>
-      </div>
-      <p class="board-desc">The only NVIDIA option in this catalog. Eight-core Carmel ARMv8.2 paired with a 512-core Volta GPU and 64 Tensor Cores — 32 TOPS of AI compute, well beyond what Rockchip RK3588 or NXP i.MX 8M Plus offer. Industrial-grade only (-40 to +85°C). Built for autonomous machines, multi-camera vision AI, robotics, and heavy edge inference workloads where the silicon premium is justified.</p>
-      <div class="board-section-label">Memory &amp; Storage</div>
-      <ul class="spec-list">
-        <li><span class="label">RAM</span><span class="value">32GB LPDDR4x</span></li>
-        <li><span class="label">eMMC</span><span class="value">32GB</span></li>
-        <li><span class="label">Expansion</span><span class="value">M.2 SSD · 1× TF card</span></li>
-      </ul>
-      <div class="board-section-label">Connectivity</div>
-      <ul class="spec-list">
-        <li><span class="label">Ethernet</span><span class="value">1× Gigabit</span></li>
-        <li><span class="label">USB</span><span class="value">3× USB 3.0 Host</span></li>
-        <li><span class="label">Cellular</span><span class="value">5G M.2 + 4G Mini PCIe</span></li>
-        <li><span class="label">CAN</span><span class="value">2× CAN</span></li>
-        <li><span class="label">UART</span><span class="value">5× UART</span></li>
-        <li><span class="label">SDIO / SPI</span><span class="value">1× each</span></li>
-      </ul>
-      <div class="board-section-label">Multimedia</div>
-      <ul class="spec-list">
-        <li><span class="label">HDMI</span><span class="value">1.4 · 1080p@60fps</span></li>
-        <li><span class="label">MIPI CSI</span><span class="value">4× 4-lane CSI-2</span></li>
-        <li><span class="label">Video decode</span><span class="value">2× 8K@30 H.265</span></li>
-        <li><span class="label">Video encode</span><span class="value">8× 4K@30 H.265</span></li>
-        <li><span class="label">Audio</span><span class="value">3.5mm jack</span></li>
-      </ul>
-      <div class="board-section-label">Form Factor</div>
-      <ul class="spec-list">
-        <li><span class="label">Module</span><span class="value">SOM + carrier board</span></li>
-        <li><span class="label">Carrier size</span><span class="value">170 × 170 mm</span></li>
-        <li><span class="label">OS</span><span class="value">Linux (NVIDIA JetPack)</span></li>
-        <li><span class="label">Debug</span><span class="value">JTAG + USB-to-TTL</span></li>
-        <li><span class="label">Temp grade</span><span class="value">Industrial only (-40 to +85°C)</span></li>
-      </ul>
-    </article>
-
-  </div>
-</section>
-
-<!-- XILINX CATEGORY -->
-<section class="category" id="xilinx">
-  <div class="category-head">
-    <h2 class="category-title">Xilinx FPGA Platform</h2>
-    <span class="category-meta">FPGA-BASED · 1 BOARD</span>
-  </div>
-  <div class="boards-grid">
-
-    <article class="board">
-      <div class="board-id">KB_ZYNQ7020_SOM/EVK</div>
-      <h3 class="board-name">Zynq-7020 Platform</h3>
-      <div class="board-tag">Xilinx (AMD) · FPGA-based · SoC</div>
-      <div class="board-perf">
-        <div class="board-perf-label">Performance</div>
-        <div class="board-perf-spec"><em>2× Cortex-A9</em> @ 800 MHz · <em>Artix-7 FPGA</em> · 444K logic cells</div>
-      </div>
-      <p class="board-desc">The outlier in this catalog. Xilinx Zynq-7020 (XC7Z020) combines dual ARM Cortex-A9 cores with Artix-7 FPGA fabric on the same 28nm die. PS and PL can be developed independently — the PS configures and loads programs into the PL. Designed for applications that need real-time deterministic logic alongside an embedded Linux SoC: machine vision, motor control, software-defined radio, custom protocol bridges.</p>
-      <div class="board-section-label">Memory &amp; Storage</div>
-      <ul class="spec-list">
-        <li><span class="label">RAM</span><span class="value">1GB DDR3 (PS-side)</span></li>
-        <li><span class="label">eMMC</span><span class="value">8GB 5.1</span></li>
-        <li><span class="label">QSPI Flash</span><span class="value">256 Mb</span></li>
-        <li><span class="label">Other</span><span class="value">1× TF card slot</span></li>
-      </ul>
-      <div class="board-section-label">Connectivity</div>
-      <ul class="spec-list">
-        <li><span class="label">Ethernet</span><span class="value">1× Gigabit (onboard)</span></li>
-        <li><span class="label">USB</span><span class="value">1× USB 2.0 Host</span></li>
-        <li><span class="label">CAN</span><span class="value">2× CAN</span></li>
-        <li><span class="label">UART</span><span class="value">2× UART</span></li>
-        <li><span class="label">SPI</span><span class="value">1× SPI</span></li>
-        <li><span class="label">GPIO</span><span class="value">50× GPIO</span></li>
-      </ul>
-      <div class="board-section-label">Multimedia</div>
-      <ul class="spec-list">
-        <li><span class="label">HDMI</span><span class="value">1× output</span></li>
-      </ul>
-      <div class="board-section-label">Form Factor</div>
-      <ul class="spec-list">
-        <li><span class="label">Module</span><span class="value">SOM (DDR4 gold finger) + carrier</span></li>
-        <li><span class="label">SOM size</span><span class="value">50 × 50 mm</span></li>
-        <li><span class="label">Carrier width</span><span class="value">140 mm</span></li>
-        <li><span class="label">Process</span><span class="value">28 nm</span></li>
-        <li><span class="label">Debug</span><span class="value">JTAG + TTL UART</span></li>
-        <li><span class="label">Temp grade</span><span class="value">Commercial &amp; Industrial (-40 to +85°C)</span></li>
-      </ul>
-    </article>
-
-  </div>
-</section>
-
-<!-- INFO BANNER -->
-<div class="info-banner">
-  <h3>About these platforms</h3>
-  <p>The boards above are Kingbrother's published IDH catalog. <strong>SOM</strong> denotes the core System-on-Module (the compute card containing CPU, RAM, eMMC, and power); <strong>EVK</strong> and <strong>EBC</strong> denote the carrier boards used to evaluate or deploy the SOM. In production, customers typically integrate the SOM onto their own custom carrier designed for their enclosure.</p>
-  <p>These platforms sit at the &ldquo;industrial reference&rdquo; tier of the gongban ecosystem — between commodity consumer gongbans and fully bespoke designs. For background on the full system, see <a href="/what-are-gongbans.html">What are gongbans?</a> or read the book.</p>
-  <p>Hans is reachable at <a href="https://hansstam.eu">hansstam.eu</a> for sourcing advisory and direct introductions to Kingbrother's IDH team.</p>
-</div>
 
 </main>
 
@@ -584,5 +237,6 @@ footer a:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
   <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
 </footer>
 
+<script src="assets/app.js"></script>
 </body>
 </html>
