@@ -29,7 +29,7 @@ IDEAS = ROOT / "data" / "ideas.json"   # optional: ideas built on the boards (bu
 DB_DIR = ROOT / "db"
 DB_DIR.mkdir(exist_ok=True)
 
-ASSET_V = "20261114d"
+ASSET_V = "20261114e"
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">')
@@ -104,7 +104,8 @@ ACTIVE = ' class="active"'
 NAV_ITEMS = [("/start.html", "Start here", "start"), ("/what-are-gongbans.html", "What are gongbans?", "what"),
              ("/boards.html", "Catalogue", "boards"), ("/issuers.html", "Who makes them", "issuers"),
              ("/ideas.html", "Ideas", "ideas"), ("/playbook.html", "Playbook", "playbook")]
-NAV_TAIL = [("https://hansolo42.gumroad.com/l/gongbans", "The book", ""), ("https://hansstam.eu", "Hans Stam", "")]
+BOOK_URL = "https://hansolo42.gumroad.com/l/gongbans"   # the GONGBANS book; every "The book" link on the site uses this
+NAV_TAIL = [(BOOK_URL, "The book", ""), ("https://hansstam.eu", "Hans Stam", "")]
 HOME_EXTRA = [("#investors", "Investors"), ("#how-it-works", "How it works")]   # investor anchors, home page only
 
 
@@ -125,9 +126,69 @@ def nav(active="", extra=()):
 
 FOOTER = f'''<footer class="site-footer">
   <p class="foot-links"><a href="/">Home</a><a href="/start.html">Start here</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Who makes them</a><a href="/ideas.html">Ideas</a><a href="/playbook.html">Playbook</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
-  <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
+  <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="{BOOK_URL}">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
 </footer>
 <script src="/assets/site.js?v={ASSET_V}"></script>'''
+
+
+# ---------------------------------------------------------------------------
+# "Get this built" call-to-action (lead channel) — ONE place for the wording and the intake address.
+# To switch the intake from mailto to a web form later, change build_cta_href() only.
+# ---------------------------------------------------------------------------
+BUILD_CTA_EMAIL = "hans@supplychat.ai"
+BUILD_CTA_SUBJECT = "gongbans build request: {name}"
+BUILD_CTA_BODY = ("Hi, I'd like help building: {name} ({url})\n\n"
+                  "Who I am / company:\nWhat I want to build:\nQuantity (first batch / per year):\n"
+                  "Timeline:\nBudget range:\nWhere I am (country):")
+BUILD_CTA_LABEL = "Get this built"
+BUILD_CTA_TITLE = "Want this built?"
+BUILD_CTA_TEXT = "Get sourcing and manufacturing help from a team in Shenzhen and Europe."
+BUILD_CTA_BUTTON = "Get this built →"
+SITE = "https://www.gongbans.com/"
+
+
+def build_cta_href(name, canonical):
+    """mailto: link for one idea / board / pack. `canonical` = page path relative to the site root."""
+    url = SITE + canonical
+    subject = quote(BUILD_CTA_SUBJECT.format(name=name), safe="")
+    body = quote(BUILD_CTA_BODY.format(name=name, url=url), safe="")
+    return f"mailto:{BUILD_CTA_EMAIL}?subject={subject}&body={body}"
+
+
+def build_cta(name, canonical, note_html=""):
+    """The CTA box. Exactly one per idea, start-pack and board page. `note_html` = optional small print under the text."""
+    note = f'\n      <p class="note">{note_html}</p>' if note_html else ""
+    return f'''  <section class="dsection build-cta" id="get-built">
+    <div class="dsection-label">{e(BUILD_CTA_LABEL)}</div>
+    <div class="build-cta-box">
+      <div class="build-cta-text">
+        <h2>{e(BUILD_CTA_TITLE)}</h2>
+        <p>{e(BUILD_CTA_TEXT)}</p>{note}
+      </div>
+      <a class="btn primary" href="{e(build_cta_href(name, canonical))}">{e(BUILD_CTA_BUTTON)}</a>
+    </div>
+  </section>'''
+
+
+# ---------------------------------------------------------------------------
+# GONGBANS book box (start.html via <!-- book-box --> markers, every start pack). Wording = what the site already
+# says about the book (what-are-gongbans.html, start.html). No cover image exists in the repo, so none is shown.
+# ---------------------------------------------------------------------------
+BOOK_TITLE = "GONGBANS — the book"
+BOOK_TEXT = ("The book behind this site: it explains the system behind the boards, the economics, "
+             "and how to navigate it as a founder.")
+BOOK_BUTTON = "Get the book →"
+
+
+def book_box():
+    return f'''<aside class="book-box">
+    <div class="book-box-text">
+      <div class="dsection-label">The book</div>
+      <h3>{e(BOOK_TITLE)}</h3>
+      <p>{e(BOOK_TEXT)}</p>
+    </div>
+    <a class="btn outline" href="{BOOK_URL}" target="_blank" rel="noopener">{e(BOOK_BUTTON)}</a>
+  </aside>'''
 
 
 # ---------------------------------------------------------------------------
@@ -439,6 +500,7 @@ def render_board(g, index, ideas_by_board=None):
 {source_section(g)}
 {hans_note_section(g)}
 {related_section(g, index)}{ideas_section(g, ideas_by_board or {})}
+{build_cta(g["name"], f"db/{g['slug']}.html")}
   <p class="catalogue-note">Entry <code>{e(g["slug"])}</code>{" · status: " + e(status)}. Catalogue entries are indexed from publishers' public pages; the site re-hosts nothing except the hand-curated design packs. Spotted an error? <a href="https://hansstam.eu">Get in touch via hansstam.eu</a>.</p>
 </main>
 
@@ -570,6 +632,7 @@ def patch_chrome(path, active, extra=()):
     out, n2 = re.subn(r'<footer class="site-footer">.*?</footer>\s*<script src="/assets/site\.js[^"]*"></script>',
                       lambda m: FOOTER, out, count=1, flags=re.S)
     out = re.sub(r'(/assets/[a-z]+\.(?:css|js)\?v=)[0-9A-Za-z]+', lambda m: m.group(1) + ASSET_V, out)
+    out = re.sub(r'<!-- book-box -->.*?<!-- /book-box -->', lambda m: f"<!-- book-box -->\n  {book_box()}\n  <!-- /book-box -->", out, flags=re.S)
     if out != src:
         path.write_text(out, encoding="utf-8")
     return n1 + n2

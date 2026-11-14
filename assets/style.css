@@ -475,6 +475,23 @@ main.detail.startpack{max-width:960px}
 .pack-body pre.email code{background:none;border:0;padding:0;color:inherit;font-size:inherit}
 .pack-body em{color:var(--text-light)}
 main.detail.playbook{max-width:900px}
+/* "Get this built" CTA (one per idea / start pack / board page) + GONGBANS book box */
+.build-cta-box{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 28px;background:var(--green-deeper);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;padding:28px 32px}
+.build-cta-text{flex:1;min-width:240px}
+.build-cta-box h2{font-family:var(--font-display);font-size:clamp(22px,2.6vw,28px);color:var(--white);line-height:1.2;margin:0 0 8px}
+.build-cta-box p{font-size:16px;color:rgba(255,255,255,0.72);line-height:1.6;margin:0}
+.build-cta-box p.note{font-size:13px;color:rgba(255,255,255,0.5);margin-top:10px}
+.build-cta-box p a{color:var(--gold);border-bottom:1px solid rgba(201,168,76,0.35)}
+.build-cta-box p a:hover{border-bottom-color:var(--gold)}
+.build-cta-box .btn.primary{flex-shrink:0;font-size:15px;padding:14px 30px;white-space:nowrap}
+.book-box{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;background:var(--white);border:1px solid rgba(201,168,76,0.45);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;padding:20px 24px;margin:0 0 40px}
+.book-box-text{flex:1;min-width:220px}
+.book-box .dsection-label{margin-bottom:6px}
+.book-box h3{font-family:var(--font-display);font-size:22px;color:var(--text);line-height:1.2;margin:0 0 6px;font-weight:400}
+.book-box p{font-size:15px;color:var(--text-mid);line-height:1.6;margin:0}
+.book-box .btn.outline{flex-shrink:0;white-space:nowrap}
+@media(max-width:600px){.build-cta-box{padding:22px 20px}.build-cta-box .btn.primary,.book-box .btn.outline{width:100%;justify-content:center;white-space:normal}.book-box{padding:18px 18px}}
+
 .playbook .pb-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.5px}
 .playbook .pb-toc a{padding:6px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.12);background:var(--white);color:var(--text-mid)}
 .playbook .pb-toc a:hover{border-color:var(--gold-dim);color:var(--text)}

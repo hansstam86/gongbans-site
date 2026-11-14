@@ -24,7 +24,7 @@ from html import escape
 from pathlib import Path
 from urllib.parse import quote
 
-from build_detail_pages import FOOTER, e, head, nav
+from build_detail_pages import FOOTER, book_box, build_cta, e, head, nav
 
 ROOT = Path(__file__).parent
 PACK_DIR = ROOT / "startpacks"
@@ -279,13 +279,9 @@ def render_pack(slug, md, idea, n_total):
 {body_html}
   </article>
 
-  <section class="dsection" id="help">
-    <div class="dsection-label">Building it?</div>
-    <div class="hans-note">
-      <div class="hans-note-label">Want help sourcing or building this?</div>
-      <p>The boards are real and the path is written down; the rest is work. Never built hardware? Start with the <a href="/playbook.html">zero-experience founder playbook</a>: samples, the first quote, CE/FCC, customs, logistics and the kill question, in order. If you take this one on, or want a second pair of eyes on the start kit, <a href="https://hansstam.eu">talk to Hans via hansstam.eu</a>. Board facts come from the <a href="/boards.html">catalogue</a>; everything else in this pack is an estimate.</p>
-    </div>
-  </section>
+  {book_box()}
+
+{build_cta(name, f"startpacks/{slug}.html", 'Never built hardware? Start with the <a href="/playbook.html">zero-experience founder playbook</a>: samples, the first quote, CE/FCC, customs, logistics and the kill question, in order. Board facts come from the <a href="/boards.html">catalogue</a>; everything else in this pack is an estimate.')}
 
   <p class="catalogue-note">Start pack <code>{e(slug)}</code> · written by the GONGBANS inventor from the public catalogue and public sources. {e(DISCLAIMER)} <a href="/ideas/{e(slug)}.html">Idea page</a> · <a href="/startpacks/{e(slug)}.md" download>Download as Markdown</a> · <a href="/ideas.html#startpacks">All {n_total} start packs →</a></p>
 </main>
