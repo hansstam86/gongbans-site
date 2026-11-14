@@ -40,53 +40,6 @@
     ]
    ]
   },
-  "mould-risk-monitor": {
-   "verdict": "WEAK TO UNCERTAIN",
-   "summary": "A real market for mould sensing exists, but it is B2B/B2G: landlords and housing associations buying fleets of sensors with dashboards (Switchee, Vericon MouldSense, Aico HomeLINK, Connexin, NRLA ResiSure). No evidence was found of DE/NL consumers or tenants buying a single mould-documentation device; cheap humidity sensors (Aqara T1/W100, roughly €15–41) already cover basic alerting.",
-   "risk": "Tenants may see the device as surveillance: a UK NRLA source notes landlords find tenants often suspect such sensors exist to blame them. German legal sources confirm mould disputes are common and measurement is legally relevant, but nothing shows tenants currently buy devices for this.",
-   "correction": {
-    "title": "Audience mismatch found in research",
-    "text": "The original kill question tested the wrong buyer: a tenant survey about a €59 puck. The research found the buyers who already pay for mould sensing are landlords and housing associations buying fleets with a dashboard, and that tenants may distrust a device that documents their ventilation. The kill question in section 2 now tests the housing-association / landlord buyer first; the tenant-survey version is kept as a secondary signal.",
-    "original_kill_question": "Do 30 of 300 tenants in one housing association's survey say they would pay €59 for a device that documents ventilation behaviour?"
-   },
-   "rows": [
-    [
-     "Switchee",
-     "Fleet sensors + dashboard sold to UK social landlords",
-     "The real buyer exists, and is B2B/B2G"
-    ],
-    [
-     "Vericon MouldSense",
-     "Mould-risk sensing for landlords",
-     "Same"
-    ],
-    [
-     "Aico HomeLINK",
-     "Connected home-environment sensing for housing providers",
-     "Same"
-    ],
-    [
-     "Connexin",
-     "IoT sensing for housing associations",
-     "Same"
-    ],
-    [
-     "NRLA ResiSure (UK landlords' association)",
-     "Landlord-side sensing offer",
-     "NRLA source also notes tenants often suspect such sensors exist to blame them"
-    ],
-    [
-     "Aqara T1 / W100 and similar (roughly €15–41)",
-     "Generic temperature/humidity sensors",
-     "Cover basic alerting at a fraction of the price; the wall-surface measurement is the only differentiator left"
-    ],
-    [
-     "German legal sources on mould disputes",
-     "Disputes common; measurement legally relevant",
-     "Relevance confirmed, but no sign tenants buy devices for it"
-    ]
-   ]
-  },
   "smiley-terminal": {
    "verdict": "LIKELY",
    "summary": "HappyOrNot, the dominant incumbent, is confirmed subscription-only at roughly $69–100 per kiosk per month (Fox Business, Software Advice, Spendbase); four terminals at $69 a month is about $3,300 a year against a one-off buy, so payback is under two months. No competitor was found selling a comparable buy-once terminal (SurveyStance and AirVote are subscription or freemium).",
@@ -919,7 +872,8 @@
    "ros-trainer",
    "trail-talker",
    "trap-check",
-   "vibration-health-sticker"
+   "vibration-health-sticker",
+   "mould-risk-monitor"
   ],
   "note": "Entries kept in git history."
  }

@@ -64,70 +64,6 @@
    "score_total": 19
   },
   {
-   "slug": "mould-risk-monitor",
-   "title": "Mould-Risk Monitor",
-   "category": "Smart home",
-   "pitch": "A wall puck that measures room humidity and the actual surface temperature of the cold outer wall, computes the dew point and tells tenants when to ventilate — before mould appears.",
-   "audience": "Housing associations and landlords in DE/NL/UK buying sensor fleets with a dashboard (the buyers who already pay for mould sensing); tenants as users, not buyers; building-energy consultants.",
-   "why_now": "Energy-saving behaviour (less heating, less ventilation) is driving mould complaints; landlord-tenant disputes hinge on who ventilated. A device that logs the physics settles the argument.",
-   "built_from": [
-    {
-     "board_slug": "seeed-grove-tempandhumi-sensor-sht31",
-     "role": "room T/RH reference",
-     "board_name": "Seeed Grove-TempAndHumi Sensor-SHT31",
-     "issuer": "Seeed Studio",
-     "open_files": "schematic"
-    },
-    {
-     "board_slug": "m5stack-unit-ncir2",
-     "role": "non-contact surface temperature of the wall",
-     "board_name": "M5Stack Unit NCIR2 (U150)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-unit-env-pro",
-     "role": "alternative high-accuracy environmental sensor",
-     "board_name": "M5Stack Unit ENV-Pro (U169)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-stamp-c3",
-     "role": "WiFi/BLE MCU",
-     "board_name": "M5Stack Stamp-C3 (C056-B)",
-     "issuer": "M5Stack",
-     "open_files": "pcb"
-    }
-   ],
-   "whats_new": "Dew-point-on-surface logic, traffic-light LED, 90-day local log with PDF export for disputes, optional LoRaWAN variant for housing associations.",
-   "effort_weeks_est": "8–12",
-   "bom_eur_est": "12–18",
-   "price_eur_est": "59–79",
-   "certification": "RED + EN 18031 if connected, EMC, EN 62368-1, CRA; battery → Battery Regulation.",
-   "kill_question": "Do 3 housing associations or landlords (500+ units each) sign a paid pilot of 50 wall sensors with the dashboard, at €59–79 per unit plus a per-unit platform fee, within 8 weeks, with tenants told in writing what it measures and why? Pass = 3 signed pilots. Secondary signal only: the original tenant survey (30 of 300 tenants saying they would pay €59).",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 4,
-    "buildability": 5,
-    "margin": 4,
-    "speed": 5
-   },
-   "tags": [
-    "smart-home",
-    "air",
-    "building",
-    "b2b"
-   ],
-   "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 18,
-   "kill_question_original": "Do 30 of 300 tenants in one housing association's survey say they would pay €59 for a device that documents ventilation behaviour?",
-   "market_correction": {
-    "title": "Audience mismatch found in research (November 2026)",
-    "text": "The original kill question tested tenants as buyers of a €59 puck. External research found that the buyers who already pay for mould sensing are landlords and housing associations buying fleets with a dashboard (Switchee, Vericon MouldSense, Aico HomeLINK, Connexin, NRLA ResiSure), that no DE/NL evidence shows tenants buying such devices, and that tenants may distrust a device that documents their ventilation. The kill question now tests the housing-association / landlord buyer first; the tenant survey is kept as a secondary signal. As researched November 2026 by web search; verify before relying on it."
-   }
-  },
-  {
    "slug": "smiley-terminal",
    "title": "Smiley Terminal, No Subscription",
    "category": "Retail & POS",
@@ -2114,7 +2050,7 @@
  ],
  "removed_after_market_check": {
   "date": "2026-11-14",
-  "note": "15 ideas with a WEAK external market verdict withdrawn from the site at Hans's request; full records in git history (commit before this change).",
+  "note": "16 ideas with a WEAK external market verdict withdrawn from the site at Hans's request (15 on 2026-11-14, mould-risk-monitor the same day after a separate decision); full records in git history.",
   "slugs": [
    "bedroom-audit-box",
    "classroom-geiger-kit",
@@ -2130,7 +2066,8 @@
    "ros-trainer",
    "trail-talker",
    "trap-check",
-   "vibration-health-sticker"
+   "vibration-health-sticker",
+   "mould-risk-monitor"
   ]
  }
 }
