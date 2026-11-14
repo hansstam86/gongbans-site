@@ -2,44 +2,70 @@
 
 A static, no-build database of Chinese factory reference designs (gongbans / 公板) — the off-the-shelf hardware that quietly powers consumer electronics. Companion to the book [GONGBANS](https://hansolo42.gumroad.com/l/gongbans).
 
+The catalogue lives at `boards.html`. It holds Hans's 16 hand-curated ATU gongban kits (3 with full design packs) plus 1,100+ boards imported from the private `gongban.db` master database (`build_catalog.py`), with one detail page per board under `db/`. `issuers.html` lists who publishes them plus a directory of Shenzhen solution houses. The hand-written Kingbrother industrial SOM page is kept at `boards-kingbrother.html`. The whole site shares one light stylesheet, `assets/style.css`.
+
 ## What's here
 
 ```
-gongbans-db/
-├── index.html            ← catalog, all 16 entries, filter + search
-├── data/gongbans.json    ← the database (single source of truth)
-├── db/                   ← one HTML page per gongban (auto-generated)
-├── files/                ← downloadable hardware packs
-│   ├── uv-sensor-veml6075-lpc824/        [SCH PCB Gerber BOM Spec PPT + 8 datasheets]
-│   ├── gesture-vcnl4020-lpc824/          [SCH PCB Gerber BOM Spec PPT + 5 datasheets]
-│   └── ble-reference-design-qn9022/      [SCH PCB Gerber BOM Spec PPT + datasheets]
+gongbans-site/
+├── index.html              ← landing page (investor briefing + catalogue stats)
+├── boards.html             ← catalogue: category / issuer / files / openness chips + search, 60 cards at a time
+├── issuers.html            ← publishers of the boards + Shenzhen solution-house directory (generated)
+├── boards-kingbrother.html ← Kingbrother IDH industrial SOM platforms (hand-written)
+├── what-are-gongbans.html  ← essay
+├── data/gongbans.json      ← the database (single source of truth; curated + imported entries)
+├── data/catalog.json       ← slim copy for the grid (generated, do not edit)
+├── data/issuers.json       ← publishers + solution houses, public fields only (generated)
+├── data/stats.json         ← counts patched into the pages (generated)
+├── db/                     ← one HTML page per board (generated)
+├── files/                  ← downloadable hardware packs for the 3 curated full-pack entries
 ├── assets/
-│   ├── style.css         ← PCB-aesthetic theme (solder mask green, ENIG gold, copper)
-│   └── app.js            ← catalog filter / search (vanilla, no framework)
-├── build_detail_pages.py ← regenerates /db/*.html from gongbans.json
+│   ├── style.css           ← the one shared stylesheet (light theme of the landing page)
+│   ├── app.js              ← catalogue filter / search / incremental render (vanilla)
+│   └── site.js             ← mobile nav + scroll reveal
+├── build_catalog.py        ← gongban.db → data/*.json
+├── build_detail_pages.py   ← data/*.json → db/*.html, issuers.html, stats in the hand-written pages
 └── README.md
 ```
 
 ## Run locally
 
 ```bash
-cd gongbans-db
+cd gongbans-site
 python3 -m http.server 8000
-# open http://localhost:8000
+# open http://localhost:8000/boards.html
 ```
 
-(Opening `index.html` directly via `file://` won't work — `fetch()` of `data/gongbans.json` needs a real HTTP origin.)
+(Opening the pages via `file://` won't work — the catalogue `fetch()`es `data/catalog.json` and the
+stylesheet is linked as `/assets/style.css`.)
 
-## Adding a new gongban
+## Rebuilding from the master database
 
-1. Add an entry to `data/gongbans.json` following the schema (slug, project_no, name, category, chip, etc.).
+```bash
+python3 build_catalog.py        # reads ~/Projects/gongban-db/gongban.db (or pass a path)
+python3 build_detail_pages.py   # regenerates db/*.html + issuers.html, patches stats, removes stale pages
+```
+
+`build_catalog.py` keeps every hand-curated entry (anything without `"origin": "db"`) byte-for-byte,
+drops and re-imports all database entries, and writes `data/gongbans.json`, the slim `data/catalog.json`
+the grid loads, `data/issuers.json` and `data/stats.json`. It reads `boards`, `files`, `sources`
+(name/type/url only) and the public columns of `solution_houses` (rows with `excluded` set are skipped).
+The contacts, outreach, fetch_log and fairs tables are never exported. Boards tied to ride-sharing fleets,
+vehicle tracking and micromobility are excluded, e-mail addresses and named contacts are scrubbed from
+notes, OSHWHub author handles are not published (and project links are withheld where the handle looks like
+a phone/QQ number). The ~30 database categories are grouped into the catalogue's ten chips
+(`CATEGORY_MAP` in the script); the original category is kept in `db_category`.
+
+## Adding a new hand-curated gongban
+
+1. Add an entry to `data/gongbans.json` following the schema (slug, project_no, name, category, chip, etc.). Do not set `origin`.
 2. If you have hardware files, drop them in `files/<slug>/` with conventional names: `schematic.sch`, `pcb.pcb`, `gerber.zip`, `bom.xlsx`, `spec.docx`, `presentation.pptx`, `datasheets/*.pdf`.
 3. Set `files_available: true` in the manifest.
-4. Run `python3 build_detail_pages.py` to regenerate detail pages.
+4. Run `python3 build_catalog.py` (to refresh `data/catalog.json` and the stats) and `python3 build_detail_pages.py`.
 
 ## Editing Hans's sourcing notes
 
-Right now most entries say `"hans_notes": "Hans note pending — ..."`. Each is a placeholder waiting for your real sourcing voice. The detail-page renderer flags pending notes visually so you can see at a glance which ones still need writing.
+Right now most curated entries say `"hans_notes": "Hans note pending — ..."` (imported entries have no note and render none). Each is a placeholder waiting for your real sourcing voice. The detail-page renderer flags pending notes visually so you can see at a glance which ones still need writing.
 
 When you write a real note, the markup automatically switches from "Sourcing Note — Pending" to "Hans's Sourcing Note" in red, with the note styled as a real callout.
 
@@ -67,14 +93,17 @@ When you write a real note, the markup automatically switches from "Sourcing Not
 }
 ```
 
-## Deploy to GitHub Pages
+Entries imported from the database carry extra fields, all optional and left empty when unknown:
+`origin: "db"`, `db_slug`, `issuer`, `issuer_type`, `source_name`, `source_url`, `db_category`,
+`openness` / `openness_label`, `year`, `region`, `license`, `files_avail` (kinds the issuer publishes),
+`files_at_source` (links to the issuer's own files — nothing is re-hosted), `status`
+(`source-files` | `metadata-only`), `notes` (issuer/ingestion notes) and `hint` (product name taken
+from the schematic file name, DFRobot only).
 
-This is the same setup as the existing gongbans.com (vanilla static, GitHub Pages). Either:
+## Deploy
 
-- **Replace** the current gongbans.com repo with this one (book sales page becomes one section linked from the new landing).
-- Or **subdirectory** approach: drop this whole folder as `/db/` inside the existing repo and it serves at `gongbans.com/db/`.
-
-Recommend the first: this becomes the new gongbans.com identity, with the book linked prominently in the header (already wired up — see `index.html` nav). The DB is the lead magnet, the book is the depth.
+GitHub Pages serves `main` from the repo root at https://www.gongbans.com (custom domain via `CNAME`).
+Commit the generated output and push `main`; there is no build on the Pages side.
 
 ## Why static / no framework
 
@@ -88,7 +117,7 @@ Recommend the first: this becomes the new gongbans.com identity, with the book l
 
 - Add **photos** of populated boards (each card has a slot for one).
 - Add the firmware source repos as Git submodules under `/firmware/<slug>/`.
-- Build a **DXT-style firmware browser** (the BLE Reference Design has full WeChat AirSync SDK, would be useful as a reference).
+- Build a **DXT-style firmware browser** (the BLE Reference Design ships the Weixin AirSync SDK, would be useful as a reference).
 - Add an **RSS/Atom feed** when new gongbans get added.
 - Hook up **Pagefind** for full-text search across Hans's sourcing notes (only when there's enough note content to make it worthwhile — ~15+ filled notes).
 

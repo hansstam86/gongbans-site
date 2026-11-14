@@ -3,196 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UV Sensor Demo (VEML6075 + LPC824) — P15-096 · GONGBANS DB</title>
+<title>UV Sensor Demo (VEML6075 + LPC824) — P15-096 · GONGBANS catalogue</title>
 <meta name="description" content="Reference design for UV index measurement. Useful for wearables (sunburn warning), outdoor environmental monitoring, smart hat / umbrella products.">
-<link rel="stylesheet" href="../assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a3d22'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23d4b06a' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%230a3d22'/%3E%3C/svg%3E">
+<meta property="og:title" content="UV Sensor Demo (VEML6075 + LPC824) — P15-096 · GONGBANS catalogue">
+<meta property="og:description" content="Reference design for UV index measurement. Useful for wearables (sunburn warning), outdoor environmental monitoring, smart hat / umbrella products.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gongbans.com/db/uv-sensor-veml6075-lpc824.html">
+<link rel="canonical" href="https://www.gongbans.com/db/uv-sensor-veml6075-lpc824.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23021e14'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23c9a84c' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23c9a84c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=20261114">
 </head>
 <body>
-
-<header class="site-header">
-  <div class="site-header-inner">
-    <a href="../index.html" class="brand">
-      <span class="brand-mark">GONGBANS<span style="color: var(--silkscreen);">/</span>DB</span>
-      <span class="brand-sub">公板数据库</span>
-    </a>
-    <nav class="site-nav">
-      <a href="../index.html">Catalog</a>
-      <a href="https://hansolo42.gumroad.com/l/gongbans" target="_blank" rel="noopener">The Book ↗</a>
-      <a href="https://hansstam.eu" target="_blank" rel="noopener">Hans</a>
-    </nav>
+<nav class="site-nav">
+  <a href="/" class="logo">GONGBANS<span>/公板</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
+  <div class="links" id="site-links">
+    <a href="/what-are-gongbans.html">What are gongbans?</a>
+    <a href="/boards.html" class="active">Catalogue</a>
+    <a href="/issuers.html">Issuers</a>
+    <a href="https://hansolo42.gumroad.com/l/gongbans">The book</a>
+    <a href="https://hansstam.eu">Hans Stam</a>
+    <a href="/#download" class="cta">Download PDF</a>
   </div>
-</header>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="crumbs"><a href="/boards.html">Catalogue</a><span class="sep">/</span><a href="/boards.html#cat=IoT">IoT</a><span class="sep">/</span><span>P15-096</span></div>
+    <div class="header-id">P15-096</div>
+    <h1>UV Sensor Demo (VEML6075 + LPC824)</h1>
+    <p class="sub">Reference design for UV index measurement. Useful for wearables (sunburn warning), outdoor environmental monitoring, smart hat / umbrella products.</p>
+  </div>
+</div>
 
 <main class="detail">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="../index.html">Catalog</a>
-    <span class="breadcrumb-sep">/</span>
-    <span>IoT</span>
-    <span class="breadcrumb-sep">/</span>
-    <span>UV Sensor Demo (VEML6075 + LPC824)</span>
-  </nav>
+  <div class="detail-meta"><div class="detail-meta-item"><span class="detail-meta-label">Category</span><span class="detail-meta-value"><a href="/boards.html#cat=IoT">IoT</a></span></div><div class="detail-meta-item"><span class="detail-meta-label">Issuer</span><span class="detail-meta-value">ATU (Taiwan distributor) · hand-curated kit</span></div><div class="detail-meta-item"><span class="detail-meta-label">Chip</span><span class="detail-meta-value gold">VEML6075</span></div><div class="detail-meta-item"><span class="detail-meta-label">Chip brand</span><span class="detail-meta-value">Vishay</span></div><div class="detail-meta-item"><span class="detail-meta-label">Host MCU</span><span class="detail-meta-value gold">LPC824JHI33</span></div><div class="detail-meta-item"><span class="detail-meta-label">Chip price · 5k pcs</span><span class="detail-meta-value gold">$1.09</span></div><div class="detail-meta-item"><span class="detail-meta-label">Openness</span><span class="detail-meta-value"><span class="openness-pill ">Hosted on this site</span></span></div><div class="detail-meta-item"><span class="detail-meta-label">Files</span><span class="detail-meta-value">Bill of materials, Component datasheets, Gerber files, PCB layout, Reference presentation, Schematic, Specification / manual</span></div><div class="detail-meta-item"><span class="detail-meta-label">Datasheet</span><span class="detail-meta-value"><a href="https://www.vishay.com/docs/84304/veml6075.pdf" target="_blank" rel="noopener">PDF ↗</a></span></div></div>
 
-  <span class="detail-projno">P15-096</span>
-  <h1 class="detail-title">UV Sensor Demo (VEML6075 + LPC824)</h1>
+  <section class="dsection" id="application">
+    <div class="dsection-label">What it is</div>
+    <h2>Application</h2>
+    <p>Reference design for UV index measurement. Useful for wearables (sunburn warning), outdoor environmental monitoring, smart hat / umbrella products.</p>
+    <div class="tags">TAGS · sensor · uv · i2c · demo-board</div>
+  </section>
 
-  <div class="detail-meta">
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Category</span>
-      <span class="detail-meta-value">IoT</span>
+  <section class="dsection" id="silicon">
+    <div class="dsection-label">Silicon</div>
+    <h2>Hero chip</h2>
+    <div class="chip-card">
+      <div class="chip-brand">Vishay</div>
+      <div class="chip-name">VEML6075</div>
+      <div class="chip-role">UV-A + UV-B light sensor (I²C)</div>
     </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Chip</span>
-      <span class="detail-meta-value gold">VEML6075</span>
-    </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Brand</span>
-      <span class="detail-meta-value">Vishay</span>
-    </div>
-    
-        <div class="detail-meta-item">
-          <span class="detail-meta-label">Host MCU</span>
-          <span class="detail-meta-value">LPC824JHI33</span>
-        </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Chip price · 5k pcs</span>
-      <span class="detail-meta-value gold">$1.09</span>
-    </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Datasheet</span>
-      <span class="detail-meta-value">
-        <a href="https://www.vishay.com/docs/84304/veml6075.pdf" target="_blank" rel="noopener" class="ext" style="color: var(--enig-bright);">Vishay PDF</a>
-      </span>
-    </div>
-  </div>
+    <p>Host MCU: <strong>LPC824JHI33</strong> (NXP).</p><p style="margin-top:16px">Spot price reference at 5k-unit volume: <strong>$1.09</strong>. Actual price depends on distributor (Avnet / Arrow / Future / WPG / local) and current allocation. For the real-time China market check <a href="https://www.hqew.com" target="_blank" rel="noopener">hqew.com</a> or <a href="https://www.lcsc.com" target="_blank" rel="noopener">LCSC</a>.</p><p><a href="https://www.vishay.com/docs/84304/veml6075.pdf" target="_blank" rel="noopener">Vishay datasheet (PDF)</a></p>
+  </section>
 
-  <section class="section" id="application">
-    <h3 class="section-label">Application</h3>
-    <div class="section-body">
-      <p>Reference design for UV index measurement. Useful for wearables (sunburn warning), outdoor environmental monitoring, smart hat / umbrella products.</p>
-      <p style='margin-top: 1rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--silkscreen-faded); letter-spacing: 0.08em;'>TAGS: sensor · uv · i2c · demo-board</p>
+  <section class="dsection" id="files">
+    <div class="dsection-label">Files · hosted on this site</div>
+    <h2>Full design pack</h2>
+    <p>Schematic, PCB layout, Gerbers, BOM and the original spec document, as handed over by the distributor. Use it as a starting point, not a drop-in production design.</p>
+    <div class="files-list"><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/schematic.sch" download><span class="file-icon">SCH</span><span class="file-name">Schematic<small>Protel / Altium .sch · 262 KB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/pcb.pcb" download><span class="file-icon">PCB</span><span class="file-name">PCB layout<small>Protel / Altium .pcb · 1.0 MB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/gerber.zip" download><span class="file-icon">GBR</span><span class="file-name">Gerber files<small>ZIP · 555 KB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/bom.xlsx" download><span class="file-icon">BOM</span><span class="file-name">Bill of materials<small>.xlsx · 17 KB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/spec.docx" download><span class="file-icon">SPEC</span><span class="file-name">Specification document<small>.docx · 17 KB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/presentation.pptx" download><span class="file-icon">PPT</span><span class="file-name">Reference presentation<small>.pptx · 1.3 MB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/datasheets/Designing VEML6075 into an Application 84339 150909.pdf" download><span class="file-icon">DS</span><span class="file-name">Designing VEML6075 into an Application 84339 150909.pdf<small>datasheet · 1.0 MB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/datasheets/LPC11U3X.pdf" download><span class="file-icon">DS</span><span class="file-name">LPC11U3X.pdf<small>datasheet · 1.9 MB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/datasheets/LPC82X.pdf" download><span class="file-icon">DS</span><span class="file-name">LPC82X.pdf<small>datasheet · 2.0 MB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/datasheets/PRTR5V0U2X.pdf" download><span class="file-icon">DS</span><span class="file-name">PRTR5V0U2X.pdf<small>datasheet · 77 KB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/datasheets/TCR2EF33_datasheet_en_20140301.pdf" download><span class="file-icon">DS</span><span class="file-name">TCR2EF33_datasheet_en_20140301.pdf<small>datasheet · 1.2 MB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/datasheets/UM10462.pdf" download><span class="file-icon">DS</span><span class="file-name">UM10462.pdf<small>datasheet · 3.7 MB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/datasheets/UM10800.pdf" download><span class="file-icon">DS</span><span class="file-name">UM10800.pdf<small>datasheet · 3.4 MB</small></span></a><a class="file-link" href="/files/uv-sensor-veml6075-lpc824/datasheets/VEML6075_84304_20150519_Preliminary.pdf" download><span class="file-icon">DS</span><span class="file-name">VEML6075_84304_20150519_Preliminary.pdf<small>datasheet · 299 KB</small></span></a></div>
+  </section>
+
+  <section class="dsection" id="bom">
+    <div class="dsection-label">BOM</div>
+    <h2>BOM summary</h2>
+    <p>Top-level components only. The full bill of materials — every passive, value, package and brand reference — is in the downloadable XLSX above.</p>
+    <table class="kv-table"><tbody><tr><td>u1 main mcu</td><td>LPC11U35FHI33 (USB bridge MCU)</td></tr><tr><td>u4 target mcu</td><td>LPC824JHI33 (Cortex-M0+, the actual gongban target)</td></tr><tr><td>u5 sensor</td><td>VEML6075 (UV sensor)</td></tr><tr><td>u3 ldo</td><td>TCR2EF33 (5V→3.3V)</td></tr><tr><td>u2 esd</td><td>PRTR5V0U2X</td></tr><tr><td>display</td><td>128×64 LCD</td></tr><tr><td>passives count approx</td><td>60</td></tr><tr><td>leds</td><td>7</td></tr><tr><td>buttons</td><td>3</td></tr></tbody></table>
+  </section>
+
+
+  <section class="dsection" id="notes">
+    <div class="dsection-label">Sourcing</div>
+    <h2>Notes from Hans</h2>
+    <div class="hans-note pending">
+      <div class="hans-note-label">Sourcing note — pending</div>
+      <p>Hans note pending — VEML6075 stock status (Vishay deprecated → check VEML6030 family), UV calibration drift, optical window choice (most factories skip the right glass).</p>
     </div>
   </section>
 
-  <section class="section" id="silicon">
-    <h3 class="section-label">Silicon</h3>
-    <div class="section-body">
-      <div class="card-chip" style="max-width: 360px; margin: 0;">
-        <div class="chip-brand">Vishay</div>
-        <div class="chip-name">VEML6075</div>
-        <div class="chip-role">UV-A + UV-B light sensor (I²C)</div>
-      </div>
-      <p style="margin-top: 1.25rem;">
-        Spot price reference at 5k unit volume:
-        <strong>$1.09</strong>. Actual price depends on
-        distributor (Avnet / Arrow / Future / WPG / local) and current
-        allocation. For real-time China market check
-        <a href="https://www.hqew.com" target="_blank" rel="noopener" class="ext" style="color: var(--enig-bright);">hqew.com</a>
-        or <a href="https://www.lcsc.com" target="_blank" rel="noopener" class="ext" style="color: var(--enig-bright);">LCSC</a>.
-      </p>
-    </div>
+  <section class="dsection" id="related">
+    <div class="dsection-label">See also</div>
+    <h2>Related boards</h2>
+    <p>Other entries that share this chip, issuer or application area.</p>
+    <div class="boards-grid">
+      <a class="board full-pack" href="/db/gesture-vcnl4020-lpc824.html">
+        <div class="board-id">P15-097</div>
+        <h3 class="board-name" style="font-size:19px">Gesture Recognition (VCNL4020 + LPC824)</h3>
+        <div class="board-tag" style="margin-bottom:0">IoT · VCNL4020</div>
+      </a>
+      <a class="board metadata-only" href="/db/rgb-color-sensor-veml6040.html">
+        <div class="board-id">P15-098</div>
+        <h3 class="board-name" style="font-size:19px">RGB Color Sensor</h3>
+        <div class="board-tag" style="margin-bottom:0">IoT · VEML6040</div>
+      </a>
+      <a class="board metadata-only" href="/db/proximity-sensor-vcnl4020.html">
+        <div class="board-id">P15-099</div>
+        <h3 class="board-name" style="font-size:19px">Proximity Sensor</h3>
+        <div class="board-tag" style="margin-bottom:0">IoT · VCNL4020</div>
+      </a></div>
   </section>
-
-  
-    <section class="section" id="files">
-      <h3 class="section-label">Files</h3>
-      <div class="section-body">
-        <p style="margin-bottom: 1.25rem;">
-          Full design pack — schematic, PCB, gerber, BOM, firmware reference,
-          and the original spec document. Use as a starting point, not a
-          drop-in production design.
-        </p>
-        <div class="files-list">
-        <a class="file-link" href="../files/uv-sensor-veml6075-lpc824/schematic.sch" download>
-          <span class="file-icon">SCH</span>
-          <span class="file-name">Schematic</span>
-        </a>
-        <a class="file-link" href="../files/uv-sensor-veml6075-lpc824/pcb.pcb" download>
-          <span class="file-icon">PCB</span>
-          <span class="file-name">PCB Layout</span>
-        </a>
-        <a class="file-link" href="../files/uv-sensor-veml6075-lpc824/gerber.zip" download>
-          <span class="file-icon">ZIP</span>
-          <span class="file-name">Gerber files</span>
-        </a>
-        <a class="file-link" href="../files/uv-sensor-veml6075-lpc824/bom.xlsx" download>
-          <span class="file-icon">XLSX</span>
-          <span class="file-name">Bill of Materials</span>
-        </a>
-        <a class="file-link" href="../files/uv-sensor-veml6075-lpc824/spec.docx" download>
-          <span class="file-icon">DOCX</span>
-          <span class="file-name">Specification document</span>
-        </a>
-        <a class="file-link" href="../files/uv-sensor-veml6075-lpc824/presentation.pptx" download>
-          <span class="file-icon">PPTX</span>
-          <span class="file-name">Reference presentation</span>
-        </a>
-        <a class="file-link" href="../files/uv-sensor-veml6075-lpc824/datasheets/" download>
-          <span class="file-icon">DIR</span>
-          <span class="file-name">Component datasheets</span>
-        </a></div>
-      </div>
-    </section>
-  
-    <section class="section" id="bom">
-      <h3 class="section-label">BOM Summary</h3>
-      <div class="section-body">
-        <p style="margin-bottom: 1.25rem;">
-          Top-level components only. Full bill of materials is in the
-          downloadable XLSX above — including every passive, value, package,
-          tolerance, and brand reference.
-        </p>
-        <table class="bom-table">
-          <thead><tr><th>Designator</th><th>Part</th></tr></thead>
-          <tbody><tr><td>U1 MAIN MCU</td><td>LPC11U35FHI33 (USB bridge MCU)</td></tr><tr><td>U4 TARGET MCU</td><td>LPC824JHI33 (Cortex-M0+, the actual gongban target)</td></tr><tr><td>U5 SENSOR</td><td>VEML6075 (UV sensor)</td></tr><tr><td>U3 LDO</td><td>TCR2EF33 (5V→3.3V)</td></tr><tr><td>U2 ESD</td><td>PRTR5V0U2X</td></tr><tr><td>DISPLAY</td><td>128×64 LCD</td></tr><tr><td>PASSIVES COUNT APPROX</td><td>60</td></tr><tr><td>LEDS</td><td>7</td></tr><tr><td>BUTTONS</td><td>3</td></tr></tbody>
-        </table>
-      </div>
-    </section>
-  
-    <section class="section" id="notes">
-      <h3 class="section-label">Notes from Hans</h3>
-      <div class="section-body">
-        <div class="hans-note pending">
-          <div class="hans-note-label">Sourcing Note — Pending</div>
-          <p class="hans-note-body">Hans note pending — VEML6075 stock status (Vishay deprecated → check VEML6030 family), UV calibration drift, optical window choice (most factories skip the right glass).</p>
-        </div>
-      </div>
-    </section>
-  
-    <section class="section" id="related">
-      <h3 class="section-label">Related Gongbans</h3>
-      <div class="section-body">
-        <p style="margin-bottom: 1.25rem;">
-          Other entries that share this chip, brand, or application area.
-        </p>
-        <div class="files-list">
-          <a class="file-link" href="gesture-vcnl4020-lpc824.html">
-            <span class="file-icon">P15-097</span>
-            <span class="file-name">Gesture Recognition (VCNL4020 + LPC824)</span>
-          </a>
-          <a class="file-link" href="rgb-color-sensor-veml6040.html">
-            <span class="file-icon">P15-098</span>
-            <span class="file-name">RGB Color Sensor</span>
-          </a>
-          <a class="file-link" href="proximity-sensor-vcnl4020.html">
-            <span class="file-icon">P15-099</span>
-            <span class="file-name">Proximity Sensor</span>
-          </a></div>
-      </div>
-    </section>
-
+  <p class="catalogue-note">Entry <code>uv-sensor-veml6075-lpc824</code> · status: full-pack. Catalogue entries are indexed from publishers' public pages; the site re-hosts nothing except the hand-curated design packs. Spotted an error? <a href="https://hansstam.eu">Get in touch via hansstam.eu</a>.</p>
 </main>
 
 <footer class="site-footer">
-  <div class="site-footer-inner">
-    <div>
-      Maintained by <a href="https://hansstam.eu" target="_blank" rel="noopener">Hans Stam</a> · Berlin · Shenzhen
-    </div>
-    <div>
-      Companion to <a href="https://hansolo42.gumroad.com/l/gongbans" target="_blank" rel="noopener">GONGBANS — the book</a>
-    </div>
-  </div>
+  <p class="foot-links"><a href="/">Home</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Issuers</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
+  <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
 </footer>
-
+<script src="/assets/site.js?v=20261114"></script>
 </body>
 </html>
