@@ -9,6 +9,7 @@ The catalogue lives at `boards.html`. It holds Hans's 16 hand-curated ATU gongba
 ```
 gongbans-site/
 ├── index.html              ← landing page (investor briefing + catalogue stats)
+├── start.html              ← "Start here" for first-time hardware founders (3-sentence gongban, 4-step path, mistakes, glossary)
 ├── boards.html             ← catalogue: category / issuer / files / openness chips + search, 60 cards at a time
 ├── issuers.html            ← publishers of the boards + Shenzhen solution-house directory (generated)
 ├── boards-kingbrother.html ← Kingbrother IDH industrial SOM platforms (hand-written)

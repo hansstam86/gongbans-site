@@ -495,3 +495,66 @@ main.detail.playbook{max-width:900px}
 .kq-note{font-size:14px;color:var(--text-mid);border-top:1px solid rgba(0,0,0,0.08);margin-top:14px;padding-top:12px;line-height:1.6}
 .kq-note strong{color:var(--red)}
 .market-badge.uncertain{color:var(--copper);border-color:var(--copper);background:rgba(184,115,51,0.08)}
+
+/* ---------- FOUNDER UX: start.html, two-door on the home page, hints, beginner chip (2026-11-14) ---------- */
+nav.site-nav .links{gap:clamp(12px,1.5vw,24px)}
+nav.site-nav .links a{white-space:nowrap}
+.hero .founder-line{font-size:15px;color:rgba(255,255,255,0.72);margin:-18px 0 30px;line-height:1.6}
+.hero .founder-line a{color:var(--gold);border-bottom:1px solid var(--gold-dim)}
+.hero .founder-line a:hover{border-bottom-color:var(--gold)}
+.two-door{background:var(--white);border-bottom:1px solid rgba(0,0,0,0.08);padding:40px 2rem}
+.two-door .inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.door{border-radius:8px;padding:28px 28px 26px;display:flex;flex-direction:column;gap:10px;border:1px solid rgba(0,0,0,0.08);background:var(--cream)}
+.door.founder{background:var(--green-deeper);border-color:var(--green-deeper)}
+.door .door-tag{font-family:var(--font-mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dim)}
+.door.founder .door-tag{color:var(--gold)}
+.door h2{font-family:var(--font-display);font-size:clamp(22px,2.6vw,28px);line-height:1.2;color:var(--text)}
+.door.founder h2{color:var(--white)}
+.door p{font-size:15px;line-height:1.6;color:var(--text-mid);flex:1;margin:0}
+.door.founder p{color:rgba(255,255,255,0.65)}
+.door .btn{align-self:flex-start;margin-top:6px}
+.door.founder .btn.primary{background:var(--gold);color:var(--green-deeper)}
+.door.founder .btn.primary:hover{background:var(--copper);color:var(--white)}
+main.detail.start{max-width:900px}
+.path-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:8px 0 12px}
+.path-card{background:var(--white);border:1px solid rgba(0,0,0,0.06);border-top:3px solid var(--gold);border-radius:8px;padding:26px 26px 24px;display:flex;flex-direction:column;gap:10px}
+.path-card h3{font-family:var(--font-display);font-size:22px;color:var(--text);line-height:1.2}
+.path-card p{font-size:15px;color:var(--text-mid);line-height:1.6;flex:1;margin:0}
+.path-card .also{font-size:13px;color:var(--text-light);margin:0;flex:0}
+.path-card .also a,.path-card p a{color:var(--copper);border-bottom:1px solid rgba(184,115,51,0.3)}
+.path-card .btn{align-self:flex-start;margin-top:4px}
+.path-card .btn.primary{background:var(--green-deeper);color:var(--gold)}
+.path-card .btn.primary:hover{background:var(--green-dark)}
+.mistakes{list-style:none;margin:0 0 8px;padding:0}
+.mistakes li{background:var(--white);border-left:4px solid var(--red);padding:16px 20px;border-radius:0 6px 6px 0;margin-bottom:12px;font-size:16px;line-height:1.6;color:var(--text-mid)}
+.mistakes li strong{color:var(--text);display:block;margin-bottom:2px}
+.glossary dt{font-weight:600;color:var(--text);margin-top:12px}
+.glossary dd{color:var(--text-mid);margin:2px 0 0;line-height:1.6}
+.glossary dd a{color:var(--copper);border-bottom:1px solid rgba(184,115,51,0.3)}
+.start-hint{font-size:14px;color:var(--text-mid);background:var(--white);border-left:4px solid var(--gold);padding:12px 18px;border-radius:0 6px 6px 0;margin-bottom:24px;line-height:1.6}
+.start-hint strong{color:var(--text)}
+.start-hint a{color:var(--copper);border-bottom:1px solid rgba(184,115,51,0.3)}
+.start-hint a:hover{border-bottom-color:var(--copper)}
+.start-hint.small{font-size:13px;padding:8px 14px;margin:-16px 0 28px}
+.filter-chip.quick{border-color:var(--gold-dim);background:var(--white);color:var(--green-deeper);font-weight:500}
+.filter-chip.quick.active{background:var(--gold);border-color:var(--gold);color:var(--green-deeper)}
+.filter-chip.quick.active small{color:var(--green-deeper)}
+.beginner-note{font-size:13px;color:var(--text-mid);line-height:1.5;margin:-4px 0 0}
+.beginner-note a{color:var(--copper);border-bottom:1px solid rgba(184,115,51,0.3)}
+@media(max-width:760px){
+  .two-door{padding:28px 1.2rem}
+  .two-door .inner,.path-grid{grid-template-columns:1fr}
+  .door{padding:22px 20px}
+}
+/* nav grew from 7 to 9 links (11 on the home page): collapse to the menu button below 1100px, and hide the
+   home page's two in-page investor anchors below 1280px (the two-door section covers them) */
+@media(max-width:1099px){
+  nav.site-nav .menu-btn{display:inline-block}
+  nav.site-nav .links{position:absolute;top:56px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--green-deeper);border-bottom:2px solid var(--gold-dim);display:none}
+  nav.site-nav .links.open{display:flex}
+  nav.site-nav .links a{padding:14px 1.2rem;border-top:1px solid rgba(255,255,255,0.06);font-size:14px}
+  nav.site-nav .links a.cta{margin:12px 1.2rem 16px;text-align:center;border-radius:4px}
+}
+@media(min-width:1100px) and (max-width:1279px){
+  nav.site-nav .links a[href^="#"]{display:none}
+}

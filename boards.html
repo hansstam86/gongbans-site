@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=20261114b">
+<link rel="stylesheet" href="/assets/style.css?v=20261114d">
 <link rel="preload" href="data/catalog.json" as="fetch" crossorigin="anonymous">
 </head>
 <body>
@@ -23,10 +23,12 @@
   <a href="/" class="logo">GONGBANS<span>/公板</span></a>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
   <div class="links" id="site-links">
+    <a href="/start.html">Start here</a>
     <a href="/what-are-gongbans.html">What are gongbans?</a>
     <a href="/boards.html" class="active">Catalogue</a>
-    <a href="/issuers.html">Issuers</a>
+    <a href="/issuers.html">Who makes them</a>
     <a href="/ideas.html">Ideas</a>
+    <a href="/playbook.html">Playbook</a>
     <a href="https://hansolo42.gumroad.com/l/gongbans">The book</a>
     <a href="https://hansstam.eu">Hans Stam</a>
     <a href="/#download" class="cta">Download PDF</a>
@@ -44,7 +46,7 @@
 <div class="context-bar">
   <div class="context-inner">
     <div class="context-note">
-      <strong>How to read it:</strong> every card is one board. <em>Full design pack</em> entries carry schematic, PCB, Gerber and BOM downloads on this site; <em>Design files at source</em> entries link to what the publisher put online; <em>Catalogue entry</em> means specs or enclosure files only. Industrial SOM platforms from Kingbrother have <a href="/boards-kingbrother.html">their own page</a>; the companies behind the boards are on the <a href="/issuers.html">Issuers</a> page.
+      <strong>How to read it:</strong> every card is one board. <em>Full design pack</em> entries carry schematic, PCB, Gerber and BOM downloads on this site; <em>Files at the maker's site</em> entries link to what the publisher put online; <em>Specs only</em> means no design files, just specifications or enclosure files. The badge on the right says how you get the files: <em>Free download</em>, <em>Free account needed</em>, <em>Comes with purchase</em>, <em>Ask the distributor</em> or <em>Community project</em> (check the licence). Industrial SOM platforms from Kingbrother have <a href="/boards-kingbrother.html">their own page</a>; the companies behind the boards are on the <a href="/issuers.html">Who makes them</a> page.
     </div>
     <div class="context-source">Source · <span>gongban.db · Nov 2026</span></div>
   </div>
@@ -52,7 +54,10 @@
 
 <main class="catalogue">
 
+<p class="start-hint">New here? Read <a href="/start.html">Start here</a> first, then tick <strong>Beginner-friendly (free files)</strong> below: boards whose design files (schematic, PCB layout or Gerber) you can download for free. Not sure what to pick? See the <a href="/ideas.html">Ideas</a>.</p>
+
 <section class="filter-bar" aria-label="Filters">
+  <div class="filter-group" role="group" aria-label="Quick filters"><span class="filter-label">Quick</span><span id="chips-quick" class="filter-group"></span><span id="quick-note" class="beginner-note" hidden>Free to download, with at least the schematic (circuit drawing); many also publish the PCB layout or Gerber files — narrow down with the <strong>Files</strong> chips. Community boards count too: <a href="/start.html#glossary">check the licence</a> before you sell anything.</span></div>
   <div class="filter-group scroll" role="group" aria-label="Category"><span class="filter-label">Category</span><span id="chips-cat" class="filter-group"></span></div>
   <div class="filter-group scroll" role="group" aria-label="Issuer"><span class="filter-label">Issuer</span><span id="chips-issuer" class="filter-group"></span></div>
   <div class="filter-group scroll" role="group" aria-label="Files"><span class="filter-label">Files</span><span id="chips-files" class="filter-group"></span></div>
@@ -78,11 +83,10 @@
 </main>
 
 <footer class="site-footer">
-  <p class="foot-links"><a href="/">Home</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Issuers</a><a href="/ideas.html">Ideas</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
+  <p class="foot-links"><a href="/">Home</a><a href="/start.html">Start here</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Who makes them</a><a href="/ideas.html">Ideas</a><a href="/playbook.html">Playbook</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
   <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
 </footer>
-
-<script src="/assets/site.js?v=20261114b"></script>
-<script src="/assets/app.js?v=20261114b"></script>
+<script src="/assets/site.js?v=20261114d"></script>
+<script src="/assets/app.js?v=20261114d"></script>
 </body>
 </html>

@@ -29,7 +29,7 @@ IDEAS = ROOT / "data" / "ideas.json"   # optional: ideas built on the boards (bu
 DB_DIR = ROOT / "db"
 DB_DIR.mkdir(exist_ok=True)
 
-ASSET_V = "20261114c"
+ASSET_V = "20261114d"
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">')
@@ -58,6 +58,9 @@ OPENNESS_TEXT = {
     "community": "Circulates through community channels rather than an official publication.",
 }
 OPENNESS_CLASS = {"open_download": "", "community": "neutral", "registration": "gated", "with_purchase": "gated", "contact_atu": "gated", "hosted": ""}
+# plain-language labels (same wording as the catalogue chips in assets/app.js)
+OPENNESS_PLAIN = {"open_download": "Free download", "registration": "Free account needed", "with_purchase": "Comes with purchase",
+                  "contact_atu": "Ask the distributor (ATU)", "community": "Community project", "hosted": "Download here (full pack)"}
 CURATED_FILE_TYPES = [
     ("schematic", "SCH", "Schematic", "Protel / Altium .sch"),
     ("pcb", "PCB", "PCB layout", "Protel / Altium .pcb"),
@@ -98,11 +101,17 @@ def head(title, description, canonical, og_type="article", extra=""):
 ACTIVE = ' class="active"'
 
 
-def nav(active=""):
-    items = [("/what-are-gongbans.html", "What are gongbans?", "what"), ("/boards.html", "Catalogue", "boards"),
-             ("/issuers.html", "Issuers", "issuers"), ("/ideas.html", "Ideas", "ideas"),
-             ("https://hansolo42.gumroad.com/l/gongbans", "The book", ""),
-             ("https://hansstam.eu", "Hans Stam", "")]
+NAV_ITEMS = [("/start.html", "Start here", "start"), ("/what-are-gongbans.html", "What are gongbans?", "what"),
+             ("/boards.html", "Catalogue", "boards"), ("/issuers.html", "Who makes them", "issuers"),
+             ("/ideas.html", "Ideas", "ideas"), ("/playbook.html", "Playbook", "playbook")]
+NAV_TAIL = [("https://hansolo42.gumroad.com/l/gongbans", "The book", ""), ("https://hansstam.eu", "Hans Stam", "")]
+HOME_EXTRA = [("#investors", "Investors"), ("#how-it-works", "How it works")]   # investor anchors, home page only
+
+
+def nav(active="", extra=()):
+    """Site nav, identical on every page. `extra` = (href, label) pairs inserted before the book link
+    (the home page uses it for its investor anchors)."""
+    items = NAV_ITEMS + [(h, l, "") for h, l in extra] + NAV_TAIL
     links = "\n".join(f'    <a href="{href}"{ACTIVE if key and key == active else ""}>{label}</a>' for href, label, key in items)
     return f'''<nav class="site-nav">
   <a href="/" class="logo">GONGBANS<span>/公板</span></a>
@@ -115,7 +124,7 @@ def nav(active=""):
 
 
 FOOTER = f'''<footer class="site-footer">
-  <p class="foot-links"><a href="/">Home</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Issuers</a><a href="/ideas.html">Ideas</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
+  <p class="foot-links"><a href="/">Home</a><a href="/start.html">Start here</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Who makes them</a><a href="/ideas.html">Ideas</a><a href="/playbook.html">Playbook</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
   <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
 </footer>
 <script src="/assets/site.js?v={ASSET_V}"></script>'''
@@ -221,7 +230,7 @@ def source_section(g):
         row("Source page", e(g["source_note"]))
     row("Indexed from", e(g.get("source_name")))
     row("Issuer type", e((g.get("issuer_type") or "").replace("_", " ")))
-    row("Openness", e(g.get("openness_label")))
+    row("Openness", e(OPENNESS_PLAIN.get(g.get("openness") or "", g.get("openness_label"))))
     row("Year", e(g.get("year")))
     row("Region", e(g.get("region")))
     row("License", e(g.get("license")))
@@ -368,7 +377,7 @@ def render_board(g, index, ideas_by_board=None):
     description = (g.get("application") or f'{g["name"]} — {issuer}'.strip(" —"))[:200]
     status = "full-pack" if g.get("files_available") else g.get("status", "metadata-only")
     openness = "hosted" if g.get("files_available") else g.get("openness", "")
-    openness_label = "Hosted on this site" if openness == "hosted" else g.get("openness_label", "")
+    openness_label = OPENNESS_PLAIN.get(openness) or g.get("openness_label", "")
 
     meta = []
     def item(label, value_html, cls=""):
@@ -548,6 +557,24 @@ def patch_stats(path, stats):
     return n + k
 
 
+# hand-written pages: nav, footer and asset version are rewritten so they match the generated pages
+STATIC_PAGES = {"index.html": ("", HOME_EXTRA), "start.html": ("start", ()), "boards.html": ("boards", ()),
+                "what-are-gongbans.html": ("what", ()), "boards-kingbrother.html": ("boards", ())}
+
+
+def patch_chrome(path, active, extra=()):
+    if not path.exists():
+        return 0
+    src = path.read_text(encoding="utf-8")
+    out, n1 = re.subn(r'<nav class="site-nav">.*?</nav>', lambda m: nav(active, extra), src, count=1, flags=re.S)
+    out, n2 = re.subn(r'<footer class="site-footer">.*?</footer>\s*<script src="/assets/site\.js[^"]*"></script>',
+                      lambda m: FOOTER, out, count=1, flags=re.S)
+    out = re.sub(r'(/assets/[a-z]+\.(?:css|js)\?v=)[0-9A-Za-z]+', lambda m: m.group(1) + ASSET_V, out)
+    if out != src:
+        path.write_text(out, encoding="utf-8")
+    return n1 + n2
+
+
 def main():
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     gongbans = manifest["gongbans"]
@@ -569,8 +596,9 @@ def main():
     (ROOT / "issuers.html").write_text(render_issuers(issuers, stats), encoding="utf-8")
     print(f"issuers.html: {len(issuers['board_issuers'])} publishers, {len(issuers['solution_houses'])} solution houses")
 
-    for name in ("index.html", "what-are-gongbans.html", "boards.html"):
-        print(f"{name}: {patch_stats(ROOT / name, stats)} stat(s) patched")
+    for name, (active, extra) in STATIC_PAGES.items():
+        k = patch_chrome(ROOT / name, active, extra)
+        print(f"{name}: nav/footer {'patched' if k == 2 else 'NOT patched (' + str(k) + '/2)'}, {patch_stats(ROOT / name, stats)} stat(s) patched")
 
 
 if __name__ == "__main__":

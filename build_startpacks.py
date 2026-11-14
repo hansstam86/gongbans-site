@@ -270,6 +270,7 @@ def render_pack(slug, md, idea, n_total):
 
 <main class="detail startpack">
   <div class="idea-disclaimer"><strong>Concept, not a product.</strong> {e(DISCLAIMER)}</div>
+  <p class="start-hint small">New here? <a href="/start.html">Start here →</a> explains what a gongban is, the four steps and the first-timer mistakes. Come back to this pack afterwards.</p>
   <div class="detail-meta">{"".join(meta)}</div>
   <nav class="pack-toc" aria-label="Sections">{toc}<a class="dl" href="/startpacks/{e(slug)}.md" download>↓ Markdown</a></nav>
   <p class="pack-playbook"><strong>Order of operations:</strong> read the summary, then <a href="#s2">validate demand (section 2)</a> with real customers before you touch the start kit or e-mail anyone in <a href="#s5">Who to contact (section 5)</a>. New to hardware? The <a href="/playbook.html">zero-experience founder playbook</a> covers validation, samples, the first quote, CE/FCC, customs and fulfilment for all {n_total} ideas.</p>

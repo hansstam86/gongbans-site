@@ -5,7 +5,7 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
 - Live: https://www.gongbans.com
 - Repo: hansstam86/gongbans-site (branch `main`, served from repo root, legacy Pages build)
 - DNS: GoDaddy (apex A records to GitHub Pages IPs, www CNAME to the owner's github.io)
-- Pages: `index.html` (investor landing), `boards.html` (catalogue, 1,100+ boards, JS grid), `db/<slug>.html`
+- Pages: `index.html` (two doors: founders → `start.html`, investors → the briefing below; all investor content kept), `start.html` (first-time founder entry page, hand-written: gongban in 3 sentences, 4-step path, first-timer mistakes, glossary), `boards.html` (catalogue, 1,100+ boards, JS grid), `db/<slug>.html`
   (one page per board, generated), `issuers.html` (publishers + solution-house directory, generated),
   `boards-kingbrother.html` (hand-written Kingbrother SOM page), `what-are-gongbans.html` (essay),
   `ideas.html` + `ideas/<slug>.html` (product concepts built from catalogue boards; 50 generated, 16 withdrawn 2026-11-14 after the external market check (slugs in `data/ideas.json` → `removed_after_market_check`, full records in git history), 16 added the same day in round 2 (`add_ideas_round2.py`, `add_ideas_round2b.py`; market-checked before building; `data/ideas.json` → `rounds`), generated from `data/ideas.json`
@@ -18,6 +18,8 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
   Every page links it; keep page-specific CSS in there too, not inline.
 
 ## Rules
+- Nav/footer are defined ONCE in `build_detail_pages.py` (`NAV_ITEMS`, `nav()`, `FOOTER`): Start here · What are gongbans? · Catalogue · Who makes them (URL stays `issuers.html`) · Ideas · Playbook (+ Investors / How it works on the home page only, `HOME_EXTRA`). Generated pages call `nav(active)`; the hand-written pages (`STATIC_PAGES`: index, start, boards, what-are-gongbans, boards-kingbrother) get nav, footer and `?v=ASSET_V` rewritten by `patch_chrome()` on every `build_detail_pages.py` run, so never hand-edit a nav. Bump `ASSET_V` when CSS/JS change.
+- Founder wording: catalogue chips/badges and the db-page openness pill use plain language (`OPEN_LABEL` in `assets/app.js` = `OPENNESS_PLAIN` in `build_detail_pages.py`; keep them in sync). The "Beginner-friendly (free files)" quick chip = free download/hosted + schematic, PCB or Gerber published; deep link `boards.html#beginner=1` (or `?beginner=1`), used by `start.html`. The nav collapses to the menu button below 1100px (it has 9–11 links).
 - No build step at runtime: GitHub Pages serves the committed HTML. The generator scripts run locally and their
   output is committed.
 - Do not change `CNAME`, DNS or Pages settings without Hans's OK.
