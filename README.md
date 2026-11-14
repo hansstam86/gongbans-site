@@ -14,7 +14,7 @@ gongbans-site/
 ├── boards-kingbrother.html ← Kingbrother IDH industrial SOM platforms (hand-written)
 ├── what-are-gongbans.html  ← essay
 ├── ideas.html              ← product concepts built from catalogue boards (search, tag chips, sort); 50 generated,
-│                              16 withdrawn after the Nov 2026 market check (see data/ideas.json → removed_after_market_check)
+│                              16 withdrawn after the Nov 2026 market check (data/ideas.json → removed_after_market_check), 13 added in round 2 (add_ideas_round2.py; data/ideas.json → rounds)
 ├── ideas/                  ← one HTML page per idea (generated)
 ├── startpacks/             ← founder start packs: <slug>.md (source, downloadable) + <slug>.html (generated);
 │                              section 2 "Validate demand first" (build_validate.py) and section 5 "Who to contact"

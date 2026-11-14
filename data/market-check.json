@@ -853,6 +853,309 @@
      "Corroborating precedent"
     ]
    ]
+  },
+  "dark-sky-meter": {
+   "verdict": "LIKELY",
+   "summary": "Unihedron SQM-L ($198–290) and TESS-W (about €275 assembled) confirm a real 2.5–3× price gap. TESS-W is already a finished open-hardware product at a similar price to the SQM-L, so the wedge is price and simplicity, not novelty.",
+   "risk": "A finished open product exists; the handheld form, the calibration certificate and the price must carry the pitch.",
+   "rows": [
+    [
+     "Unihedron SQM-L",
+     "$198–290 handheld",
+     "Legacy reference meter, 2.5–3× the target"
+    ],
+    [
+     "TESS-W (Stars4All)",
+     "About €275 assembled, open hardware, fixed station",
+     "Finished open product already exists"
+    ],
+    [
+     "France 2018 light-pollution decree (overview)",
+     "Regulation requiring lighting controls and measurements",
+     "Institutional pull"
+    ]
+   ]
+  },
+  "classroom-noise-light": {
+   "verdict": "LIKELY (STRONG)",
+   "summary": "SoundEar 3 sells at €1,230–3,500 to institutions, a far larger gap than assumed. German DGUV / Unfallkassen already recognise kindergarten noise as a hazard and run free noise-light lending programmes.",
+   "risk": "The free lending programmes are a competing alternative for the trial phase; the product must be the purchase after the loan.",
+   "rows": [
+    [
+     "SoundEar 3",
+     "€1,230–3,500 institutional noise light",
+     "Incumbent, 10× the target"
+    ],
+    [
+     "DGUV / Unfallkassen Lärmampel lending programmes",
+     "Free loan of noise lights to kindergartens",
+     "Competing free alternative; also confirms the hazard is recognised"
+    ],
+    [
+     "DIY ESP32 noise-light projects",
+     "Maker builds",
+     "Demand signal, no finished product"
+    ]
+   ]
+  },
+  "cue-light-system": {
+   "verdict": "LIKELY (CONTESTED)",
+   "summary": "The real incumbent, DSan PerfectCue / CueLight, sells at $485–985, not the £1.5–4k first assumed; the gap holds at 30–55% cheaper but is smaller than first thought. Blue Room forum threads and a Hackaday cue-light project show DIY demand.",
+   "risk": "A smaller price gap than assumed: the package and simplicity for amateur groups must carry the pitch alongside price.",
+   "rows": [
+    [
+     "DSan PerfectCue / CueLight",
+     "$485–985 portable cue lights",
+     "Incumbent; the target is 30–55% below it"
+    ],
+    [
+     "Blue Room forum DIY threads",
+     "Technicians building their own",
+     "Demand signal"
+    ],
+    [
+     "Hackaday cue-light project",
+     "Maker build",
+     "Demand signal, no boxed product"
+    ]
+   ]
+  },
+  "village-stop-display": {
+   "verdict": "UNCERTAIN",
+   "summary": "A real technical blocker: live GTFS-Realtime requires on-board vehicle equipment that rural and small-contractor bus fleets often lack (confirmed in a Südtirol example), so buses without it show only scheduled times, in exactly the rural markets targeted. Municipal e-paper stop displays (Meisenheim, Ludwigsburg) and regional GTFS-RT open data (VBN) exist.",
+   "risk": "The pitch was reworked before building: scheduled always, live where available, with the source labelled on screen; scope sales to regions that already publish GTFS-RT.",
+   "correction": {
+    "title": "Built with the research fix applied (November 2026)",
+    "text": "The research found that live departure data needs on-board equipment many rural fleets lack, so a sign promising live times everywhere would fail in its own target market. This pack is therefore scoped to \"scheduled always, live where the operator broadcasts it\", the sign labels which it shows, and the kill question only counts regions that already publish GTFS-Realtime for their stops. As researched November 2026 by web search; verify before relying on it."
+   },
+   "rows": [
+    [
+     "Südtirol real-time caveat",
+     "Buses without on-board equipment do not report live positions",
+     "The 'live' promise cannot hold everywhere; pitch reworked"
+    ],
+    [
+     "Meisenheim, Ludwigsburg municipal display examples",
+     "Municipalities trialling e-paper stop displays",
+     "Demand and procurement precedent"
+    ],
+    [
+     "VBN GTFS-Realtime open data",
+     "Regional live feed published openly",
+     "Target regions exist"
+    ],
+    [
+     "Papercast, Luminator, ConnectPoint",
+     "Agency displays, quote-based €2–5k",
+     "Incumbents at a multiple of the target"
+    ]
+   ]
+  },
+  "oil-tank-eye": {
+   "verdict": "LIKELY",
+   "summary": "Oilfox is confirmed subscription-based (about £6 a month) and Boilerjuice Connected costs £75 plus £4.99 a month, a real no-subscription wedge; the ESPHome / Home Assistant DIY precedent is strong and active (simon42, rogerfrost and multiple build threads).",
+   "risk": "Explosion-safety (ATEX) requirements for a sensor in an oil-tank headspace are unverified; a compliance check is needed before launch and the pack does not claim it is fine.",
+   "rows": [
+    [
+     "Oilfox",
+     "Device + subscription (~£6/month)",
+     "Incumbent with the fee"
+    ],
+    [
+     "Boilerjuice Connected",
+     "£75 + £4.99/month",
+     "Incumbent with the fee"
+    ],
+    [
+     "Watchman Sonic Advanced",
+     "Ultrasonic sender + receiver",
+     "Incumbent without app"
+    ],
+    [
+     "simon42 / rogerfrost ESPHome builds and Home Assistant threads",
+     "DIY tank sensors",
+     "Strong demand signal, no boxed product"
+    ]
+   ]
+  },
+  "room-door-sign": {
+   "verdict": "LIKELY",
+   "summary": "Joan (about €5–20 per device per month) and Evoko Naso ($800–3,600 plus licensing) are confirmed subscription-attached, a real wedge; the DIY precedent is confirmed (ESPHome-ePaper-Calendar and relatives).",
+   "risk": "The risk is the sales cycle, not the market: Microsoft 365 / Google app consent and IT security review will be the real bottleneck.",
+   "rows": [
+    [
+     "Joan",
+     "E-paper room sign, ~€5–20/device/month",
+     "Incumbent with subscription"
+    ],
+    [
+     "Evoko Naso (Biamp)",
+     "$800–3,600 + licensing",
+     "Incumbent at a multiple of the target"
+    ],
+    [
+     "ESPHome-ePaper-Calendar",
+     "DIY e-paper calendar sign",
+     "Demand signal, no boxed product"
+    ]
+   ]
+  },
+  "kiln-mind": {
+   "verdict": "UNCERTAIN",
+   "summary": "The price gap is real (Skutt KMT kit $579–650, Bartlett Genesis 2.0 $388–699 against the €249–349 target), but an independent source (the Digitalfire community) confirms DIY kiln controllers are not CSA/UL listed and are implicated in fire-insurance disputes, a real threat to institutional sales regardless of price.",
+   "risk": "Scoped before building to individual hobbyist potters only; schools and studios are excluded in the pack text until a listed version exists.",
+   "correction": {
+    "title": "Built with the research fix applied (November 2026)",
+    "text": "The research found that non-listed kiln controllers are implicated in fire-insurance disputes, which rules out schools, colleges and commercial studios as buyers regardless of price. This pack is therefore scoped to individual hobbyist potters, sold installer-fitted and certified as a mains temperature controller, with the scope stated on the landing page and in the box. As researched November 2026 by web search; verify before relying on it."
+   },
+   "rows": [
+    [
+     "Skutt KilnMaster (KMT) kit",
+     "$579–650",
+     "Incumbent, about double the target"
+    ],
+    [
+     "Bartlett Genesis 2.0",
+     "$388–699",
+     "Incumbent, similar to higher price"
+    ],
+    [
+     "Digitalfire community on DIY controllers",
+     "Not CSA/UL listed; implicated in insurance disputes",
+     "Rules out institutional buyers; scope fixed"
+    ]
+   ]
+  },
+  "vitrine-log": {
+   "verdict": "LIKELY",
+   "summary": "The UK Government Indemnity Scheme (National Heritage Act 1980) genuinely requires RH, temperature and light monitoring for loan periods, a citable requirement, and Testo 160 THL (about £487–617) confirms a 2–3× price gap. The specific GIS environmental-conditions rule is reported under active review (suspended through at least March 2023, status unclear).",
+   "risk": "Verify current GIS requirements before leaning on them as a hard mandate; lenders' own loan conditions carry the demand regardless.",
+   "rows": [
+    [
+     "UK Government Indemnity Scheme (ICOM UK on the GIS review)",
+     "Climate monitoring required for loans; environmental rule under review",
+     "Compliance pull, but verify current status"
+    ],
+    [
+     "Walters Art Museum loan policy",
+     "Lender requires climate records",
+     "Demand regardless of GIS"
+    ],
+    [
+     "Testo 160 THL",
+     "About £487–617",
+     "Incumbent, 2–3× the target"
+    ]
+   ]
+  },
+  "tree-thirst-sensor": {
+   "verdict": "LIKELY",
+   "summary": "Already-funded municipal programmes exist (Vienna \"Internet of Trees\", Ludwigsburg, Jena, Pforzheim): live demand, not hypothetical. Treesense and FloraPulse exist as competitors but do not publish pricing.",
+   "risk": "Get a real competitor quote before claiming to be cheaper.",
+   "rows": [
+    [
+     "Vienna Internet of Trees; Ludwigsburg, Jena, Pforzheim programmes",
+     "Municipal tree-sensor deployments",
+     "Funded demand exists"
+    ],
+    [
+     "Treesense (whitepaper)",
+     "Tree sensors + platform, no public price",
+     "Incumbent; quote needed"
+    ],
+    [
+     "FloraPulse",
+     "Plant water-status sensors, no public price",
+     "Incumbent; quote needed"
+    ]
+   ]
+  },
+  "machine-access-box": {
+   "verdict": "LIKELY",
+   "summary": "FabAccess is confirmed real and actively funded (a ten-workshop roll-out in 2023–24), a strong sector-wide demand signal. Fabman is a real incumbent but its pricing is unverified.",
+   "risk": "Get a Fabman quote before claiming a cost advantage.",
+   "rows": [
+    [
+     "FabAccess (offene-werkstaetten.org, FOSDEM talk)",
+     "Open access-control project, funded ten-workshop roll-out",
+     "Sector demand; compatibility target"
+    ],
+    [
+     "Fabman",
+     "Per-machine bridge + subscription, pricing unverified",
+     "Incumbent; quote needed"
+    ],
+    [
+     "MakeACS",
+     "Access-control project",
+     "Precedent"
+    ]
+   ]
+  },
+  "hall-heat-scheduler": {
+   "verdict": "UNCERTAIN",
+   "summary": "The compliance angle does not hold: EU EPBD building-automation thresholds (70–290 kW) are sized for buildings much bigger than a typical sports or parish hall. German sports-federation guidance (DFB) confirms clubs manually fight this exact problem today, so the pain is real, but cost-driven, not compliance-driven.",
+   "risk": "Pitch reworked before building: sold on measured heating savings and the B2B buyer only; no mandate is claimed.",
+   "correction": {
+    "title": "Built with the research fix applied (November 2026)",
+    "text": "The research found that the EU building-automation requirements (EPBD, 70–290 kW thresholds) do not apply to halls this size, so this pack claims no compliance pull. It is sold on the heating hours it measurably saves, to the club or parish that pays the bill, with the installer as the channel; the kill question requires a measured saving. As researched November 2026 by web search; verify before relying on it."
+   },
+   "rows": [
+    [
+     "EU EPBD building-automation thresholds (70–290 kW)",
+     "Apply to large buildings only",
+     "No compliance pull for halls; claim dropped"
+    ],
+    [
+     "DFB (German football federation) guidance on hall heating",
+     "Clubs manually manage heating of empty halls",
+     "The pain is real and cost-driven"
+    ]
+   ]
+  },
+  "shared-laundry-notifier": {
+   "verdict": "LIKELY",
+   "summary": "A confirmed, active Home Assistant DIY pattern (multiple forum threads and GitHub projects for washer/dryer notification): real demand. No public pricing was found for Miele, Electrolux or Waschkarten systems, so the competitive gap must be verified.",
+   "risk": "Ask in the demand interviews whether housing associations want detection layered on existing booking or card systems or consider the problem solved; verify incumbent pricing before claiming a gap.",
+   "rows": [
+    [
+     "Home Assistant forum threads (laundry sensors; washer/dryer notify blueprint)",
+     "DIY detection at home",
+     "Proven pattern, demand signal"
+    ],
+    [
+     "GitHub washer-notifier project",
+     "DIY project",
+     "Same"
+    ],
+    [
+     "Miele / Electrolux Professional, Aptus, Waschkarten systems",
+     "Booking systems, pricing not public",
+     "Incumbents; gap unverified"
+    ]
+   ]
+  },
+  "stream-level-gauge": {
+   "verdict": "LIKELY",
+   "summary": "Strong confirmed precedent: a community-built sensor in Hennef was installed by the city on a public bridge and feeds a public smart-city map, real institutional pickup; TTN Bergisch Gladbach gauges the Strunde the same way. OTT ecoLog represents the official instrument class.",
+   "risk": "Liability: positioned as advisory, not an official gauge, given the flood-safety stakes; the pack says so in contract, manual and dashboard.",
+   "rows": [
+    [
+     "TTN Rhein-Sieg Hennef sensor",
+     "Community sensor installed by the city on a public bridge, public map",
+     "Institutional pickup confirmed"
+    ],
+    [
+     "TTN Bergisch Gladbach Strunde sensor",
+     "Community stream gauge",
+     "Precedent"
+    ],
+    [
+     "OTT ecoLog",
+     "Official gauge logger class",
+     "Incumbent for official gauges, €2–6k class"
+    ]
+   ]
   }
  },
  "withdrawn": {

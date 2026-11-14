@@ -51,18 +51,18 @@ NEXT_RE = re.compile(r"^## \d\. Next steps", re.M)
 # issuer (boards.issuer / catalog issuer) → how it is presented. Only facts that are in the db.
 PUBLISHER_KIND = {
     "M5Stack": "company", "Seeed Studio": "company", "Espressif": "company", "SIMCom": "company",
-    "Jieli 杰理": "company", "ATU kit (curated)": "company", "OSHWHub": "platform",
+    "Jieli 杰理": "company", "ATU kit (curated)": "company", "DFRobot": "company", "OSHWHub": "platform",
 }
 ISSUER_SOURCE = {   # issuer → sources.id (boards in the db carry it; curated ATU kits do not)
     "M5Stack": "m5stack_github", "Seeed Studio": "seeed_wiki", "Espressif": "espressif_github",
-    "SIMCom": "simcom", "Jieli 杰理": "jieli_circulating", "ATU kit (curated)": "wpi_atu_pages", "OSHWHub": "oshwhub",
+    "SIMCom": "simcom", "Jieli 杰理": "jieli_circulating", "ATU kit (curated)": "wpi_atu_pages", "DFRobot": "dfrobot_wiki", "OSHWHub": "oshwhub",
 }
 ISSUER_HOUSE = {    # issuer → solution_houses.id of the same company, when the directory has it
     "Seeed Studio": 97, "Jieli 杰理": 53, "ATU kit (curated)": 62,
 }
 PUBLISHER_LABEL = {
     "M5Stack": "M5Stack", "Seeed Studio": "Seeed Studio", "Espressif": "Espressif", "SIMCom": "SIMCom",
-    "Jieli 杰理": "Jieli Technology (杰理)", "ATU kit (curated)": "WPI ATU (distributor kits)", "OSHWHub": "OSHWHub community designs",
+    "Jieli 杰理": "Jieli Technology (杰理)", "ATU kit (curated)": "WPI ATU (distributor kits)", "DFRobot": "DFRobot", "OSHWHub": "OSHWHub community designs",
 }
 ISSUER_TYPE_LABEL = {"chip_house": "Chip house", "distributor": "Distributor", "solution_house": "Solution house",
                      "community": "Community / maker brand", "leak_channel": "Circulating schematic (not an official release)"}

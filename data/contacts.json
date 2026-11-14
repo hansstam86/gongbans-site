@@ -94,6 +94,15 @@
     ]
    }
   },
+  "DFRobot": {
+   "label": "DFRobot",
+   "kind": "company",
+   "issuer_type": "Community / maker brand",
+   "source_name": "DFRobot wiki catalog",
+   "source_url": "https://wiki.dfrobot.com/",
+   "boards_in_catalogue": 250,
+   "house": null
+  },
   "OSHWHub": {
    "label": "OSHWHub community designs",
    "kind": "platform",

@@ -2046,6 +2046,966 @@
    ],
    "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
    "score_total": 11
+  },
+  {
+   "slug": "dark-sky-meter",
+   "title": "Dark-Sky Meter",
+   "category": "Air & environment",
+   "pitch": "A pocket sky-quality meter (mag/arcsec²) with logging and optional LoRaWAN upload, for astronomy clubs and municipalities measuring light pollution, at a third of the price of the meters they use today.",
+   "audience": "Astronomy clubs and societies; municipalities and nature parks pursuing DarkSky certification or complying with light-pollution rules (France's 2018 decree, Slovenia, Croatia); ecologists studying light at night.",
+   "why_now": "Light-pollution rules and DarkSky certifications now ask for measured sky brightness, the two meters everyone uses (Unihedron SQM-L, TESS-W) cost €200–290, and the sensor inside them is a €3 part the catalogue carries on three boards.",
+   "built_from": [
+    {
+     "board_slug": "seeed-grove-digital-light-sensor",
+     "role": "TSL2561 digital light sensor: the measuring front end",
+     "board_name": "Seeed Grove-Digital Light Sensor",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-dlight",
+     "role": "alternative ambient-light unit for a quick first prototype",
+     "board_name": "M5Stack Unit DLight (U136)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "dfrobot-sen0097",
+     "role": "BH1750 light sensor, second-source option",
+     "board_name": "DFRobot SEN0097",
+     "issuer": "DFRobot",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-atoms3-lite",
+     "role": "ESP32-S3 core with display-less button for the handheld",
+     "board_name": "M5Stack AtomS3-Lite (C124)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-stamp-c6lora",
+     "role": "LoRaWAN variant for a fixed monitoring post",
+     "board_name": "M5Stack Stamp C6LoRa (S012)",
+     "issuer": "M5Stack",
+     "open_files": "pcb,schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-rtc",
+     "role": "timestamped logging without network",
+     "board_name": "M5Stack Unit RTC (U126)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "A calibrated light front end behind a narrow lens, firmware that integrates long enough for dark skies, a mag/arcsec² readout, SD/phone logging and a LoRaWAN post variant; a transfer calibration against a reference meter per unit.",
+   "effort_weeks_est": "8–10",
+   "bom_eur_est": "12–18",
+   "price_eur_est": "79–99",
+   "certification": "RED (BLE / LoRa variant) via pre-certified module, EMC, EN 62368-1, RoHS, WEEE, CRA; battery → Battery Regulation / UN 38.3 for the handheld.",
+   "kill_question": "Do 10 astronomy clubs or 3 municipal dark-sky projects pre-order at €89 after a side-by-side reading against a Unihedron SQM-L? Pass = 10 deposits or 3 purchase orders in 6 weeks.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 3,
+    "buildability": 4,
+    "margin": 4,
+    "speed": 4
+   },
+   "tags": [
+    "environment",
+    "sensors",
+    "b2b",
+    "education",
+    "lorawan"
+   ],
+   "open_boards_note": "3 of 6 boards publish schematic/PCB files",
+   "score_total": 15
+  },
+  {
+   "slug": "classroom-noise-light",
+   "title": "Noise Light",
+   "category": "Education & STEM",
+   "pitch": "A wall traffic light that shows classroom or kindergarten noise level live and logs daily exposure for the teacher, with no subscription and no app required.",
+   "audience": "Kindergartens and primary schools (teacher hearing-protection guidance from the German Unfallkassen), libraries, open-plan offices; kindergarten operators (Träger) as the buyer.",
+   "why_now": "Noise in kindergartens is a recognised occupational hazard (DGUV / Unfallkassen guidance), the institutional product costs over €1,200, and lending programmes exist precisely because nobody can afford to buy one per room.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-unit-mic",
+     "role": "microphone unit for the sound front end",
+     "board_name": "M5Stack Unit MIC (U096)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-mini-pdm",
+     "role": "digital PDM microphone alternative",
+     "board_name": "M5Stack Unit Mini PDM (U089)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "seeed-grove-analog-microphone",
+     "role": "open analogue microphone reference circuit",
+     "board_name": "Seeed Grove-Analog-Microphone",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "dfrobot-dfr0034",
+     "role": "analogue sound sensor, second source",
+     "board_name": "DFRobot DFR0034",
+     "issuer": "DFRobot",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "seeed-grove-chainable-rgb-led",
+     "role": "RGB light-engine reference circuit for the traffic light",
+     "board_name": "Seeed Grove-Chainable RGB LED",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-atoms3-lite",
+     "role": "ESP32-S3 core",
+     "board_name": "M5Stack AtomS3-Lite (C124)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "A wall unit with a big three-colour light, A-weighted level estimation on an ESP32, a daily exposure log on an e-paper or small OLED, optional WiFi export; set-up by two buttons, no app.",
+   "effort_weeks_est": "8",
+   "bom_eur_est": "18–28",
+   "price_eur_est": "99–149",
+   "certification": "RED via module (WiFi variant), EMC, EN 62368-1 (USB power), RoHS, WEEE, CRA; no battery in the wall unit.",
+   "kill_question": "Do 10 kindergartens of one Träger buy at €119 after a two-week trial unit, knowing that their Unfallkasse lends similar lights for free? Pass = 10 orders or one Träger-wide framework order.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 4,
+    "buildability": 5,
+    "margin": 4,
+    "speed": 5
+   },
+   "tags": [
+    "education",
+    "sensors",
+    "b2b",
+    "wifi",
+    "building"
+   ],
+   "open_boards_note": "3 of 6 boards publish schematic/PCB files",
+   "score_total": 18
+  },
+  {
+   "slug": "cue-light-system",
+   "title": "Cue Lights for Small Stages",
+   "category": "Audio",
+   "pitch": "A wireless standby/go cue-light set (master plus four battery outstations with big lit buttons) for school theatres, amateur dramatics, churches and small event crews, 30–55% cheaper than the entry-level professional systems.",
+   "audience": "Amateur theatre federations (BDAT in Germany, Little Theatre Guild in the UK), school and university theatres, churches with productions, small AV hire companies.",
+   "why_now": "Amateur and school stages run cues by whisper and WhatsApp; the professional cue-light systems start around $485 and go to $985 (research, Nov 2026); ESP-NOW and lit buttons make a reliable set buildable from catalogue parts.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-atoms3-lite",
+     "role": "ESP32-S3 core for master and outstations (ESP-NOW)",
+     "board_name": "M5Stack AtomS3-Lite (C124)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-bytebutton",
+     "role": "RGB-lit button bar for the master",
+     "board_name": "M5Stack Unit ByteButton (U192)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-button",
+     "role": "single big button for an outstation",
+     "board_name": "M5Stack Unit Button (U027)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-buzzer",
+     "role": "acknowledge beep",
+     "board_name": "M5Stack Unit Buzzer (U132)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "seeed-grove-chainable-rgb-led",
+     "role": "open RGB indicator circuit for the outstation lamp",
+     "board_name": "Seeed Grove-Chainable RGB LED",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    }
+   ],
+   "whats_new": "A stage-manager master with four channels and four battery outstations; standby (flashing) and go (solid) with acknowledge; ESP-NOW with retries and a link-health light; no WiFi network, no app.",
+   "effort_weeks_est": "10",
+   "bom_eur_est": "60–90",
+   "price_eur_est": "349–449",
+   "certification": "RED via pre-certified ESP32 module (2.4 GHz), EMC, EN 62368-1, RoHS, WEEE, CRA; Battery Regulation / UN 38.3 for the outstation cells.",
+   "kill_question": "Do 10 amateur groups from one federation pre-order the five-piece set at €399 after a video demo? Pass = 10 deposits in 6 weeks.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 3,
+    "buildability": 5,
+    "margin": 4,
+    "speed": 5
+   },
+   "tags": [
+    "events",
+    "education",
+    "b2b",
+    "consumer",
+    "wifi"
+   ],
+   "open_boards_note": "1 of 5 boards publish schematic/PCB files",
+   "score_total": 17
+  },
+  {
+   "slug": "village-stop-display",
+   "title": "Village Stop Display",
+   "category": "Displays",
+   "pitch": "A solar e-paper departure sign for rural bus stops and dial-a-ride that shows the timetable always and live departures where the operator broadcasts them, at a fraction of the price of transit-agency displays.",
+   "audience": "Landkreise and regional transport associations whose operators already publish GTFS-Realtime (for example VBN and other open-data regions), small municipalities, rural bus operators; B2G procurement.",
+   "why_now": "Rural stops have paper timetables and no information at all when a bus is late; agency displays cost €2,000–5,000 with service contracts; e-paper, Cat-M and solar make a €800 sign possible, and open GTFS data is spreading region by region.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-papers3",
+     "role": "ESP32-S3 e-paper device for the prototype sign",
+     "board_name": "M5Stack PaperS3 (C139)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-papercolor",
+     "role": "colour e-paper variant for line colours",
+     "board_name": "M5Stack PaperColor (C151)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "simcom-a7670x-hw-design",
+     "role": "Cat-1/Cat-M cellular module hardware design for the backhaul",
+     "board_name": "SIMCom A7672X/A7670X Series Hardware Design",
+     "issuer": "SIMCom",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-catm",
+     "role": "Cat-M unit for the prototype",
+     "board_name": "M5Stack Unit CatM (U128)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "dfrobot-dfr0535",
+     "role": "solar power manager for the off-grid post",
+     "board_name": "DFRobot DFR0535",
+     "issuer": "DFRobot",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-stamp-c6lora",
+     "role": "LoRaWAN backhaul where a town network exists",
+     "board_name": "M5Stack Stamp C6LoRa (S012)",
+     "issuer": "M5Stack",
+     "open_files": "pcb,schematic"
+    }
+   ],
+   "whats_new": "An A4-class e-paper sign in an IP65 housing with a solar panel, a Cat-M or LoRaWAN modem, firmware that always shows the scheduled departures from GTFS and overlays live times only where GTFS-Realtime for that stop actually exists, and says which it is showing.",
+   "effort_weeks_est": "14",
+   "bom_eur_est": "120–180",
+   "price_eur_est": "599–899",
+   "certification": "RED (cellular module pre-certified; LoRa variant EN 300 220), EMC, EN 62368-1, RoHS, WEEE, CRA; Battery Regulation for the solar buffer cell; IP65 and vandal-resistance by design, not certification.",
+   "kill_question": "Do 2 Landkreise or transport associations whose operators already publish GTFS-Realtime sign a paid 10-stop pilot at €799 per sign within 8 weeks? Pass = 2 signed pilots; a region without GTFS-RT at its stops does not count.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 3,
+    "buildability": 4,
+    "margin": 4,
+    "speed": 3
+   },
+   "tags": [
+    "displays",
+    "e-paper",
+    "b2b",
+    "cellular",
+    "solar",
+    "public"
+   ],
+   "open_boards_note": "3 of 6 boards publish schematic/PCB files",
+   "score_total": 14
+  },
+  {
+   "slug": "oil-tank-eye",
+   "title": "Tank Eye",
+   "category": "Energy & solar",
+   "pitch": "A heating-oil (or pellet, or rainwater) tank level sensor with a local display and WiFi or LoRa, no app account and no subscription.",
+   "audience": "The roughly five million oil-heated homes in DE/AT/CH, holiday-home owners, small heating-oil dealers as a channel; Home Assistant users as the first buyers.",
+   "why_now": "The two known connected tank sensors bill a subscription on top of the device, oil prices made households watch their tank, and the ESPHome community has built this sensor hundreds of times without anyone boxing it.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-unit-ultrasonic-i2c",
+     "role": "ultrasonic distance unit for the tank lid",
+     "board_name": "M5Stack Unit Ultrasonic-I2C (U098-B1)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-tof",
+     "role": "time-of-flight alternative for small tanks",
+     "board_name": "M5Stack Unit ToF (U010)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "seeed-grove-ultrasonic-ranger",
+     "role": "open ultrasonic ranger reference circuit",
+     "board_name": "Seeed Grove-Ultrasonic Ranger",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-atoms3-lite",
+     "role": "ESP32-S3 WiFi core",
+     "board_name": "M5Stack AtomS3-Lite (C124)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-stamp-c6lora",
+     "role": "LoRa variant for tanks out of WiFi range",
+     "board_name": "M5Stack Stamp C6LoRa (S012)",
+     "issuer": "M5Stack",
+     "open_files": "pcb,schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-oled",
+     "role": "local display at the tank or in the hallway",
+     "board_name": "M5Stack Unit OLED (U119)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "A lid-mounted ultrasonic or ToF sensor with a tank-shape wizard (cylinder, cuboid, battery of tanks), a local display puck, WiFi with a local web page and MQTT, optional LoRa for the barn tank, consumption trend and a low-level alert by e-mail; no account.",
+   "effort_weeks_est": "8",
+   "bom_eur_est": "14–20",
+   "price_eur_est": "79–99",
+   "certification": "RED via module, EMC, EN 62368-1, RoHS, WEEE, CRA; explosion-safety (ATEX) status of a sensor in a heating-oil tank headspace must be verified before launch, not assumed.",
+   "kill_question": "100 members of a German heating forum offered it at €89 with \"no account, no subscription\": 30 refundable deposits in 3 weeks.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 4,
+    "buildability": 5,
+    "margin": 4,
+    "speed": 5
+   },
+   "tags": [
+    "energy",
+    "smart-home",
+    "consumer",
+    "wifi",
+    "sensors"
+   ],
+   "open_boards_note": "2 of 6 boards publish schematic/PCB files",
+   "score_total": 18
+  },
+  {
+   "slug": "room-door-sign",
+   "title": "Door Sign, No Subscription",
+   "category": "Displays",
+   "pitch": "An e-paper meeting-room sign that reads any CalDAV, Google or Microsoft 365 calendar directly, runs for months on a charge, and never bills per room.",
+   "audience": "SMEs, co-working spaces, schools, churches and community centres that book rooms; IT resellers and managed-service providers as the channel.",
+   "why_now": "Room signs from Joan and Evoko bill per device per month or cost up to several thousand euros; the e-paper plus calendar build is one of the most repeated Home Assistant and ESPHome projects; the devices in the catalogue already have the display, battery and radio.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-papers3",
+     "role": "ESP32-S3 e-paper device for the sign",
+     "board_name": "M5Stack PaperS3 (C139)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-coreink",
+     "role": "small e-paper variant for narrow door frames",
+     "board_name": "M5Stack CoreInk (K048)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-papercolor",
+     "role": "colour variant for status colours",
+     "board_name": "M5Stack PaperColor (C151)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "Firmware that talks to CalDAV, Google Calendar and Microsoft Graph directly from the device or through a small self-hosted bridge, a one-time setup page, book-now and end-early buttons, 2–4 months on a charge, a magnetic or glass mount; no per-room fee.",
+   "effort_weeks_est": "10",
+   "bom_eur_est": "35–55",
+   "price_eur_est": "149–199",
+   "certification": "RED via module, EMC, EN 62368-1, RoHS, WEEE, CRA; Battery Regulation / UN 38.3 for the cell.",
+   "kill_question": "Do 10 co-working spaces or SMEs pre-order 3 signs each at €169 from a landing page within 30 days? Pass = 10 orders of 3 or more.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 4,
+    "buildability": 5,
+    "margin": 4,
+    "speed": 5
+   },
+   "tags": [
+    "displays",
+    "e-paper",
+    "b2b",
+    "office",
+    "wifi"
+   ],
+   "open_boards_note": "0 of 3 boards publish schematic/PCB files",
+   "score_total": 18
+  },
+  {
+   "slug": "kiln-mind",
+   "title": "Kiln Mind",
+   "category": "Maker tools",
+   "pitch": "A retrofit controller and logger for the home potter's small electric kiln: ramp-and-hold programmes, a phone notification when the firing is done, and a log of every firing, for individual hobbyists, not schools or studios.",
+   "audience": "Individual hobbyist potters with a small electric kiln at home (DE/UK/NL/Nordics), kiln repair technicians as installers; explicitly not schools, colleges or commercial studios, where insurance terms rule out non-listed controllers.",
+   "why_now": "Hobby kilns are booming with the ceramics revival, the replacement controllers cost $388–699 and are sold through dealers, the catalogue has an isolated thermocouple input and a DIN controller ready, and the research confirmed the insurance problem that keeps this a hobbyist product.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-unit-kmeter-iso",
+     "role": "isolated K-type thermocouple input for the kiln probe",
+     "board_name": "M5Stack Unit KMeter-ISO (U133-V11)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-stamplc",
+     "role": "DIN-rail PLC-style controller core",
+     "board_name": "M5Stack StamPLC (K141)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-stamplc-ac",
+     "role": "mains-powered StamPLC variant",
+     "board_name": "M5Stack StamPLC AC (A160)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "seeed-grove-solid-state-relay-v2",
+     "role": "pilot-signal SSR reference; the kiln load goes through an external contactor",
+     "board_name": "Seeed Grove-Solid State Relay V2",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-buzzer",
+     "role": "end-of-firing and fault alarm",
+     "board_name": "M5Stack Unit Buzzer (U132)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "A controller box with an isolated thermocouple input, programme editor on the phone over local WiFi, cone-table presets, a pilot output to the kiln's existing contactor fitted by a technician, over-temperature and stuck-relay watchdogs, and a log of every firing; sold with an installer note and a clear statement that it is not a listed controller for institutions.",
+   "effort_weeks_est": "14",
+   "bom_eur_est": "45–70",
+   "price_eur_est": "249–349",
+   "certification": "LVD / EN 60730-1 class for a mains-connected temperature controller, EMC, RED (WiFi), RoHS, WEEE, CRA; installer-fitted; the kiln contactor and wiring stay the installer's responsibility.",
+   "kill_question": "Do 10 individual hobbyist potters (not schools or studios) buy at €299 after seeing one logged firing on a kiln like theirs, and does a kiln repair technician agree to fit it? Pass = 10 orders and 1 installer in 8 weeks.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 3,
+    "buildability": 4,
+    "margin": 4,
+    "speed": 3
+   },
+   "tags": [
+    "maker",
+    "consumer",
+    "wifi",
+    "heating",
+    "tools"
+   ],
+   "open_boards_note": "1 of 5 boards publish schematic/PCB files",
+   "score_total": 14
+  },
+  {
+   "slug": "vitrine-log",
+   "title": "Vitrine Log",
+   "category": "LoRaWAN & building IoT",
+   "pitch": "A showcase and archive climate logger (temperature, humidity, lux, UV) over LoRaWAN or BLE that produces the loan-ready PDF report lenders ask for, at a third of institutional logger prices.",
+   "audience": "Regional and university museums, archives, instrument and art collections, churches holding artworks; conservators and registrars; the museum's collections budget pays.",
+   "why_now": "Loan agreements routinely require continuous climate records (the UK Government Indemnity Scheme is the citable case, currently under review), institutional loggers cost £487–617 each plus software, and the sensors are catalogue parts.",
+   "built_from": [
+    {
+     "board_slug": "seeed-grove-temperatureandhumidity-sensor-hdc1000",
+     "role": "HDC1000 temperature/humidity reference circuit",
+     "board_name": "Seeed Grove-TemperatureAndHumidity Sensor-HDC1000",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "seeed-grove-temptureandhumidity-sensor-high-accuracy-andmini-v1-0",
+     "role": "high-accuracy T/RH alternative",
+     "board_name": "Seeed Grove-TemptureAndHumidity Sensor-High-Accuracy AndMini-v1.0",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-env-pro",
+     "role": "BME688-class environmental unit for the prototype",
+     "board_name": "M5Stack Unit ENV-Pro (U169)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "seeed-grove-uv-sensor",
+     "role": "UV sensor reference circuit",
+     "board_name": "Seeed Grove-UV Sensor",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-dlight",
+     "role": "lux measurement",
+     "board_name": "M5Stack Unit DLight (U136)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-stamp-c6lora",
+     "role": "open ESP32-C6 + LoRa core for the logger",
+     "board_name": "M5Stack Stamp C6LoRa (S012)",
+     "issuer": "M5Stack",
+     "open_files": "pcb,schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-lorawan-eu868",
+     "role": "EU868 LoRaWAN module for the prototype run",
+     "board_name": "M5Stack Unit LoRaWAN-EU868 (U184-EU868)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "A small logger with calibrated T/RH, lux and UV sensors, two years on a cell, LoRaWAN or BLE readout, and a report generator that outputs the per-object climate PDF a lender's registrar expects (ranges, excursions, graphs) with no per-logger software licence.",
+   "effort_weeks_est": "10",
+   "bom_eur_est": "25–40",
+   "price_eur_est": "149–199",
+   "certification": "RED (LoRa EN 300 220 / BLE) via module, EMC, EN 62368-1, RoHS, WEEE, CRA; Battery Regulation for the lithium cell.",
+   "kill_question": "Do 3 regional museums buy 10 loggers each at €169 after one loan cycle with the PDF report? Pass = 3 orders in 10 weeks.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 4,
+    "buildability": 5,
+    "margin": 4,
+    "speed": 4
+   },
+   "tags": [
+    "building",
+    "lorawan",
+    "b2b",
+    "sensors",
+    "compliance",
+    "museum"
+   ],
+   "open_boards_note": "4 of 7 boards publish schematic/PCB files",
+   "score_total": 17
+  },
+  {
+   "slug": "tree-thirst-sensor",
+   "title": "Tree Thirst Sensor",
+   "category": "Agri",
+   "pitch": "A LoRaWAN soil-moisture and temperature stake for municipal young-tree watering, publishing to the city's own LoRaWAN or TTN with no platform fee.",
+   "audience": "Municipal green-space departments with climate-adaptation budgets (Vienna, Ludwigsburg, Jena and Pforzheim already run such programmes), tree-care contractors, housing associations with green space.",
+   "why_now": "Cities already run funded tree-sensor programmes, the watering of young trees in dry summers is a line item every green department fights over, and the commercial sensors come with a platform fee the municipal IT would rather avoid.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-unit-earth",
+     "role": "soil moisture unit for the first prototype",
+     "board_name": "M5Stack Unit Earth (U019)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-watering",
+     "role": "capacitive soil moisture + pump reference",
+     "board_name": "M5Stack Unit Watering (U101)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "dfrobot-sen0114",
+     "role": "soil moisture sensor, second source",
+     "board_name": "DFRobot SEN0114",
+     "issuer": "DFRobot",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-stamp-c6lora",
+     "role": "open ESP32-C6 + LoRa core",
+     "board_name": "M5Stack Stamp C6LoRa (S012)",
+     "issuer": "M5Stack",
+     "open_files": "pcb,schematic"
+    },
+    {
+     "board_slug": "seeed-grove-temperatureandhumidity-sensor-hdc1000",
+     "role": "soil / air temperature reference circuit",
+     "board_name": "Seeed Grove-TemperatureAndHumidity Sensor-HDC1000",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    }
+   ],
+   "whats_new": "A 60 cm stake with two capacitive moisture probes (30 and 60 cm), soil temperature, a sealed head with a Stamp C6LoRa and a lithium cell for five years, a soil-type calibration wizard, and open decoders for TTN and the city's LoRaWAN; a simple map and a watering list, no per-sensor fee.",
+   "effort_weeks_est": "8",
+   "bom_eur_est": "15–25",
+   "price_eur_est": "69–99",
+   "certification": "RED (EN 300 220) via module, EMC, RoHS, WEEE, CRA; Battery Regulation / UN 38.3 for the cell; IP67 head by design.",
+   "kill_question": "Do 3 cities' green departments order a 50-sensor paid pilot at €89 within one budget cycle? Pass = 3 purchase orders in 12 weeks.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 4,
+    "buildability": 5,
+    "margin": 4,
+    "speed": 4
+   },
+   "tags": [
+    "agri",
+    "lorawan",
+    "b2b",
+    "sensors",
+    "outdoor",
+    "public"
+   ],
+   "open_boards_note": "3 of 5 boards publish schematic/PCB files",
+   "score_total": 17
+  },
+  {
+   "slug": "machine-access-box",
+   "title": "Machine Access Box",
+   "category": "Maker tools",
+   "pitch": "An RFID or fingerprint interlock for workshop machines that checks the user's training level, logs usage and enables power, with no subscription.",
+   "audience": "Makerspaces and open workshops (Verbund Offener Werkstätten, FabLabs), school and university workshops, repair cafés; the space's board or the workshop manager pays.",
+   "why_now": "FabAccess is being rolled out across ten workshops with public funding, which proves the sector wants machine access control; the commercial option bills per machine, and the catalogue has readers, relays and cores ready.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-unit-rfid2",
+     "role": "13.56 MHz RFID reader for member cards",
+     "board_name": "M5Stack Unit RFID2 (U031-B)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-nfc",
+     "role": "NFC reader alternative",
+     "board_name": "M5Stack Unit NFC (U216)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-fingerprint2",
+     "role": "fingerprint option for spaces without cards",
+     "board_name": "M5Stack Unit Fingerprint2 (U203)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-relay",
+     "role": "single relay for the machine enable",
+     "board_name": "M5Stack Unit Relay (U023)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-2relay",
+     "role": "two-channel relay for enable + indicator",
+     "board_name": "M5Stack Unit 2Relay (U131)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-core2",
+     "role": "touch-screen controller for the prototype",
+     "board_name": "M5Stack Core2 (K010)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-atoms3-lite",
+     "role": "compact core for the production box",
+     "board_name": "M5Stack AtomS3-Lite (C124)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-buzzer",
+     "role": "feedback beep",
+     "board_name": "M5Stack Unit Buzzer (U132)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "A DIN or wall box per machine with a reader, a relay that enables the machine's control circuit, an LED ring and buzzer, a local server (or FabAccess compatibility) holding members and training levels, usage logs and maintenance counters; no per-machine fee.",
+   "effort_weeks_est": "10",
+   "bom_eur_est": "30–45",
+   "price_eur_est": "149–199",
+   "certification": "RED (WiFi, 13.56 MHz reader) via modules, EMC, EN 62368-1 (low-voltage control circuit only), RoHS, WEEE, CRA; not a safety-rated interlock: it enables the control circuit, it does not replace the machine's e-stop.",
+   "kill_question": "Do 10 makerspaces from one network pre-order 3 boxes each at €169? Pass = 10 orders of 3 in 8 weeks.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 4,
+    "buildability": 5,
+    "margin": 4,
+    "speed": 5
+   },
+   "tags": [
+    "maker",
+    "b2b",
+    "education",
+    "nfc",
+    "wifi"
+   ],
+   "open_boards_note": "0 of 8 boards publish schematic/PCB files",
+   "score_total": 18
+  },
+  {
+   "slug": "hall-heat-scheduler",
+   "title": "Hall Heat Scheduler",
+   "category": "Energy & solar",
+   "pitch": "A DIN-rail box that heats sports halls, church halls and clubhouses only when the booking calendar and a presence sensor say so, locally, with no cloud, cutting the hours a hall is heated for nobody.",
+   "audience": "Sports clubs, parishes and municipal hall managers who pay the heating bill; electricians and heating installers who fit it. Sold on cost savings, not on compliance.",
+   "why_now": "Clubs manually fight heated empty halls (German sports-federation guidance describes exactly this), energy prices made the bill visible, and the building-automation rules that exist are sized for far bigger buildings, so nothing forces a solution and nobody sells a small one.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-stamplc-ac",
+     "role": "mains-powered DIN controller core",
+     "board_name": "M5Stack StamPLC AC (A160)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-stamplc",
+     "role": "DIN-rail PLC-style controller",
+     "board_name": "M5Stack StamPLC (K141)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-pir",
+     "role": "presence detection in the hall",
+     "board_name": "M5Stack Unit PIR (U004)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-tmos-pir",
+     "role": "thermal presence that sees a still person",
+     "board_name": "M5Stack Unit TMOS PIR (U185)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "seeed-grove-solid-state-relay-v2",
+     "role": "open SSR reference for the boiler enable signal",
+     "board_name": "Seeed Grove-Solid State Relay V2",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-env-iii",
+     "role": "hall temperature and humidity",
+     "board_name": "M5Stack Unit ENV-III (U001-C)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-rtc",
+     "role": "schedule keeping without network",
+     "board_name": "M5Stack Unit RTC (U126)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "A DIN box that reads the hall's booking calendar (CalDAV, Google, the club's booking tool), a presence sensor, a temperature sensor and a schedule, and drives the boiler enable or zone valve with pre-heat logic; a local web page and a monthly report of heating hours saved; no cloud.",
+   "effort_weeks_est": "12",
+   "bom_eur_est": "60–90",
+   "price_eur_est": "299–399",
+   "certification": "LVD / EN 60730-1 class for a mains-connected control device, EMC, RED (WiFi), RoHS, WEEE, CRA; installer-fitted; the boiler interface stays within the boiler maker's enable contact spec.",
+   "kill_question": "Do 5 clubs or parishes install a paid pilot at €349 and measure heating hours saved for one month? Pass = 5 pilots and a measured saving in at least 3.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 4,
+    "buildability": 4,
+    "margin": 4,
+    "speed": 4
+   },
+   "tags": [
+    "energy",
+    "heating",
+    "b2b",
+    "din-rail",
+    "building"
+   ],
+   "open_boards_note": "1 of 7 boards publish schematic/PCB files",
+   "score_total": 16
+  },
+  {
+   "slug": "shared-laundry-notifier",
+   "title": "Laundry Room Notifier",
+   "category": "Smart home",
+   "pitch": "Clip-on current or vibration sensors per machine and an e-paper status board at the laundry-room door, with optional push to residents, so nobody carries a basket down to a busy room; no subscription.",
+   "audience": "Housing associations, student-housing operators and housing co-ops in CH/DE/Nordics where shared laundry rooms are standard; facility managers buy, residents use.",
+   "why_now": "Washer-done detection is one of the most repeated Home Assistant projects, shared laundry rooms are a daily friction for millions of residents, and the professional booking systems are expensive and tied to card infrastructure.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-unit-ac-measure",
+     "role": "AC power measurement per machine",
+     "board_name": "M5Stack Unit AC Measure (U164)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "dfrobot-sen0098",
+     "role": "AC current sensor alternative",
+     "board_name": "DFRobot SEN0098",
+     "issuer": "DFRobot",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-accel",
+     "role": "vibration-based detection where the plug is not accessible",
+     "board_name": "M5Stack Unit Accel (U056)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-papers3",
+     "role": "e-paper status board at the laundry-room door",
+     "board_name": "M5Stack PaperS3 (C139)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-coreink",
+     "role": "small e-paper variant",
+     "board_name": "M5Stack CoreInk (K048)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-stamp-c6lora",
+     "role": "LoRa link from basement laundry rooms",
+     "board_name": "M5Stack Stamp C6LoRa (S012)",
+     "issuer": "M5Stack",
+     "open_files": "pcb,schematic"
+    },
+    {
+     "board_slug": "m5stack-atoms3-lite",
+     "role": "ESP32-S3 sensor node core",
+     "board_name": "M5Stack AtomS3-Lite (C124)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "Sensor nodes that read a machine's power draw or vibration and classify running / finished / free, a door-side e-paper board listing every machine, an optional resident web page or push, and a LoRa link for basements; installed without touching the machines' electrics; no per-room fee.",
+   "effort_weeks_est": "10",
+   "bom_eur_est": "50–80",
+   "price_eur_est": "249–349",
+   "certification": "RED via modules, EMC, EN 62368-1 (clip-on current sensor, no mains contact; plug-through variant needs the socket's own certification), RoHS, WEEE, CRA; Battery Regulation for battery nodes.",
+   "kill_question": "Do 3 housing associations or student-housing operators install a paid pilot in 5 laundry rooms at €299 per room, and do residents say in week 3 that they check the board before carrying the basket? Pass = 3 pilots and a majority yes.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 4,
+    "buildability": 5,
+    "margin": 4,
+    "speed": 4
+   },
+   "tags": [
+    "smart-home",
+    "building",
+    "b2b",
+    "e-paper",
+    "lorawan",
+    "housing"
+   ],
+   "open_boards_note": "2 of 7 boards publish schematic/PCB files",
+   "score_total": 17
+  },
+  {
+   "slug": "stream-level-gauge",
+   "title": "Stream Level Gauge",
+   "category": "LoRaWAN & building IoT",
+   "pitch": "A solar ultrasonic water-level sensor for bridges and culverts that reports over LoRaWAN or Cat-M to a public dashboard, giving small municipalities an advisory early warning on the streams nobody gauges; advisory, not an official gauge.",
+   "audience": "Municipalities, water boards and volunteer fire brigades in flood-prone regions (post-2021 budgets in DE/BE/NL; EU Floods Directive planning), TTN communities that already build such sensors.",
+   "why_now": "Hennef installed a community-built level sensor on a public bridge feeding its smart-city map, and Bergisch Gladbach gauges the Strunde the same way: municipalities take these sensors up when they exist; the official gauges cost thousands and are placed only on larger rivers.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-unit-ultrasonic-i2c",
+     "role": "ultrasonic distance to the water surface",
+     "board_name": "M5Stack Unit Ultrasonic-I2C (U098-B1)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "seeed-grove-ultrasonic-ranger",
+     "role": "open ultrasonic ranger reference circuit",
+     "board_name": "Seeed Grove-Ultrasonic Ranger",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-stamp-c6lora",
+     "role": "open ESP32-C6 + LoRa core",
+     "board_name": "M5Stack Stamp C6LoRa (S012)",
+     "issuer": "M5Stack",
+     "open_files": "pcb,schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-lorawan-eu868",
+     "role": "EU868 LoRaWAN module for the prototype",
+     "board_name": "M5Stack Unit LoRaWAN-EU868 (U184-EU868)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-catm",
+     "role": "Cat-M fallback where no LoRaWAN exists",
+     "board_name": "M5Stack Unit CatM (U128)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "dfrobot-dfr0535",
+     "role": "solar power manager for the post",
+     "board_name": "DFRobot DFR0535",
+     "issuer": "DFRobot",
+     "open_files": "schematic"
+    }
+   ],
+   "whats_new": "An IP67 post or bridge-rail mount with a downward ultrasonic sensor, a Stamp C6LoRa, solar panel and cell, firmware with temperature compensation, surface-noise filtering and rate-of-rise alerts, a public dashboard and alert rules for the fire brigade; labelled advisory on every screen.",
+   "effort_weeks_est": "12",
+   "bom_eur_est": "80–130",
+   "price_eur_est": "399–599",
+   "certification": "RED (EN 300 220 / cellular module), EMC, EN 62368-1, RoHS, WEEE, CRA; Battery Regulation for the cell; IP67 by design; no claim to be a measuring instrument under metrology law.",
+   "kill_question": "Do 3 municipalities or one water board sign a paid 10-gauge advisory pilot at €499 within one budget cycle, with the advisory status accepted in writing? Pass = 3 signed pilots (or 1 water board) in 12 weeks.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 4,
+    "buildability": 4,
+    "margin": 4,
+    "speed": 3
+   },
+   "tags": [
+    "lorawan",
+    "b2b",
+    "outdoor",
+    "solar",
+    "public",
+    "safety"
+   ],
+   "open_boards_note": "3 of 6 boards publish schematic/PCB files",
+   "score_total": 15
   }
  ],
  "removed_after_market_check": {
@@ -2069,5 +3029,26 @@
    "vibration-health-sticker",
    "mould-risk-monitor"
   ]
- }
+ },
+ "rounds": [
+  {
+   "date": "2026-11-14",
+   "note": "Round 2: 13 ideas added after an external market check of 16 candidates (10 as-is, 3 with the researcher's fix applied; 3 dropped).",
+   "slugs": [
+    "dark-sky-meter",
+    "classroom-noise-light",
+    "cue-light-system",
+    "village-stop-display",
+    "oil-tank-eye",
+    "room-door-sign",
+    "kiln-mind",
+    "vitrine-log",
+    "tree-thirst-sensor",
+    "machine-access-box",
+    "hall-heat-scheduler",
+    "shared-laundry-notifier",
+    "stream-level-gauge"
+   ]
+  }
+ ]
 }
