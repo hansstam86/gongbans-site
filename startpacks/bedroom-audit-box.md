@@ -160,7 +160,119 @@ For the prototype MCU/display use any ESP32-S3 dev board with battery support fr
 - Packaging: rental pouch that survives 50 cycles; printed quick-start on the pouch, not a leaflet.
 - Incoterms: FOB Shenzhen; lithium → DG surcharge; consolidate with sea freight at 5k.
 
-## 4. Next steps (this week)
+## 4. Who to contact
+
+<!-- who-to-contact:start -->
+**On file: 2 board publishers (Seeed Studio and M5Stack).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+
+### Board publishers (direct)
+
+- **Seeed Studio** (矽递科技(深圳)有限公司, seeedstudio.com) — community / maker brand; 183 boards in the catalogue; files via Seeed Studio wiki catalog · https://github.com/Seeed-Studio/wiki-documents. Directory entry: IoT module + open hardware OEM: XIAO ESP32S3; Grove modules; LoRa gateway; Jetson carrier; OEM PCBA. Boards used here: [Seeed Grove-Loudness Sensor](/db/seeed-grove-loudness-sensor.html) (noise level reference); [Seeed Grove-TempAndHumi Sensor-SHT31](/db/seeed-grove-tempandhumi-sensor-sht31.html) (temperature/humidity). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+- **M5Stack** — community / maker brand; 274 boards in the catalogue; files via M5Stack M5_Hardware repo · https://github.com/m5stack/M5_Hardware. Boards used here: [M5Stack Unit CO2L (U104)](/db/m5stack-unit-co2l.html) (CO2 for ventilation assessment); [M5Stack Unit DLight (U136)](/db/m5stack-unit-dlight.html) (ambient light sensor). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+
+### Manufacturing (PCBA / EMS) on file
+
+- **Kingbrother / King Brother Technology** · https://global.kingbrother.com/ — PCB fab + EMS; see the [Kingbrother SOM page](/boards-kingbrother.html) on this site.
+- **Foxlink (SZ)** (正崴精密工业(深圳)有限公司) · foxconn.com — PCBA + cable assembly EMS: Cable assembly; PCBA; connector; OEM for major electronics brands.
+
+### MOQ and landed cost
+
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+
+### Outreach e-mail, ready to send
+
+Fill in the [brackets], keep it short, and send it to the sales or "contact us" address on the company's own website. The Chinese version is the same letter; sending both in one mail is normal. How to read the reply: [playbook → the first quote](/playbook.html#quote).
+
+**A. To a board publisher — samples and volume price** (send to the sales / "contact us" address on the Seeed Studio and M5Stack websites)
+
+```email
+Subject: Sample order and volume pricing — Seeed Grove-Loudness Sensor, Seeed Grove-TempAndHumi Sensor-SHT31, M5Stack Unit CO2L (U104), M5Stack Unit DLight (U136) — for a Bedroom Audit Box
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are developing a Bedroom Audit Box: A rental box that logs noise, light, CO2, temperature and humidity in a bedroom for seven nights and produces a plain-language sleep-environment report — rented out by mattress and sleep shops. The design is built around your Seeed Grove-Loudness Sensor, Seeed Grove-TempAndHumi Sensor-SHT31, M5Stack Unit CO2L (U104), M5Stack Unit DLight (U136).
+
+Could you please send:
+1. Price and lead time for [10] sample units of each: Seeed Grove-Loudness Sensor, Seeed Grove-TempAndHumi Sensor-SHT31, M5Stack Unit CO2L (U104), M5Stack Unit DLight (U136).
+2. Unit pricing at 100 / 500 / 1,000 pieces, EXW Shenzhen and DDP [your city], including packaging.
+3. Whether a customised variant is possible (our enclosure, connector, or firmware pre-loaded), with the NRE and MOQ for it.
+4. Radio test reports or module certification documents, if available, so we can plan EU (CE/RED) certification.
+5. Payment terms and accepted methods for a first order.
+
+We can share our block diagram and target quantities under NDA if that helps.
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**A. 中文版**
+
+```email
+主题：样品订购及批量报价 — Seeed Grove-Loudness Sensor, Seeed Grove-TempAndHumi Sensor-SHT31, M5Stack Unit CO2L (U104), M5Stack Unit DLight (U136) — 用于Bedroom Audit Box
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Bedroom Audit Box：A rental box that logs noise, light, CO2, temperature and humidity in a bedroom for seven nights and produces a plain-language sleep-environment report — rented out by mattress and sleep shops。产品设计基于贵司的Seeed Grove-Loudness Sensor, Seeed Grove-TempAndHumi Sensor-SHT31, M5Stack Unit CO2L (U104), M5Stack Unit DLight (U136)。
+
+请提供以下信息：
+1. 各[10]片样品的单价和交期：Seeed Grove-Loudness Sensor, Seeed Grove-TempAndHumi Sensor-SHT31, M5Stack Unit CO2L (U104), M5Stack Unit DLight (U136)。
+2. 100 / 500 / 1,000 片的批量单价（深圳EXW及DDP到[城市]），含包装。
+3. 是否可以定制（外壳、接口或预烧录固件），以及定制的NRE费用和最小起订量（MOQ）。
+4. 如有，请提供射频测试报告或模组认证文件，以便我们规划欧盟CE/RED认证。
+5. 首单的付款方式和条件。
+
+如有需要，我们可在签署NDA后提供框图和目标数量。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+
+**B. To a PCBA / EMS house — quote from the open design files** (send to Kingbrother, Foxlink or any assembler you vet; see the [playbook](/playbook.html#manufacturer))
+
+```email
+Subject: PCBA quote from open design files — Bedroom Audit Box, [50] prototypes + [500] production units
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are building a Bedroom Audit Box: A rental box that logs noise, light, CO2, temperature and humidity in a bedroom for seven nights and produces a plain-language sleep-environment report — rented out by mattress and sleep shops. The design starts from published open-hardware files (Seeed Grove-Loudness Sensor, Seeed Grove-TempAndHumi Sensor-SHT31, M5Stack Unit CO2L (U104), M5Stack Unit DLight (U136); schematic, PCB and BOM available) with our own modifications.
+
+Could you quote:
+1. PCB fabrication + SMT assembly for [50] prototype units and [500 / 1,000] production units, including component sourcing (we provide the BOM with manufacturer part numbers).
+2. NRE, stencil and test-fixture costs, and your DFM review fee if any.
+3. Lead time from file approval to shipment, and your QC / functional-test process.
+4. Box build (enclosure, cable, packaging) if you offer it.
+5. Terms: EXW / FOB Shenzhen or DDP [your city]; payment terms for a first order.
+
+Design files: [link to Gerber, BOM and pick-and-place files].
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**B. 中文版**
+
+```email
+主题：基于开源设计文件的PCBA报价 — Bedroom Audit Box，[50]台样机 + [500]台量产
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Bedroom Audit Box：A rental box that logs noise, light, CO2, temperature and humidity in a bedroom for seven nights and produces a plain-language sleep-environment report — rented out by mattress and sleep shops。设计基于已公开的开源硬件文件（Seeed Grove-Loudness Sensor, Seeed Grove-TempAndHumi Sensor-SHT31, M5Stack Unit CO2L (U104), M5Stack Unit DLight (U136)；含原理图、PCB和BOM），并做了我们自己的修改。
+
+请报价：
+1. [50]台样机和[500 / 1,000]台量产的PCB制板+SMT贴片，含元器件采购（我们提供带厂商料号的BOM）。
+2. NRE、钢网和测试治具费用，以及DFM评审费用（如有）。
+3. 从文件确认到出货的交期，以及贵司的QC/功能测试流程。
+4. 如可提供，整机组装（外壳、线材、包装）报价。
+5. 贸易条款：深圳EXW/FOB或DDP到[城市]；首单付款条件。
+
+设计文件：[Gerber、BOM和坐标文件链接]。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+<!-- who-to-contact:end -->
+
+## 5. Next steps (this week)
 1. Order 15 sets (Unit CO2L, Unit DLight, Grove Loudness, Grove SHT31, ESP32-S3 battery dev board) and print 15 cases; get one logging 7 nights by day 10.
 2. Write the report template with a sleep scientist friend or a published guideline as the source for every recommendation — the report is the product.
 3. Visit 10 independent mattress shops with a mock report and the pilot offer (3 boxes, 2 months, €450).

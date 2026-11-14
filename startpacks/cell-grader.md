@@ -167,7 +167,129 @@ Margin is fine for a tool. The 8-slot Pro roughly doubles BOM and adds €200 of
 - Packaging: no lithium in the box; PSU separate; quick sheet with the safety wording.
 - Incoterms: FOB Shenzhen; air for the first 100; sea afterwards.
 
-## 4. Next steps (this week)
+## 4. Who to contact
+
+<!-- who-to-contact:start -->
+**On file: 1 board publisher (M5Stack).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+
+### Board publishers (direct)
+
+- **M5Stack** — community / maker brand; 274 boards in the catalogue; files via M5Stack M5_Hardware repo · https://github.com/m5stack/M5_Hardware. Boards used here: [M5Stack Unit INA226-10A (U200)](/db/m5stack-unit-ina226-10a.html) (precision current/voltage measurement); [M5Stack VAMeter (K136)](/db/m5stack-vameter.html) (display + measurement reference for the handheld variant). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+
+### Open-hardware boards without a company behind them
+
+- **OSHWHub community designs** — community projects on OSHWHub 立创开源硬件平台 (JLC open hardware platform) · https://oshwhub.com . The author is an individual, not a supplier, and author handles are not published here. Fabricate from the files through a PCBA house (below) and check each project's licence first. Boards used here: [CN3300 4串电池组板](/db/oshwhub-dian-chi-zu-ban-copy-copy.html) (open CN3300 4-cell pack board as charge-path reference); [STC8H3K64S2制作12864LCD双路电压电流容量表](/db/oshwhub-stc8h3k-tssop20-dian-ya-dian-liu-biao-copy-copy-copy.html) (open dual-channel voltage/current/capacity meter).
+
+### Manufacturing (PCBA / EMS) on file
+
+- **Kingbrother / King Brother Technology** · https://global.kingbrother.com/ — PCB fab + EMS; see the [Kingbrother SOM page](/boards-kingbrother.html) on this site.
+- **Foxlink (SZ)** (正崴精密工业(深圳)有限公司) · foxconn.com — PCBA + cable assembly EMS: Cable assembly; PCBA; connector; OEM for major electronics brands.
+
+### Also in the directory (category match, not idea-specific)
+
+Companies in the gongban.db solution-house directory whose product category overlaps this idea. They were matched on the idea's tags, not on this design; none has seen it.
+
+- **Linkage Technology** (深圳市联控智能科技有限公司) · linkage-tech.com — Smart meter / energy IoT solution house: Smart energy meter; sub-metering IoT; NB-IoT / LoRa; OEM/ODM. *(Smart-metering / energy IoT)*
+- **GREPOW** (深圳格瑞普电池有限公司) · grepow.com — High-rate Li-Po / NiMH battery OEM: High-drain Li-Po; shaped/custom battery; NiMH; UAV battery. *(Custom Li-Po / NiMH batteries)*
+
+### MOQ and landed cost
+
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+
+### Outreach e-mail, ready to send
+
+Fill in the [brackets], keep it short, and send it to the sales or "contact us" address on the company's own website. The Chinese version is the same letter; sending both in one mail is normal. How to read the reply: [playbook → the first quote](/playbook.html#quote).
+
+**A. To a board publisher — samples and volume price** (send to the sales / "contact us" address on the M5Stack website)
+
+```email
+Subject: Sample order and volume pricing — M5Stack Unit INA226-10A (U200), M5Stack VAMeter (K136) — for a Cell Grader
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are developing a Cell Grader: A bench tool that measures capacity, internal resistance and self-discharge of salvaged 18650 / 21700 cells and prints a grade label, so repair cafés and pack rebuilders can reuse cells safely. The design is built around your M5Stack Unit INA226-10A (U200), M5Stack VAMeter (K136).
+
+Could you please send:
+1. Price and lead time for [10] sample units of each: M5Stack Unit INA226-10A (U200), M5Stack VAMeter (K136).
+2. Unit pricing at 100 / 500 / 1,000 pieces, EXW Shenzhen and DDP [your city], including packaging.
+3. Whether a customised variant is possible (our enclosure, connector, or firmware pre-loaded), with the NRE and MOQ for it.
+4. Radio test reports or module certification documents, if available, so we can plan EU (CE/RED) certification.
+5. Payment terms and accepted methods for a first order.
+
+We can share our block diagram and target quantities under NDA if that helps.
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**A. 中文版**
+
+```email
+主题：样品订购及批量报价 — M5Stack Unit INA226-10A (U200), M5Stack VAMeter (K136) — 用于Cell Grader
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Cell Grader：A bench tool that measures capacity, internal resistance and self-discharge of salvaged 18650 / 21700 cells and prints a grade label, so repair cafés and pack rebuilders can reuse cells safely。产品设计基于贵司的M5Stack Unit INA226-10A (U200), M5Stack VAMeter (K136)。
+
+请提供以下信息：
+1. 各[10]片样品的单价和交期：M5Stack Unit INA226-10A (U200), M5Stack VAMeter (K136)。
+2. 100 / 500 / 1,000 片的批量单价（深圳EXW及DDP到[城市]），含包装。
+3. 是否可以定制（外壳、接口或预烧录固件），以及定制的NRE费用和最小起订量（MOQ）。
+4. 如有，请提供射频测试报告或模组认证文件，以便我们规划欧盟CE/RED认证。
+5. 首单的付款方式和条件。
+
+如有需要，我们可在签署NDA后提供框图和目标数量。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+
+**B. To a PCBA / EMS house — quote from the open design files** (send to Kingbrother, Foxlink or any assembler you vet; see the [playbook](/playbook.html#manufacturer))
+
+```email
+Subject: PCBA quote from open design files — Cell Grader, [50] prototypes + [500] production units
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are building a Cell Grader: A bench tool that measures capacity, internal resistance and self-discharge of salvaged 18650 / 21700 cells and prints a grade label, so repair cafés and pack rebuilders can reuse cells safely. The design starts from published open-hardware files (CN3300 4串电池组板, STC8H3K64S2制作12864LCD双路电压电流容量表; schematic, PCB and BOM available) with our own modifications.
+
+Could you quote:
+1. PCB fabrication + SMT assembly for [50] prototype units and [500 / 1,000] production units, including component sourcing (we provide the BOM with manufacturer part numbers).
+2. NRE, stencil and test-fixture costs, and your DFM review fee if any.
+3. Lead time from file approval to shipment, and your QC / functional-test process.
+4. Box build (enclosure, cable, packaging) if you offer it.
+5. Terms: EXW / FOB Shenzhen or DDP [your city]; payment terms for a first order.
+
+Design files: [link to Gerber, BOM and pick-and-place files].
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**B. 中文版**
+
+```email
+主题：基于开源设计文件的PCBA报价 — Cell Grader，[50]台样机 + [500]台量产
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Cell Grader：A bench tool that measures capacity, internal resistance and self-discharge of salvaged 18650 / 21700 cells and prints a grade label, so repair cafés and pack rebuilders can reuse cells safely。设计基于已公开的开源硬件文件（CN3300 4串电池组板, STC8H3K64S2制作12864LCD双路电压电流容量表；含原理图、PCB和BOM），并做了我们自己的修改。
+
+请报价：
+1. [50]台样机和[500 / 1,000]台量产的PCB制板+SMT贴片，含元器件采购（我们提供带厂商料号的BOM）。
+2. NRE、钢网和测试治具费用，以及DFM评审费用（如有）。
+3. 从文件确认到出货的交期，以及贵司的QC/功能测试流程。
+4. 如可提供，整机组装（外壳、线材、包装）报价。
+5. 贸易条款：深圳EXW/FOB或DDP到[城市]；首单付款条件。
+
+设计文件：[Gerber、BOM和坐标文件链接]。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+<!-- who-to-contact:end -->
+
+## 5. Next steps (this week)
 1. Fab or buy the open meter board, order 4× Unit INA226-10A, 8 power resistors and a fan; have 4 cells cycling on a bench by day 7 and film it.
 2. Pull a list of 60 battery-repair shops, power-tool/garden-tool repairers and repair cafés in your country; write the deposit email with the grade definition on one page.
 3. Read Regulation (EU) 2023/1542's articles on repurposed and remanufactured batteries ([EUR-Lex consolidated text](https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf)) and note exactly which claims a grader may and may not make.

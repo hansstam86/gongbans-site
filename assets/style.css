@@ -465,3 +465,23 @@ main.detail.startpack{max-width:960px}
   .startpack-explainer .n{text-align:left}
   .pack-body pre.diagram{font-size:11.5px;padding:14px 16px}
 }
+
+/* who-to-contact + playbook (2026-11) */
+.pack-toc a.pb{background:var(--gold);color:var(--green-deeper);border-color:var(--gold)}
+.pack-toc a.pb:hover{background:var(--copper);border-color:var(--copper);color:#fff}
+.pack-playbook{font-size:14px;color:var(--text-mid);background:var(--white);border-left:4px solid var(--copper);padding:12px 18px;border-radius:0 6px 6px 0;margin:-24px 0 36px;line-height:1.6}
+.pack-playbook a{color:var(--copper);border-bottom:1px solid rgba(184,115,51,0.3)}
+.pack-body pre.email{background:var(--white);color:var(--text);font-family:var(--font-mono);font-size:13px;line-height:1.55;padding:18px 22px;border-radius:6px;overflow-x:auto;margin:0 0 20px;border:1px solid rgba(0,0,0,0.1);border-left:4px solid var(--copper);white-space:pre-wrap}
+.pack-body pre.email code{background:none;border:0;padding:0;color:inherit;font-size:inherit}
+.pack-body em{color:var(--text-light)}
+main.detail.playbook{max-width:900px}
+.playbook .pb-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.5px}
+.playbook .pb-toc a{padding:6px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.12);background:var(--white);color:var(--text-mid)}
+.playbook .pb-toc a:hover{border-color:var(--gold-dim);color:var(--text)}
+.playbook .pack-body h2{font-family:var(--font-display);font-size:30px;line-height:1.2;margin:8px 0 16px;color:var(--text)}
+.playbook .step{counter-increment:step}
+.playbook .est{display:inline-block;font-family:var(--font-mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--copper);border:1px solid rgba(184,115,51,0.4);padding:1px 6px;border-radius:3px;margin-left:6px;vertical-align:middle}
+.playbook table.kv-table td,.playbook table.kv-table th{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(0,0,0,0.06)}
+.playbook table.kv-table th{font-family:var(--font-mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dim);background:var(--cream)}
+.playbook .glossary dt{font-weight:600;color:var(--text);margin-top:12px}
+.playbook .glossary dd{color:var(--text-mid);margin:2px 0 0 0;line-height:1.6}

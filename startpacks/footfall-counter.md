@@ -174,7 +174,133 @@ No frame buffer written to flash. No video output. Debug UART unpopulated in pro
 - Packaging: single-unit box, mounting kit, printed firmware hash and DPIA QR code.
 - Incoterms: FOB Shenzhen for the first batches; move to DAP once volumes justify a forwarder contract.
 
-## 4. Next steps (this week)
+## 4. Who to contact
+
+<!-- who-to-contact:start -->
+**On file: 2 board publishers (Espressif and M5Stack).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+
+### Board publishers (direct)
+
+- **Espressif** — chip house; 48 boards in the catalogue; files via Espressif esp-dev-kits (GitHub) · https://github.com/espressif/esp-dev-kits. Boards used here: [Espressif esp32-p4-eye](/db/espressif-esp32-p4-eye.html) (lower-cost compute/camera reference for the lite SKU). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+- **M5Stack** — community / maker brand; 274 boards in the catalogue; files via M5Stack M5_Hardware repo · https://github.com/m5stack/M5_Hardware. Boards used here: [M5Stack Unit PoE P4 (U213)](/db/m5stack-unit-poe-p4.html) (PoE for ceiling installs); [M5Stack Unit ToF4M (U172)](/db/m5stack-unit-tof4m.html) (ToF for ceiling-height calibration / low-light fallback). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+
+### Open-hardware boards without a company behind them
+
+- **OSHWHub community designs** — community projects on OSHWHub 立创开源硬件平台 (JLC open hardware platform) · https://oshwhub.com . The author is an individual, not a supplier, and author handles are not published here. Fabricate from the files through a PCBA house (below) and check each project's licence first. Boards used here: [立创·庐山派K230-CanMV开发板](/db/oshwhub-li-chuang-lu-shan-pai-k230-canmv-kai-fa-ban.html) (fully open K230 AI-vision board (NPU, multiple camera inputs) — person detection and line crossing on device).
+
+### Manufacturing (PCBA / EMS) on file
+
+- **Kingbrother / King Brother Technology** · https://global.kingbrother.com/ — PCB fab + EMS; see the [Kingbrother SOM page](/boards-kingbrother.html) on this site.
+- **Foxlink (SZ)** (正崴精密工业(深圳)有限公司) · foxconn.com — PCBA + cable assembly EMS: Cable assembly; PCBA; connector; OEM for major electronics brands.
+
+### Also in the directory (category match, not idea-specific)
+
+Companies in the gongban.db solution-house directory whose product category overlaps this idea. They were matched on the idea's tags, not on this design; none has seen it.
+
+- **Forlinx Embedded** (飞凌嵌入式技术有限公司) · forlinx.com — ARM core board / SOM OEM: i.MX8M / RK3568 / AM62x SOM; carrier board; Linux BSP; OEM/ODM. *(Edge-AI / SOM boards and Linux BSPs)*
+- **Toradex (SZ)** (深圳图睿达科技有限公司) · toradex.com — Industrial SOM / embedded Linux OEM: Apalis / Colibri SOM; carrier board; Yocto Linux; long-term supply. *(Edge-AI / SOM boards and Linux BSPs)*
+- **iWave Systems (SZ)** (爱微电子(深圳)有限公司) · no website on file — ARM SOM / carrier board ODM: RK3568/i.MX8 SOM; carrier board; embedded Linux OEM/ODM. *(Edge-AI / SOM boards and Linux BSPs)*
+- **Kangshida (Conradtech)** (深圳市康士达科技有限公司) · cstipc.com — Industrial PC / AI edge computing OEM: Industrial PC board; AI edge card; computer vision; OEM/ODM. *(Edge-AI / SOM boards and Linux BSPs)*
+- **AI-Thinker** (安信可科技(深圳)有限公司) · ai-thinker.com — ESP8266 / ESP32 module OEM: ESP-01; ESP32-CAM; A9 GSM modules; massive community. *(ESP32 / ESP8266 modules)*
+
+### MOQ and landed cost
+
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+
+### Outreach e-mail, ready to send
+
+Fill in the [brackets], keep it short, and send it to the sales or "contact us" address on the company's own website. The Chinese version is the same letter; sending both in one mail is normal. How to read the reply: [playbook → the first quote](/playbook.html#quote).
+
+**A. To a board publisher — samples and volume price** (send to the sales / "contact us" address on the Espressif and M5Stack websites)
+
+```email
+Subject: Sample order and volume pricing — Espressif esp32-p4-eye, M5Stack Unit PoE P4 (U213), M5Stack Unit ToF4M (U172) — for a Footfall Counter (GDPR by design)
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are developing a Footfall Counter (GDPR by design): A ceiling-mounted edge-AI counter that outputs only in/out numbers — never an image — at a third of the incumbents' price, for libraries, museums and independent shops. The design is built around your Espressif esp32-p4-eye, M5Stack Unit PoE P4 (U213), M5Stack Unit ToF4M (U172).
+
+Could you please send:
+1. Price and lead time for [10] sample units of each: Espressif esp32-p4-eye, M5Stack Unit PoE P4 (U213), M5Stack Unit ToF4M (U172).
+2. Unit pricing at 100 / 500 / 1,000 pieces, EXW Shenzhen and DDP [your city], including packaging.
+3. Whether a customised variant is possible (our enclosure, connector, or firmware pre-loaded), with the NRE and MOQ for it.
+4. Radio test reports or module certification documents, if available, so we can plan EU (CE/RED) certification.
+5. Payment terms and accepted methods for a first order.
+
+We can share our block diagram and target quantities under NDA if that helps.
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**A. 中文版**
+
+```email
+主题：样品订购及批量报价 — Espressif esp32-p4-eye, M5Stack Unit PoE P4 (U213), M5Stack Unit ToF4M (U172) — 用于Footfall Counter (GDPR by design)
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Footfall Counter (GDPR by design)：A ceiling-mounted edge-AI counter that outputs only in/out numbers — never an image — at a third of the incumbents' price, for libraries, museums and independent shops。产品设计基于贵司的Espressif esp32-p4-eye, M5Stack Unit PoE P4 (U213), M5Stack Unit ToF4M (U172)。
+
+请提供以下信息：
+1. 各[10]片样品的单价和交期：Espressif esp32-p4-eye, M5Stack Unit PoE P4 (U213), M5Stack Unit ToF4M (U172)。
+2. 100 / 500 / 1,000 片的批量单价（深圳EXW及DDP到[城市]），含包装。
+3. 是否可以定制（外壳、接口或预烧录固件），以及定制的NRE费用和最小起订量（MOQ）。
+4. 如有，请提供射频测试报告或模组认证文件，以便我们规划欧盟CE/RED认证。
+5. 首单的付款方式和条件。
+
+如有需要，我们可在签署NDA后提供框图和目标数量。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+
+**B. To a PCBA / EMS house — quote from the open design files** (send to Kingbrother, Foxlink or any assembler you vet; see the [playbook](/playbook.html#manufacturer))
+
+```email
+Subject: PCBA quote from open design files — Footfall Counter (GDPR by design), [50] prototypes + [500] production units
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are building a Footfall Counter (GDPR by design): A ceiling-mounted edge-AI counter that outputs only in/out numbers — never an image — at a third of the incumbents' price, for libraries, museums and independent shops. The design starts from published open-hardware files (立创·庐山派K230-CanMV开发板; schematic, PCB and BOM available) with our own modifications.
+
+Could you quote:
+1. PCB fabrication + SMT assembly for [50] prototype units and [500 / 1,000] production units, including component sourcing (we provide the BOM with manufacturer part numbers).
+2. NRE, stencil and test-fixture costs, and your DFM review fee if any.
+3. Lead time from file approval to shipment, and your QC / functional-test process.
+4. Box build (enclosure, cable, packaging) if you offer it.
+5. Terms: EXW / FOB Shenzhen or DDP [your city]; payment terms for a first order.
+
+Design files: [link to Gerber, BOM and pick-and-place files].
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**B. 中文版**
+
+```email
+主题：基于开源设计文件的PCBA报价 — Footfall Counter (GDPR by design)，[50]台样机 + [500]台量产
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Footfall Counter (GDPR by design)：A ceiling-mounted edge-AI counter that outputs only in/out numbers — never an image — at a third of the incumbents' price, for libraries, museums and independent shops。设计基于已公开的开源硬件文件（立创·庐山派K230-CanMV开发板；含原理图、PCB和BOM），并做了我们自己的修改。
+
+请报价：
+1. [50]台样机和[500 / 1,000]台量产的PCB制板+SMT贴片，含元器件采购（我们提供带厂商料号的BOM）。
+2. NRE、钢网和测试治具费用，以及DFM评审费用（如有）。
+3. 从文件确认到出货的交期，以及贵司的QC/功能测试流程。
+4. 如可提供，整机组装（外壳、线材、包装）报价。
+5. 贸易条款：深圳EXW/FOB或DDP到[城市]；首单付款条件。
+
+设计文件：[Gerber、BOM和坐标文件链接]。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+<!-- who-to-contact:end -->
+
+## 5. Next steps (this week)
 
 1. Order one K230 CanMV board, a USB camera and a PoE Unit; get a person detector running on it by Friday.
 2. Ask two libraries you can reach for permission to hang a dev board above the entrance for a week in exchange for the data — write the 5-question script first and interview the director when you install it.

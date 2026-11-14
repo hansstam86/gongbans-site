@@ -11,7 +11,8 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
   `ideas.html` + `ideas/<slug>.html` (50 product concepts built from catalogue boards, generated from `data/ideas.json`
   by `build_ideas.py`; board pages get a "Used in ideas" block from the same JSON),
   `startpacks/<slug>.html` + `startpacks/<slug>.md` (founder start packs: business plan + start kit per idea, rendered by
-  `build_startpacks.py` from the Markdown, called by `build_ideas.py`; the .md is the "Download as Markdown" source).
+  `build_startpacks.py` from the Markdown, called by `build_ideas.py`; the .md is the "Download as Markdown" source),
+  `playbook.html` (the zero-experience founder playbook shared by all ideas, written in `build_playbook.py`).
 - One shared stylesheet: `assets/style.css` (palette/fonts of the original landing page: deep green
   `#021e14`, gold `#c9a84c`, copper `#b87333`, cream `#f5f2eb`; DM Serif Display / IBM Plex Sans / IBM Plex Mono).
   Every page links it; keep page-specific CSS in there too, not inline.
@@ -35,6 +36,12 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
   (`build_startpacks.py`) is stdlib-only and supports headings, lists, pipe tables, fenced blocks (diagrams → `<pre>`),
   bold/italic/code/links; `www.gongbans.com/...` links become site-relative. Every pack page carries the disclaimer at the
   top; a pack without an idea page aborts the build. `.nojekyll` is required so GitHub Pages serves the `.md` files as-is.
+- "Who to contact" (section 4 of every pack) is generated, not hand-written: `build_contacts.py` reads gongban.db and
+  rewrites the block between `<!-- who-to-contact:start -->` / `<!-- who-to-contact:end -->` in each `.md` (and writes
+  `data/contacts.json`, public columns only). Edit the script, not the block. Only *company* board publishers count as
+  a match; OSHWHub designs get the "no verified contact" note; directory entries are labelled "category match, not
+  idea-specific"; no MOQ/price is shown unless it is in the db (ManThink is the only one). Never add e-mail addresses,
+  WeChat IDs or personal names to it, even if asked: company websites only (the `check()` assertions enforce this).
 - The database itself is private and must never be committed. Never export: `contacts`, `outreach`, `fetch_log`,
   `fairs`, `sources.notes`, `solution_houses.wechat/email/notes/district`, rows with `solution_houses.excluded` set,
   anything ride-sharing / vehicle-tracking / micromobility (see `MOBILITY_RE`), e-mail addresses, personal names, WeChat IDs,

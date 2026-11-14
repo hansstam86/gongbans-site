@@ -164,7 +164,131 @@ Thin at 1k, acceptable at 5k. The SIM is the margin killer — negotiate hard (m
 - Packaging: UN 3481 marking; post in a tube; quick card with "text SET -1".
 - Incoterms: FOB Shenzhen; air (DG-rated) for 50; sea for the season batch — ship by September to sell in December.
 
-## 4. Next steps (this week)
+## 4. Who to contact
+
+<!-- who-to-contact:start -->
+**On file: 3 board publishers (M5Stack and SIMCom and Seeed Studio).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+
+### Board publishers (direct)
+
+- **M5Stack** — community / maker brand; 274 boards in the catalogue; files via M5Stack M5_Hardware repo · https://github.com/m5stack/M5_Hardware. Boards used here: [M5Stack Unit CatM (U128)](/db/m5stack-unit-catm.html) (Cat-M/NB-IoT uplink). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+- **SIMCom** — solution house; 3 boards in the catalogue; files via SIMCom module hardware designs · https://www.simcom.com/technical_files-p110.html. Boards used here: [SIMCom A7670/SIM7070/A7672X Compatible Design](/db/simcom-a7670-sim7070-compat-design.html) (shows one footprint accepting three cellular module generations). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+- **Seeed Studio** (矽递科技(深圳)有限公司, seeedstudio.com) — community / maker brand; 183 boards in the catalogue; files via Seeed Studio wiki catalog · https://github.com/Seeed-Studio/wiki-documents. Directory entry: IoT module + open hardware OEM: XIAO ESP32S3; Grove modules; LoRa gateway; Jetson carrier; OEM PCBA. Boards used here: [Seeed Grove-TempAndHumi Sensor-SHT31](/db/seeed-grove-tempandhumi-sensor-sht31.html) (T/RH for dew-point and frost logic). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+
+### Open-hardware boards without a company behind them
+
+- **OSHWHub community designs** — community projects on OSHWHub 立创开源硬件平台 (JLC open hardware platform) · https://oshwhub.com . The author is an individual, not a supplier, and author handles are not published here. Fabricate from the files through a PCBA house (below) and check each project's licence first. Boards used here: [solar-to-5v-zener-regulator](/db/oshwhub-solar-to-5v-zener-regulator.html) (solar charge path reference).
+
+### Manufacturing (PCBA / EMS) on file
+
+- **Kingbrother / King Brother Technology** · https://global.kingbrother.com/ — PCB fab + EMS; see the [Kingbrother SOM page](/boards-kingbrother.html) on this site.
+- **Foxlink (SZ)** (正崴精密工业(深圳)有限公司) · foxconn.com — PCBA + cable assembly EMS: Cable assembly; PCBA; connector; OEM for major electronics brands.
+
+### Also in the directory (category match, not idea-specific)
+
+Companies in the gongban.db solution-house directory whose product category overlaps this idea. They were matched on the idea's tags, not on this design; none has seen it.
+
+- **Luat (Air105/Air780)** (深圳市合宙通信有限公司) · openluat.com — LTE Cat-1 / NB-IoT module OEM: Air780E Cat-1 bis module; Air105 MCU; MQTT/TLS; OEM/ODM. *(Cellular (Cat-1 / NB-IoT) modules)*
+- **LILYGO** (深圳市合宙通信有限公司) · lilygo.cc — ESP32 / LoRa / cellular dev module OEM: T-SIM7670 / T-Watch / TTGO LoRa boards; OEM module supply. *(Cellular (Cat-1 / NB-IoT) modules)*
+
+### MOQ and landed cost
+
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+
+### Outreach e-mail, ready to send
+
+Fill in the [brackets], keep it short, and send it to the sales or "contact us" address on the company's own website. The Chinese version is the same letter; sending both in one mail is normal. How to read the reply: [playbook → the first quote](/playbook.html#quote).
+
+**A. To a board publisher — samples and volume price** (send to the sales / "contact us" address on the M5Stack and SIMCom and Seeed Studio websites)
+
+```email
+Subject: Sample order and volume pricing — M5Stack Unit CatM (U128), SIMCom A7670/SIM7070/A7672X Compatible Design, Seeed Grove-TempAndHumi Sensor-SHT31 — for a Frost Sentinel
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are developing a Frost Sentinel: A solar-powered post with Cat-M that texts the winegrower when canopy temperature hits the frost threshold — no platform subscription, no €1,400 weather station. The design is built around your M5Stack Unit CatM (U128), SIMCom A7670/SIM7070/A7672X Compatible Design, Seeed Grove-TempAndHumi Sensor-SHT31.
+
+Could you please send:
+1. Price and lead time for [10] sample units of each: M5Stack Unit CatM (U128), SIMCom A7670/SIM7070/A7672X Compatible Design, Seeed Grove-TempAndHumi Sensor-SHT31.
+2. Unit pricing at 100 / 500 / 1,000 pieces, EXW Shenzhen and DDP [your city], including packaging.
+3. Whether a customised variant is possible (our enclosure, connector, or firmware pre-loaded), with the NRE and MOQ for it.
+4. Radio test reports or module certification documents, if available, so we can plan EU (CE/RED) certification.
+5. Payment terms and accepted methods for a first order.
+
+We can share our block diagram and target quantities under NDA if that helps.
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**A. 中文版**
+
+```email
+主题：样品订购及批量报价 — M5Stack Unit CatM (U128), SIMCom A7670/SIM7070/A7672X Compatible Design, Seeed Grove-TempAndHumi Sensor-SHT31 — 用于Frost Sentinel
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Frost Sentinel：A solar-powered post with Cat-M that texts the winegrower when canopy temperature hits the frost threshold — no platform subscription, no €1,400 weather station。产品设计基于贵司的M5Stack Unit CatM (U128), SIMCom A7670/SIM7070/A7672X Compatible Design, Seeed Grove-TempAndHumi Sensor-SHT31。
+
+请提供以下信息：
+1. 各[10]片样品的单价和交期：M5Stack Unit CatM (U128), SIMCom A7670/SIM7070/A7672X Compatible Design, Seeed Grove-TempAndHumi Sensor-SHT31。
+2. 100 / 500 / 1,000 片的批量单价（深圳EXW及DDP到[城市]），含包装。
+3. 是否可以定制（外壳、接口或预烧录固件），以及定制的NRE费用和最小起订量（MOQ）。
+4. 如有，请提供射频测试报告或模组认证文件，以便我们规划欧盟CE/RED认证。
+5. 首单的付款方式和条件。
+
+如有需要，我们可在签署NDA后提供框图和目标数量。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+
+**B. To a PCBA / EMS house — quote from the open design files** (send to Kingbrother, Foxlink or any assembler you vet; see the [playbook](/playbook.html#manufacturer))
+
+```email
+Subject: PCBA quote from open design files — Frost Sentinel, [50] prototypes + [500] production units
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are building a Frost Sentinel: A solar-powered post with Cat-M that texts the winegrower when canopy temperature hits the frost threshold — no platform subscription, no €1,400 weather station. The design starts from published open-hardware files (solar-to-5v-zener-regulator; schematic, PCB and BOM available) with our own modifications.
+
+Could you quote:
+1. PCB fabrication + SMT assembly for [50] prototype units and [500 / 1,000] production units, including component sourcing (we provide the BOM with manufacturer part numbers).
+2. NRE, stencil and test-fixture costs, and your DFM review fee if any.
+3. Lead time from file approval to shipment, and your QC / functional-test process.
+4. Box build (enclosure, cable, packaging) if you offer it.
+5. Terms: EXW / FOB Shenzhen or DDP [your city]; payment terms for a first order.
+
+Design files: [link to Gerber, BOM and pick-and-place files].
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**B. 中文版**
+
+```email
+主题：基于开源设计文件的PCBA报价 — Frost Sentinel，[50]台样机 + [500]台量产
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Frost Sentinel：A solar-powered post with Cat-M that texts the winegrower when canopy temperature hits the frost threshold — no platform subscription, no €1,400 weather station。设计基于已公开的开源硬件文件（solar-to-5v-zener-regulator；含原理图、PCB和BOM），并做了我们自己的修改。
+
+请报价：
+1. [50]台样机和[500 / 1,000]台量产的PCB制板+SMT贴片，含元器件采购（我们提供带厂商料号的BOM）。
+2. NRE、钢网和测试治具费用，以及DFM评审费用（如有）。
+3. 从文件确认到出货的交期，以及贵司的QC/功能测试流程。
+4. 如可提供，整机组装（外壳、线材、包装）报价。
+5. 贸易条款：深圳EXW/FOB或DDP到[城市]；首单付款条件。
+
+设计文件：[Gerber、BOM和坐标文件链接]。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+<!-- who-to-contact:end -->
+
+## 5. Next steps (this week)
 1. Order 5× Unit CatM, 5× SHT31 Grove, a prepaid IoT SIM, 5 IP65 boxes and 5 fibreglass posts; have one unit texting you a temperature by day 7.
 2. Find the next 3 growers' association or wine institute evenings in Jan–Feb in your region and get a 10-minute slot; prepare the deposit QR.
 3. Request quotes from three multi-network IoT eSIM providers for 1,000 × 5 years with 500 SMS/year — the answer decides your price point.

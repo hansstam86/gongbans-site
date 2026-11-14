@@ -154,7 +154,129 @@ RS485 bus (A/B/GND) -> [TVS, PTC] -> [isolated RS485 transceiver] -> [isolated D
 - Packaging: tool box with foam, adapters, printed quick card; lithium labels.
 - Incoterms: FOB Shenzhen; air for the first 300, sea after.
 
-## 4. Next steps (this week)
+## 4. Who to contact
+
+<!-- who-to-contact:start -->
+**On file: 1 board publisher (M5Stack).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+
+### Board publishers (direct)
+
+- **M5Stack** — community / maker brand; 274 boards in the catalogue; files via M5Stack M5_Hardware repo · https://github.com/m5stack/M5_Hardware. Boards used here: [M5Stack Cardputer (K132)](/db/m5stack-cardputer.html) (keyboard + screen + ESP32-S3 handheld for the prototype); [M5Stack Unit RS485-ISO (U094)](/db/m5stack-unit-rs485-iso.html) (isolated RS485 front-end); [M5Stack Station-485 (K123)](/db/m5stack-station-485.html) (multi-port RS485 station reference). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+
+### Open-hardware boards without a company behind them
+
+- **OSHWHub community designs** — community projects on OSHWHub 立创开源硬件平台 (JLC open hardware platform) · https://oshwhub.com . The author is an individual, not a supplier, and author handles are not published here. Fabricate from the files through a PCBA house (below) and check each project's licence first. Boards used here: [充电式蓝牙转485通讯测试盒](/db/oshwhub-lan-ya-xu-ni-chuan-kou-diao-shi-qi-copy.html) (open rechargeable Bluetooth-to-RS485 test box).
+
+### Manufacturing (PCBA / EMS) on file
+
+- **Kingbrother / King Brother Technology** · https://global.kingbrother.com/ — PCB fab + EMS; see the [Kingbrother SOM page](/boards-kingbrother.html) on this site.
+- **Foxlink (SZ)** (正崴精密工业(深圳)有限公司) · foxconn.com — PCBA + cable assembly EMS: Cable assembly; PCBA; connector; OEM for major electronics brands.
+
+### Also in the directory (category match, not idea-specific)
+
+Companies in the gongban.db solution-house directory whose product category overlaps this idea. They were matched on the idea's tags, not on this design; none has seen it.
+
+- **Xinhua Control (XHC)** (深圳市欣华宸科技有限公司) · xhciot.com — Industrial edge gateway / RTU OEM: Industrial edge gateway; RTU; RS485/Modbus; 4G/LoRa. *(Industrial RS485 / Modbus gateways)*
+- **Kongtai Technology** (深圳市控泰科技有限公司) · kongtai.net — SCADA / PLC / edge computing OEM: PLC; HMI; SCADA; edge gateway. *(Industrial RS485 / Modbus gateways)*
+
+### MOQ and landed cost
+
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+
+### Outreach e-mail, ready to send
+
+Fill in the [brackets], keep it short, and send it to the sales or "contact us" address on the company's own website. The Chinese version is the same letter; sending both in one mail is normal. How to read the reply: [playbook → the first quote](/playbook.html#quote).
+
+**A. To a board publisher — samples and volume price** (send to the sales / "contact us" address on the M5Stack website)
+
+```email
+Subject: Sample order and volume pricing — M5Stack Cardputer (K132), M5Stack Unit RS485-ISO (U094), M5Stack Station-485 (K123) — for a Modbus Pocket Analyser
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are developing a Modbus Pocket Analyser: A handheld with keyboard and screen that plugs into any RS485 bus, auto-detects baud rate and slave IDs, decodes registers of common heat pumps, inverters and meters and logs to SD — no laptop needed. The design is built around your M5Stack Cardputer (K132), M5Stack Unit RS485-ISO (U094), M5Stack Station-485 (K123).
+
+Could you please send:
+1. Price and lead time for [10] sample units of each: M5Stack Cardputer (K132), M5Stack Unit RS485-ISO (U094), M5Stack Station-485 (K123).
+2. Unit pricing at 100 / 500 / 1,000 pieces, EXW Shenzhen and DDP [your city], including packaging.
+3. Whether a customised variant is possible (our enclosure, connector, or firmware pre-loaded), with the NRE and MOQ for it.
+4. Radio test reports or module certification documents, if available, so we can plan EU (CE/RED) certification.
+5. Payment terms and accepted methods for a first order.
+
+We can share our block diagram and target quantities under NDA if that helps.
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**A. 中文版**
+
+```email
+主题：样品订购及批量报价 — M5Stack Cardputer (K132), M5Stack Unit RS485-ISO (U094), M5Stack Station-485 (K123) — 用于Modbus Pocket Analyser
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Modbus Pocket Analyser：A handheld with keyboard and screen that plugs into any RS485 bus, auto-detects baud rate and slave IDs, decodes registers of common heat pumps, inverters and meters and logs to SD — no laptop needed。产品设计基于贵司的M5Stack Cardputer (K132), M5Stack Unit RS485-ISO (U094), M5Stack Station-485 (K123)。
+
+请提供以下信息：
+1. 各[10]片样品的单价和交期：M5Stack Cardputer (K132), M5Stack Unit RS485-ISO (U094), M5Stack Station-485 (K123)。
+2. 100 / 500 / 1,000 片的批量单价（深圳EXW及DDP到[城市]），含包装。
+3. 是否可以定制（外壳、接口或预烧录固件），以及定制的NRE费用和最小起订量（MOQ）。
+4. 如有，请提供射频测试报告或模组认证文件，以便我们规划欧盟CE/RED认证。
+5. 首单的付款方式和条件。
+
+如有需要，我们可在签署NDA后提供框图和目标数量。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+
+**B. To a PCBA / EMS house — quote from the open design files** (send to Kingbrother, Foxlink or any assembler you vet; see the [playbook](/playbook.html#manufacturer))
+
+```email
+Subject: PCBA quote from open design files — Modbus Pocket Analyser, [50] prototypes + [500] production units
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are building a Modbus Pocket Analyser: A handheld with keyboard and screen that plugs into any RS485 bus, auto-detects baud rate and slave IDs, decodes registers of common heat pumps, inverters and meters and logs to SD — no laptop needed. The design starts from published open-hardware files (充电式蓝牙转485通讯测试盒; schematic, PCB and BOM available) with our own modifications.
+
+Could you quote:
+1. PCB fabrication + SMT assembly for [50] prototype units and [500 / 1,000] production units, including component sourcing (we provide the BOM with manufacturer part numbers).
+2. NRE, stencil and test-fixture costs, and your DFM review fee if any.
+3. Lead time from file approval to shipment, and your QC / functional-test process.
+4. Box build (enclosure, cable, packaging) if you offer it.
+5. Terms: EXW / FOB Shenzhen or DDP [your city]; payment terms for a first order.
+
+Design files: [link to Gerber, BOM and pick-and-place files].
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**B. 中文版**
+
+```email
+主题：基于开源设计文件的PCBA报价 — Modbus Pocket Analyser，[50]台样机 + [500]台量产
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Modbus Pocket Analyser：A handheld with keyboard and screen that plugs into any RS485 bus, auto-detects baud rate and slave IDs, decodes registers of common heat pumps, inverters and meters and logs to SD — no laptop needed。设计基于已公开的开源硬件文件（充电式蓝牙转485通讯测试盒；含原理图、PCB和BOM），并做了我们自己的修改。
+
+请报价：
+1. [50]台样机和[500 / 1,000]台量产的PCB制板+SMT贴片，含元器件采购（我们提供带厂商料号的BOM）。
+2. NRE、钢网和测试治具费用，以及DFM评审费用（如有）。
+3. 从文件确认到出货的交期，以及贵司的QC/功能测试流程。
+4. 如可提供，整机组装（外壳、线材、包装）报价。
+5. 贸易条款：深圳EXW/FOB或DDP到[城市]；首单付款条件。
+
+设计文件：[Gerber、BOM和坐标文件链接]。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+<!-- who-to-contact:end -->
+
+## 5. Next steps (this week)
 1. Buy a Cardputer and a Unit RS485-ISO; flash a sniff + scan proof-of-concept against any Modbus device you can reach (a cheap energy meter works).
 2. Line up three technicians (HVAC, PV, BMS) for shadow days in the next three weeks; write the observation sheet.
 3. Collect the public Modbus register PDFs of the 10 most common heat-pump and inverter brands in your market and draft the profile format.

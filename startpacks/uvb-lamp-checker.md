@@ -157,7 +157,120 @@ UVB lamp ~~~> [PTFE diffuser] -> [UVA/UVB sensor, I2C] -> [MCU] -> [OLED 0.96"]
 - Packaging: retail box with window, EAN barcode, counter display design for 6 units.
 - Incoterms: FOB Shenzhen; small volume → air freight consolidated.
 
-## 4. Next steps (this week)
+## 4. Who to contact
+
+<!-- who-to-contact:start -->
+**On file: 3 board publishers (WPI ATU (distributor kits) and Seeed Studio and M5Stack).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+
+### Board publishers (direct)
+
+- **WPI ATU (distributor kits)** (WPI Group, wpigroup.com) — distributor; 16 boards in the catalogue; files via WPI ATU solution pages (WPG hot channel / tech-highlights / press releases) · https://wpig.wpgholdings.com/tech-highlights/zhcn. Directory entry: Smartphone reference design (MediaTek): MediaTek smartphone + tablet gongban; 1000+ reference designs; billions of devices. The kit files are hosted here; WPI's application unit published them for its distribution customers. Boards used here: [UV Sensor Demo (VEML6075 + LPC824)](/db/uv-sensor-veml6075-lpc824.html) (full open design pack: UV-A/UV-B sensor + MCU). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+- **Seeed Studio** (矽递科技(深圳)有限公司, seeedstudio.com) — community / maker brand; 183 boards in the catalogue; files via Seeed Studio wiki catalog · https://github.com/Seeed-Studio/wiki-documents. Directory entry: IoT module + open hardware OEM: XIAO ESP32S3; Grove modules; LoRa gateway; Jetson carrier; OEM PCBA. Boards used here: [Seeed Grove-UV Sensor](/db/seeed-grove-uv-sensor.html) (alternative UV sensor reference); [Seeed Grove-Sunlight Sensor](/db/seeed-grove-sunlight-sensor.html) (visible/IR reference for lamp-type detection). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+- **M5Stack** — community / maker brand; 274 boards in the catalogue; files via M5Stack M5_Hardware repo · https://github.com/m5stack/M5_Hardware. Boards used here: [M5Stack StickC-Plus (K016-P)](/db/m5stack-stickc-plus.html) (display + battery for the prototype). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+
+### Manufacturing (PCBA / EMS) on file
+
+- **Kingbrother / King Brother Technology** · https://global.kingbrother.com/ — PCB fab + EMS; see the [Kingbrother SOM page](/boards-kingbrother.html) on this site.
+- **Foxlink (SZ)** (正崴精密工业(深圳)有限公司) · foxconn.com — PCBA + cable assembly EMS: Cable assembly; PCBA; connector; OEM for major electronics brands.
+
+### MOQ and landed cost
+
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+
+### Outreach e-mail, ready to send
+
+Fill in the [brackets], keep it short, and send it to the sales or "contact us" address on the company's own website. The Chinese version is the same letter; sending both in one mail is normal. How to read the reply: [playbook → the first quote](/playbook.html#quote).
+
+**A. To a board publisher — samples and volume price** (send to the sales / "contact us" address on the WPI ATU (distributor kits) and Seeed Studio and M5Stack websites)
+
+```email
+Subject: Sample order and volume pricing — UV Sensor Demo (VEML6075 + LPC824), Seeed Grove-UV Sensor, Seeed Grove-Sunlight Sensor, M5Stack StickC-Plus (K016-P) — for a UVB Lamp Checker
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are developing a UVB Lamp Checker: A pocket UV-index meter that tells reptile and bird keepers whether the terrarium UVB lamp still delivers — lamps fade invisibly months before they fail. The design is built around your UV Sensor Demo (VEML6075 + LPC824), Seeed Grove-UV Sensor, Seeed Grove-Sunlight Sensor, M5Stack StickC-Plus (K016-P).
+
+Could you please send:
+1. Price and lead time for [10] sample units of each: UV Sensor Demo (VEML6075 + LPC824), Seeed Grove-UV Sensor, Seeed Grove-Sunlight Sensor, M5Stack StickC-Plus (K016-P).
+2. Unit pricing at 100 / 500 / 1,000 pieces, EXW Shenzhen and DDP [your city], including packaging.
+3. Whether a customised variant is possible (our enclosure, connector, or firmware pre-loaded), with the NRE and MOQ for it.
+4. Radio test reports or module certification documents, if available, so we can plan EU (CE/RED) certification.
+5. Payment terms and accepted methods for a first order.
+
+We can share our block diagram and target quantities under NDA if that helps.
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**A. 中文版**
+
+```email
+主题：样品订购及批量报价 — UV Sensor Demo (VEML6075 + LPC824), Seeed Grove-UV Sensor, Seeed Grove-Sunlight Sensor, M5Stack StickC-Plus (K016-P) — 用于UVB Lamp Checker
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款UVB Lamp Checker：A pocket UV-index meter that tells reptile and bird keepers whether the terrarium UVB lamp still delivers — lamps fade invisibly months before they fail。产品设计基于贵司的UV Sensor Demo (VEML6075 + LPC824), Seeed Grove-UV Sensor, Seeed Grove-Sunlight Sensor, M5Stack StickC-Plus (K016-P)。
+
+请提供以下信息：
+1. 各[10]片样品的单价和交期：UV Sensor Demo (VEML6075 + LPC824), Seeed Grove-UV Sensor, Seeed Grove-Sunlight Sensor, M5Stack StickC-Plus (K016-P)。
+2. 100 / 500 / 1,000 片的批量单价（深圳EXW及DDP到[城市]），含包装。
+3. 是否可以定制（外壳、接口或预烧录固件），以及定制的NRE费用和最小起订量（MOQ）。
+4. 如有，请提供射频测试报告或模组认证文件，以便我们规划欧盟CE/RED认证。
+5. 首单的付款方式和条件。
+
+如有需要，我们可在签署NDA后提供框图和目标数量。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+
+**B. To a PCBA / EMS house — quote from the open design files** (send to Kingbrother, Foxlink or any assembler you vet; see the [playbook](/playbook.html#manufacturer))
+
+```email
+Subject: PCBA quote from open design files — UVB Lamp Checker, [50] prototypes + [500] production units
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are building a UVB Lamp Checker: A pocket UV-index meter that tells reptile and bird keepers whether the terrarium UVB lamp still delivers — lamps fade invisibly months before they fail. The design starts from published open-hardware files (UV Sensor Demo (VEML6075 + LPC824), Seeed Grove-UV Sensor, Seeed Grove-Sunlight Sensor, M5Stack StickC-Plus (K016-P); schematic, PCB and BOM available) with our own modifications.
+
+Could you quote:
+1. PCB fabrication + SMT assembly for [50] prototype units and [500 / 1,000] production units, including component sourcing (we provide the BOM with manufacturer part numbers).
+2. NRE, stencil and test-fixture costs, and your DFM review fee if any.
+3. Lead time from file approval to shipment, and your QC / functional-test process.
+4. Box build (enclosure, cable, packaging) if you offer it.
+5. Terms: EXW / FOB Shenzhen or DDP [your city]; payment terms for a first order.
+
+Design files: [link to Gerber, BOM and pick-and-place files].
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**B. 中文版**
+
+```email
+主题：基于开源设计文件的PCBA报价 — UVB Lamp Checker，[50]台样机 + [500]台量产
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款UVB Lamp Checker：A pocket UV-index meter that tells reptile and bird keepers whether the terrarium UVB lamp still delivers — lamps fade invisibly months before they fail。设计基于已公开的开源硬件文件（UV Sensor Demo (VEML6075 + LPC824), Seeed Grove-UV Sensor, Seeed Grove-Sunlight Sensor, M5Stack StickC-Plus (K016-P)；含原理图、PCB和BOM），并做了我们自己的修改。
+
+请报价：
+1. [50]台样机和[500 / 1,000]台量产的PCB制板+SMT贴片，含元器件采购（我们提供带厂商料号的BOM）。
+2. NRE、钢网和测试治具费用，以及DFM评审费用（如有）。
+3. 从文件确认到出货的交期，以及贵司的QC/功能测试流程。
+4. 如可提供，整机组装（外壳、线材、包装）报价。
+5. 贸易条款：深圳EXW/FOB或DDP到[城市]；首单付款条件。
+
+设计文件：[Gerber、BOM和坐标文件链接]。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+<!-- who-to-contact:end -->
+
+## 5. Next steps (this week)
 1. Buy the reference radiometer and three different UVB lamps; order the UV pack boards (Gerber + BOM) and 3× StickC-Plus.
 2. Draft the lamp-profile measurement protocol (distance steps, lamp age, warm-up) — you'll live by this spreadsheet.
 3. List 30 reptile shops within driving distance and the dates of the next three reptile fairs; book a table at one.

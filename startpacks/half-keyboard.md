@@ -138,7 +138,122 @@ Gap: left/right PCB variants, switch-access input, QMK mirror layer tuned with O
 ### First production checklist
 Switch and keycap samples (feel test with 3 OTs), golden sample with firmware version label, DFM on plate/base fit and hot-swap socket alignment, MOQ 500 per hand with a 2,000 forecast (left:right split from pre-orders — stroke clients skew to one side, check), QC/AQL Level II + 100% key-press test on a fixture, drop test, FOB Shenzhen, EU importer + WEEE number on the label.
 
-## 4. Next steps (this week)
+## 4. Who to contact
+
+<!-- who-to-contact:start -->
+**On file: 1 board publisher (Seeed Studio).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+
+### Board publishers (direct)
+
+- **Seeed Studio** (矽递科技(深圳)有限公司, seeedstudio.com) — community / maker brand; 183 boards in the catalogue; files via Seeed Studio wiki catalog · https://github.com/Seeed-Studio/wiki-documents. Directory entry: IoT module + open hardware OEM: XIAO ESP32S3; Grove modules; LoRa gateway; Jetson carrier; OEM PCBA. Boards used here: [Seeed Grove-Mech Keycap](/db/seeed-grove-mech-keycap.html) (mechanical key + RGB reference). What to ask for: sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.
+
+### Open-hardware boards without a company behind them
+
+- **OSHWHub community designs** — community projects on OSHWHub 立创开源硬件平台 (JLC open hardware platform) · https://oshwhub.com . The author is an individual, not a supplier, and author handles are not published here. Fabricate from the files through a PCBA house (below) and check each project's licence first. Boards used here: [HTX Studio One-Handed Keyboard](/db/oshwhub-one-handed-keyboard.html) (open one-handed mechanical keyboard design); [矩阵键盘](/db/oshwhub-matrixkeyboard.html) (key-matrix reference); [44Key](/db/oshwhub-miniusbkey.html) (compact 44-key USB keyboard design).
+
+### Manufacturing (PCBA / EMS) on file
+
+- **Kingbrother / King Brother Technology** · https://global.kingbrother.com/ — PCB fab + EMS; see the [Kingbrother SOM page](/boards-kingbrother.html) on this site.
+- **Foxlink (SZ)** (正崴精密工业(深圳)有限公司) · foxconn.com — PCBA + cable assembly EMS: Cable assembly; PCBA; connector; OEM for major electronics brands.
+
+### MOQ and landed cost
+
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+
+### Outreach e-mail, ready to send
+
+Fill in the [brackets], keep it short, and send it to the sales or "contact us" address on the company's own website. The Chinese version is the same letter; sending both in one mail is normal. How to read the reply: [playbook → the first quote](/playbook.html#quote).
+
+**A. To a board publisher — samples and volume price** (send to the sales / "contact us" address on the Seeed Studio website)
+
+```email
+Subject: Sample order and volume pricing — Seeed Grove-Mech Keycap — for a Half-Keyboard for One-Handed Typing
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are developing a Half-Keyboard for One-Handed Typing: A compact one-handed keyboard with mirror-layer typing and programmable macros, built from an open one-handed keyboard design, for people with a temporary or permanent single-hand limitation. The design is built around your Seeed Grove-Mech Keycap.
+
+Could you please send:
+1. Price and lead time for [10] sample units of each: Seeed Grove-Mech Keycap.
+2. Unit pricing at 100 / 500 / 1,000 pieces, EXW Shenzhen and DDP [your city], including packaging.
+3. Whether a customised variant is possible (our enclosure, connector, or firmware pre-loaded), with the NRE and MOQ for it.
+4. Radio test reports or module certification documents, if available, so we can plan EU (CE/RED) certification.
+5. Payment terms and accepted methods for a first order.
+
+We can share our block diagram and target quantities under NDA if that helps.
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**A. 中文版**
+
+```email
+主题：样品订购及批量报价 — Seeed Grove-Mech Keycap — 用于Half-Keyboard for One-Handed Typing
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Half-Keyboard for One-Handed Typing：A compact one-handed keyboard with mirror-layer typing and programmable macros, built from an open one-handed keyboard design, for people with a temporary or permanent single-hand limitation。产品设计基于贵司的Seeed Grove-Mech Keycap。
+
+请提供以下信息：
+1. 各[10]片样品的单价和交期：Seeed Grove-Mech Keycap。
+2. 100 / 500 / 1,000 片的批量单价（深圳EXW及DDP到[城市]），含包装。
+3. 是否可以定制（外壳、接口或预烧录固件），以及定制的NRE费用和最小起订量（MOQ）。
+4. 如有，请提供射频测试报告或模组认证文件，以便我们规划欧盟CE/RED认证。
+5. 首单的付款方式和条件。
+
+如有需要，我们可在签署NDA后提供框图和目标数量。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+
+**B. To a PCBA / EMS house — quote from the open design files** (send to Kingbrother, Foxlink or any assembler you vet; see the [playbook](/playbook.html#manufacturer))
+
+```email
+Subject: PCBA quote from open design files — Half-Keyboard for One-Handed Typing, [50] prototypes + [500] production units
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are building a Half-Keyboard for One-Handed Typing: A compact one-handed keyboard with mirror-layer typing and programmable macros, built from an open one-handed keyboard design, for people with a temporary or permanent single-hand limitation. The design starts from published open-hardware files (HTX Studio One-Handed Keyboard, 矩阵键盘, 44Key; schematic, PCB and BOM available) with our own modifications.
+
+Could you quote:
+1. PCB fabrication + SMT assembly for [50] prototype units and [500 / 1,000] production units, including component sourcing (we provide the BOM with manufacturer part numbers).
+2. NRE, stencil and test-fixture costs, and your DFM review fee if any.
+3. Lead time from file approval to shipment, and your QC / functional-test process.
+4. Box build (enclosure, cable, packaging) if you offer it.
+5. Terms: EXW / FOB Shenzhen or DDP [your city]; payment terms for a first order.
+
+Design files: [link to Gerber, BOM and pick-and-place files].
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**B. 中文版**
+
+```email
+主题：基于开源设计文件的PCBA报价 — Half-Keyboard for One-Handed Typing，[50]台样机 + [500]台量产
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Half-Keyboard for One-Handed Typing：A compact one-handed keyboard with mirror-layer typing and programmable macros, built from an open one-handed keyboard design, for people with a temporary or permanent single-hand limitation。设计基于已公开的开源硬件文件（HTX Studio One-Handed Keyboard, 矩阵键盘, 44Key；含原理图、PCB和BOM），并做了我们自己的修改。
+
+请报价：
+1. [50]台样机和[500 / 1,000]台量产的PCB制板+SMT贴片，含元器件采购（我们提供带厂商料号的BOM）。
+2. NRE、钢网和测试治具费用，以及DFM评审费用（如有）。
+3. 从文件确认到出货的交期，以及贵司的QC/功能测试流程。
+4. 如可提供，整机组装（外壳、线材、包装）报价。
+5. 贸易条款：深圳EXW/FOB或DDP到[城市]；首单付款条件。
+
+设计文件：[Gerber、BOM和坐标文件链接]。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+<!-- who-to-contact:end -->
+
+## 5. Next steps (this week)
 1. Open the OSHWHub project page, read the licence, clone the design; order parts for two 48-key boards; flash QMK swap-hands.
 2. Email the assistive-technology special-interest group of the national OT association and book 10 calls.
 3. Spend two hours on a patent search for half-QWERTY/mirror typing and write down what you find.

@@ -1,0 +1,1032 @@
+{
+ "generated": "2026-11-14",
+ "source": "gongban.db (public columns only)",
+ "publishers": {
+  "M5Stack": {
+   "label": "M5Stack",
+   "kind": "company",
+   "issuer_type": "Community / maker brand",
+   "source_name": "M5Stack M5_Hardware repo",
+   "source_url": "https://github.com/m5stack/M5_Hardware",
+   "boards_in_catalogue": 274,
+   "house": null
+  },
+  "Seeed Studio": {
+   "label": "Seeed Studio",
+   "kind": "company",
+   "issuer_type": "Community / maker brand",
+   "source_name": "Seeed Studio wiki catalog",
+   "source_url": "https://github.com/Seeed-Studio/wiki-documents",
+   "boards_in_catalogue": 183,
+   "house": {
+    "id": 97,
+    "company_en": "Seeed Studio (Seeed Technology)",
+    "company_cn": "矽递科技(深圳)有限公司",
+    "category": "Maker / IoT modules",
+    "subcategory": "IoT module + open hardware OEM",
+    "website": "seeedstudio.com",
+    "key_products": [
+     "XIAO ESP32S3",
+     "Grove modules",
+     "LoRa gateway",
+     "Jetson carrier",
+     "OEM PCBA"
+    ]
+   }
+  },
+  "Espressif": {
+   "label": "Espressif",
+   "kind": "company",
+   "issuer_type": "Chip house",
+   "source_name": "Espressif esp-dev-kits (GitHub)",
+   "source_url": "https://github.com/espressif/esp-dev-kits",
+   "boards_in_catalogue": 48,
+   "house": null
+  },
+  "SIMCom": {
+   "label": "SIMCom",
+   "kind": "company",
+   "issuer_type": "Solution house",
+   "source_name": "SIMCom module hardware designs",
+   "source_url": "https://www.simcom.com/technical_files-p110.html",
+   "boards_in_catalogue": 3,
+   "house": null
+  },
+  "Jieli 杰理": {
+   "label": "Jieli Technology (杰理)",
+   "kind": "company",
+   "issuer_type": "Circulating schematic (not an official release)",
+   "source_name": "Circulating chip-house standard schematics (Jieli etc.)",
+   "source_url": "https://www.scribd.com/document/813959152/",
+   "boards_in_catalogue": 1,
+   "house": {
+    "id": 53,
+    "company_en": "Jieli Technology",
+    "company_cn": "珠海市杰理科技股份有限公司",
+    "category": "TWS Audio",
+    "subcategory": "TWS SoC chip solution house",
+    "website": "zh-jieli.com",
+    "key_products": [
+     "AC69xx/AC70xx TWS SoC",
+     "27B+ chips shipped",
+     "clients: Xiaomi / QCY / HP / Lenovo"
+    ]
+   }
+  },
+  "ATU kit (curated)": {
+   "label": "WPI ATU (distributor kits)",
+   "kind": "company",
+   "issuer_type": "Distributor",
+   "source_name": "WPI ATU solution pages (WPG hot channel / tech-highlights / press releases)",
+   "source_url": "https://wpig.wpgholdings.com/tech-highlights/zhcn",
+   "boards_in_catalogue": 16,
+   "house": {
+    "id": 62,
+    "company_en": "WPI (Winning Technologies)",
+    "company_cn": "WPI Group",
+    "category": "Smartphone / Tablet",
+    "subcategory": "Smartphone reference design (MediaTek)",
+    "website": "wpigroup.com",
+    "key_products": [
+     "MediaTek smartphone + tablet gongban",
+     "1000+ reference designs",
+     "billions of devices"
+    ]
+   }
+  },
+  "OSHWHub": {
+   "label": "OSHWHub community designs",
+   "kind": "platform",
+   "issuer_type": "Community / maker brand",
+   "source_name": "OSHWHub 立创开源硬件平台 (JLC open hardware platform)",
+   "source_url": "https://oshwhub.com",
+   "boards_in_catalogue": 0,
+   "house": null
+  }
+ },
+ "houses": {
+  "19": {
+   "id": 19,
+   "company_en": "IDO Technology",
+   "company_cn": "爱都科技有限公司",
+   "category": "Wearables",
+   "subcategory": "Smartwatch / health tracker ODM",
+   "website": "ido.com.cn",
+   "key_products": [
+    "Smartwatch",
+    "fitness band",
+    "SpO2/HRM ODM for 30+ countries",
+    "Amazfit supply"
+   ]
+  },
+  "20": {
+   "id": 20,
+   "company_en": "iSmarch",
+   "company_cn": "深圳市艾斯曼科技有限公司",
+   "category": "Wearables",
+   "subcategory": "Smartwatch OEM/ODM (UWB/LoRa)",
+   "website": "ismarch.com",
+   "key_products": [
+    "X5/X6 smartwatch",
+    "GPS+BLE+UWB+HRM",
+    "LoRaWAN/CAT-1",
+    "SDK + raw data access"
+   ]
+  },
+  "21": {
+   "id": 21,
+   "company_en": "Linwear Innovation",
+   "company_cn": "领为创新科技(深圳)有限公司",
+   "category": "Wearables",
+   "subcategory": "Smartwatch health solution house",
+   "website": "",
+   "key_products": [
+    "SpO2/HRM/multi-sport smartwatch gongban",
+    "Amazfit supply partner"
+   ]
+  },
+  "22": {
+   "id": 22,
+   "company_en": "Bestlink Intelligent",
+   "company_cn": "联硕智能(深圳)有限公司",
+   "category": "Wearables",
+   "subcategory": "4G LTE smartwatch solution house",
+   "website": "",
+   "key_products": [
+    "4G LTE cellular smartwatch reference design",
+    "OEM/ODM"
+   ]
+  },
+  "23": {
+   "id": 23,
+   "company_en": "Zhongke Lanwei (Bluetrum)",
+   "company_cn": "中科蓝讯科技有限公司",
+   "category": "Wearables / TWS",
+   "subcategory": "Wearable + BT audio chip solution house",
+   "website": "bluetrum.com",
+   "key_products": [
+    "AB5356A BT SoC",
+    "smartwatch + TWS reference designs",
+    "domestic RISC-V chip"
+   ]
+  },
+  "24": {
+   "id": 24,
+   "company_en": "Yingde'er",
+   "company_cn": "深圳市英得尔实业有限公司",
+   "category": "Wearables",
+   "subcategory": "Smart watch / children tablet",
+   "website": "",
+   "key_products": [
+    "Smart phone watch",
+    "smart band",
+    "robot",
+    "tablet",
+    "400 staff"
+   ]
+  },
+  "25": {
+   "id": 25,
+   "company_en": "Fenda Technology",
+   "company_cn": "深圳市奋达科技股份有限公司",
+   "category": "TWS Audio",
+   "subcategory": "TWS earbuds / smart speaker ODM",
+   "website": "fenda.com",
+   "key_products": [
+    "TWS earbuds",
+    "smart speaker",
+    "smart home",
+    "clients: Amazon / Creative / Philips"
+   ]
+  },
+  "26": {
+   "id": 26,
+   "company_en": "Haoern Acoustics",
+   "company_cn": "深圳市豪恩声学股份有限公司",
+   "category": "TWS Audio",
+   "subcategory": "TWS / headphone ODM",
+   "website": "haoen.cn",
+   "key_products": [
+    "TWS",
+    "ANC headphone",
+    "smart speaker",
+    "clients: vivo / RAZER / BEATS / HP"
+   ]
+  },
+  "27": {
+   "id": 27,
+   "company_en": "Guanxu Electronics",
+   "company_cn": "深圳市冠旭电子股份有限公司",
+   "category": "TWS Audio",
+   "subcategory": "TWS / smart headset ODM",
+   "website": "",
+   "key_products": [
+    "Pro audio",
+    "smart earphone",
+    "smart speaker",
+    "CES/Red Dot/iF award winner"
+   ]
+  },
+  "28": {
+   "id": 28,
+   "company_en": "Kenahsin",
+   "company_cn": "深圳科奈信科技有限公司",
+   "category": "TWS Audio",
+   "subcategory": "BT headphone ODM",
+   "website": "",
+   "key_products": [
+    "Mid-high end BT earphone OEM/ODM",
+    "2000+ staff",
+    "own factory in Dongguan Tangxia"
+   ]
+  },
+  "29": {
+   "id": 29,
+   "company_en": "Yingtong Comms",
+   "company_cn": "瀛通通讯技术有限公司",
+   "category": "TWS Audio",
+   "subcategory": "Earphone / TWS ODM",
+   "website": "",
+   "key_products": [
+    "TWS",
+    "earphone line",
+    "USB cable",
+    "smart band",
+    "listed SZ mid-cap"
+   ]
+  },
+  "30": {
+   "id": 30,
+   "company_en": "Hanke Electronics",
+   "company_cn": "深圳市汉科电子股份有限公司",
+   "category": "TWS Audio",
+   "subcategory": "TWS / charging accessories ODM",
+   "website": "",
+   "key_products": [
+    "TWS earbuds + charging accessories OEM/ODM for global brands"
+   ]
+  },
+  "31": {
+   "id": 31,
+   "company_en": "Antixun",
+   "company_cn": "深圳市安特信技术有限公司",
+   "category": "TWS Audio",
+   "subcategory": "TWS / smart audio ODM",
+   "website": "",
+   "key_products": [
+    "TWS",
+    "ANC earphone",
+    "smart speaker",
+    "pivoted from solution house to ODM 2018"
+   ]
+  },
+  "32": {
+   "id": 32,
+   "company_en": "Youcheng Technology",
+   "company_cn": "深圳优程科技有限公司",
+   "category": "TWS Audio",
+   "subcategory": "TWS audio solution house / ODM",
+   "website": "",
+   "key_products": [
+    "Audio gongban",
+    "partners: Airoha / Qualcomm / MediaTek / Jieli chipsets"
+   ]
+  },
+  "33": {
+   "id": 33,
+   "company_en": "Tuya Smart",
+   "company_cn": "涂鸦智能股份有限公司",
+   "category": "Smart Home / IoT",
+   "subcategory": "IoT platform + module solution house",
+   "website": "tuya.com",
+   "key_products": [
+    "WiFi/BT/Zigbee/BLE Mesh modules",
+    "500+ product smart-home gongbans",
+    "global OEM APP"
+   ]
+  },
+  "34": {
+   "id": 34,
+   "company_en": "Scensmart",
+   "company_cn": "思特萌科技(深圳)有限公司",
+   "category": "Smart Home / IoT",
+   "subcategory": "ARM-based IoT / Android ODM solution",
+   "website": "scensmart.com",
+   "key_products": [
+    "Set-top box",
+    "projector",
+    "NAS",
+    "tablet",
+    "smart home",
+    "RK3568/3588 platforms OEM/ODM"
+   ]
+  },
+  "35": {
+   "id": 35,
+   "company_en": "AI-Thinker",
+   "company_cn": "安信可科技(深圳)有限公司",
+   "category": "IoT Modules / BLE",
+   "subcategory": "ESP8266 / ESP32 module OEM",
+   "website": "ai-thinker.com",
+   "key_products": [
+    "ESP-01",
+    "ESP32-CAM",
+    "A9 GSM modules",
+    "massive community",
+    "OEM/ODM"
+   ]
+  },
+  "36": {
+   "id": 36,
+   "company_en": "Moko Technology",
+   "company_cn": "深圳市摩可智能硬件有限公司",
+   "category": "IoT Modules / BLE",
+   "subcategory": "BLE / WiFi / NB-IoT module OEM",
+   "website": "mokosmart.com",
+   "key_products": [
+    "BLE 5.0 beacon",
+    "NB-IoT tracker",
+    "WiFi module",
+    "CE/FCC/RoHS OEM/ODM"
+   ]
+  },
+  "37": {
+   "id": 37,
+   "company_en": "Minew Technologies",
+   "company_cn": "深圳市敏芯微电子技术有限公司",
+   "category": "IoT Modules / BLE",
+   "subcategory": "BLE beacon / indoor positioning",
+   "website": "minewtech.com",
+   "key_products": [
+    "BLE beacon",
+    "iBeacon",
+    "AoA/AoD positioning",
+    "CE/FCC modules OEM"
+   ]
+  },
+  "38": {
+   "id": 38,
+   "company_en": "RAK Wireless",
+   "company_cn": "深圳锐凌无线技术有限公司",
+   "category": "IoT Modules / LoRa",
+   "subcategory": "LoRaWAN gateway / module OEM",
+   "website": "rakwireless.com",
+   "key_products": [
+    "RAK2245 / RAK4630 LoRaWAN",
+    "Helium compatible",
+    "CE/FCC",
+    "OEM"
+   ]
+  },
+  "39": {
+   "id": 39,
+   "company_en": "Dragino Technology",
+   "company_cn": "创联技术(深圳)有限公司",
+   "category": "IoT Modules / LoRa",
+   "subcategory": "LoRaWAN gateway / sensor OEM",
+   "website": "dragino.com",
+   "key_products": [
+    "LG308 LoRa gateway",
+    "LHT65 temp/humidity sensor",
+    "open-source firmware OEM"
+   ]
+  },
+  "40": {
+   "id": 40,
+   "company_en": "DOITING",
+   "company_cn": "深圳市道同科技发展有限公司",
+   "category": "IoT Modules / BLE",
+   "subcategory": "NB-IoT / LoRa / BLE module OEM",
+   "website": "doiting.com",
+   "key_products": [
+    "NB-IoT module",
+    "LoRa gateway",
+    "BLE mesh",
+    "OEM/ODM for IoT product brands"
+   ]
+  },
+  "41": {
+   "id": 41,
+   "company_en": "Aoni",
+   "company_cn": "深圳市奥尼电子股份有限公司",
+   "category": "Cameras / Dashcam",
+   "subcategory": "Dashcam / IP cam / conference cam ODM",
+   "website": "aoni.cc",
+   "key_products": [
+    "Dashcam",
+    "smart doorbell",
+    "baby cam",
+    "conference cam",
+    "NVR",
+    "ODM centre"
+   ]
+  },
+  "42": {
+   "id": 42,
+   "company_en": "VLT (Veilute)",
+   "company_cn": "深圳市威路特汽车科技有限公司",
+   "category": "Cameras / Dashcam",
+   "subcategory": "Dashcam OEM/ODM",
+   "website": "veilute.com",
+   "key_products": [
+    "Dashcam OEM/ODM",
+    "FCC/CE/ISO9001/IATF16949",
+    "full in-house mould + SMT"
+   ]
+  },
+  "43": {
+   "id": 43,
+   "company_en": "Baishengxing",
+   "company_cn": "深圳市百盛兴业科技有限公司",
+   "category": "Cameras / Dashcam",
+   "subcategory": "Dashcam / vehicle cam OEM",
+   "website": "luview.cn",
+   "key_products": [
+    "Dashcam",
+    "vehicle cam",
+    "display",
+    "OEM/ODM for global retailers and wholesalers"
+   ]
+  },
+  "44": {
+   "id": 44,
+   "company_en": "Reolink",
+   "company_cn": "锐捷电子(深圳)有限公司",
+   "category": "Cameras / Security",
+   "subcategory": "IP cam / NVR OEM/ODM",
+   "website": "reolink.com",
+   "key_products": [
+    "WiFi/4G IP cam",
+    "NVR",
+    "solar cam",
+    "CE/FCC",
+    "direct EU/US sales + white-label"
+   ]
+  },
+  "45": {
+   "id": 45,
+   "company_en": "Vstarcam",
+   "company_cn": "威视达康(深圳)有限公司",
+   "category": "Cameras / Security",
+   "subcategory": "IP cam WiFi solution house",
+   "website": "vstarcam.com",
+   "key_products": [
+    "WiFi IP camera",
+    "P2P cloud",
+    "OEM/ODM",
+    "Tuya-compatible"
+   ]
+  },
+  "46": {
+   "id": 46,
+   "company_en": "Costar Group (CCTV)",
+   "company_cn": "深圳市科星通信技术有限公司",
+   "category": "Cameras / Security",
+   "subcategory": "CCTV / IP cam solution",
+   "website": "costargroup.com",
+   "key_products": [
+    "CCTV",
+    "NVR",
+    "IP camera",
+    "analytics",
+    "OEM for global security brands"
+   ]
+  },
+  "52": {
+   "id": 52,
+   "company_en": "Bestechnic (BES)",
+   "company_cn": "恒玄科技(上海)股份有限公司",
+   "category": "TWS Audio",
+   "subcategory": "TWS SoC chip solution house",
+   "website": "bestechnic.com",
+   "key_products": [
+    "BES2300/2600 TWS SoC",
+    "clients: Huawei Freebuds / Samsung / Sony / Google"
+   ]
+  },
+  "53": {
+   "id": 53,
+   "company_en": "Jieli Technology",
+   "company_cn": "珠海市杰理科技股份有限公司",
+   "category": "TWS Audio",
+   "subcategory": "TWS SoC chip solution house",
+   "website": "zh-jieli.com",
+   "key_products": [
+    "AC69xx/AC70xx TWS SoC",
+    "27B+ chips shipped",
+    "clients: Xiaomi / QCY / HP / Lenovo"
+   ]
+  },
+  "54": {
+   "id": 54,
+   "company_en": "Airoha (MediaTek)",
+   "company_cn": "络达科技股份有限公司",
+   "category": "TWS Audio",
+   "subcategory": "TWS ANC SoC chip solution house",
+   "website": "airoha.com",
+   "key_products": [
+    "AB156x ANC TWS SoC",
+    "FCC/CE pre-cert modules",
+    "clients: Jabra / JBL"
+   ]
+  },
+  "55": {
+   "id": 55,
+   "company_en": "Tuya Smart Module",
+   "company_cn": "涂鸦智能模组部门",
+   "category": "Smart Home / IoT",
+   "subcategory": "WiFi/BT/Zigbee smart home modules",
+   "website": "developer.tuya.com",
+   "key_products": [
+    "CBU / WBR3 / BT3L modules",
+    "Alexa/Google certified",
+    "volume IoT OEM"
+   ]
+  },
+  "56": {
+   "id": 56,
+   "company_en": "Huaertai (HET)",
+   "company_cn": "和而泰智能科技集团股份有限公司",
+   "category": "Smart Home / IoT",
+   "subcategory": "Smart home controller / appliance IoT",
+   "website": "hetiotcloud.com",
+   "key_products": [
+    "Smart home controller gongban",
+    "clients: Electrolux / Whirlpool / Bosch / Haier"
+   ]
+  },
+  "57": {
+   "id": 57,
+   "company_en": "Viomi Technology",
+   "company_cn": "云米科技股份有限公司",
+   "category": "Smart Home / IoT",
+   "subcategory": "Smart home appliance solution",
+   "website": "viomi.com.cn",
+   "key_products": [
+    "Smart fridge / washing machine IoT",
+    "full appliance solution OEM",
+    "Xiaomi ecosystem"
+   ]
+  },
+  "58": {
+   "id": 58,
+   "company_en": "BYD Microelectronics",
+   "company_cn": "比亚迪半导体有限公司",
+   "category": "Smart Home / IoT",
+   "subcategory": "MCU / power chip for IoT devices",
+   "website": "bydmicro.com",
+   "key_products": [
+    "MCU chips",
+    "motor driver ICs",
+    "IoT SoC",
+    "power management",
+    "OEM reference designs"
+   ]
+  },
+  "59": {
+   "id": 59,
+   "company_en": "Xinhua Control (XHC)",
+   "company_cn": "深圳市欣华宸科技有限公司",
+   "category": "Industrial IoT",
+   "subcategory": "Industrial edge gateway / RTU OEM",
+   "website": "xhciot.com",
+   "key_products": [
+    "Industrial edge gateway",
+    "RTU",
+    "RS485/Modbus",
+    "4G/LoRa",
+    "OEM/ODM"
+   ]
+  },
+  "60": {
+   "id": 60,
+   "company_en": "Kongtai Technology",
+   "company_cn": "深圳市控泰科技有限公司",
+   "category": "Industrial IoT",
+   "subcategory": "SCADA / PLC / edge computing OEM",
+   "website": "kongtai.net",
+   "key_products": [
+    "PLC",
+    "HMI",
+    "SCADA",
+    "edge gateway",
+    "industrial IoT OEM/ODM"
+   ]
+  },
+  "61": {
+   "id": 61,
+   "company_en": "Kangshida (Conradtech)",
+   "company_cn": "深圳市康士达科技有限公司",
+   "category": "Industrial IoT",
+   "subcategory": "Industrial PC / AI edge computing OEM",
+   "website": "cstipc.com",
+   "key_products": [
+    "Industrial PC board",
+    "AI edge card",
+    "computer vision",
+    "OEM/ODM",
+    "ISO9001"
+   ]
+  },
+  "62": {
+   "id": 62,
+   "company_en": "WPI (Winning Technologies)",
+   "company_cn": "WPI Group",
+   "category": "Smartphone / Tablet",
+   "subcategory": "Smartphone reference design (MediaTek)",
+   "website": "wpigroup.com",
+   "key_products": [
+    "MediaTek smartphone + tablet gongban",
+    "1000+ reference designs",
+    "billions of devices"
+   ]
+  },
+  "63": {
+   "id": 63,
+   "company_en": "ATU Tech",
+   "company_cn": "安图科技",
+   "category": "Smartphone / Tablet",
+   "subcategory": "Smartphone solution house (MediaTek)",
+   "website": "",
+   "key_products": [
+    "Android smartphone gongban",
+    "MediaTek ecosystem",
+    "strong Africa/SEA market"
+   ]
+  },
+  "64": {
+   "id": 64,
+   "company_en": "Longcheer",
+   "company_cn": "龙旗科技集团",
+   "category": "Smartphone / Tablet",
+   "subcategory": "Smartphone / tablet solution house",
+   "website": "longcheer.com",
+   "key_products": [
+    "Android smartphone + tablet gongban",
+    "global ODM partnerships"
+   ]
+  },
+  "65": {
+   "id": 65,
+   "company_en": "Thundersoft (SZ branch)",
+   "company_cn": "中科创达软件股份有限公司",
+   "category": "Smartphone / AI / Wearable",
+   "subcategory": "OS + AI solution house (Qualcomm-based)",
+   "website": "thundersoft.com",
+   "key_products": [
+    "Qualcomm RB6 robotics",
+    "wearable SOM",
+    "camera AI",
+    "VR/AR ODM",
+    "OS + AI stack"
+   ]
+  },
+  "66": {
+   "id": 66,
+   "company_en": "Rockchip (RK) partners",
+   "company_cn": "瑞芯微授权方案商",
+   "category": "Tablet / Android / Edge AI",
+   "subcategory": "RK3566/3588 platform ODM",
+   "website": "",
+   "key_products": [
+    "Android tablet",
+    "edge AI box",
+    "digital signage",
+    "vehicle HMI",
+    "OEM/ODM on Rockchip"
+   ]
+  },
+  "67": {
+   "id": 67,
+   "company_en": "Topway (Tuo Pu)",
+   "company_cn": "深圳市拓普威科技有限公司",
+   "category": "Display / Smart Retail",
+   "subcategory": "Commercial display / digital signage solution",
+   "website": "topwaytech.com",
+   "key_products": [
+    "Commercial LCD display",
+    "Android signage player",
+    "meeting room controller",
+    "OEM"
+   ]
+  },
+  "68": {
+   "id": 68,
+   "company_en": "Szrfid Technology",
+   "company_cn": "深圳市新中讯网络技术有限公司",
+   "category": "RFID / Industrial",
+   "subcategory": "RFID reader / UHF solution house",
+   "website": "szrfid.com",
+   "key_products": [
+    "UHF RFID reader",
+    "RFID module",
+    "OEM/ODM for logistics + retail + access"
+   ]
+  },
+  "69": {
+   "id": 69,
+   "company_en": "Chainway",
+   "company_cn": "深圳成远科技有限公司",
+   "category": "RFID / Industrial",
+   "subcategory": "Industrial handheld RFID scanner OEM",
+   "website": "chainway.net",
+   "key_products": [
+    "Android RFID handheld",
+    "barcode scanner",
+    "rugged mobile computer",
+    "OEM/ODM"
+   ]
+  },
+  "70": {
+   "id": 70,
+   "company_en": "Newland (SZ)",
+   "company_cn": "新大陆(深圳)科技有限公司",
+   "category": "RFID / Barcode",
+   "subcategory": "Barcode / RFID / POS terminal",
+   "website": "newlandaidc.com",
+   "key_products": [
+    "Barcode scanner",
+    "NFC reader",
+    "POS terminal",
+    "RFID reader",
+    "OEM/ODM"
+   ]
+  },
+  "71": {
+   "id": 71,
+   "company_en": "Idata Technology",
+   "company_cn": "深圳市艾达天成科技有限公司",
+   "category": "Industrial Handheld",
+   "subcategory": "Rugged Android handheld / RFID OEM",
+   "website": "idatatech.com",
+   "key_products": [
+    "Rugged Android PDA",
+    "RFID UHF",
+    "barcode",
+    "4G/WiFi",
+    "OEM/ODM"
+   ]
+  },
+  "84": {
+   "id": 84,
+   "company_en": "GREPOW",
+   "company_cn": "深圳格瑞普电池有限公司",
+   "category": "Battery / Power",
+   "subcategory": "High-rate Li-Po / NiMH battery OEM",
+   "website": "grepow.com",
+   "key_products": [
+    "High-drain Li-Po",
+    "shaped/custom battery",
+    "NiMH",
+    "UAV battery",
+    "OEM/ODM"
+   ]
+  },
+  "85": {
+   "id": 85,
+   "company_en": "Foxlink (SZ)",
+   "company_cn": "正崴精密工业(深圳)有限公司",
+   "category": "EMS / Manufacturing",
+   "subcategory": "PCBA + cable assembly EMS",
+   "website": "foxconn.com",
+   "key_products": [
+    "Cable assembly",
+    "PCBA",
+    "connector",
+    "OEM for major electronics brands"
+   ]
+  },
+  "86": {
+   "id": 86,
+   "company_en": "Hengli Electronics",
+   "company_cn": "深圳市恒力电子有限公司",
+   "category": "Wireless Charging",
+   "subcategory": "Qi wireless charging module OEM",
+   "website": "",
+   "key_products": [
+    "Qi wireless charging transmitter/receiver",
+    "5W-100W",
+    "OEM/ODM modules"
+   ]
+  },
+  "87": {
+   "id": 87,
+   "company_en": "Lixiang Wireless (Green)",
+   "company_cn": "深圳市绿源电子技术有限公司",
+   "category": "Wireless Charging",
+   "subcategory": "Qi / MagSafe wireless charge OEM",
+   "website": "",
+   "key_products": [
+    "Qi 2.0 / MagSafe compatible wireless charge",
+    "OEM/ODM for branded accessories"
+   ]
+  },
+  "88": {
+   "id": 88,
+   "company_en": "iDisc Technology",
+   "company_cn": "深圳市艾迪思科技有限公司",
+   "category": "E-ink / E-reader",
+   "subcategory": "E-ink display module / e-reader OEM",
+   "website": "",
+   "key_products": [
+    "E-ink display module",
+    "e-reader gongban",
+    "retail price tag",
+    "OEM/ODM"
+   ]
+  },
+  "89": {
+   "id": 89,
+   "company_en": "Visionox (SZ branch)",
+   "company_cn": "视涯科技(深圳)有限公司",
+   "category": "Display / OLED",
+   "subcategory": "AMOLED / OLED module OEM",
+   "website": "visionox.com",
+   "key_products": [
+    "AMOLED module for smartwatch / wearable / phone",
+    "OEM/ODM"
+   ]
+  },
+  "90": {
+   "id": 90,
+   "company_en": "BOE (SZ branch)",
+   "company_cn": "京东方科技集团(深圳)",
+   "category": "Display / LCD",
+   "subcategory": "LCD / AMOLED display module OEM",
+   "website": "boe.com.cn",
+   "key_products": [
+    "TFT-LCD",
+    "AMOLED",
+    "flexible display",
+    "OEM module supply"
+   ]
+  },
+  "91": {
+   "id": 91,
+   "company_en": "Pax Technology",
+   "company_cn": "百富计算机技术(深圳)有限公司",
+   "category": "POS / Payment Terminal",
+   "subcategory": "Payment terminal / POS solution house",
+   "website": "paxintl.com",
+   "key_products": [
+    "Android POS",
+    "handheld POS",
+    "smart terminal",
+    "CE/FCC/EMV",
+    "OEM/ODM"
+   ]
+  },
+  "92": {
+   "id": 92,
+   "company_en": "Centerm (Shennan)",
+   "company_cn": "新华三(深圳)信息技术有限公司",
+   "category": "Thin Client / Edge",
+   "subcategory": "Thin client / edge terminal solution",
+   "website": "centerm.com",
+   "key_products": [
+    "ARM/x86 thin client",
+    "mini PC",
+    "industrial terminal",
+    "OEM/ODM"
+   ]
+  },
+  "93": {
+   "id": 93,
+   "company_en": "Huidu Technology",
+   "company_cn": "深圳市汇顶科技股份有限公司",
+   "category": "Fingerprint / Biometric",
+   "subcategory": "Fingerprint chip + module solution house",
+   "website": "goodix.com",
+   "key_products": [
+    "Under-display fingerprint SoC",
+    "touch + biometric",
+    "OEM reference design"
+   ]
+  },
+  "94": {
+   "id": 94,
+   "company_en": "iWave Systems (SZ)",
+   "company_cn": "爱微电子(深圳)有限公司",
+   "category": "SOM / Embedded",
+   "subcategory": "ARM SOM / carrier board ODM",
+   "website": "",
+   "key_products": [
+    "RK3568/i.MX8 SOM",
+    "carrier board",
+    "embedded Linux OEM/ODM"
+   ]
+  },
+  "95": {
+   "id": 95,
+   "company_en": "Forlinx Embedded",
+   "company_cn": "飞凌嵌入式技术有限公司",
+   "category": "SOM / Embedded",
+   "subcategory": "ARM core board / SOM OEM",
+   "website": "forlinx.com",
+   "key_products": [
+    "i.MX8M / RK3568 / AM62x SOM",
+    "carrier board",
+    "Linux BSP",
+    "OEM/ODM"
+   ]
+  },
+  "96": {
+   "id": 96,
+   "company_en": "Toradex (SZ)",
+   "company_cn": "深圳图睿达科技有限公司",
+   "category": "SOM / Embedded",
+   "subcategory": "Industrial SOM / embedded Linux OEM",
+   "website": "toradex.com",
+   "key_products": [
+    "Apalis / Colibri SOM",
+    "carrier board",
+    "Yocto Linux",
+    "long-term supply"
+   ]
+  },
+  "97": {
+   "id": 97,
+   "company_en": "Seeed Studio (Seeed Technology)",
+   "company_cn": "矽递科技(深圳)有限公司",
+   "category": "Maker / IoT modules",
+   "subcategory": "IoT module + open hardware OEM",
+   "website": "seeedstudio.com",
+   "key_products": [
+    "XIAO ESP32S3",
+    "Grove modules",
+    "LoRa gateway",
+    "Jetson carrier",
+    "OEM PCBA"
+   ]
+  },
+  "98": {
+   "id": 98,
+   "company_en": "LILYGO",
+   "company_cn": "深圳市合宙通信有限公司",
+   "category": "IoT Dev / Module",
+   "subcategory": "ESP32 / LoRa / cellular dev module OEM",
+   "website": "lilygo.cc",
+   "key_products": [
+    "T-SIM7670 / T-Watch / TTGO LoRa boards",
+    "OEM module supply"
+   ]
+  },
+  "99": {
+   "id": 99,
+   "company_en": "Luat (Air105/Air780)",
+   "company_cn": "深圳市合宙通信有限公司",
+   "category": "IoT Modules",
+   "subcategory": "LTE Cat-1 / NB-IoT module OEM",
+   "website": "openluat.com",
+   "key_products": [
+    "Air780E Cat-1 bis module",
+    "Air105 MCU",
+    "MQTT/TLS",
+    "OEM/ODM"
+   ]
+  },
+  "100": {
+   "id": 100,
+   "company_en": "Linkage Technology",
+   "company_cn": "深圳市联控智能科技有限公司",
+   "category": "Smart Metering / IoT",
+   "subcategory": "Smart meter / energy IoT solution house",
+   "website": "linkage-tech.com",
+   "key_products": [
+    "Smart energy meter",
+    "sub-metering IoT",
+    "NB-IoT / LoRa",
+    "OEM/ODM"
+   ]
+  }
+ },
+ "manufacturing": [
+  {
+   "label": "Kingbrother / King Brother Technology",
+   "what": "PCB fab + EMS",
+   "website": "https://global.kingbrother.com/",
+   "site_page": "/boards-kingbrother.html",
+   "source_name": "Kingbrother / King Brother Technology (PCB fab + EMS)"
+  },
+  {
+   "label": "Foxlink (SZ)",
+   "company_cn": "正崴精密工业(深圳)有限公司",
+   "what": "PCBA + cable assembly EMS",
+   "website": "foxconn.com",
+   "key_products": [
+    "Cable assembly",
+    "PCBA",
+    "connector",
+    "OEM for major electronics brands"
+   ]
+  }
+ ],
+ "manthink": {
+  "label": "ManThink",
+  "website": "https://www.manthink.cn/",
+  "board_slug": "manthink-gd6-lorawan-gateway",
+  "board_name": "ManThink GD6 open-source LoRaWAN gateway",
+  "what": "open-source LoRaWAN gateway (direct supplier submission)",
+  "reference_price": "Supplier reference price (Nov 2026, GD61 indoor, 8 channels): basic Ethernet/Wi-Fi US$50; 4G+PoE US$70; global 4G+PoE US$87; power kit +US$5. MOQ and lead time on request."
+ }
+}

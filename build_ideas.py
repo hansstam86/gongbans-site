@@ -22,6 +22,8 @@ from pathlib import Path
 from urllib.parse import quote
 
 from build_detail_pages import ASSET_V, FOOTER, e, head, nav
+import build_contacts
+import build_playbook
 import build_startpacks
 
 ROOT = Path(__file__).parent
@@ -89,7 +91,7 @@ def render_index(data, ideas):
     explainer = (f'''<section class="startpack-explainer" id="startpacks" aria-label="Founder start packs">
   <div>
     <h2>Founder start packs</h2>
-    <p>Ideas marked <span class="pack-badge" style="margin-left:0">Start pack</span> come with a founder start pack: a one-page summary, a business plan (customer, market size, competition, unit economics, go-to-market, 12-month plan, funding, risks) and a start kit (the catalogue boards to copy from, a block diagram, a starter BOM, firmware starting points, a 12-week build plan, the EU certification checklist, a validation toolkit and a first-production checklist), ending with three things to do this week. Every pack is downloadable as Markdown. Same rule as the ideas: concepts, not products; every number is an estimate to check.{f' Example: <a href="/startpacks/{e(first["slug"])}.html">{e(first["title"])} →</a>' if first else ""}</p>
+    <p>Ideas marked <span class="pack-badge" style="margin-left:0">Start pack</span> come with a founder start pack: a one-page summary, a business plan (customer, market size, competition, unit economics, go-to-market, 12-month plan, funding, risks) and a start kit (the catalogue boards to copy from, a block diagram, a starter BOM, firmware starting points, a 12-week build plan, the EU certification checklist, a validation toolkit and a first-production checklist), ending with three things to do this week. Since November 2026 every pack also has a <strong>Who to contact</strong> section: the companies on file in gongban.db that publish the boards, the PCBA houses, and ready-to-send outreach e-mails in English and Chinese. Every pack is downloadable as Markdown. Same rule as the ideas: concepts, not products; every number is an estimate to check. Never built hardware? Read the <a href="/playbook.html">zero-experience founder playbook</a> first.{f' Example: <a href="/startpacks/{e(first["slug"])}.html">{e(first["title"])} →</a>' if first else ""}</p>
   </div>
   <div class="n">{n_packs}<small>start packs</small></div>
 </section>''' if n_packs else "")
@@ -301,6 +303,8 @@ def patch_index(ideas):
 
 def main():
     data, ideas, boards = load()
+    build_contacts.patch_packs()
+    build_playbook.build()
     PACKS.update(build_startpacks.build(ideas))
     (ROOT / "ideas.html").write_text(render_index(data, ideas), encoding="utf-8")
     wanted = set()

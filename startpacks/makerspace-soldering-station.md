@@ -182,7 +182,74 @@ Case: steel, earthed; tip earthed via handle; no mains inside.
 - Packaging: double-wall box, foam insert, tip card, warranty card, QR to the teacher guide.
 - Incoterms: FOB Shenzhen; declare the PSU separately on the invoice (different HS code).
 
-## 4. Next steps (this week)
+## 4. Who to contact
+
+<!-- who-to-contact:start -->
+**No verified company contact on file yet for this idea.** Every board it is built from is a community design on OSHWHub, where the author is an individual, not a supplier. Nothing has been invented to fill the gap: use the manufacturing houses and the directory entries below, follow the [zero-experience founder playbook](/playbook.html), and treat the first quote you get as the real data. Company websites only; no personal contacts are published.
+
+### Open-hardware boards without a company behind them
+
+- **OSHWHub community designs** — community projects on OSHWHub 立创开源硬件平台 (JLC open hardware platform) · https://oshwhub.com . The author is an individual, not a supplier, and author handles are not published here. Fabricate from the files through a PCBA house (below) and check each project's licence first. Boards used here: [数控智能焊台](/db/oshwhub-shuo-kong-gao-pin-zhi-neng-han-tai.html) (open digital soldering-station controller); [54X-AT热风枪控制器主板模块858](/db/oshwhub-re-feng-qiang-kong-zhi-qi-mo-kuai.html) (open hot-air gun controller main board); [直流低压加热台 DC/Mini](/db/oshwhub-zhi-liu-di-ya-jia-re-tai-v1.html) (open DC low-voltage heating plate); [TPS63020](/db/oshwhub-tps63020.html) (buck-boost regulator reference).
+
+### Manufacturing (PCBA / EMS) on file
+
+- **Kingbrother / King Brother Technology** · https://global.kingbrother.com/ — PCB fab + EMS; see the [Kingbrother SOM page](/boards-kingbrother.html) on this site.
+- **Foxlink (SZ)** (正崴精密工业(深圳)有限公司) · foxconn.com — PCBA + cable assembly EMS: Cable assembly; PCBA; connector; OEM for major electronics brands.
+
+### MOQ and landed cost
+
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+
+### Outreach e-mail, ready to send
+
+Fill in the [brackets], keep it short, and send it to the sales or "contact us" address on the company's own website. The Chinese version is the same letter; sending both in one mail is normal. How to read the reply: [playbook → the first quote](/playbook.html#quote).
+
+**B. To a PCBA / EMS house — quote from the open design files** (send to Kingbrother, Foxlink or any assembler you vet; see the [playbook](/playbook.html#manufacturer))
+
+```email
+Subject: PCBA quote from open design files — Makerspace Soldering & Rework Station, [50] prototypes + [500] production units
+
+Hello [company] sales team,
+
+I am [your name], founder of [your company] in [country]. We are building a Makerspace Soldering & Rework Station: A CE-ready low-voltage soldering station, hot-air controller and DC pre-heater built on open controller boards, sold as a bundle to European makerspaces and schools with a maintenance-friendly design. The design starts from published open-hardware files (数控智能焊台, 54X-AT热风枪控制器主板模块858, 直流低压加热台 DC/Mini, TPS63020; schematic, PCB and BOM available) with our own modifications.
+
+Could you quote:
+1. PCB fabrication + SMT assembly for [50] prototype units and [500 / 1,000] production units, including component sourcing (we provide the BOM with manufacturer part numbers).
+2. NRE, stencil and test-fixture costs, and your DFM review fee if any.
+3. Lead time from file approval to shipment, and your QC / functional-test process.
+4. Box build (enclosure, cable, packaging) if you offer it.
+5. Terms: EXW / FOB Shenzhen or DDP [your city]; payment terms for a first order.
+
+Design files: [link to Gerber, BOM and pick-and-place files].
+
+Best regards,
+[your name] · [your company] · [website] · [phone / WhatsApp]
+```
+
+**B. 中文版**
+
+```email
+主题：基于开源设计文件的PCBA报价 — Makerspace Soldering & Rework Station，[50]台样机 + [500]台量产
+
+[公司]销售团队，您好：
+
+我是[姓名]，[国家][公司]的创始人。我们正在开发一款Makerspace Soldering & Rework Station：A CE-ready low-voltage soldering station, hot-air controller and DC pre-heater built on open controller boards, sold as a bundle to European makerspaces and schools with a maintenance-friendly design。设计基于已公开的开源硬件文件（数控智能焊台, 54X-AT热风枪控制器主板模块858, 直流低压加热台 DC/Mini, TPS63020；含原理图、PCB和BOM），并做了我们自己的修改。
+
+请报价：
+1. [50]台样机和[500 / 1,000]台量产的PCB制板+SMT贴片，含元器件采购（我们提供带厂商料号的BOM）。
+2. NRE、钢网和测试治具费用，以及DFM评审费用（如有）。
+3. 从文件确认到出货的交期，以及贵司的QC/功能测试流程。
+4. 如可提供，整机组装（外壳、线材、包装）报价。
+5. 贸易条款：深圳EXW/FOB或DDP到[城市]；首单付款条件。
+
+设计文件：[Gerber、BOM和坐标文件链接]。
+
+祝好，
+[姓名] · [公司] · [网站] · [电话 / WhatsApp]
+```
+<!-- who-to-contact:end -->
+
+## 5. Next steps (this week)
 
 1. Order the open soldering-station controller PCB (from the OSHWHub files) plus a C245-compatible handle, two tips and a 24 V/150 W desktop PSU; get it heating by the weekend.
 2. Write the one-page class-set offer with a spec table against Hakko FX-888DX, Aixun T3A and JBC CD-B; send it to 30 makerspace managers.
