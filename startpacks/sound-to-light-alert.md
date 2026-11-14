@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** On-device sound classification on an ESP32-class chip is routine; Thread/Zigbee low-power radios are cheap; the incumbents still sell 433 MHz transmitters per source; EU accessibility pressure is rising.
 - **The ask:** ~€95k (estimate) to the first 1,000 kits; route = association trials + member pre-orders + bootstrap; hearing-aid shop channel for scale.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Sonic Alert is a real, established incumbent selling individual components at about $64–224 each (one bundle discontinued) rather than one cheap integrated kit. "A third of today's prices" is roughly plausible: a full Sonic Alert setup is $150–250+ in parts against one €129–179 kit. **Main risk:** A discontinued Sonic Alert all-in-one starter kit suggests this exact sub-segment may have been tried and pulled before; find out why. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -127,6 +131,20 @@ Positioning: a **convenience alert**, not a safety-critical device and not a smo
 | Nothing / relying on a hearing partner ("do nothing") | The majority | Fails when the partner is out |
 
 **Wedge:** no wiring and no transmitters — listeners recognise existing sounds; trainable (record your own doorbell); one bedside pad for everything; mesh between rooms; a third of the price; hearing-aid shops can demo it in 2 minutes.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Sonic Alert components (Diglo, MaxiAids) | About $64–224 per component | Incumbent sold piecemeal |
+| Sonic Alert all-in-one starter kit | Discontinued | The integrated-kit segment was tried before |
+| Alerting-devices cost guide | Market overview | Supports the price comparison |
+
+**Verdict as researched: LIKELY.** Main risk: A discontinued Sonic Alert all-in-one starter kit suggests this exact sub-segment may have been tried and pulled before; find out why.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: **Listener** — wall-plug (USB-C or integrated plug) puck with a MEMS mic, ESP32-S3-class MCU for on-device classification, Thread/Zigbee (ESP32-H2-class) or BLE mesh to the pad, LED ring for local flash, battery backup for 24 h. **Pad** — bedside unit with a high-brightness multi-colour flash, a strong vibration motor (under-pillow disc option), a big dismiss button, 3-colour event legend, Li-ion backup, USB-C. **Portable pager** (later SKU) — wrist/pocket vibrator. Software: on-device models for doorbell/smoke-alarm/baby-cry/oven-timer/knock; "teach" mode (play your doorbell 5×); per-event colour and vibration pattern; mesh pairing by button; optional phone notification via a local bridge (not required). Privacy: no audio leaves the device, ever — that's a feature on the box.

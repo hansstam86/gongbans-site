@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Smart cups exist but force residents to use a specific vessel. Load cells, ESP32-C3 BLE and RGB rings are now a few euros. Care regulators in several EU countries treat hydration logging as a quality indicator.
 - **The ask:** ~€95k (estimate) to get to 1,000 units, two care-home pilots and a care-tablet app. Route: pre-paid pilots plus a regional innovation grant, angel top-up if the pilots renew.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** A real, funded category: Aquarate / Hydracare is live in UK care homes, Person Centred Software sells weighing "smart cups", and Aquatime was EU-funded. The incumbents are smart cups that measure actual consumption, not coasters, so a more direct solution already exists; a Nottingham Trent student project built almost exactly this coaster. **Main risk:** Must win on cost and simplicity against institutionally adopted smart-cup competitors. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -126,6 +130,21 @@ Sources used: [Savills care-home research](https://en.savills.pt/research_articl
 | Student/DIY load-cell coaster projects | Demo-grade | Not a product |
 
 **Wedge:** vessel-agnostic (tare on lift-off, works with the resident's favourite mug), fleet of 20–100 coasters per home on one tablet, open API/CSV so any care-record vendor can import, and a light-only nudge that does not add noise to a ward. Sources: [smart coaster for hospital dehydration](https://www.healthcare-management.uk/smart-coaster-tackle-hidden-epidemic-hospital-dehydration), [care-home smart cup via care software](https://personcentredsoftware.com/resources/a-smart-way-to-track-fluid-intake-and-prevent-dehydration), [consumer reminder cup pricing](https://www.epill.com/dropletsmartcup.html).
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Aquarate / Hydracare | Smart cups in UK care homes | Incumbent, more direct measurement |
+| Person Centred Software smart cups | Weighing cups tied to care software | Incumbent with the care-record integration |
+| Aquatime (AAL Europe) | EU-funded hydration project | Funded interest in the problem |
+| Nottingham Trent University coaster project | Student prototype | Concept precedent, not a product |
+
+**Verdict as researched: LIKELY.** Main risk: Must win on cost and simplicity against institutionally adopted smart-cup competitors.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: 95 mm coaster, glass or ceramic top plate (dishwasher-safe), silicone skirt, 1× 5 kg load cell under the plate, ESP32-C3 BLE, 12-LED RGB ring diffused through the skirt, 500 mAh Li-ion, Qi receiver, charging tray that holds 10 coasters. Software: BLE gateway (a cheap tablet or an ESP32 hub) → local server or cloud → per-resident daily total, "no sip in 90 min" nudge, CSV/API export. **Wellness/care-logging only. No medical claims, no dehydration diagnosis.** If you ever say "detects dehydration", MDR applies. Don't.

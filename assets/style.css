@@ -494,3 +494,4 @@ main.detail.playbook{max-width:900px}
 .pack-body blockquote.market-check.correction{border-left-color:var(--red);background:var(--red-bg)}
 .kq-note{font-size:14px;color:var(--text-mid);border-top:1px solid rgba(0,0,0,0.08);margin-top:14px;padding-top:12px;line-height:1.6}
 .kq-note strong{color:var(--red)}
+.market-badge.uncertain{color:var(--copper);border-color:var(--copper);background:rgba(184,115,51,0.08)}

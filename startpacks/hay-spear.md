@@ -12,6 +12,10 @@
 - **Why now:** Open ESP32-C6 + LoRa core exists with PCB and schematic; LoRaWAN modules are cheap; the one established wireless system is a 10-probe starter kit with a reader and a subscription at a four-figure price.
 - **The ask:** ~€70k to the first 1,000 spears; pre-orders at fairs plus one insurer partnership.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Self-heating hay and straw fires are real and well documented, with defined danger thresholds (about 65–95 °C / 150–200 °F). Quanturi's HAYTECH already sells a bale-insertion probe and repeater system, so this is a direct incumbent, not greenfield. **Main risk:** Incumbent pricing and MOQ, and the insurer channel's interest, are unverified. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -124,6 +128,19 @@ Who pays: the farmer (a €169 spear is cheap against a €200k barn), or the in
 | Do nothing — sniff and hope | €0 | Barn fires |
 
 **Wedge:** a 1 m spear with three depths (the core heats first), LoRaWAN that reaches across the yard and into public networks, buy-once pricing (no subscription for alarms), and insurer co-funding.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Quanturi HAYTECH (via Nationwide) | Bale probe + repeater monitoring system | Direct incumbent |
+| University of Kentucky / Oneida County hay-fire guides | Extension guidance with temperature thresholds | The problem is real and documented |
+
+**Verdict as researched: LIKELY.** Main risk: Incumbent pricing and MOQ, and the insurer channel's interest, are unverified.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **Spear:** 1,000 mm × 20 mm stainless tube, pointed, three digital temperature sensors at 30/60/90 cm, PA66 head with IP67 seal and a loop for pulling out, LED + button.

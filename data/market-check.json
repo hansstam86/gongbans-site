@@ -1,6 +1,6 @@
 {
  "researched": "November 2026",
- "method": "External web-search research on the ten highest-scoring ideas (competitors, demand signals, price comparables), carried out by Hans's research assistant in November 2026. Sources are named as found; none of the figures or claims has been re-verified by this site. Verify before relying on any of it.",
+ "method": "External web-search research on all 50 ideas (competitors, demand signals, price comparables), carried out by Hans's research assistant in November 2026 (top 10 first, the other 40 after). Sources are named as found; none of the figures or claims has been re-verified by this site. Verify before relying on any of it.",
  "caveat": "As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.",
  "ideas": {
   "tariff-lamp": {
@@ -8,12 +8,36 @@
    "summary": "No standalone competing product was found (Tibber Pulse's light shows connection status, not price), while several independent DIY builds do exactly this, and dynamic tariffs are a real, growing NL/DE category (Tibber, EDF FreePhase, Nord Pool-indexed contracts).",
    "risk": "Technical users can DIY it with a cheap smart bulb and Home Assistant; the product has to beat \"just buy a smart plug\" on simplicity.",
    "rows": [
-    ["Tibber Pulse (meter reader with status light)", "Light indicates connection status only, not price", "Confirms the gap: no retailer hardware shows the price itself"],
-    ["Home Assistant forum thread \"Preparing for a Dynamic Energy Contract with Color Awareness\"", "DIY colour-by-price build", "Demand signal: people build this themselves"],
-    ["GitHub gist for Amber (Australia) price light", "DIY build on another market's dynamic tariff", "Same need re-invented elsewhere"],
-    ["Aqara forum \"traffic light\" post", "DIY price traffic light", "Same"],
-    ["Homey community thread asking for exactly this", "User asked for a price lamp and was told to build it", "Unmet demand stated by a user"],
-    ["Dynamic tariff providers: Tibber, EDF FreePhase, Nord Pool-indexed contracts", "The category the lamp depends on", "Real and growing in NL/DE"]
+    [
+     "Tibber Pulse (meter reader with status light)",
+     "Light indicates connection status only, not price",
+     "Confirms the gap: no retailer hardware shows the price itself"
+    ],
+    [
+     "Home Assistant forum thread \"Preparing for a Dynamic Energy Contract with Color Awareness\"",
+     "DIY colour-by-price build",
+     "Demand signal: people build this themselves"
+    ],
+    [
+     "GitHub gist for Amber (Australia) price light",
+     "DIY build on another market's dynamic tariff",
+     "Same need re-invented elsewhere"
+    ],
+    [
+     "Aqara forum \"traffic light\" post",
+     "DIY price traffic light",
+     "Same"
+    ],
+    [
+     "Homey community thread asking for exactly this",
+     "User asked for a price lamp and was told to build it",
+     "Unmet demand stated by a user"
+    ],
+    [
+     "Dynamic tariff providers: Tibber, EDF FreePhase, Nord Pool-indexed contracts",
+     "The category the lamp depends on",
+     "Real and growing in NL/DE"
+    ]
    ]
   },
   "mould-risk-monitor": {
@@ -26,13 +50,41 @@
     "original_kill_question": "Do 30 of 300 tenants in one housing association's survey say they would pay €59 for a device that documents ventilation behaviour?"
    },
    "rows": [
-    ["Switchee", "Fleet sensors + dashboard sold to UK social landlords", "The real buyer exists, and is B2B/B2G"],
-    ["Vericon MouldSense", "Mould-risk sensing for landlords", "Same"],
-    ["Aico HomeLINK", "Connected home-environment sensing for housing providers", "Same"],
-    ["Connexin", "IoT sensing for housing associations", "Same"],
-    ["NRLA ResiSure (UK landlords' association)", "Landlord-side sensing offer", "NRLA source also notes tenants often suspect such sensors exist to blame them"],
-    ["Aqara T1 / W100 and similar (roughly €15–41)", "Generic temperature/humidity sensors", "Cover basic alerting at a fraction of the price; the wall-surface measurement is the only differentiator left"],
-    ["German legal sources on mould disputes", "Disputes common; measurement legally relevant", "Relevance confirmed, but no sign tenants buy devices for it"]
+    [
+     "Switchee",
+     "Fleet sensors + dashboard sold to UK social landlords",
+     "The real buyer exists, and is B2B/B2G"
+    ],
+    [
+     "Vericon MouldSense",
+     "Mould-risk sensing for landlords",
+     "Same"
+    ],
+    [
+     "Aico HomeLINK",
+     "Connected home-environment sensing for housing providers",
+     "Same"
+    ],
+    [
+     "Connexin",
+     "IoT sensing for housing associations",
+     "Same"
+    ],
+    [
+     "NRLA ResiSure (UK landlords' association)",
+     "Landlord-side sensing offer",
+     "NRLA source also notes tenants often suspect such sensors exist to blame them"
+    ],
+    [
+     "Aqara T1 / W100 and similar (roughly €15–41)",
+     "Generic temperature/humidity sensors",
+     "Cover basic alerting at a fraction of the price; the wall-surface measurement is the only differentiator left"
+    ],
+    [
+     "German legal sources on mould disputes",
+     "Disputes common; measurement legally relevant",
+     "Relevance confirmed, but no sign tenants buy devices for it"
+    ]
    ]
   },
   "smiley-terminal": {
@@ -40,10 +92,26 @@
    "summary": "HappyOrNot, the dominant incumbent, is confirmed subscription-only at roughly $69–100 per kiosk per month (Fox Business, Software Advice, Spendbase); four terminals at $69 a month is about $3,300 a year against a one-off buy, so payback is under two months. No competitor was found selling a comparable buy-once terminal (SurveyStance and AirVote are subscription or freemium).",
    "risk": "No public complaints about HappyOrNot's cost or lock-in surfaced (reviews are thin and positive), so the pain point is assumed, not verified; there is no direct evidence facility managers are shopping for a buy-once alternative.",
    "rows": [
-    ["HappyOrNot (Fox Business, Software Advice, Spendbase)", "Subscription only, roughly $69–100 per kiosk per month", "Payback of a €299 one-off terminal under two months at four units"],
-    ["SurveyStance", "Subscription / freemium feedback kiosks", "No buy-once offer"],
-    ["AirVote", "Subscription / freemium feedback", "No buy-once offer"],
-    ["HappyOrNot reviews on Software Advice (4.9 stars, 18 reviews)", "Thin, positive", "Cost pain point not evidenced in public reviews"]
+    [
+     "HappyOrNot (Fox Business, Software Advice, Spendbase)",
+     "Subscription only, roughly $69–100 per kiosk per month",
+     "Payback of a €299 one-off terminal under two months at four units"
+    ],
+    [
+     "SurveyStance",
+     "Subscription / freemium feedback kiosks",
+     "No buy-once offer"
+    ],
+    [
+     "AirVote",
+     "Subscription / freemium feedback",
+     "No buy-once offer"
+    ],
+    [
+     "HappyOrNot reviews on Software Advice (4.9 stars, 18 reviews)",
+     "Thin, positive",
+     "Cost pain point not evidenced in public reviews"
+    ]
    ]
   },
   "club-scoreboard": {
@@ -51,12 +119,36 @@
    "summary": "Full-size varsity boards run about $5,000–5,700 (Anthem Sports, School Health / Sportable); mid-tier portable wireless units about $2,089 (First Team FT810W); Daktronics is quote-only. Demand evidence: a Silicon Chip article calls pro boards generally out of reach for amateur and school teams, an Electro-Tech-Online thread shows a club rejecting pre-built units as too costly and asking how to DIY one, and a Make Magazine piece covers a parent building one for the same reason.",
    "risk": "All demand evidence is anecdotal; nobody has quantified what clubs will pay. Also: at €399 the board is roughly a fifth of the mid-tier and a twelfth of the full-size price, so the pitch's \"a fifth of the price\" should name which tier it compares to.",
    "rows": [
-    ["Full-size varsity boards (Anthem Sports, School Health / Sportable)", "About $5,000–5,700", "€399 is roughly a twelfth of this"],
-    ["First Team FT810W portable wireless", "About $2,089", "€399 is roughly a fifth of this; the pitch's comparison tier"],
-    ["Daktronics", "Quote-only", "No public price found"],
-    ["Silicon Chip article on DIY scoreboards", "Pro boards \"generally out of reach for amateur and school teams\"", "Demand signal, anecdotal"],
-    ["Electro-Tech-Online forum thread", "Club rejected pre-built units as too costly, asked how to DIY", "Demand signal, anecdotal"],
-    ["Make Magazine piece", "Parent built one after finding commercial units too expensive", "Demand signal, anecdotal"]
+    [
+     "Full-size varsity boards (Anthem Sports, School Health / Sportable)",
+     "About $5,000–5,700",
+     "€399 is roughly a twelfth of this"
+    ],
+    [
+     "First Team FT810W portable wireless",
+     "About $2,089",
+     "€399 is roughly a fifth of this; the pitch's comparison tier"
+    ],
+    [
+     "Daktronics",
+     "Quote-only",
+     "No public price found"
+    ],
+    [
+     "Silicon Chip article on DIY scoreboards",
+     "Pro boards \"generally out of reach for amateur and school teams\"",
+     "Demand signal, anecdotal"
+    ],
+    [
+     "Electro-Tech-Online forum thread",
+     "Club rejected pre-built units as too costly, asked how to DIY",
+     "Demand signal, anecdotal"
+    ],
+    [
+     "Make Magazine piece",
+     "Parent built one after finding commercial units too expensive",
+     "Demand signal, anecdotal"
+    ]
    ]
   },
   "fire-door-watch": {
@@ -64,12 +156,36 @@
    "summary": "The UK Fire Safety (England) Regulations 2022, regulation 10, legally mandate quarterly fire-door checks in buildings over 11 m, an enforced compliance duty. The market is already populated: Safecility ShutSafe (NB-IoT, subscription), Minol Connect / B.One, Harmony Auro Door, Fireco DorMag Pro and Loxone all sell open-door or gap sensing with remote monitoring today. Harmony claims over a third of fire doors cannot be annually inspected because of access problems, so a gap remains.",
    "risk": "Not a novel niche: it needs a clear wedge (no-subscription LoRaWAN) against funded incumbents with existing housing-association relationships. Incumbent per-door pricing could not be confirmed (quote-based).",
    "rows": [
-    ["Fire Safety (England) Regulations 2022, reg. 10", "Quarterly fire-door checks mandatory in buildings over 11 m", "Enforced duty behind the demand"],
-    ["Safecility ShutSafe", "NB-IoT fire-door sensor, subscription", "Direct incumbent"],
-    ["Minol Connect / B.One", "Building IoT incl. door sensing", "Direct incumbent"],
-    ["Harmony Auro Door", "Fire-door monitoring", "Incumbent; claims over a third of doors cannot be annually inspected"],
-    ["Fireco DorMag Pro", "Door retainer / monitoring", "Incumbent"],
-    ["Loxone", "Smart-building platform with door sensing", "Incumbent"]
+    [
+     "Fire Safety (England) Regulations 2022, reg. 10",
+     "Quarterly fire-door checks mandatory in buildings over 11 m",
+     "Enforced duty behind the demand"
+    ],
+    [
+     "Safecility ShutSafe",
+     "NB-IoT fire-door sensor, subscription",
+     "Direct incumbent"
+    ],
+    [
+     "Minol Connect / B.One",
+     "Building IoT incl. door sensing",
+     "Direct incumbent"
+    ],
+    [
+     "Harmony Auro Door",
+     "Fire-door monitoring",
+     "Incumbent; claims over a third of doors cannot be annually inspected"
+    ],
+    [
+     "Fireco DorMag Pro",
+     "Door retainer / monitoring",
+     "Incumbent"
+    ],
+    [
+     "Loxone",
+     "Smart-building platform with door sensing",
+     "Incumbent"
+    ]
    ]
   },
   "hallway-transit-board": {
@@ -77,9 +193,21 @@
    "summary": "More than ten independent DIY e-paper transit displays were found across UK, DE, CH, US and Canada (busink, pibus, rpi_waiting_time_display, rmv-rpi-display, transit-pi, E-Ink Trainstation, a Swiss CFF display, Munich / BVG / BART / GO Transit plugins for TRMNL): repeated, geographically spread reinvention is a classic pre-product buy signal. No ready-made consumer product fills the gap; B2B stop-display vendors (Luminator, Papercast, ConnectPoint) sell to transit agencies. TRMNL, a general e-ink dashboard with community transit plugins, sells at $149.95–219, which supports the €119–149 band.",
    "risk": "Every known instance is a DIY build, not a purchase; willingness to pay for a finished, no-soldering version is unproven.",
    "rows": [
-    ["DIY projects: busink, pibus, rpi_waiting_time_display, rmv-rpi-display, transit-pi, E-Ink Trainstation, Swiss CFF display", "Hobby e-paper departure boards, UK/DE/CH/US/CA", "Repeated reinvention; nobody sells a finished one"],
-    ["TRMNL ($149.95–219) with Munich / BVG / BART / GO Transit community plugins", "General e-ink dashboard, transit via plugins", "Price-band comparable; not transit-specific"],
-    ["Luminator, Papercast, ConnectPoint", "Stop displays for transit agencies", "B2B / municipal, not households"]
+    [
+     "DIY projects: busink, pibus, rpi_waiting_time_display, rmv-rpi-display, transit-pi, E-Ink Trainstation, Swiss CFF display",
+     "Hobby e-paper departure boards, UK/DE/CH/US/CA",
+     "Repeated reinvention; nobody sells a finished one"
+    ],
+    [
+     "TRMNL ($149.95–219) with Munich / BVG / BART / GO Transit community plugins",
+     "General e-ink dashboard, transit via plugins",
+     "Price-band comparable; not transit-specific"
+    ],
+    [
+     "Luminator, Papercast, ConnectPoint",
+     "Stop displays for transit agencies",
+     "B2B / municipal, not households"
+    ]
    ]
   },
   "meter-eye": {
@@ -87,10 +215,26 @@
    "summary": "The DIY precedent is real and active: jomjol's AI-on-the-edge-device (ESP32-CAM + TFLite) has an actively maintained ESP32-S3 successor board covered by CNX Software and Electronics-Lab in 2025. Multi-year German-language threads on ioBroker and heimnetz.de show real users hitting setup friction (digit misreads, ROI and alignment tuning), exactly the gap a finished product fixes. No assembled commercial competitor was found at this price.",
    "risk": "Community size could not be confirmed numerically; one forum mentioned possible EU Data Act friction around camera-based meter reading, unverified and worth a legal check before launch.",
    "rows": [
-    ["jomjol / AI-on-the-edge-device", "Open ESP32-CAM meter reader; ESP32-S3 successor board (CNX Software, Electronics-Lab, 2025)", "The DIY precedent the product polishes"],
-    ["ioBroker forum threads (multi-year)", "Users struggling with setup, misreads, alignment", "\"Wants it, can't get it working\" demand"],
-    ["heimnetz.de threads (multi-year)", "Same", "Same"],
-    ["EU Data Act (forum mention)", "Possible friction for camera-based meter reading", "Unverified; legal check before launch"]
+    [
+     "jomjol / AI-on-the-edge-device",
+     "Open ESP32-CAM meter reader; ESP32-S3 successor board (CNX Software, Electronics-Lab, 2025)",
+     "The DIY precedent the product polishes"
+    ],
+    [
+     "ioBroker forum threads (multi-year)",
+     "Users struggling with setup, misreads, alignment",
+     "\"Wants it, can't get it working\" demand"
+    ],
+    [
+     "heimnetz.de threads (multi-year)",
+     "Same",
+     "Same"
+    ],
+    [
+     "EU Data Act (forum mention)",
+     "Possible friction for camera-based meter reading",
+     "Unverified; legal check before launch"
+    ]
    ]
   },
   "sg-ready-price-switch": {
@@ -98,10 +242,26 @@
    "summary": "SG-Ready is confirmed as a real certified German standard (BWP) supported by most EU heat-pump makers (NIBE, Viessmann, Vaillant). Installers and owners actively discuss wiring dynamic-tariff logic to SG-Ready with DIY tools (Shelly relay + Home Assistant, evcc, the Tibber app) on HaustechnikDialog and in the simon42 / evcc communities. Germany's BEG funding rules reportedly require a digital grid-control interface on new heat pumps from July 2027.",
    "risk": "A cheap DIY substitute already exists (Shelly relay at roughly €30–40 plus free Home Assistant or evcc), and one forum voice called plain SG-Ready \"not very useful\" without extra conditions. The real market is installers wanting a no-fuss, no-cloud box to resell, which matches the pack's B2B kill question.",
    "rows": [
-    ["SG-Ready standard (BWP), supported by NIBE, Viessmann, Vaillant and most EU makers", "The interface the box drives", "Real and widespread"],
-    ["HaustechnikDialog, simon42 and evcc community threads", "Installers and owners wiring tariff logic to SG-Ready with Shelly + Home Assistant, evcc, Tibber", "Demand signal and the DIY substitute at once"],
-    ["Shelly relay (roughly €30–40) + Home Assistant / evcc", "Free-software DIY route", "The cheap substitute to beat on simplicity"],
-    ["BEG funding rules (reported)", "Digital grid-control interface required on new heat pumps from July 2027", "Regulatory tailwind; verify the wording"]
+    [
+     "SG-Ready standard (BWP), supported by NIBE, Viessmann, Vaillant and most EU makers",
+     "The interface the box drives",
+     "Real and widespread"
+    ],
+    [
+     "HaustechnikDialog, simon42 and evcc community threads",
+     "Installers and owners wiring tariff logic to SG-Ready with Shelly + Home Assistant, evcc, Tibber",
+     "Demand signal and the DIY substitute at once"
+    ],
+    [
+     "Shelly relay (roughly €30–40) + Home Assistant / evcc",
+     "Free-software DIY route",
+     "The cheap substitute to beat on simplicity"
+    ],
+    [
+     "BEG funding rules (reported)",
+     "Digital grid-control interface required on new heat pumps from July 2027",
+     "Regulatory tailwind; verify the wording"
+    ]
    ]
   },
   "shop-window-epaper-signs": {
@@ -109,10 +269,26 @@
    "summary": "Enterprise ESL vendors (Pricer, Hanshow) target chains with thousands of SKUs; independent-grocer sources (DUMAC, RetailWire) name upfront cost as the top objection because independents cannot spread it like chains. A Shopify Community thread confirms no plug-and-play, no-subscription ESL kit exists today. Bare e-paper hardware costs about $47–113; enterprise gateways (not needed here) add $300–400, which makes a €119 finished no-gateway unit plausible on margin.",
    "risk": "Nothing confirms an underserved category at scale, only that the big players do not serve it; independents may keep using a €2 chalk sign.",
    "rows": [
-    ["Pricer, Hanshow", "Enterprise ESL for chains with 5,000+ SKUs", "Do not serve independents"],
-    ["DUMAC, RetailWire (independent-grocer sources)", "Upfront cost is the top objection to ESL", "Confirms the price-sensitivity of the target"],
-    ["Shopify Community thread", "No plug-and-play, no-subscription ESL kit exists", "Confirms the gap"],
-    ["Bare e-paper hardware ($47–113); enterprise gateways ($300–400)", "Component and system price points", "Supports the €119 no-gateway unit on margin"]
+    [
+     "Pricer, Hanshow",
+     "Enterprise ESL for chains with 5,000+ SKUs",
+     "Do not serve independents"
+    ],
+    [
+     "DUMAC, RetailWire (independent-grocer sources)",
+     "Upfront cost is the top objection to ESL",
+     "Confirms the price-sensitivity of the target"
+    ],
+    [
+     "Shopify Community thread",
+     "No plug-and-play, no-subscription ESL kit exists",
+     "Confirms the gap"
+    ],
+    [
+     "Bare e-paper hardware ($47–113); enterprise gateways ($300–400)",
+     "Component and system price points",
+     "Supports the €119 no-gateway unit on margin"
+    ]
    ]
   },
   "accessible-midi-instrument": {
@@ -120,12 +296,951 @@
    "summary": "Direct competitors are active: Skoog (about £180–230), Cosmo / Filisia (about $199 per dot), AptiPlay (open source, pitched as the cheaper DIY alternative) and the older Device One / One6 from Drake Music Project NI. The OHMI Trust (UK, Arts Council-funded) exists because adapted instruments are not cheap, confirming a funding-constrained institutional buyer class looking for lower-cost options. €299 sits above Skoog and Cosmo but far below Soundbeam (£2,505–4,595 for a full kit).",
    "risk": "Skoog and Cosmo already occupy this niche at lower prices; €299 has to clearly beat a $199 Skoog, not match it.",
    "rows": [
-    ["Skoog", "About £180–230", "Direct competitor, cheaper"],
-    ["Cosmo / Filisia", "About $199 per dot", "Direct competitor, cheaper"],
-    ["AptiPlay", "Open source, pitched as the cheaper DIY alternative", "Free substitute for makers"],
-    ["Device One / One6 (Drake Music Project NI)", "Older accessible instruments", "Precedent"],
-    ["Soundbeam", "£2,505–4,595 full kit", "The expensive end of the market"],
-    ["OHMI Trust (Arts Council-funded)", "Exists because adapted instruments are not cheap", "Confirms the buyer class and its budget constraint"]
+    [
+     "Skoog",
+     "About £180–230",
+     "Direct competitor, cheaper"
+    ],
+    [
+     "Cosmo / Filisia",
+     "About $199 per dot",
+     "Direct competitor, cheaper"
+    ],
+    [
+     "AptiPlay",
+     "Open source, pitched as the cheaper DIY alternative",
+     "Free substitute for makers"
+    ],
+    [
+     "Device One / One6 (Drake Music Project NI)",
+     "Older accessible instruments",
+     "Precedent"
+    ],
+    [
+     "Soundbeam",
+     "£2,505–4,595 full kit",
+     "The expensive end of the market"
+    ],
+    [
+     "OHMI Trust (Arts Council-funded)",
+     "Exists because adapted instruments are not cheap",
+     "Confirms the buyer class and its budget constraint"
+    ]
+   ]
+  },
+  "balance-kit": {
+   "verdict": "UNCERTAIN",
+   "summary": "Hydraulic-balancing valves (IMI TA, Danfoss) sell at roughly €79–126 each, and IMI's TA-SCOPE confirms a professional balancing-instrument category exists, though no price for it was found. No installer-forum discussion of balancing pain or cost surfaced.",
+   "risk": "No direct demand evidence; the kill question's ten installer calls remain the real test.",
+   "rows": [
+    [
+     "IMI TA balancing valve (aio.lv)",
+     "About €126 per valve",
+     "The balancing job and its parts are real"
+    ],
+    [
+     "Danfoss balancing valve (aio.lv)",
+     "About €79 per valve",
+     "Same"
+    ],
+    [
+     "IMI TA-SCOPE",
+     "Professional balancing instrument, no price found",
+     "The instrument category exists"
+    ],
+    [
+     "Danfoss hydronic balancing overview",
+     "Vendor material",
+     "Confirms the practice, not the pain"
+    ]
+   ]
+  },
+  "build-a-radio-kit": {
+   "verdict": "LIKELY (CONTESTED)",
+   "summary": "Elenco's WEmake FM soldering kit sells at about £31–47, with volume pricing around $43 at 25+ units: a real category with real demand, already owned by an established, cheaper incumbent.",
+   "risk": "Needs a clear differentiator (laser-cut case, no-code angle) to win a teacher's budget over Elenco.",
+   "rows": [
+    [
+     "Elenco WEmake FM kit (Cogs Toys)",
+     "About £31",
+     "Cheaper incumbent in the same category"
+    ],
+    [
+     "Jameco: Elenco volume pricing",
+     "About $43 at 25+ units",
+     "Class-set pricing already exists"
+    ],
+    [
+     "Fruugo DIY radio kit",
+     "About $69",
+     "Upper end of the hobby tier"
+    ]
+   ]
+  },
+  "classroom-geiger-kit": {
+   "verdict": "WEAK TO UNCERTAIN",
+   "summary": "The market splits into a cheap tier ($9.50–27, Flinn) and an expensive tier ($180–1,215, Ward's, Images SI) that bracket the €119–159 target awkwardly, with little found in between. The MightyOhm DIY kit confirms hobbyist precedent but no evidence of school-scale sales.",
+   "risk": "The cheap tier may already satisfy budget-constrained physics departments.",
+   "rows": [
+    [
+     "Flinn Student Geiger Counter",
+     "About $9.50",
+     "Cheap tier"
+    ],
+    [
+     "Ward's Advanced Radioactivity Kit",
+     "About $181",
+     "Expensive tier"
+    ],
+    [
+     "Images SI desktop counter",
+     "About $524",
+     "Expensive tier"
+    ],
+    [
+     "MightyOhm Geiger kit bundle",
+     "DIY kit",
+     "Hobbyist precedent, no school sales evidence"
+    ]
+   ]
+  },
+  "fruiting-chamber-controller": {
+   "verdict": "LIKELY",
+   "summary": "Real DIY precedent: ShroomBox (Blynk) and Raspberry Pi builds combine Inkbird CO2 and humidity controllers to hit the stated RH and CO2 targets, and a documented \"fan and humidifier fighting each other\" failure mode is exactly what a purpose-built controller fixes.",
+   "risk": "Inkbird units cost under €50 each; the integrated unit must clearly beat \"buy two Inkbirds and wire them yourself\".",
+   "rows": [
+    [
+     "Mercy for Animals fruiting-room guide",
+     "Grower guidance on RH/CO2 targets",
+     "Confirms the targets in the pitch"
+    ],
+    [
+     "ShroomBox IoT build (Blynk) and Pi builds",
+     "DIY controllers",
+     "Demand signal and the DIY substitute"
+    ],
+    [
+     "Inkbird humidity / CO2 controllers",
+     "Under €50 each",
+     "The component-level substitute to beat"
+    ]
+   ]
+  },
+  "half-keyboard": {
+   "verdict": "LIKELY (STRONG)",
+   "summary": "Maltron one-handed keyboards run about $540–970 and the Matias Half-Keyboard from about $654, which confirms and even understates the pitch's \"€500 incumbents\". A €149–199 entrant undercuts every named incumbent three to five times.",
+   "risk": "A price gap does not confirm clinical adoption by occupational therapists; that is what the ten-OT trial in the kill question is for.",
+   "rows": [
+    [
+     "Maltron one-handed keyboard (MaxiAids, School Health, SpecialNeedsComputers.ca)",
+     "About $540–970",
+     "Incumbent, 3–5× the target price"
+    ],
+    [
+     "Matias Half Keyboard (BoundlessAT)",
+     "From about $654",
+     "Incumbent, 3–4× the target price"
+    ]
+   ]
+  },
+  "hay-spear": {
+   "verdict": "LIKELY",
+   "summary": "Self-heating hay and straw fires are real and well documented, with defined danger thresholds (about 65–95 °C / 150–200 °F). Quanturi's HAYTECH already sells a bale-insertion probe and repeater system, so this is a direct incumbent, not greenfield.",
+   "risk": "Incumbent pricing and MOQ, and the insurer channel's interest, are unverified.",
+   "rows": [
+    [
+     "Quanturi HAYTECH (via Nationwide)",
+     "Bale probe + repeater monitoring system",
+     "Direct incumbent"
+    ],
+    [
+     "University of Kentucky / Oneida County hay-fire guides",
+     "Extension guidance with temperature thresholds",
+     "The problem is real and documented"
+    ]
+   ]
+  },
+  "isolated-interface-kit": {
+   "verdict": "WEAK",
+   "summary": "Isolated USB-to-RS485/RS232/TTL adapters are a mature commodity category at $16–180; Waveshare's $16–24 multibus converter covers the exact use case. No evidence that technicians discuss \"frying a laptop\" as a live pain point.",
+   "risk": "This is a packaging and bundling play on commodity hardware, not a product gap.",
+   "rows": [
+    [
+     "Waveshare Multibus Converter",
+     "About $16–24",
+     "Commodity incumbent covering the same buses"
+    ],
+    [
+     "DFRobot isolated USB-RS485",
+     "About $17",
+     "Commodity incumbent"
+    ],
+    [
+     "StarTech ICUSB422IS",
+     "About €180",
+     "Premium end of the same category"
+    ]
+   ]
+  },
+  "loop-logger-4-20ma": {
+   "verdict": "WEAK",
+   "summary": "An established multi-vendor category: Dragino PS-LB-NA / PS-LS-NA ($79–89), RAK7432, Decentlab DL-DLR2-004 and Radio Bridge all read 4–20 mA over LoRaWAN today at similar prices.",
+   "risk": "Real, direct, already-priced competition; differentiation has to be EU868, DIN-rail form and integrator bundling, not the core function.",
+   "rows": [
+    [
+     "Dragino PS-LB-NA / PS-LS-NA",
+     "About $79–89, LoRaWAN 4–20 mA",
+     "Direct incumbent at the same price"
+    ],
+    [
+     "RAK7432 WisNode Bridge Analog",
+     "LoRaWAN analogue bridge",
+     "Direct incumbent"
+    ],
+    [
+     "Decentlab DL-DLR2-004",
+     "LoRaWAN 4–20 mA datalogger",
+     "Direct incumbent"
+    ],
+    [
+     "Radio Bridge",
+     "LoRaWAN analogue sensors",
+     "Direct incumbent"
+    ]
+   ]
+  },
+  "nfc-voice-labels": {
+   "verdict": "LIKELY",
+   "summary": "PenFriend (RNIB-affiliated, about $180) is the dominant incumbent but is barcode-based, not NFC, which confirms the NFC plus washable-sticker approach as a real gap. A DIY app (VoiceTag) validates the concept's appeal.",
+   "risk": "PenFriend is deeply entrenched with blind-support organisations; displacing institutional buying habits is the real challenge, not features.",
+   "rows": [
+    [
+     "RNIB PenFriend 3",
+     "About $180, barcode labels",
+     "Dominant incumbent, different technology"
+    ],
+    [
+     "VoiceTag (AppleVis discussion)",
+     "DIY app for voice labels",
+     "Concept appeal validated"
+    ],
+    [
+     "AgriAbility PenFriend listing",
+     "Retail listing",
+     "Price point of the incumbent"
+    ]
+   ]
+  },
+  "one-knob-radio": {
+   "verdict": "WEAK",
+   "summary": "Already well served: the Alzheimer's Society's own shop, Ravencourt (about £74–79) and Relish (about £149) all sell one-button dementia radios at or below the target price today.",
+   "risk": "The most directly outcompeted idea in this group; carer-loaded playlists is the only uncovered angle found.",
+   "rows": [
+    [
+     "Alzheimer's Society one-button radio",
+     "Charity shop product",
+     "Incumbent at or below target price"
+    ],
+    [
+     "Ravencourt One Button Radio",
+     "About £74–79",
+     "Incumbent, cheaper"
+    ],
+    [
+     "Relish dementia radio",
+     "About £149",
+     "Incumbent at target price"
+    ]
+   ]
+  },
+  "sip-coaster": {
+   "verdict": "LIKELY",
+   "summary": "A real, funded category: Aquarate / Hydracare is live in UK care homes, Person Centred Software sells weighing \"smart cups\", and Aquatime was EU-funded. The incumbents are smart cups that measure actual consumption, not coasters, so a more direct solution already exists; a Nottingham Trent student project built almost exactly this coaster.",
+   "risk": "Must win on cost and simplicity against institutionally adopted smart-cup competitors.",
+   "rows": [
+    [
+     "Aquarate / Hydracare",
+     "Smart cups in UK care homes",
+     "Incumbent, more direct measurement"
+    ],
+    [
+     "Person Centred Software smart cups",
+     "Weighing cups tied to care software",
+     "Incumbent with the care-record integration"
+    ],
+    [
+     "Aquatime (AAL Europe)",
+     "EU-funded hydration project",
+     "Funded interest in the problem"
+    ],
+    [
+     "Nottingham Trent University coaster project",
+     "Student prototype",
+     "Concept precedent, not a product"
+    ]
+   ]
+  },
+  "touchless-switch-module": {
+   "verdict": "UNCERTAIN",
+   "summary": "Several Chinese OEM/ODM makers advertise touchless-dispenser capability, mostly simple IR proximity rather than gesture recognition. No evidence was found of an established market for a standalone drop-in gesture module sold to EU OEMs, as opposed to sourcing complete cheap dispensers.",
+   "risk": "The module layer itself may not be a market, only a design choice inside someone else's product.",
+   "rows": [
+    [
+     "CDWK Group OEM hygiene products",
+     "Touchless dispensers, IR proximity",
+     "OEMs buy finished dispensers, not modules"
+    ],
+    [
+     "Elecrow custom-PCB soap dispenser design",
+     "Design service",
+     "Same"
+    ]
+   ]
+  },
+  "trap-check": {
+   "verdict": "WEAK",
+   "summary": "A crowded, well-funded incumbent market: Anticimex SMART and Rentokil PestConnect (both multinationals) already sell connected-trap monitoring as part of full-service contracts.",
+   "risk": "Competing against entrenched multinationals with existing client relationships, not an open niche; the independent-SME wedge in the pitch has to carry everything.",
+   "rows": [
+    [
+     "Rentokil PestConnect",
+     "Connected traps inside service contracts",
+     "Multinational incumbent"
+    ],
+    [
+     "Anticimex SMART",
+     "Connected traps inside service contracts",
+     "Multinational incumbent"
+    ],
+    [
+     "IoT pest-control overview (Provisioner)",
+     "Trade coverage",
+     "Category is established"
+    ]
+   ]
+  },
+  "uvb-lamp-checker": {
+   "verdict": "LIKELY (STRONG)",
+   "summary": "Solarmeter 6.5R, the established incumbent, sells at about $228–280 (up to about €488 in the EU), three to five times the €59–89 target: a genuine price gap. Lamp fade is the real stated problem and the reason this meter category exists.",
+   "risk": "Solarmeter is trusted in a safety-relevant niche (animal welfare); a cheaper entrant must earn accuracy trust, not just win on price.",
+   "rows": [
+    [
+     "Solarmeter 6.5R (PetSmart $250, Chewy, Walmart $280)",
+     "UV-index meter for reptile keepers",
+     "Incumbent at 3–5× the target price"
+    ]
+   ]
+  },
+  "bedroom-audit-box": {
+   "verdict": "WEAK",
+   "summary": "No precedent anywhere for the core mechanic (a mattress retailer rents out a monitoring box, the customer returns it and gets a report). Every real competitor either sells a consumer sleep tracker outright (Withings, Beautyrest Sleeptracker at about $199) or uses sleep data only as an in-store sales aid (Mattress Firm with SleepScore).",
+   "risk": "Less \"market exists but crowded\" than \"untested business model\": the rental-through-retailer channel is the open question, bigger than competition.",
+   "rows": [
+    [
+     "RetailWire piece on sleep tech in retail",
+     "Retail coverage",
+     "No rental-box model found"
+    ],
+    [
+     "Sleepace RestOn sold to furniture retailers",
+     "Tracker sold outright through retailers",
+     "Outright sale, not rental"
+    ],
+    [
+     "Beautyrest Sleeptracker launch (about $199)",
+     "Consumer tracker",
+     "Outright sale"
+    ],
+    [
+     "Mattress Firm + SleepScore",
+     "Sleep data as an in-store sales aid",
+     "Data used to sell mattresses, not sold as a service"
+    ]
+   ],
+   "correction": {
+    "title": "Untested business model found in research (November 2026)",
+    "text": "The research found no precedent anywhere for the pack's core mechanic: a mattress or sleep retailer renting out a monitoring box and handing the customer a report. Every real competitor sells a tracker outright or uses sleep data only as an in-store sales aid. Treat the rental-through-retailer channel as the first thing to validate, ahead of the product; the kill question's five mattress shops are the right test, run it before anything else. As researched November 2026 by web search; verify before relying on it."
+   }
+  },
+  "club-timing-gates": {
+   "verdict": "WEAK",
+   "summary": "Freelap's cheapest usable club pack runs about $535–845 and full setups commonly $500–2,500, which overlaps the €199–249 target rather than being beaten five times over as the pitch implies.",
+   "risk": "Incumbents already serve the budget end; the product needs a reason beyond price.",
+   "rows": [
+    [
+     "Freelap packs (SimpliFaster)",
+     "About $535–845 for a club pack",
+     "Budget incumbent, overlapping the target"
+    ],
+    [
+     "Brower Black Box / TCi",
+     "Timing systems, $500–2,500 setups",
+     "Established incumbent"
+    ],
+    [
+     "Buyer's Guide to Sports Timing; Athletics Direct UK",
+     "Market overviews",
+     "Category is served at the budget end"
+    ]
+   ]
+  },
+  "haccp-fridge-logger": {
+   "verdict": "UNCERTAIN",
+   "summary": "A real, heavily served category (Testo Saveris 2 / Food, Checkit), but pricing and licensing sit behind sales quotes, so \"no monthly fee\" cannot be confirmed as a genuine gap rather than a restatement of what is already offered. FridgeTag, named in the pack, returned no results and may be discontinued.",
+   "risk": "The buy-once wedge is unverified against incumbents' actual terms; one hardware-only listing at CHF 445 was the only open price found.",
+   "rows": [
+    [
+     "Testo Saveris 2 (food applications)",
+     "Cloud temperature monitoring",
+     "Incumbent, quote-based pricing"
+    ],
+    [
+     "Checkit (The Caterer)",
+     "Digital HACCP platform",
+     "Incumbent, quote-based"
+    ],
+    [
+     "Hardware-only listing, CHF 445",
+     "One open price point",
+     "Only open comparable found"
+    ],
+    [
+     "FridgeTag",
+     "Named in the pack; no results found",
+     "Possibly discontinued; remove or re-check"
+    ]
+   ]
+  },
+  "modbus-pocket-analyser": {
+   "verdict": "UNCERTAIN",
+   "summary": "No handheld device marketed specifically as a Modbus/RS485 bus analyser for HVAC or solar technicians was found, only adjacent refrigerant and system tools (Fieldpiece, Mastercool). This could be genuine white space or a niche that general search does not index well (industrial and BMS channels).",
+   "risk": "Absence of evidence is not a gap confirmed; check industrial-distribution catalogues and ask technicians before reading it as white space.",
+   "rows": [
+    [
+     "Fieldpiece HG2 / HG3",
+     "HVAC system analysers (refrigerant side)",
+     "Adjacent, not a bus analyser"
+    ],
+    [
+     "Mastercool system analyser kits",
+     "Same",
+     "Adjacent"
+    ],
+    [
+     "ACHR News on Modbus data offload",
+     "Trade article",
+     "Technicians do deal with Modbus data in the field"
+    ]
+   ]
+  },
+  "trail-talker": {
+   "verdict": "WEAK TO UNCERTAIN",
+   "summary": "This exact product already exists and is deployed at scale: Blackbox-av (UK) has installations at Vindolanda (24,000+ plays), RSPB Conwy and the Trans Pennine Trail. Not white space; an entrenched single-vendor niche.",
+   "risk": "Needs a specific wedge against Blackbox-av: price, EU-wide reach or faster delivery.",
+   "rows": [
+    [
+     "Blackbox-av: Trans Pennine Trail, Vindolanda, RSPB Conwy",
+     "Solar audio posts, commercially deployed",
+     "Direct incumbent, same product"
+    ],
+    [
+     "Shelley Signs",
+     "Phone-based audio-trail alternative",
+     "Competing approach without hardware"
+    ]
+   ]
+  },
+  "workshop-dust-sentinel": {
+   "verdict": "UNCERTAIN",
+   "summary": "The underlying hazards are well documented (NIOSH and CDC on 3D-printer VOCs in makerspaces), but no regulated indoor-air-quality standard for small workshops was found, which undercuts the \"documentation for health-and-safety visits\" framing.",
+   "risk": "Demand may be real but voluntary, not compliance-forced.",
+   "rows": [
+    [
+     "NIOSH makerspace guide",
+     "Hazard guidance",
+     "The hazard is documented"
+    ],
+    [
+     "ASU EHS makerspace guidance",
+     "University safety guidance",
+     "Same"
+    ],
+    [
+     "Chemical Insights 3D Makerspace report",
+     "VOC exposure study",
+     "Same; no regulatory threshold for small workshops found"
+    ]
+   ]
+  },
+  "cell-grader": {
+   "verdict": "LIKELY",
+   "summary": "Dedicated 18650/21700 testers already exist commercially (ZB206+, generic capacity and internal-resistance testers), confirming the technology is real and buildable, but no evidence was found of repair cafés or rebuild shops actively seeking grading tools.",
+   "risk": "Demand is unverified rather than contradicted; the kill question's fifteen commitments are the test.",
+   "rows": [
+    [
+     "Zbotic cell-grading guide",
+     "How-to with existing testers",
+     "Technique established"
+    ],
+    [
+     "Sigma Nortec 18650 tester module; ZB206+",
+     "Commercial testers",
+     "Component-level substitutes exist"
+    ]
+   ]
+  },
+  "control-theory-balance-kit": {
+   "verdict": "WEAK",
+   "summary": "Quanser's QUBE-Servo (and QUBE-Servo 3) is a direct, established incumbent selling control-education modules, including reaction-wheel experiments, to universities, and is the default in many curricula. Pricing is quote-only, so €299 per station cannot be benchmarked.",
+   "risk": "A curriculum-embedded incumbent; the kit needs a reason a lecturer would switch, not only a lower price.",
+   "rows": [
+    [
+     "Quanser QUBE-Servo 3",
+     "Control-education module",
+     "Direct incumbent, quote-only"
+    ],
+    [
+     "Quanser Introduction to Controls Teaching Lab",
+     "Curriculum package",
+     "Embedded in courses"
+    ],
+    [
+     "NI QUBE-Servo listing",
+     "Distribution listing",
+     "Same"
+    ]
+   ]
+  },
+  "farm-shop-self-checkout": {
+   "verdict": "LIKELY (CROWDED)",
+   "summary": "Unstaffed farm retail is real and growing in Germany (about 600 smart stores, about 150 in farm retail) on existing systems (Dorfladenbox, Ackerpay), and case studies show farms moving from vending to self-checkout successfully. But a 2026 study cited in the research found self-checkout correlates with higher shrinkage, not lower, which directly undercuts the kill question's \"less shrinkage than the honesty box\" test.",
+   "risk": "The kill metric may be wrong: uptime, basket size or customer satisfaction may be better go/no-go measures than shrinkage. Hans should decide.",
+   "rows": [
+    [
+     "Locafox Gottschalks Hof case study",
+     "Farm moved from vending to self-checkout",
+     "Category is real"
+    ],
+    [
+     "Locafox self-checkout for farm shops",
+     "Existing system",
+     "Incumbent"
+    ],
+    [
+     "Dorfladenbox, Ackerpay",
+     "Existing unstaffed-store systems",
+     "Incumbents"
+    ],
+    [
+     "RetailDetail self-checkout shrinkage study (2026)",
+     "Self-checkout correlates with higher shrinkage",
+     "Undercuts the kill question's metric"
+    ],
+    [
+     "Lokbest unstaffed farm store",
+     "Existing concept",
+     "Category is real"
+    ]
+   ],
+   "correction": {
+    "title": "Kill-question metric questioned by research (November 2026)",
+    "text": "The kill question passes if five farm shops report less shrinkage than the honesty box. A 2026 study found in the research reports the opposite correlation for self-checkout in general: more shrinkage, not less. The category itself is real and growing (Dorfladenbox, Ackerpay, Locafox case studies), so the idea stands, but the pass mark may be measuring the wrong thing. Before running the pilot, decide with the shops what success means: uptime, basket size, customer satisfaction, staff hours saved. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it."
+   }
+  },
+  "frost-sentinel": {
+   "verdict": "UNCERTAIN",
+   "summary": "The frost-warning category is real and established (Pessl / METOS frost products, Sencrop, a UK-funded Terraprima / Vinewatch project), confirming funded institutional interest, but no competitor pricing was found anywhere (quote-only is the norm), so the \"no €1,400 weather station\" comparison is unverified either way.",
+   "risk": "The price claim in the pitch is unsupported until a competitor quote is in hand.",
+   "rows": [
+    [
+     "METOS viticulture brochure; METOS frost leaflet (Pessl)",
+     "Frost-warning stations",
+     "Incumbent, quote-only"
+    ],
+    [
+     "Sencrop",
+     "Connected weather stations for farms",
+     "Incumbent"
+    ],
+    [
+     "Terraprima / Vinewatch (UK-funded)",
+     "Vineyard monitoring project",
+     "Institutional interest"
+    ],
+    [
+     "IoT World Today: smart vineyard frost device",
+     "Trade coverage",
+     "Category is active"
+    ]
+   ]
+  },
+  "heat-pump-cop-lite": {
+   "verdict": "WEAK",
+   "summary": "The technical premise, not only demand, is weak: OpenEnergyMonitor's own documentation states that clip-on current clamps plus flow and return temperature sensors (their \"Level 2\") are not sufficient for a real COP; true COP needs heat-output metering (\"Level 3\", about £550, a harder instrument). The active OpenEnergyMonitor community is real evidence of interest, and also exactly the audience most likely to call the \"±15% indicative\" claim optimistic.",
+   "risk": "Technical credibility: the most knowledgeable buyers may reject the method before price is discussed.",
+   "rows": [
+    [
+     "OpenEnergyMonitor heat-pump monitoring docs",
+     "Level 2 (CT + temps) vs Level 3 (heat meter)",
+     "States Level 2 is not sufficient for real COP"
+    ],
+    [
+     "EmonHP Level 2 PDF",
+     "Method description",
+     "Same"
+    ],
+    [
+     "HeatpumpMonitor.org / GitHub",
+     "Community of monitored heat pumps",
+     "Interest is real; audience is expert"
+    ]
+   ],
+   "correction": {
+    "title": "Technical premise questioned by research (November 2026)",
+    "text": "OpenEnergyMonitor, the reference community for exactly this audience, documents that clip-on current plus flow/return temperatures do not give a real COP; that needs a heat meter. The pack sells the kit as \"indicative, ±15%\", which the research flags as optimistic and as the claim an expert audience will test first. Before the demand test, settle the method: either prove the ±15% against a Level-3 reference on real installations, or reposition the kit as a settings-check tool that does not claim a COP figure. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it."
+   }
+  },
+  "pack-rebuilder-spot-welder": {
+   "verdict": "WEAK",
+   "summary": "A saturated commodity hobbyist market: SUNKKO alone spans about $55–600, and the exact €179–249 tier is already called \"community-validated\" in an existing buyer guide. No evidence that anyone pays extra for a bundled safety course.",
+   "risk": "Commodity competition at every price point; the safety-course bundle is an unproven differentiator.",
+   "rows": [
+    [
+     "SUNKKO pricing roundup",
+     "About $55–600 across the range",
+     "Commodity incumbent"
+    ],
+    [
+     "SUNKKO 788S-PRO (eBay), 737G (Fruugo)",
+     "Listings in the €179–249 tier",
+     "The target tier is already served"
+    ]
+   ]
+  },
+  "school-scope": {
+   "verdict": "LIKELY",
+   "summary": "Classroom pocket-oscilloscope kits exist (Velleman / Whadda WSEDU06 at about £19–38, ConsuLab uScope classroom sets), confirming a real buyer and category; the cheap options get mixed-to-poor reviews, while deeper alternatives (PicoScope) are bench instruments, not pocket kits, so a quality gap in the middle is plausible.",
+   "risk": "Needs to justify a two-to-three-times price premium over Whadda on quality and curriculum grounds.",
+   "rows": [
+    [
+     "Whadda WSEDU06 (Rapid Online)",
+     "About £19–38 pocket scope kit",
+     "Cheap incumbent, mixed reviews"
+    ],
+    [
+     "ConsuLab uScope classroom kit",
+     "Classroom set",
+     "Incumbent in the education channel"
+    ],
+    [
+     "PicoScope Education Kit",
+     "Bench instrument for schools",
+     "Upper tier, different form factor"
+    ]
+   ]
+  },
+  "sound-to-light-alert": {
+   "verdict": "LIKELY",
+   "summary": "Sonic Alert is a real, established incumbent selling individual components at about $64–224 each (one bundle discontinued) rather than one cheap integrated kit. \"A third of today's prices\" is roughly plausible: a full Sonic Alert setup is $150–250+ in parts against one €129–179 kit.",
+   "risk": "A discontinued Sonic Alert all-in-one starter kit suggests this exact sub-segment may have been tried and pulled before; find out why.",
+   "rows": [
+    [
+     "Sonic Alert components (Diglo, MaxiAids)",
+     "About $64–224 per component",
+     "Incumbent sold piecemeal"
+    ],
+    [
+     "Sonic Alert all-in-one starter kit",
+     "Discontinued",
+     "The integrated-kit segment was tried before"
+    ],
+    [
+     "Alerting-devices cost guide",
+     "Market overview",
+     "Supports the price comparison"
+    ]
+   ]
+  },
+  "switchboard-hotspot-watch": {
+   "verdict": "UNCERTAIN",
+   "summary": "Panel hot-spot monitoring is real and actively developed (Eaton, GraceSense HSM 600, NFPA 70B cited as a compliance driver, a FAU / Siemens thermopile thesis), but everything found is enterprise-scale with no per-unit pricing, so €299–399 cannot be benchmarked.",
+   "risk": "The need may be served today mainly by periodic professional IR-camera inspection; vendors position sensors as a complement to inspection, not a replacement.",
+   "rows": [
+    [
+     "Eaton hot-spot monitoring guide",
+     "Enterprise monitoring",
+     "Incumbent, no per-unit price"
+    ],
+    [
+     "GraceSense HSM 600",
+     "Hot-spot monitor",
+     "Incumbent, enterprise channel"
+    ],
+    [
+     "NFPA 70B",
+     "Maintenance standard cited as driver",
+     "Compliance pull exists (US)"
+    ],
+    [
+     "FAU / Siemens thermopile thesis",
+     "Academic prototype",
+     "Technique validated"
+    ]
+   ]
+  },
+  "vibration-health-sticker": {
+   "verdict": "WEAK",
+   "summary": "A mature, commercialised category: Monnit ($215–356), Netvox (about AUD 242, subscription) and Advantech ($2,799) all sell vibration and temperature nodes to the same facility-manager buyer today. The €79–99 node undercuts meaningfully.",
+   "risk": "The no-gateway, LoRaWAN-native deployment story has to be proven, not assumed, to matter against incumbents.",
+   "rows": [
+    [
+     "Monnit ALTA vibration sensors",
+     "About $215–356",
+     "Incumbent"
+    ],
+    [
+     "Netvox accelerometer",
+     "About AUD 242 plus subscription",
+     "Incumbent"
+    ],
+    [
+     "Advantech WISE-2410-NB",
+     "About $2,799",
+     "Enterprise incumbent"
+    ]
+   ]
+  },
+  "footfall-counter": {
+   "verdict": "LIKELY",
+   "summary": "Camera-free, privacy-safe people counting is an established category (Terabee thermal / time-of-flight, FootfallCam hashing, Ariadne consent-free analytics), and the compliance angle is real and current, with the EU AI Act as a tailwind. No public pricing was found, so \"a third of the incumbents' price\" is unverifiable.",
+   "risk": "The price claim is unsupported; the differentiation must be proven on compliance and simplicity.",
+   "rows": [
+    [
+     "Terabee people counting + GDPR pages",
+     "Thermal / ToF counters",
+     "Incumbent in the privacy-safe niche"
+    ],
+    [
+     "FootfallCam privacy statement",
+     "Hashing-based counting",
+     "Incumbent"
+    ],
+    [
+     "Ariadne consent-free footfall",
+     "Analytics without consent prompts",
+     "Incumbent"
+    ]
+   ]
+  },
+  "haptic-setpoint-knob": {
+   "verdict": "LIKELY",
+   "summary": "The concept is validated by patents and one shipping product, the Aqara Touchscreen Dial V1, which is locked to Aqara's ecosystem; no cross-platform \"works with any hub\" haptic dial was found, matching the pitch's gap.",
+   "risk": "Aqara, well funded, could extend its dial to more hubs faster than a newcomer establishes the category.",
+   "rows": [
+    [
+     "Aqara Touchscreen Dial V1",
+     "Shipping haptic dial, Aqara ecosystem only",
+     "Concept proven, gap is cross-platform"
+    ],
+    [
+     "Haptic smart-home patent (USPTO)",
+     "Patent",
+     "Prior art to check before launch"
+    ],
+    [
+     "Immersion Home Smart Panel concept",
+     "Concept page",
+     "Interest from haptics vendors"
+    ]
+   ]
+  },
+  "makerspace-soldering-station": {
+   "verdict": "WEAK TO UNCERTAIN",
+   "summary": "Cheap single-kit soldering products for schools exist at $15–40 per kit (CircuitMess, Forward Education, TeacherGeek at about $24.50), far below a €249-per-station bundle. No CE-ready hot-air plus pre-heater bundle was found at this tier, but also no evidence of pent-up demand for the extra capability.",
+   "risk": "The gap is unproven on the demand side; schools may be satisfied with cheap kits.",
+   "rows": [
+    [
+     "TeacherGeek Soldering Package",
+     "About $24.50 per unit",
+     "Cheap education incumbent"
+    ],
+    [
+     "CircuitMess Tools Pack; Forward Education",
+     "About $15–40 per kit",
+     "Same"
+    ],
+    [
+     "SOLDR kit (low-reliability blog source)",
+     "Kit listing",
+     "Weak source, noted as such"
+    ]
+   ]
+  },
+  "motion-control-slider": {
+   "verdict": "WEAK",
+   "summary": "Edelkrone's SliderONE v3 sells at $439–549, under the €499 target rather than beaten by it, while pricier Edelkrone and Rhino rigs serve the high end. \"No app\" is not validated as a differentiator: Edelkrone's whole pitch is app and motion-kit control and no rejection of that model was found. Rental at $75–150 a day is an existing alternative.",
+   "risk": "The weakest-looking idea in this batch: an incumbent under the target price and no evidence the knob-not-app angle is wanted.",
+   "rows": [
+    [
+     "Edelkrone SliderONE v3",
+     "About $439–549",
+     "Incumbent below the target price"
+    ],
+    [
+     "Edelkrone SliderPLUS v6; Rhino",
+     "Higher-end rigs",
+     "Upper tier served"
+    ],
+    [
+     "Cameraboom buying guide (rental $75–150/day)",
+     "Rental market",
+     "Alternative path for the buyer"
+    ]
+   ]
+  },
+  "new-flat-air-check": {
+   "verdict": "LIKELY",
+   "summary": "Direct-reading formaldehyde and VOC meter rentals exist (Extech VFM200, PCE meters) but are aimed at professionals, not consumer-facing retailer loan units; no furniture or flooring retailer loan-at-the-till programme was found, matching the pitch's channel angle. A pricier lab-analysed service (Wellbuild Lab, $395–525 a week) confirms willingness to pay at a much higher price point.",
+   "risk": "No evidence yet that retailers want to run a loan-unit programme; that channel is the actual kill question and is unverified.",
+   "rows": [
+    [
+     "Extech VFM200 rental",
+     "Professional meter rental",
+     "Rental exists, professional channel"
+    ],
+    [
+     "Kwipped PCE formaldehyde meter",
+     "Professional meter rental",
+     "Same"
+    ],
+    [
+     "Wellbuild Lab IAQ test kit ($395–525/week)",
+     "Lab-analysed home test",
+     "Willingness to pay at a higher price"
+    ]
+   ]
+  },
+  "quiet-guardian": {
+   "verdict": "LIKELY",
+   "summary": "Passive, camera-free elderly-monitoring kits for family use are a real, populated category: IvedaCare ($500 + $50 a month), StillWell ($349 + about $49 a month), Blissfull Sense (about €460) and Caregiver Smart Solutions ($147–294 + $4–12 a month) all ship today, all with a subscription. The pack's \"€2,500 lamp\" reference could not be verified.",
+   "risk": "Every real competitor charges an ongoing subscription; the near-subscription-free pitch is the differentiator and is unproven against entrenched competitors.",
+   "rows": [
+    [
+     "NCOA Best Monitoring Systems 2025",
+     "Category overview",
+     "Category is real and populated"
+    ],
+    [
+     "IvedaCare Kit",
+     "$500 + $50/month",
+     "Incumbent, subscription"
+    ],
+    [
+     "StillWell",
+     "$349 + about $49/month",
+     "Incumbent, subscription"
+    ],
+    [
+     "Blissfull Sense",
+     "About €460",
+     "Incumbent"
+    ],
+    [
+     "Caregiver Smart Solutions",
+     "$147–294 + $4–12/month",
+     "Incumbent, subscription"
+    ]
+   ]
+  },
+  "trinkwasser-logger": {
+   "verdict": "UNCERTAIN",
+   "summary": "The research could not confirm that continuous temperature logging itself (as opposed to periodic Legionella laboratory testing) is a legal requirement; in the pack that is an assumption, not a cited rule. Techem and Minol already own the property-manager relationship through their testing services.",
+   "risk": "Soften the compliance-mandate language until checked against the TrinkwV §31 text directly, and consider selling through Techem or Minol as a channel rather than direct to property managers.",
+   "rows": [
+    [
+     "TrinkwV §31 (German drinking-water ordinance)",
+     "Legionella testing duties",
+     "Logging-as-requirement not confirmed; verify the text"
+    ],
+    [
+     "Techem",
+     "Legionella testing services for property managers",
+     "Owns the customer relationship; possible channel"
+    ],
+    [
+     "Minol",
+     "Same",
+     "Same"
+    ]
+   ],
+   "correction": {
+    "title": "Compliance claim unverified; channel question (November 2026)",
+    "text": "The pack treats continuous hot-water temperature logging as a compliance requirement. The research could not confirm that logging itself, rather than periodic Legionella laboratory testing, is legally required; check the TrinkwV §31 text before repeating the claim to a buyer. Techem and Minol already hold the property-manager relationship through their testing services, so the better route may be selling through them rather than direct. Kill question unchanged pending Hans's decision; the three property managers in it are still worth asking, and ask them who they buy testing from. As researched November 2026 by web search; verify before relying on it."
+   }
+  },
+  "ros-trainer": {
+   "verdict": "WEAK",
+   "summary": "TurtleBot (ROBOTIS / Clearpath) is a deeply entrenched fifteen-year incumbent, the default platform for ROS 2 courses, with university case studies (Waterloo) and prices of about $495–1,900 that bracket the €999 target rather than being beaten by it.",
+   "risk": "Not a price gap but a head-on challenge to a curriculum-embedded market leader; needs a real differentiator before the kill question is worth running.",
+   "rows": [
+    [
+     "TurtleBot (ROBOTIS / Clearpath)",
+     "About $495–1,900, default ROS 2 teaching platform",
+     "Entrenched incumbent bracketing the target price"
+    ],
+    [
+     "University of Waterloo case study",
+     "TurtleBot in a ROS course",
+     "Curriculum embedding"
+    ]
+   ],
+   "correction": {
+    "title": "Entrenched incumbent found in research (November 2026)",
+    "text": "TurtleBot has been the default ROS teaching robot for fifteen years, is embedded in university curricula, and sells at $495–1,900, on both sides of this pack's €999. A lower price is not available as the wedge. Before running the kill question, name the differentiator a lecturer would switch for (an open RK3566 board with a published BSP, EU supply and support, a specific curriculum) and test that in the interviews first. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it."
+   }
+  },
+  "offline-ai-docent": {
+   "verdict": "LIKELY",
+   "summary": "No fully offline museum kiosk product was found; every real deployment (Intuiface, the Autun Museum chatbot, a Warsaw exhibition chatbot, TimeLens at the Grand Egyptian Museum) depends on a network or cloud call, which supports \"fully offline, no cloud\" as a genuine technical differentiator.",
+   "risk": "No evidence museums actually want offline over cloud; the gap found is architectural, not a stated customer complaint.",
+   "rows": [
+    [
+     "Intuiface AI kiosk",
+     "Cloud-dependent kiosk software",
+     "Incumbent, online"
+    ],
+    [
+     "Autun Museum chatbot (askmona.ai)",
+     "Cloud chatbot",
+     "Online"
+    ],
+    [
+     "Warsaw exhibition chatbot",
+     "Cloud chatbot",
+     "Online"
+    ],
+    [
+     "TimeLens / Grand Egyptian Museum (arXiv)",
+     "Research deployment",
+     "Online"
+    ]
+   ]
+  },
+  "pollinator-counter": {
+   "verdict": "LIKELY",
+   "summary": "Insect Detect (peer-reviewed in PLOS ONE, open source, deployed across Europe through the SEPPI project) is a direct precedent validating the technical approach and a research-buyer channel; researchers report it is more time-efficient than manual transect counts. An Oregon State bumblebee camera-trap study corroborates.",
+   "risk": "All known instances are research prototypes, not commercial products; this would be the first to commercialise a proven approach, not an entry into a validated commercial market.",
+   "rows": [
+    [
+     "Insect Detect (bioRxiv / PLOS ONE, PMC)",
+     "Open-source camera trap, deployed via SEPPI",
+     "Direct precedent, research channel"
+    ],
+    [
+     "Oregon State bumblebee camera study (Corvallis Advocate)",
+     "Camera-trap study",
+     "Corroborating precedent"
+    ]
    ]
   }
  }

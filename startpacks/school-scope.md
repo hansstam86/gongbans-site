@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Four open scope/voltmeter designs with schematics and PCB exist in the catalogue, including a small handheld and an STM32H750-class portable; pocket scopes have proven the price point (FNIRSI DSO152 at ~€27–37, [eleshop](https://eleshop.eu/fnirsi-dso152-oscilloscope.html), [aio.lv](https://aio.lv/en/product--fnirsi-dso152--11618311.md)) but not the classroom; curricula push measurement and data literacy.
 - **The ask:** ~€90k (estimate) to the first 1,000 units; route = teacher trials → class-set pre-orders + bootstrap; education distributors for scale.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Classroom pocket-oscilloscope kits exist (Velleman / Whadda WSEDU06 at about £19–38, ConsuLab uScope classroom sets), confirming a real buyer and category; the cheap options get mixed-to-poor reviews, while deeper alternatives (PicoScope) are bench instruments, not pocket kits, so a quality gap in the middle is plausible. **Main risk:** Needs to justify a two-to-three-times price premium over Whadda on quality and curriculum grounds. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -127,6 +131,20 @@ Who pays vs who uses: the school pays via the distributor; teachers prepare, stu
 | DIY (DSO138 kits etc.) | Teachers build them with students | Unprotected, fragile, no export |
 
 **Wedge:** curriculum-first UI, protected banana inputs, class-set hardware (charging box, labelled units, spares), USB export to a spreadsheet, at pocket-scope money.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Whadda WSEDU06 (Rapid Online) | About £19–38 pocket scope kit | Cheap incumbent, mixed reviews |
+| ConsuLab uScope classroom kit | Classroom set | Incumbent in the education channel |
+| PicoScope Education Kit | Bench instrument for schools | Upper tier, different form factor |
+
+**Verdict as researched: LIKELY.** Main risk: Needs to justify a two-to-three-times price premium over Whadda on quality and curriculum grounds.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: 2.8" colour LCD, 2 analogue channels (one is enough for most lessons; two for phase/rectifier lessons), ~1 MSa/s class (audio to a few hundred kHz is all a school needs — say it), 4 mm shrouded banana inputs with ±30 V clamping and a fuse-less protection network, built-in signal generator (sine/square/triangle to 20 kHz) on a third banana pair, voltmeter mode (DC/AC RMS, 3.5 digits — the "5½-digit" open design informs the precision path but the school unit doesn't need it), Li-ion with USB-C, rubber bumper, lanyard. Software: Scope / Meter / Generator / Experiment modes; experiment mode shows a diagram, the expected curve, and a "record" button that writes a CSV; teacher dashboard = a USB "class box" that collects CSVs from 16 units and merges them into one sheet. Class set: 16 units, charging box, 16 lead sets, spares, teacher guide with 12 lessons.

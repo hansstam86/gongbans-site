@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Right-to-repair rules and the EU Battery Regulation make pack rebuilding a legitimate trade that needs legitimate tools; two open super-capacitor welder designs with schematics and PCB exist; hobby welders have proven the market at the low end.
 - **The ask:** ~€65k (estimate) to the first 1,000 units; route = live-demo deposits from repair shops + bootstrap; the safety course is the differentiator and a small recurring line.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** A saturated commodity hobbyist market: SUNKKO alone spans about $55–600, and the exact €179–249 tier is already called "community-validated" in an existing buyer guide. No evidence that anyone pays extra for a bundled safety course. **Main risk:** Commodity competition at every price point; the safety-course bundle is an unproven differentiator. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -126,6 +130,19 @@ Who pays vs who uses: the owner/school pays; the technician/student uses it; the
 | DIY from the open designs | Makers | No interlock, no PSU certification, nobody liable |
 
 **Wedge:** a finished, enclosed, interlocked welder with measured current and a QA log at €199, plus a course and EU-stocked consumables — the first welder a shop owner can hand to an employee.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| SUNKKO pricing roundup | About $55–600 across the range | Commodity incumbent |
+| SUNKKO 788S-PRO (eBay), 737G (Fruugo) | Listings in the €179–249 tier | The target tier is already served |
+
+**Verdict as researched: WEAK.** Main risk: Commodity competition at every price point; the safety-course bundle is an unproven differentiator.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: steel/ABS enclosure with a capacitor bank (super-caps, 2.7 V series bank or a single 3 V bank with balancing), half-bridge bipolar discharge (from the open bipolar design), charge from a certified 12 V / 5 A external PSU, pulse control by MCU with a current sensor (shunt + fast ADC or a Hall sensor), 2.4" display with strip-thickness presets, foot switch input, probe electrodes with copper tips (EU-stocked replacements), interlock: discharge disabled when the lid is open or the probes aren't both in contact, auto-bleed of the bank at power-off, weld counter and per-weld energy log over USB (CSV). Entry SKU: the low-power open design in the same enclosure at €129 for strip up to 0.15 mm.

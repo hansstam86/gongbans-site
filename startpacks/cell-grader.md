@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** The EU Battery Regulation (2023/1542) explicitly covers repurposed and remanufactured batteries and pushes reuse; right-to-repair makes pack rebuilding a legal trade; the measurement chips (INA226-class) and open charge-path boards are commodity.
 - **The ask:** ~€95k (estimate) to the first 1,000 units; route = deposits from rebuilders and repair-café networks + bootstrap, with a circular-economy grant as the upside.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Dedicated 18650/21700 testers already exist commercially (ZB206+, generic capacity and internal-resistance testers), confirming the technology is real and buildable, but no evidence was found of repair cafés or rebuild shops actively seeking grading tools. **Main risk:** Demand is unverified rather than contradicted; the kill question's fifteen commitments are the test. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -128,6 +132,19 @@ Who pays vs who uses: the shop owner/association pays; the technician/volunteer 
 | DIY ESP32 + INA226 testers | Makers build them | Nobody certifies or maintains them; no label |
 
 **Wedge:** repeatable grade + printed label + CSV, with thermal cut-off per slot and a CE file, at a tenth of the industrial price. "Grading you can show the customer."
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Zbotic cell-grading guide | How-to with existing testers | Technique established |
+| Sigma Nortec 18650 tester module; ZB206+ | Commercial testers | Component-level substitutes exist |
+
+**Verdict as researched: LIKELY.** Main risk: Demand is unverified rather than contradicted; the kill question's fifteen commitments are the test.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: desktop box, 4 slots (18650 and 21700 with a spring contact), 5 V/4 A USB-C PD or 12 V certified PSU, per-slot: CC/CV charge to 4.20 V, constant-current discharge 0.5–1.5 A into a resistive load with a fan, INA226-class voltage/current monitoring, NTC per slot, electronic fuse. Firmware: DC-IR (pulse method) and optional AC-IR add-on, capacity in mAh/Wh, self-discharge mode (charge, rest 7 days, re-measure OCV), grade thresholds editable, thermal label printer over USB (common 58 mm thermal printers) or QR on screen, CSV to SD/USB and a desktop page. A later 8-slot "Pro" at €449.

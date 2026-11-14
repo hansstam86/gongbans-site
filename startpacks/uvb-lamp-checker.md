@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** The open UV reference pack (sensor + MCU, with Gerbers and BOM) is in the catalogue; UV photodiode sensors are now €2–4; the hobby has moved to "evidence-based husbandry" forums where UV index charts are standard.
 - **The ask:** ~€70k (estimate) to 1,000 units in 20 shops, plus a consumer web shop. Route: bootstrap + shop consignment + a small pre-order campaign in the hobby forums.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY (STRONG).** Solarmeter 6.5R, the established incumbent, sells at about $228–280 (up to about €488 in the EU), three to five times the €59–89 target: a genuine price gap. Lamp fade is the real stated problem and the reason this meter category exists. **Main risk:** Solarmeter is trusted in a safety-relevant niche (animal welfare); a cheaper entrant must earn accuracy trust, not just win on price. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -126,6 +130,18 @@ Who pays: the keeper (€69–89 is a fraction of a €150 UVB setup and one vet
 | Shops' own meter at the counter | Some shops own one | Doesn't travel home with the customer; our counter unit *is* the sales tool |
 
 **Wedge:** price (~1/4 of the incumbent), a verdict instead of a number ("replace / fine / too far from the basking spot"), per-terrarium logging, and the shop as the channel: shops sell lamps on evidence instead of arguments.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Solarmeter 6.5R (PetSmart $250, Chewy, Walmart $280) | UV-index meter for reptile keepers | Incumbent at 3–5× the target price |
+
+**Verdict as researched: LIKELY (STRONG).** Main risk: Solarmeter is trusted in a safety-relevant niche (animal welfare); a cheaper entrant must earn accuracy trust, not just win on price.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: 70 × 40 × 15 mm, UVA/UVB sensor behind a PTFE diffuser, small OLED/segment display, one button, CR2032 or 300 mAh Li-ion, optional BLE. Firmware: UV index with a species/lamp-profile library (T5 HO, compact fluorescent, mercury-vapour, metal-halide), distance guide (hold at basking-spot distance), trend per terrarium, "replace" when output drops below a user-set % of the baseline you measured when the lamp was new. **Indicative measurement, not a calibrated radiometer** — say so on the box. Zoo/breeder version: BLE + app log + exported CSV.

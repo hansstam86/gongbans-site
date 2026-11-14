@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** The sensors are catalogue parts (open BME680 board, SCD41 Grove, loudness Grove); makerspaces and schools are buying air monitors anyway since 2020; "indicative monitor with documentation" is a slot between €150 consumer gadgets and €1,000 instruments.
 - **The ask:** ~€80k (estimate) to 1,000 units. Route: trial-unit programme (kill question) + bootstrap; education-supply distributors and a maker-community pre-order run.
 
+<!-- market-check:start -->
+> **External market check (November 2026): UNCERTAIN.** The underlying hazards are well documented (NIOSH and CDC on 3D-printer VOCs in makerspaces), but no regulated indoor-air-quality standard for small workshops was found, which undercuts the "documentation for health-and-safety visits" framing. **Main risk:** Demand may be real but voluntary, not compliance-forced. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -130,6 +134,20 @@ The pain is twofold: the room is bad (headaches, dust, noise) and nobody can pro
 | DIY (ESP32 + sensors + Home Assistant) | Makerspaces do this | No PDF, no relay rating, nobody maintains it; we sell to the ones who tried |
 
 **Wedge:** noise + VOC + CO2 in one wall unit with a room-visible light, an extraction-fan relay, and shift-based documentation; honest "indicative, not a certified instrument" positioning with a calibration-check routine.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| NIOSH makerspace guide | Hazard guidance | The hazard is documented |
+| ASU EHS makerspace guidance | University safety guidance | Same |
+| Chemical Insights 3D Makerspace report | VOC exposure study | Same; no regulatory threshold for small workshops found |
+
+**Verdict as researched: UNCERTAIN.** Main risk: Demand may be real but voluntary, not compliance-forced.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: 160 × 100 × 40 mm wall unit, 12 V PSU, BME680-class gas/VOC + T/RH, SCD41-class NDIR CO2, MEMS mic → dBA + LAeq per shift (no audio stored), 3-colour LED bar readable at 10 m, 2.9" e-paper or small LCD, relay 10 A for the extraction fan (dry contact), microSD, WiFi/Ethernet optional, BLE for setup. Firmware: thresholds per parameter, traffic light logic (worst-of), shift start/stop (button or schedule), daily/weekly summary, PDF/CSV export via web page or email, PM2.5 add-on over a connector (bought-in laser PM sensor). Wellness/safety-documentation positioning; **not a certified occupational-exposure instrument** — say it everywhere.

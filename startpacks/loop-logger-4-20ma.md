@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** LoRaWAN coverage (public and private) is mature; competitors exist (Milesight UC300 at ~€125 net EU868 with 2× 4–20 mA plus lots more; Dragino PS-LB ~€56–94; Sentinum AION420; Enless; Radio Bridge) — so this is a crowded but fragmented market where a sharper, cheaper, integrator-friendly node with a loop-powered trick still wins deals.
 - **The ask:** ~€60k to a certified first 1,000 nodes; integrator pilot orders carry most of it.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** An established multi-vendor category: Dragino PS-LB-NA / PS-LS-NA ($79–89), RAK7432, Decentlab DL-DLR2-004 and Radio Bridge all read 4–20 mA over LoRaWAN today at similar prices. **Main risk:** Real, direct, already-priced competition; differentiation has to be EU868, DIN-rail form and integrator bundling, not the core function. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -130,6 +134,21 @@ Retrofit beats replacement when budgets are tight. The transmitter already works
 | Do nothing (manual rounds, local gauge) | Free | Alarm on phone pays for itself at the first overflow |
 
 **Wedge:** loop-powered pass-through + 2 channels + on-node alarms + integrator tooling (codec, batch config, white-label label) at €149–199, from an EU company with a real datasheet.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Dragino PS-LB-NA / PS-LS-NA | About $79–89, LoRaWAN 4–20 mA | Direct incumbent at the same price |
+| RAK7432 WisNode Bridge Analog | LoRaWAN analogue bridge | Direct incumbent |
+| Decentlab DL-DLR2-004 | LoRaWAN 4–20 mA datalogger | Direct incumbent |
+| Radio Bridge | LoRaWAN analogue sensors | Direct incumbent |
+
+**Verdict as researched: WEAK.** Main risk: Real, direct, already-priced competition; differentiation has to be EU868, DIN-rail form and integrator bundling, not the core function.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

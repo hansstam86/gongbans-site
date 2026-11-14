@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Indoor-air awareness is mainstream, formaldehyde in furniture is a recurring consumer-press topic, and open sensor boards plus an off-the-shelf handheld dev kit make the prototype a two-week job. The gap is not the sensor — it is the calibration and the rental/report workflow.
 - **The ask:** ~€85k to 1,000 units; three furniture retailers running loan fleets first, then a crowdfunding/B2C wave once the report format proves itself.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Direct-reading formaldehyde and VOC meter rentals exist (Extech VFM200, PCE meters) but are aimed at professionals, not consumer-facing retailer loan units; no furniture or flooring retailer loan-at-the-till programme was found, matching the pitch's channel angle. A pricier lab-analysed service (Wellbuild Lab, $395–525 a week) confirms willingness to pay at a much higher price point. **Main risk:** No evidence yet that retailers want to run a loan-unit programme; that channel is the actual kill question and is unverified. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -131,6 +135,20 @@ Sources used: UBA/ex-Bundesgesundheitsamt guideline values (0.1 ppm / 0.1 mg/m³
 | Handheld pro meters (PCE and similar) | €300–900 | Accurate-ish, no consumer UX, nobody lends them |
 
 **Wedge:** the only device designed to be lent — rugged, lanyard, one button, a 7-day report that names the guideline value and says "indicative", with annual recalibration built into the price — sold to the people who meet the worried customer at the till or the hand-over.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Extech VFM200 rental | Professional meter rental | Rental exists, professional channel |
+| Kwipped PCE formaldehyde meter | Professional meter rental | Same |
+| Wellbuild Lab IAQ test kit ($395–525/week) | Lab-analysed home test | Willingness to pay at a higher price |
+
+**Verdict as researched: LIKELY.** Main risk: No evidence yet that retailers want to run a loan-unit programme; that channel is the actual kill question and is unverified.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

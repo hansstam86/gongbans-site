@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** The regulatory clock (Dec 2026), farm-subsidy biodiversity evidence, and open NPU vision boards with schematics that run detection at a few watts. The gap is a season of validated field data against manual transects — not hardware.
 - **The ask:** ~€140k to the first 300 posts (a season of validation comes before any volume; 1,000-unit math shown for reference), funded by one paid consultancy trial, a research/biodiversity grant and a small angel ticket.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Insect Detect (peer-reviewed in PLOS ONE, open source, deployed across Europe through the SEPPI project) is a direct precedent validating the technical approach and a research-buyer channel; researchers report it is more time-efficient than manual transect counts. An Oregon State bumblebee camera-trap study corroborates. **Main risk:** All known instances are research prototypes, not commercial products; this would be the first to commercialise a proven approach, not an entry into a validated commercial market. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -131,6 +135,19 @@ Sources used: European Commission news (26 Nov 2025) and CREAF/CETAF pages on EU
 | Generic wildlife trail cameras | €100–300 | Not for insects; motion trigger fails on small targets |
 
 **Wedge:** counts-only on device (tiny data, LoRaWAN-able, GDPR-light), solar fleet hardware under €900 with an open data format, and a published validation against transects — positioned as the EU-PoMS "complementary module" tool for consultancies.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Insect Detect (bioRxiv / PLOS ONE, PMC) | Open-source camera trap, deployed via SEPPI | Direct precedent, research channel |
+| Oregon State bumblebee camera study (Corvallis Advocate) | Camera-trap study | Corroborating precedent |
+
+**Verdict as researched: LIKELY.** Main risk: All known instances are research prototypes, not commercial products; this would be the first to commercialise a proven approach, not an entry into a validated commercial market.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

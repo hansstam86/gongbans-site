@@ -12,10 +12,18 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** TrinkwV 2023 tightened operator duties; heat-pump retrofits and "Absenkung" debates make 55 °C a daily argument; LoRaWAN coverage in German cities is now routine (municipal utilities' networks) and private gateways cost €100.
 - **The ask:** ~€95k to 1,000 building kits; three paid pilots first, then a housing-association framework deal and a regional digitalisation grant.
 
+<!-- market-check:start -->
+> **External market check (November 2026): UNCERTAIN.** The research could not confirm that continuous temperature logging itself (as opposed to periodic Legionella laboratory testing) is a legal requirement; in the pack that is an assumption, not a cited rule. Techem and Minol already own the property-manager relationship through their testing services. **Main risk:** Soften the compliance-mandate language until checked against the TrinkwV §31 text directly, and consider selling through Techem or Minol as a channel rather than direct to property managers. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+>
+> **Compliance claim unverified; channel question (November 2026).** The pack treats continuous hot-water temperature logging as a compliance requirement. The research could not confirm that logging itself, rather than periodic Legionella laboratory testing, is legally required; check the TrinkwV §31 text before repeating the claim to a buyer. Techem and Minol already hold the property-manager relationship through their testing services, so the better route may be selling through them rather than direct. Kill question unchanged pending Hans's decision; the three property managers in it are still worth asking, and ask them who they buy testing from. As researched November 2026 by web search; verify before relying on it.
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
 **Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+> **Compliance claim unverified; channel question (November 2026).** The pack treats continuous hot-water temperature logging as a compliance requirement. The research could not confirm that logging itself, rather than periodic Legionella laboratory testing, is legally required; check the TrinkwV §31 text before repeating the claim to a buyer. Techem and Minol already hold the property-manager relationship through their testing services, so the better route may be selling through them rather than direct. Kill question unchanged pending Hans's decision; the three property managers in it are still worth asking, and ask them who they buy testing from. As researched November 2026 by web search; verify before relying on it.
 
 ### The gate: this idea's kill question
 
@@ -133,6 +141,20 @@ Sources used: Hamburg and Mannheim city information sheets on TrinkwV 2023 (Gro�
 | Caretaker with a contact thermometer and a clipboard | labour | Done monthly at best, undocumented |
 
 **Wedge:** the only sub-€500 kit whose output is the document the health office wants, installed by the existing heating contractor in 30 minutes without opening a pipe.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| TrinkwV §31 (German drinking-water ordinance) | Legionella testing duties | Logging-as-requirement not confirmed; verify the text |
+| Techem | Legionella testing services for property managers | Owns the customer relationship; possible channel |
+| Minol | Same | Same |
+
+**Verdict as researched: UNCERTAIN.** Main risk: Soften the compliance-mandate language until checked against the TrinkwV §31 text directly, and consider selling through Techem or Minol as a channel rather than direct to property managers.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

@@ -12,10 +12,18 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Unstaffed direct marketing is growing in the German-speaking countries; a proposal would make digital payment mandatory for farm shops and cafés from 2027 ([top agrar](https://www.topagrar.com/betriebsleitung/news/hofladen-und-hofcafe-ab-2027-soll-digitale-zahlung-pflicht-werden-20029097.html)); payment QR standards and cheap scanners make a terminal without PCI scope feasible.
 - **The ask:** ~€110k (estimate) to the first 1,000 units; route = paid regional pilots + bootstrap; chambers of agriculture and cooperative buying groups as the scaling lever.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY (CROWDED).** Unstaffed farm retail is real and growing in Germany (about 600 smart stores, about 150 in farm retail) on existing systems (Dorfladenbox, Ackerpay), and case studies show farms moving from vending to self-checkout successfully. But a 2026 study cited in the research found self-checkout correlates with higher shrinkage, not lower, which directly undercuts the kill question's "less shrinkage than the honesty box" test. **Main risk:** The kill metric may be wrong: uptime, basket size or customer satisfaction may be better go/no-go measures than shrinkage. Hans should decide. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+>
+> **Kill-question metric questioned by research (November 2026).** The kill question passes if five farm shops report less shrinkage than the honesty box. A 2026 study found in the research reports the opposite correlation for self-checkout in general: more shrinkage, not less. The category itself is real and growing (Dorfladenbox, Ackerpay, Locafox case studies), so the idea stands, but the pass mark may be measuring the wrong thing. Before running the pilot, decide with the shops what success means: uptime, basket size, customer satisfaction, staff hours saved. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it.
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
 **Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+> **Kill-question metric questioned by research (November 2026).** The kill question passes if five farm shops report less shrinkage than the honesty box. A 2026 study found in the research reports the opposite correlation for self-checkout in general: more shrinkage, not less. The category itself is real and growing (Dorfladenbox, Ackerpay, Locafox case studies), so the idea stands, but the pass mark may be measuring the wrong thing. Before running the pilot, decide with the shops what success means: uptime, basket size, customer satisfaction, staff hours saved. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it.
 
 ### The gate: this idea's kill question
 
@@ -125,6 +133,22 @@ Who pays vs who uses: the farm family pays (one-off, no subscription); customers
 | DIY (Raspberry Pi + scanner + a web page) | A few tech-minded farmers | No support, no CE, no fiscal compliance story |
 
 **Wedge:** one-off price, no subscription or revenue cut, works offline, payment via a QR that the farmer's own provider settles (no money ever touches the device → no PCI scope), rugged for a shed, and a daily WhatsApp-style summary that makes the farmer feel in control.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Locafox Gottschalks Hof case study | Farm moved from vending to self-checkout | Category is real |
+| Locafox self-checkout for farm shops | Existing system | Incumbent |
+| Dorfladenbox, Ackerpay | Existing unstaffed-store systems | Incumbents |
+| RetailDetail self-checkout shrinkage study (2026) | Self-checkout correlates with higher shrinkage | Undercuts the kill question's metric |
+| Lokbest unstaffed farm store | Existing concept | Category is real |
+
+**Verdict as researched: LIKELY (CROWDED).** Main risk: The kill metric may be wrong: uptime, basket size or customer satisfaction may be better go/no-go measures than shrinkage. Hans should decide.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: 7" IPS touch terminal in a powder-coated steel/ABS housing with a scanner window, 2D barcode/QR scanner module, NFC reader for member cards (regulars get a tab and a monthly invoice), PoE (one cable into the shed) with WiFi fallback and an optional LTE stick, piezo and LED, optional 58 mm receipt printer, VESA/wall mount, IP54 front. Software: product list with pictures and PLU buttons for loose goods, scale input (bought-in certified scale over USB/RS-232 for weighed goods — MID-approved scale, not ours), basket → payment QR (static EPC/GiroCode with amount and reference, or a dynamic QR from the farmer's PSP), "I paid cash" button with photo-less logging, offline queue, daily summary and CSV, admin via phone browser.

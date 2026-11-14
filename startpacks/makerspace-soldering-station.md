@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Cartridge tips are now commodity (C245 clones at €4), the open controller boards publish schematic + PCB, and labs across Europe are re-equipping for electronics curricula. Nobody sells the "boring, repairable, documented" tier.
 - **The ask:** ~€75k to the first 1,000 stations; pre-orders from 10 makerspaces fund the first batch, no tooling beyond a sheet-metal case.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK TO UNCERTAIN.** Cheap single-kit soldering products for schools exist at $15–40 per kit (CircuitMess, Forward Education, TeacherGeek at about $24.50), far below a €249-per-station bundle. No CE-ready hot-air plus pre-heater bundle was found at this tier, but also no evidence of pent-up demand for the extra capability. **Main risk:** The gap is unproven on the demand side; schools may be satisfied with cheap kits. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -133,6 +137,20 @@ Sources used: price comparisons on tomshardware / atomic14 / microcontrollerslab
 | JBC CD-B / Weller WT / Ersa i-CON | €450–850 | The benchmark; a lab can afford two, not ten |
 
 **Wedge:** JBC-class cartridge heat and recovery at Hakko money, in an all-DC metal box with a real EU safety file, classroom lock-out, and tips/handles/heaters on a shelf in Europe.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| TeacherGeek Soldering Package | About $24.50 per unit | Cheap education incumbent |
+| CircuitMess Tools Pack; Forward Education | About $15–40 per kit | Same |
+| SOLDR kit (low-reliability blog source) | Kit listing | Weak source, noted as such |
+
+**Verdict as researched: WEAK TO UNCERTAIN.** Main risk: The gap is unproven on the demand side; schools may be satisfied with cheap kits.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

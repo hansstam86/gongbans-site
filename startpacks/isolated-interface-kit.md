@@ -12,6 +12,10 @@
 - **Why now:** ~28 M heat pumps and tens of millions of inverters installed in Europe need servicing; all four source boards are fully open; no radio, no battery — a pilot can be on sale in weeks.
 - **The ask:** ~€30k to the first 1,000 kits; bootstrap with trade-association pre-orders.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** Isolated USB-to-RS485/RS232/TTL adapters are a mature commodity category at $16–180; Waveshare's $16–24 multibus converter covers the exact use case. No evidence that technicians discuss "frying a laptop" as a live pain point. **Main risk:** This is a packaging and bundling play on commodity hardware, not a product gap. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -124,6 +128,20 @@ Who pays: the service company (tool budget per van is €2–5k a year); the sol
 | Manufacturer service dongles (per brand) | €100–300 | One brand only, locked software |
 
 **Wedge:** field-first packaging (metal, labelled A/B/GND, screw terminals, cable set for the common service ports), a 4-port fan-out for commissioning several devices at once, and a free scanner app that finds the device. Price between the cheap and the IT-grade.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Waveshare Multibus Converter | About $16–24 | Commodity incumbent covering the same buses |
+| DFRobot isolated USB-RS485 | About $17 | Commodity incumbent |
+| StarTech ICUSB422IS | About €180 | Premium end of the same category |
+
+**Verdict as researched: WEAK.** Main risk: This is a packaging and bundling play on commodity hardware, not a product gap.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **Adapter:** isolated USB-C to RS485/RS232/TTL (switch-selected), 2.5 kV isolation, bus TVS + PTC, USB-side over-current (from the open isolated-USB design), A/B/GND screw terminals and a DB9, activity LEDs, aluminium case, 120 Ω termination switch.

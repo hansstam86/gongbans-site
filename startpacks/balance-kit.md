@@ -12,6 +12,10 @@
 - **Why now:** GEG §60c makes balancing mandatory for many larger existing buildings by 30 Sept 2027 and a condition for BEG subsidies and every heat-pump install; EU heat-pump sales were ~2.6–2.9 M units in 2025 and every one needs a commissioning check.
 - **The ask:** ~€95k to get to 1,000 kits (first 50 pilot kits ~€25k). Bootstrap plus paid pilots; grant money (German ZIM/EXIST-type programmes) fits because this is energy-efficiency tooling.
 
+<!-- market-check:start -->
+> **External market check (November 2026): UNCERTAIN.** Hydraulic-balancing valves (IMI TA, Danfoss) sell at roughly €79–126 each, and IMI's TA-SCOPE confirms a professional balancing-instrument category exists, though no price for it was found. No installer-forum discussion of balancing pain or cost surfaced. **Main risk:** No direct demand evidence; the kill question's ten installer calls remain the real test. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -126,6 +130,21 @@ Sources: ZVSHK Bilanz 2025 (48,050 firms), co2online cost figures (€650 servic
 | Valve-maker software (Danfoss and others) | Calculation only (Verfahren B) | free | No measurement; this is the complement, not the competitor |
 
 **Wedge:** eight points at once, built for the balancing workflow, and the PDF output. Nobody sells "the measurement half" as a product for the fitter's toolbox.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| IMI TA balancing valve (aio.lv) | About €126 per valve | The balancing job and its parts are real |
+| Danfoss balancing valve (aio.lv) | About €79 per valve | Same |
+| IMI TA-SCOPE | Professional balancing instrument, no price found | The instrument category exists |
+| Danfoss hydronic balancing overview | Vendor material | Confirms the practice, not the pain |
+
+**Verdict as researched: UNCERTAIN.** Main risk: No direct demand evidence; the kill question's ten installer calls remain the real test.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - 8 nodes, each: ESP32-S3 (from the open Stamp-S3Bat design), contact NTC in a spring clamp with an IR option, 500 mAh Li-ion, magnet, LED. 8-hour runtime, charged in the case.

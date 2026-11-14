@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** EU pressure to reduce permanent rodenticide baiting pushes toward monitored mechanical traps; public LoRaWAN coverage and €50 indoor gateways make the network a non-issue; the catalogue has an open ESP32-C6 + LoRa stamp.
 - **The ask:** ~€110k (estimate) to 1,000 nodes, firmware with multi-year battery life, and 10 paying SMEs. Route: pre-orders from the kill-question calls + a regional IoT/agritech grant + one angel from the facility-services world.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** A crowded, well-funded incumbent market: Anticimex SMART and Rentokil PestConnect (both multinationals) already sell connected-trap monitoring as part of full-service contracts. **Main risk:** Competing against entrenched multinationals with existing client relationships, not an open niche; the independent-SME wedge in the pitch has to carry everything. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -125,6 +129,20 @@ Europe's pest-control services market is estimated around **US$6.5 B (2024)** by
 | DIY (ESP32 + reed switch) | Hobbyist | No battery life, no dashboard, no audit trail |
 
 **Wedge:** price (€39 + €2), universal clip that fits the snap and box traps the technician already uses, 3–5-year battery, and an export the technician's CRM can ingest so the inspection report writes itself. Sources also: [TTI rodent-trap business case](https://partners.thethingsindustries.com/business-cases/rodent-trap-monitoring/).
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Rentokil PestConnect | Connected traps inside service contracts | Multinational incumbent |
+| Anticimex SMART | Connected traps inside service contracts | Multinational incumbent |
+| IoT pest-control overview (Provisioner) | Trade coverage | Category is established |
+
+**Verdict as researched: WEAK.** Main risk: Competing against entrenched multinationals with existing client relationships, not an open niche; the independent-SME wedge in the pitch has to carry everything.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: 55 × 30 × 15 mm IP65 pod, universal clip/strap, 3-axis accelerometer (shock = snap fired), optional reed/lever input for box traps, EU868 LoRaWAN Class A, 1× AA Li-FeS2 or ½AA Li-SOCl2 primary cell, magnet-swipe pairing. Firmware: event uplink on trigger, daily heartbeat (battery, temperature), downlink config. Dashboard: map/list of traps per site, alert by push/SMS/email, inspection log with timestamps, CSV and REST export. Works on public LoRaWAN, TTN, or a €60 indoor gateway you sell with the kit.

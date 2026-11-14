@@ -12,6 +12,10 @@
 - **Why now:** The sub-€5 Bluetooth-speaker gongban economy gives you the amp + playback; the open four-band radio gives a "real radio" SKU with no code; the work is industrial design, not electronics.
 - **The ask:** ~€55k to the first 1,000 units; care-home pilots and pre-orders fund a third.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** Already well served: the Alzheimer's Society's own shop, Ravencourt (about £74–79) and Relish (about £149) all sell one-button dementia radios at or below the target price today. **Main risk:** The most directly outcompeted idea in this group; carer-loaded playlists is the only uncovered angle found. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -124,6 +128,20 @@ Who pays: the adult child (B2C, the Christmas gift that works), the care home (a
 | Old radio with tape on the buttons ("do nothing") | €0 | Works until the station changes |
 
 **Wedge:** one knob, wood, the family playlist on an SD card, fail-safe playback, EU DAB/FM-free design (local content first, radio as an SKU), care-home multi-unit setup.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Alzheimer's Society one-button radio | Charity shop product | Incumbent at or below target price |
+| Ravencourt One Button Radio | About £74–79 | Incumbent, cheaper |
+| Relish dementia radio | About £149 | Incumbent at target price |
+
+**Verdict as researched: WEAK.** Main risk: The most directly outcompeted idea in this group; carer-loaded playlists is the only uncovered angle found.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **SKU A — Player:** wooden cabinet (oak/birch veneer or solid), 3" full-range driver, 5 W amp, one big weighted knob (on/off + volume), SD-card playlist (family loads MP3s or we pre-load decades playlists), optional single preset internet station via WiFi (SKU A+), mains via a certified external PSU; optional back-panel "carer" buttons under a cover.

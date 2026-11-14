@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Hygiene expectations stuck after 2020; the catalogue holds a complete gesture reference (schematic, PCB, Gerber, BOM) so the sensor front-end is a copy job, not a research project.
 - **The ask:** ~€45k (estimate) to 1,000 modules, five sampled OEMs and one 1,000-piece order. Bootstrap plus OEM NRE fees; no outside money needed if the first OEM pays for samples.
 
+<!-- market-check:start -->
+> **External market check (November 2026): UNCERTAIN.** Several Chinese OEM/ODM makers advertise touchless-dispenser capability, mostly simple IR proximity rather than gesture recognition. No evidence was found of an established market for a standalone drop-in gesture module sold to EU OEMs, as opposed to sourcing complete cheap dispensers. **Main risk:** The module layer itself may not be a market, only a design choice inside someone else's product. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -125,6 +129,19 @@ The user is whoever waves a hand. They never know your name. This is a **compone
 | Do nothing (mechanical switch or pedal) | Free | "Touch-free" sells; pedals break |
 
 **Wedge:** *documentation and support as the product*. Datasheet with real trigger distance vs. surface reflectance, an EMC pre-test report the OEM can hand to its test lab, a design-in guide (window material, aperture, mounting), and a variant programme (relay, MOSFET, logic output; 5 V/12 V/24 V) for a small NRE fee.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| CDWK Group OEM hygiene products | Touchless dispensers, IR proximity | OEMs buy finished dispensers, not modules |
+| Elecrow custom-PCB soap dispenser design | Design service | Same |
+
+**Verdict as researched: UNCERTAIN.** Main risk: The module layer itself may not be a market, only a design choice inside someone else's product.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **Module A (proximity):** VCNL4020-class IR proximity sensor + small MCU, 5–24 V input, open-drain or 3 A MOSFET output, trigger distance adjustable 2–20 cm, latching/momentary/timed modes via solder jumper or a one-wire config. 25 × 25 mm, 2.0 mm pitch connector.

@@ -12,10 +12,18 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** An open ROS trolley design on the Taishan Pi RK3566 board already exists with schematics and PCB; ROS 2 LTS releases are stable enough for a school year; and the alternatives are either premium-priced or undocumented in European languages.
 - **The ask:** ~€140k to the first 300 robots (60 class sets). This is a €1,000 product — 1,000 units would be €250k+ of inventory, so the first-year goal is 300; the funding math below is for 300, with 1,000-unit costs shown for reference.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** TurtleBot (ROBOTIS / Clearpath) is a deeply entrenched fifteen-year incumbent, the default platform for ROS 2 courses, with university case studies (Waterloo) and prices of about $495–1,900 that bracket the €999 target rather than being beaten by it. **Main risk:** Not a price gap but a head-on challenge to a curriculum-embedded market leader; needs a real differentiator before the kill question is worth running. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+>
+> **Entrenched incumbent found in research (November 2026).** TurtleBot has been the default ROS teaching robot for fifteen years, is embedded in university curricula, and sells at $495–1,900, on both sides of this pack's €999. A lower price is not available as the wedge. Before running the kill question, name the differentiator a lecturer would switch for (an open RK3566 board with a published BSP, EU supply and support, a specific curriculum) and test that in the interviews first. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it.
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
 **Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+> **Entrenched incumbent found in research (November 2026).** TurtleBot has been the default ROS teaching robot for fifteen years, is embedded in university curricula, and sells at $495–1,900, on both sides of this pack's €999. A lower price is not available as the wedge. Before running the kill question, name the differentiator a lecturer would switch for (an open RK3566 board with a published BSP, EU supply and support, a specific curriculum) and test that in the interviews first. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it.
 
 ### The gate: this idea's kill question
 
@@ -131,6 +139,19 @@ Sources used: TurtleBot 4 Lite ~$1,340–1,465, Standard ~$2,200 at US retailers
 | DIY: open designs + student labour | €300 + a semester | Great for one capstone team; useless for 10 identical robots |
 
 **Wedge:** ten identical, dock-charged, English-documented ROS 2 robots for the price of four TurtleBot 4s, with a semester curriculum and EU spares — built on an open board the school can also study.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| TurtleBot (ROBOTIS / Clearpath) | About $495–1,900, default ROS 2 teaching platform | Entrenched incumbent bracketing the target price |
+| University of Waterloo case study | TurtleBot in a ROS course | Curriculum embedding |
+
+**Verdict as researched: WEAK.** Main risk: Not a price gap but a head-on challenge to a curriculum-embedded market leader; needs a real differentiator before the kill question is worth running.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

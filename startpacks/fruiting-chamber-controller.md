@@ -12,6 +12,10 @@
 - **Why now:** The gourmet-mushroom wave is real (grow-kit market estimates US$0.4–1.2 B globally in 2025, Europe ~28%); incumbents are US-centric and not built for saturated humidity; every part exists in the catalogue.
 - **The ask:** ~€45k to the first 1,000 units; pre-orders from grower communities fund half.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Real DIY precedent: ShroomBox (Blynk) and Raspberry Pi builds combine Inkbird CO2 and humidity controllers to hit the stated RH and CO2 targets, and a documented "fan and humidifier fighting each other" failure mode is exactly what a purpose-built controller fixes. **Main risk:** Inkbird units cost under €50 each; the integrated unit must clearly beat "buy two Inkbirds and wire them yourself". *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -123,6 +127,20 @@ Who pays: the grower (B2C, €139–199 — the price of two grow kits); micro-f
 | Do nothing — mist by hand twice a day | €0 | Pins dry out, no consistency |
 
 **Wedge:** real NDIR CO2 + a sensor pod built to live at 95% RH, DC-only outputs (safe in a wet tent), EU plugs and support, fungi presets. The 85% RH probe rating of the incumbents is the headline.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Mercy for Animals fruiting-room guide | Grower guidance on RH/CO2 targets | Confirms the targets in the pitch |
+| ShroomBox IoT build (Blynk) and Pi builds | DIY controllers | Demand signal and the DIY substitute |
+| Inkbird humidity / CO2 controllers | Under €50 each | The component-level substitute to beat |
+
+**Verdict as researched: LIKELY.** Main risk: Inkbird units cost under €50 each; the integrated unit must clearly beat "buy two Inkbirds and wire them yourself".
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **Controller box:** ESP32-C3, 2 PWM/switched 12/24 V outputs (fogger, fan) + 1 spare (light/heater), 2-line OLED + knob, RJ11 sensor cable.

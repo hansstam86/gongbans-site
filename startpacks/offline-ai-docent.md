@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Edge LLM modules at €70–90 run 0.5–1.5B-parameter models (Qwen2.5-0.5B/1.5B, Llama3.2-1B listed by the module maker) with Whisper speech recognition and local TTS; retrieval-only prompting makes a small model usable for a bounded exhibition; the AI Act and GDPR make "offline" the easiest compliance story.
 - **The ask:** ~€120k to the first 100 kiosks (a €2,000 product does not need 1,000 units to be a business; the 1,000-unit math is shown for reference); one paid museum pilot first.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** No fully offline museum kiosk product was found; every real deployment (Intuiface, the Autun Museum chatbot, a Warsaw exhibition chatbot, TimeLens at the Grand Egyptian Museum) depends on a network or cloud call, which supports "fully offline, no cloud" as a genuine technical differentiator. **Main risk:** No evidence museums actually want offline over cloud; the gap found is architectural, not a stated customer complaint. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -131,6 +135,21 @@ Sources used: M5Stack LLM630 Compute Kit specifications and price (AX630C, 3.2 T
 | DIY: Raspberry Pi + an open LLM | €150 + months | Latency, no enclosure, no admin UI, nobody maintains it |
 
 **Wedge:** the only question-answering kiosk that is provably offline (unplug the network — it still works), answers only from the curator's documents with the source shown, needs no app, and gives the DPO and the AI Act officer a one-page file.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Intuiface AI kiosk | Cloud-dependent kiosk software | Incumbent, online |
+| Autun Museum chatbot (askmona.ai) | Cloud chatbot | Online |
+| Warsaw exhibition chatbot | Cloud chatbot | Online |
+| TimeLens / Grand Egyptian Museum (arXiv) | Research deployment | Online |
+
+**Verdict as researched: LIKELY.** Main risk: No evidence museums actually want offline over cloud; the gap found is architectural, not a stated customer complaint.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

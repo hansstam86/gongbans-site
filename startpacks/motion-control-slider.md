@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Integrated smart servo motors with RS485/CAN and encoders now cost €25–40 and a knob-with-round-screen controller exists off the shelf — the parts that cost €300 of engineering five years ago are catalogue items.
 - **The ask:** ~€120k to the first 1,000 units; pre-orders from a demo video are the gate, then a crowdfunding wave and two photo-retail distributors.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** Edelkrone's SliderONE v3 sells at $439–549, under the €499 target rather than beaten by it, while pricier Edelkrone and Rhino rigs serve the high end. "No app" is not validated as a differentiator: Edelkrone's whole pitch is app and motion-kit control and no rejection of that model was found. Rental at $75–150 a day is an existing alternative. **Main risk:** The weakest-looking idea in this batch: an incumbent under the target price and no evidence the knob-not-app angle is wanted. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -129,6 +133,20 @@ Sources used: Zeapon Micro 2 Plus with PONS pan/tilt kit ~$1,010 and pan-only ~$
 | DIY: stepper slider + Arduino (many open designs) | €150 + weekends | Works for the maker; nobody else wants to build it |
 
 **Wedge:** two synchronised axes (slide + pan, tilt optional) programmed by hand on a knob in 20 seconds, repeatable to the step, silent, at the price of a slider-with-app alone.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Edelkrone SliderONE v3 | About $439–549 | Incumbent below the target price |
+| Edelkrone SliderPLUS v6; Rhino | Higher-end rigs | Upper tier served |
+| Cameraboom buying guide (rental $75–150/day) | Rental market | Alternative path for the buyer |
+
+**Verdict as researched: WEAK.** Main risk: The weakest-looking idea in this batch: an incumbent under the target price and no evidence the knob-not-app angle is wanted.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

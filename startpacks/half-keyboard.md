@@ -12,6 +12,10 @@
 - **Why now:** Open one-handed keyboard hardware and mature open firmware (QMK/ZMK) make a modern €149–199 device plausible; the half-QWERTY idea is decades old and the original patents should have expired — verify.
 - **The ask:** ~€40k to the first 1,000 units; bootstrap plus assistive-technology dealer pre-orders.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY (STRONG).** Maltron one-handed keyboards run about $540–970 and the Matias Half-Keyboard from about $654, which confirms and even understates the pitch's "€500 incumbents". A €149–199 entrant undercuts every named incumbent three to five times. **Main risk:** A price gap does not confirm clinical adoption by occupational therapists; that is what the ten-OT trial in the kill question is for. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -125,6 +129,19 @@ Who pays: workplace-adaptation schemes (DE: Integrationsamt/Rentenversicherung; 
 | Do nothing — type with one hand on a full keyboard | €0 | Slow, shoulder strain |
 
 **Wedge:** price (a third of the incumbents), modern mechanical feel, left and right SKUs, switch-access jack, and OT-facing training material. Position as "the one your OT lends you first".
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Maltron one-handed keyboard (MaxiAids, School Health, SpecialNeedsComputers.ca) | About $540–970 | Incumbent, 3–5× the target price |
+| Matias Half Keyboard (BoundlessAT) | From about $654 | Incumbent, 3–4× the target price |
+
+**Verdict as researched: LIKELY (STRONG).** Main risk: A price gap does not confirm clinical adoption by occupational therapists; that is what the ten-OT trial in the kill question is for.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **Hardware:** 44–50 low-profile hot-swappable mechanical switches (35–45 g), compact 25 × 12 cm, USB-C, aluminium top plate, optional 3.5 mm jack for an assistive switch (acts as the "mirror" key or any macro), detachable wrist rest.

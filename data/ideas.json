@@ -1496,7 +1496,11 @@
     "retail"
    ],
    "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 15
+   "score_total": 15,
+   "market_correction": {
+    "title": "Untested business model found in research (November 2026)",
+    "text": "The research found no precedent anywhere for the pack's core mechanic: a mattress or sleep retailer renting out a monitoring box and handing the customer a report. Every real competitor sells a tracker outright or uses sleep data only as an in-store sales aid. Treat the rental-through-retailer channel as the first thing to validate, ahead of the product; the kill question's five mattress shops are the right test, run it before anything else. As researched November 2026 by web search; verify before relying on it."
+   }
   },
   {
    "slug": "club-timing-gates",
@@ -1978,7 +1982,11 @@
     "b2b"
    ],
    "open_boards_note": "0 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 14
+   "score_total": 14,
+   "market_correction": {
+    "title": "Kill-question metric questioned by research (November 2026)",
+    "text": "The kill question passes if five farm shops report less shrinkage than the honesty box. A 2026 study found in the research reports the opposite correlation for self-checkout in general: more shrinkage, not less. The category itself is real and growing (Dorfladenbox, Ackerpay, Locafox case studies), so the idea stands, but the pass mark may be measuring the wrong thing. Before running the pilot, decide with the shops what success means: uptime, basket size, customer satisfaction, staff hours saved. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it."
+   }
   },
   {
    "slug": "frost-sentinel",
@@ -2097,7 +2105,11 @@
     "rs485"
    ],
    "open_boards_note": "1 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 14
+   "score_total": 14,
+   "market_correction": {
+    "title": "Technical premise questioned by research (November 2026)",
+    "text": "OpenEnergyMonitor, the reference community for exactly this audience, documents that clip-on current plus flow/return temperatures do not give a real COP; that needs a heat meter. The pack sells the kit as \"indicative, ±15%\", which the research flags as optimistic and as the claim an expert audience will test first. Before the demand test, settle the method: either prove the ±15% against a Level-3 reference on real installations, or reposition the kit as a settings-check tool that does not claim a COP figure. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it."
+   }
   },
   {
    "slug": "pack-rebuilder-spot-welder",
@@ -2571,7 +2583,11 @@
     "rs485"
    ],
    "open_boards_note": "0 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 13
+   "score_total": 13,
+   "market_correction": {
+    "title": "Compliance claim unverified; channel question (November 2026)",
+    "text": "The pack treats continuous hot-water temperature logging as a compliance requirement. The research could not confirm that logging itself, rather than periodic Legionella laboratory testing, is legally required; check the TrinkwV §31 text before repeating the claim to a buyer. Techem and Minol already hold the property-manager relationship through their testing services, so the better route may be selling through them rather than direct. Kill question unchanged pending Hans's decision; the three property managers in it are still worth asking, and ask them who they buy testing from. As researched November 2026 by web search; verify before relying on it."
+   }
   },
   {
    "slug": "makerspace-soldering-station",
@@ -2870,7 +2886,11 @@
     "check-licence"
    ],
    "open_boards_note": "3 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 12
+   "score_total": 12,
+   "market_correction": {
+    "title": "Entrenched incumbent found in research (November 2026)",
+    "text": "TurtleBot has been the default ROS teaching robot for fifteen years, is embedded in university curricula, and sells at $495–1,900, on both sides of this pack's €999. A lower price is not available as the wedge. Before running the kill question, name the differentiator a lecturer would switch for (an open RK3566 board with a published BSP, EU supply and support, a specific curriculum) and test that in the interviews first. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it."
+   }
   },
   {
    "slug": "offline-ai-docent",

@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Two open designs exist with schematics and PCB; Chinese brands ship touchscreen dials (Aqara Touchscreen Dial V1 at €80–165) but with vibration only and locked ecosystems; nobody sells a finished *haptic* wall product in Europe with a proper EU box mount.
 - **The ask:** ~€140k to first 1,000 haptic units; crowdfund/pre-order driven, with a small angel or founder cheque for tooling and certification.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** The concept is validated by patents and one shipping product, the Aqara Touchscreen Dial V1, which is locked to Aqara's ecosystem; no cross-platform "works with any hub" haptic dial was found, matching the pitch's gap. **Main risk:** Aqara, well funded, could extend its dial to more hubs faster than a newcomer establishes the category. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -132,6 +136,20 @@ Sources used: Home Assistant public analytics (verify the current number), Aqara
 | KNX/Loxone room controllers | €200–600 | Installer-grade, no haptics, closed bus |
 
 **Wedge:** the only finished wall product with true motorised haptics, local-first (MQTT + Matter), EU 60 mm box mount, from a brand the hub communities trust because the firmware is open.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Aqara Touchscreen Dial V1 | Shipping haptic dial, Aqara ecosystem only | Concept proven, gap is cross-platform |
+| Haptic smart-home patent (USPTO) | Patent | Prior art to check before launch |
+| Immersion Home Smart Panel concept | Concept page | Interest from haptics vendors |
+
+**Verdict as researched: LIKELY.** Main risk: Aqara, well funded, could extend its dial to more hubs faster than a newcomer establishes the category.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

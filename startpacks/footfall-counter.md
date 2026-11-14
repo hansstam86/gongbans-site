@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** The AI Act and five years of GDPR enforcement have made "camera" a dirty word in public procurement, while open NPU boards now run person detection at 30 fps for under €30 of silicon. "Auditable firmware, counts only" is a real differentiator with public buyers.
 - **The ask:** ~€110k to certified product and the first 1,000 units; roughly half from paid pilots with 10–20 institutions, the rest a small angel round or a regional innovation grant.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Camera-free, privacy-safe people counting is an established category (Terabee thermal / time-of-flight, FootfallCam hashing, Ariadne consent-free analytics), and the compliance angle is real and current, with the EU AI Act as a tailwind. No public pricing was found, so "a third of the incumbents' price" is unverifiable. **Main risk:** The price claim is unsupported; the differentiation must be proven on compliance and simplicity. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -129,6 +133,20 @@ Sources used: Eastek reseller claims (eastek.de), Sensource people-counting over
 | DIY: Raspberry Pi + OpenCV | €120 + weekends | No enclosure, no CE, nobody maintains it after the intern leaves |
 
 **Wedge:** the only counter under €400 with a signed statement that the device cannot export images, a one-page DPIA template, and plain MQTT/CSV output. Sell the paperwork as much as the dome.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Terabee people counting + GDPR pages | Thermal / ToF counters | Incumbent in the privacy-safe niche |
+| FootfallCam privacy statement | Hashing-based counting | Incumbent |
+| Ariadne consent-free footfall | Analytics without consent prompts | Incumbent |
+
+**Verdict as researched: LIKELY.** Main risk: The price claim is unsupported; the differentiation must be proven on compliance and simplicity.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

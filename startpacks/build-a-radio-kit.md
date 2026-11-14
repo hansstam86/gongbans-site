@@ -12,6 +12,10 @@
 - **Why now:** Open four-band radio design exists with schematic and PCB; STEM budgets exist; no firmware, no app, no cloud — the fastest idea in the catalogue to a saleable product (6–10 weeks).
 - **The ask:** ~€30k to the first 1,000 kits; bootstrap with pre-paid class sets.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY (CONTESTED).** Elenco's WEmake FM soldering kit sells at about £31–47, with volume pricing around $43 at 25+ units: a real category with real demand, already owned by an established, cheaper incumbent. **Main risk:** Needs a clear differentiator (laser-cut case, no-code angle) to win a teacher's budget over Elenco. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -124,6 +128,20 @@ Who pays: the physics department head from the Fachschaft budget (typically €5
 | Do nothing — PhET simulation on a laptop | €0 | No physical payoff, pupils forget it |
 
 **Wedge:** classroom-ready: class set of 15 + spares + 4-language numbered steps + teacher's guide mapped to curricula (DE Lehrplan waves/modulation, NL natuurkunde, UK GCSE Physics P6) + wooden case. Sell to the department, not the pupil.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Elenco WEmake FM kit (Cogs Toys) | About £31 | Cheaper incumbent in the same category |
+| Jameco: Elenco volume pricing | About $43 at 25+ units | Class-set pricing already exists |
+| Fruugo DIY radio kit | About $69 | Upper end of the hobby tier |
+
+**Verdict as researched: LIKELY (CONTESTED).** Main risk: Needs a clear differentiator (laser-cut case, no-code angle) to win a teacher's budget over Elenco.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **Kit v1 "Classic":** four-band MW/SW/FM receiver derived from the open OSHWHub design; volume pot, tuning pot, band switch; through-hole parts spaced for beginners; 2× AA battery; 57 mm speaker; laser-cut plywood case that doubles as the soldering jig.

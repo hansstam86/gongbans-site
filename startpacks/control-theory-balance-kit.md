@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Three open reaction-wheel designs exist with schematics and PCB files; the physics is visually compelling (it balances on a corner); departments buy class sets each summer; the cheapest commercial rotary pendulum kit is ~€130–170 and still needs a bench supply and a PC, the "real" ones are quote-only with 16-week lead times.
 - **The ask:** ~€70k (estimate) to the first 1,000 units; route = lecturer pre-orders for next semester + bootstrap; education-innovation grants fit.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** Quanser's QUBE-Servo (and QUBE-Servo 3) is a direct, established incumbent selling control-education modules, including reaction-wheel experiments, to universities, and is the default in many curricula. Pricing is quote-only, so €299 per station cannot be benchmarked. **Main risk:** A curriculum-embedded incumbent; the kit needs a reason a lecturer would switch, not only a lower price. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -124,6 +128,20 @@ Segments: (1) **universities of applied sciences** (Fachhochschulen, hogescholen
 | Simulation only (MATLAB/Simulink, Python) — "do nothing" | Free, scalable | Students never feel sensor noise, saturation, or a motor that gets hot |
 
 **Wedge:** a self-contained reaction-wheel station (no PC needed to run; browser plot to tune), a manual that maps to a real syllabus (PID → cascade → state-space → LQR → observer → disturbance), class-set packaging with a charging case, and a price that lets every pair have one.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Quanser QUBE-Servo 3 | Control-education module | Direct incumbent, quote-only |
+| Quanser Introduction to Controls Teaching Lab | Curriculum package | Embedded in courses |
+| NI QUBE-Servo listing | Distribution listing | Same |
+
+**Verdict as researched: WEAK.** Main risk: A curriculum-embedded incumbent; the kit needs a reason a lecturer would switch, not only a lower price.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: Reuleaux-triangle body (CNC aluminium or thick PCB-sandwich), brushless reaction wheel with a proper 3-phase driver, IMU, ESP32 (WiFi/BLE), Li-ion cell with USB-C charging, a clear acrylic cage so a spinning wheel never meets a finger. Module B: standalone BLDC momentum-wheel on a pendulum arm for the "simple" first weeks. Firmware: swappable controllers (PID, cascade, LQR, user-written C or Python-generated gains), 200 Hz parameter streaming to a browser page over WiFi, CSV logging, "disturbance" button, safety limits (wheel speed, tilt). Manual: 8 experiments, each with model, expected plot, and questions. Teacher dashboard optional (class set only).

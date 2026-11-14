@@ -12,6 +12,10 @@
 - **Why now:** Open Geiger designs exist with schematic + PCB; public interest in radiation measurement is high; schools are re-equipping labs with STEM money.
 - **The ask:** ~€40k to the first 1,000 units; bootstrap plus educational-distributor pre-orders.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK TO UNCERTAIN.** The market splits into a cheap tier ($9.50–27, Flinn) and an expensive tier ($180–1,215, Ward's, Images SI) that bracket the €119–159 target awkwardly, with little found in between. The MightyOhm DIY kit confirms hobbyist precedent but no evidence of school-scale sales. **Main risk:** The cheap tier may already satisfy budget-constrained physics departments. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -125,6 +129,21 @@ Who pays: the physics Fachschaft (the same €500–2,000/year budget as the rad
 | Do nothing — YouTube video + old counter | €0 | No hands-on; old counters die one by one |
 
 **Wedge:** classroom features (big display, loud click, CSV logging, experiment cards, no-licence sources) at €139, via the distributors schools already buy from.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Flinn Student Geiger Counter | About $9.50 | Cheap tier |
+| Ward's Advanced Radioactivity Kit | About $181 | Expensive tier |
+| Images SI desktop counter | About $524 | Expensive tier |
+| MightyOhm Geiger kit bundle | DIY kit | Hobbyist precedent, no school sales evidence |
+
+**Verdict as researched: WEAK TO UNCERTAIN.** Main risk: The cheap tier may already satisfy budget-constrained physics departments.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **Handheld "Class" unit:** open Geiger board (tube + HV supply + pulse shaping) + ESP32 (from the StickC-Plus class of module) + 4-digit 0.56" display + buzzer + USB-C logging; 18650 or 2×AA; enclosed HV section.

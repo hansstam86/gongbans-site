@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Incumbents are subscription-based cloud systems (starter kits ~€410 plus credits) or single-fridge Bluetooth loggers (~€54–65); the "multi-fridge, WiFi-independent, zero-subscription, inspector-readable display" slot is empty. ESP32-C6 brings WiFi + 802.15.4 in one chip.
 - **The ask:** ~€140k (estimate) to 1,000 kits. Route: pre-orders from cash-and-carry mornings (kill question), a food-tech or digitalisation grant, then an angel from hospitality supply.
 
+<!-- market-check:start -->
+> **External market check (November 2026): UNCERTAIN.** A real, heavily served category (Testo Saveris 2 / Food, Checkit), but pricing and licensing sit behind sales quotes, so "no monthly fee" cannot be confirmed as a genuine gap rather than a restatement of what is already offered. FridgeTag, named in the pack, returned no results and may be discontinued. **Main risk:** The buy-once wedge is unverified against incumbents' actual terms; one hardware-only listing at CHF 445 was the only open price found. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -125,6 +129,21 @@ The emotional buyer is the owner who was once written up for missing records. Th
 | DIY (ESP32 + DS18B20 + Home Assistant) | €30 | No audit trail, no signature, nobody in a kitchen wants to maintain it |
 
 **Wedge:** buy once; a wall display the inspector can read; works without WiFi (sensors talk to the hub on 802.15.4 or sub-GHz, the hub stores 2 years; WiFi only for the weekly email); corrective-action workflow that makes the PDF audit-grade.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Testo Saveris 2 (food applications) | Cloud temperature monitoring | Incumbent, quote-based pricing |
+| Checkit (The Caterer) | Digital HACCP platform | Incumbent, quote-based |
+| Hardware-only listing, CHF 445 | One open price point | Only open comparable found |
+| FridgeTag | Named in the pack; no results found | Possibly discontinued; remove or re-check |
+
+**Verdict as researched: UNCERTAIN.** Main risk: The buy-once wedge is unverified against incumbents' actual terms; one hardware-only listing at CHF 445 was the only open price found.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **Hub:** ESP32-S3/C6, 4.7"-class e-paper (always-on, readable, no glow), buzzer, USB-C power, 2 years of logs in flash, WiFi for email/PDF, local web page as backup; door-open and out-of-range alarms; "acknowledge + corrective action" buttons.

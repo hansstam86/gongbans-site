@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Low-resolution thermal arrays (MLX90640-class) are cheap and good enough to see a breaker 15 K above its neighbours; an open thermal + visual camera design exists; LoRaWAN is standard in commercial buildings; insurers are actively pushing electrical fire prevention.
 - **The ask:** ~€120k (estimate) to the first 1,000 units; route = paid contractor pilots + bootstrap; an insurer discount or endorsement as the scaling lever.
 
+<!-- market-check:start -->
+> **External market check (November 2026): UNCERTAIN.** Panel hot-spot monitoring is real and actively developed (Eaton, GraceSense HSM 600, NFPA 70B cited as a compliance driver, a FAU / Siemens thermopile thesis), but everything found is enterprise-scale with no per-unit pricing, so €299–399 cannot be benchmarked. **Main risk:** The need may be served today mainly by periodic professional IR-camera inspection; vendors position sensors as a complement to inspection, not a replacement. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -126,6 +130,21 @@ Who pays vs who uses: the building owner/facility manager pays; the electrical c
 | DIY MLX90640 + ESP32 | Makers | No baselines, no DIN mount, no report, no installation rules |
 
 **Wedge:** one array sees the whole board (not one terminal), DIN-clip install in 15 minutes by the electrician who already services the board, LoRaWAN/WiFi to the FM's existing network, per-zone learning baselines, and a monthly PDF the insurer accepts — at a price that makes sense for a €200 office board.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Eaton hot-spot monitoring guide | Enterprise monitoring | Incumbent, no per-unit price |
+| GraceSense HSM 600 | Hot-spot monitor | Incumbent, enterprise channel |
+| NFPA 70B | Maintenance standard cited as driver | Compliance pull exists (US) |
+| FAU / Siemens thermopile thesis | Academic prototype | Technique validated |
+
+**Verdict as researched: UNCERTAIN.** Main risk: The need may be served today mainly by periodic professional IR-camera inspection; vendors position sensors as a complement to inspection, not a replacement.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: DIN-rail clip or magnetic/adhesive mount on the board's enclosure facing the breakers (field of view 55°/110° variants), MLX90640-class 32×24 thermal array, a low-res visual camera optional (for the zone map — can be disabled for privacy, though inside a board there's nothing personal), ambient T/RH, ESP32-C6-class MCU with LoRa (from the Stamp C6LoRa reference) or WiFi, powered from 24 V aux (common in larger boards) or a DIN-rail 230 V → 5 V supply (bought-in certified, installed by the electrician), optional battery/supercap for a "lost power" alert. Firmware: zone map set up on a phone at install (draw boxes over the thermal image), baseline learning per zone vs ambient and vs load (if a meter is available over Modbus later), ΔT and absolute alarms, daily max per zone, LoRaWAN uplink (zone maxima only — tiny payload), monthly PDF per building, alarm by email/SMS/webhook via the FM's platform or ours.

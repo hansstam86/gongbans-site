@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Cat-M modules are cheap and pre-certified; the "one footprint, three module generations" design is documented; recent frost years pushed insurers toward monitoring; incumbents are quote-only and sell platforms ([Weenat](https://weenat.com/en/?p=289395), [Leova SMART](https://www.nordicsemi.com/Nordic-news/2022/11/the-leova-smart-employs-the-nrf9160-sip)).
 - **The ask:** ~€85k (estimate) to the first 1,000 units; route = deposits at growers' association evenings before the season + bootstrap; an insurer co-marketing deal as the lever.
 
+<!-- market-check:start -->
+> **External market check (November 2026): UNCERTAIN.** The frost-warning category is real and established (Pessl / METOS frost products, Sencrop, a UK-funded Terraprima / Vinewatch project), confirming funded institutional interest, but no competitor pricing was found anywhere (quote-only is the norm), so the "no €1,400 weather station" comparison is unverified either way. **Main risk:** The price claim in the pitch is unsupported until a competitor quote is in hand. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -127,6 +131,21 @@ Segments: (1) winegrowers 2–20 ha (DE/AT/FR/IT — hundreds of thousands of ho
 | DIY LoRa/Cat-M sensor | Makers | No weatherproofing, no SIM logistics, nobody on call |
 
 **Wedge:** the dumbest possible product: a post, a sensor, a text message. €169, SIM included for 5 years, threshold by SMS reply, 3 sensors per 10 ha instead of 1 station.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| METOS viticulture brochure; METOS frost leaflet (Pessl) | Frost-warning stations | Incumbent, quote-only |
+| Sencrop | Connected weather stations for farms | Incumbent |
+| Terraprima / Vinewatch (UK-funded) | Vineyard monitoring project | Institutional interest |
+| IoT World Today: smart vineyard frost device | Trade coverage | Category is active |
+
+**Verdict as researched: UNCERTAIN.** Main risk: The price claim in the pitch is unsupported until a competitor quote is in hand.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: IP65 enclosure on a 1.5 m fibreglass or aluminium post with a ground spike or a clamp for existing trellis posts; radiation-shielded T/RH sensor at canopy height (shield is critical — radiant cooling fools unshielded sensors by 1–2 °C); 2 W solar panel + 2,000 mAh Li-ion (or LiFePO4 for cold); Cat-M/NB-IoT module with an EU multi-network IoT eSIM; RTC-timed wake (every 10 min in frost season, every hour otherwise), SMS when below threshold, "all clear" SMS at sunrise, daily low in one text, low-battery text. Settings by SMS reply ("SET -1" / "ADD +4917…"). Optional web page with the plot's history for those who want it.

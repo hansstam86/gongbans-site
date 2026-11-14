@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Open ESP32-S3 battery stamp and an open P3 LED-matrix driver are in the catalogue; laser TX/RX units are cheap modules; grassroots sport funding is explicitly for equipment.
 - **The ask:** ~€65k (estimate) to 1,000 sets. Route: pre-orders at athletics meets (the kill question) + bootstrap; a sports-federation partnership if the demo lands.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** Freelap's cheapest usable club pack runs about $535–845 and full setups commonly $500–2,500, which overlaps the €199–249 target rather than being beaten five times over as the pitch implies. **Main risk:** Incumbents already serve the budget end; the product needs a reason beyond price. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -125,6 +129,20 @@ Users are coaches who set up in 2 minutes on grass or snow in the cold, with glo
 | DIY Arduino gates (many web guides) | €40 parts | No sun immunity, no sync, no case |
 
 **Wedge:** a finished, weather-tolerant €199–249 product with a display athletes can read from 30 m, no chips to lose, and a 2-minute setup. The dog-agility and ski niches are underserved and talkative.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Freelap packs (SimpliFaster) | About $535–845 for a club pack | Budget incumbent, overlapping the target |
+| Brower Black Box / TCi | Timing systems, $500–2,500 setups | Established incumbent |
+| Buyer's Guide to Sports Timing; Athletics Direct UK | Market overviews | Category is served at the budget end |
+
+**Verdict as researched: WEAK.** Main risk: Incumbents already serve the budget end; the product needs a reason beyond price.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Set: 2 gates (each: modulated laser TX + RX with reflector option, ESP32-S3, 18650 cell, tripod thread, 10 h runtime), 1 display (64×32 P3 LED matrix, 18650 ×2 or USB-C PD, readable in daylight at 30 m), ESP-NOW mesh with ±1 ms sync, start modes (break-beam start, button start, reaction start with a tone), split times with up to 6 gates. App (BLE) optional for athlete lists and CSV export — v1 ships without it.

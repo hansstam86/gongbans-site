@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** The Modbus installed base in homes exploded with heat pumps and PV; the catalogue has a keyboard handheld (Cardputer), an isolated RS485 unit, and an open rechargeable Bluetooth-to-RS485 test box to build from.
 - **The ask:** ~€75k (estimate) to 1,000 units. Route: pre-orders from installer communities + bootstrap; a distributor's prepayment or a wholesaler listing replaces an angel.
 
+<!-- market-check:start -->
+> **External market check (November 2026): UNCERTAIN.** No handheld device marketed specifically as a Modbus/RS485 bus analyser for HVAC or solar technicians was found, only adjacent refrigerant and system tools (Fieldpiece, Mastercool). This could be genuine white space or a niche that general search does not index well (industrial and BMS channels). **Main risk:** Absence of evidence is not a gap confirmed; check industrial-distribution catalogues and ask technicians before reading it as white space. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -124,6 +128,20 @@ The user is a service technician who does 4–6 site visits a day. The buyer is 
 | "Do nothing" (guess, call the hotline) | Free | Lost hours, repeat visits |
 
 **Wedge:** price (1/7 of a lab analyser), **profiles** (plug in, pick "heat pump brand X", see COP, flow temp, error code in plain language), auto-baud/ID scan, isolation that survives wiring mistakes, and a visit log on SD that the office can attach to the job. Source on tool landscape: [RS485 analysers for industrial automation](https://industrialmonitordirect.com/blogs/knowledgebase/rs485-protocol-analyzers-and-testers-for-industrial-automation).
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Fieldpiece HG2 / HG3 | HVAC system analysers (refrigerant side) | Adjacent, not a bus analyser |
+| Mastercool system analyser kits | Same | Adjacent |
+| ACHR News on Modbus data offload | Trade article | Technicians do deal with Modbus data in the field |
+
+**Verdict as researched: UNCERTAIN.** Main risk: Absence of evidence is not a gap confirmed; check industrial-distribution catalogues and ask technicians before reading it as white space.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: Cardputer-class handheld (ESP32-S3, 1.14" screen, QWERTY keyboard), isolated RS485 front-end with surge protection and A/B swap detection, bus-activity LEDs, line-voltage check (A/B/idle), microSD, BLE/WiFi, 1,200 mAh Li-ion, rubber boot, 2-pin + screw terminal + RJ45 pigtail adapters. Firmware: passive sniff mode (decode traffic, CRC error counter), master mode (auto-baud 1200–115200, parity sweep, ID scan 1–247), register read/write with profile decoding, profile packs updatable from SD or phone, visit log (CSV + annotated), screenshot to SD. Phone app: profile updates, report export (PDF), OTA.

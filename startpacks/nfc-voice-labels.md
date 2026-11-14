@@ -12,6 +12,10 @@
 - **Why now:** NFC reader, recorder and audio-player circuits are catalogue parts; NTAG-class stickers are a commodity; the incumbent's price and proprietary labels are the opening.
 - **The ask:** ~€55k to the first 1,000 pens; bulk pre-orders from 3 support organisations fund half.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** PenFriend (RNIB-affiliated, about $180) is the dominant incumbent but is barcode-based, not NFC, which confirms the NFC plus washable-sticker approach as a real gap. A DIY app (VoiceTag) validates the concept's appeal. **Main risk:** PenFriend is deeply entrenched with blind-support organisations; displacing institutional buying habits is the real challenge, not features. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -125,6 +129,20 @@ Who pays: sight-loss organisations and their shops (they resell to members, ofte
 | Do nothing — rubber bands, memory, a sighted helper | €0 | Dependence |
 
 **Wedge:** half the price, commodity stickers (any NTAG-class sticker works, we sell nice washable ones), louder, one button, and a typed-label path for carers (type text on a PC, drop it on the pen, it speaks it).
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| RNIB PenFriend 3 | About $180, barcode labels | Dominant incumbent, different technology |
+| VoiceTag (AppleVis discussion) | DIY app for voice labels | Concept appeal validated |
+| AgriAbility PenFriend listing | Retail listing | Price point of the incumbent |
+
+**Verdict as researched: LIKELY.** Main risk: PenFriend is deeply entrenched with blind-support organisations; displacing institutional buying habits is the real challenge, not features.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **Pen:** 150 × 25 mm, one large concave button (press = play, hold = record), tactile ring, 1 W speaker, mic, 3.5 mm jack, USB-C charge/data, Li-ion 500 mAh (weeks of use), vibration confirm, mass-storage mode (notes as files).

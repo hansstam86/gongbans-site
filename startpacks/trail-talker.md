@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Presence sensing that detects a *standing* visitor (TMOS), MP3 and class-D amp boards are catalogue parts; interpretation budgets exist and are spent on signage every year anyway.
 - **The ask:** ~€85k (estimate) to 1,000 posts. Route: paid pilots (5 parks × 3 posts at €399), then public-procurement framework listings; grants for heritage/accessibility projects pay for the first 100.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK TO UNCERTAIN.** This exact product already exists and is deployed at scale: Blackbox-av (UK) has installations at Vindolanda (24,000+ plays), RSPB Conwy and the Trans Pennine Trail. Not white space; an entrenched single-vendor niche. **Main risk:** Needs a specific wedge against Blackbox-av: price, EU-wide reach or faster delivery. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -126,6 +130,19 @@ Incumbents: UK-style solar audio posts sold to trails and playgrounds (PIR-activ
 | DIY (Arduino + MP3 module) | Hobby trail projects exist | Dies in winter; nobody supports it |
 
 **Wedge:** a catalogue product (not a quote), €349–449, sized for a northern winter, content changed by the caretaker's phone, button for languages, and procurement-ready documentation (CE, IP66, accessibility statement).
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Blackbox-av: Trans Pennine Trail, Vindolanda, RSPB Conwy | Solar audio posts, commercially deployed | Direct incumbent, same product |
+| Shelley Signs | Phone-based audio-trail alternative | Competing approach without hardware |
+
+**Verdict as researched: WEAK TO UNCERTAIN.** Main risk: Needs a specific wedge against Blackbox-av: price, EU-wide reach or faster delivery.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: aluminium/polycarbonate head unit (post sold separately or supplied by the site's signage maker), 10 W solar panel on a tilt bracket, 3.7 V 10 Ah LiFePO4 or Li-ion (LiFePO4 preferred for cold and safety), MPPT/solar charge path, TMOS presence sensor (detects a standing person, not just motion), ESP32-based controller with MP3 decoding, 10–15 W class-D amp (TAS5754M-class closed-loop) into an IP66 speaker, 1–3 language buttons, microSD, BLE for content upload and status. Firmware: play on approach (debounce, cooldown), quiet hours, volume by ambient noise, battery-save modes, play counters (anonymous).

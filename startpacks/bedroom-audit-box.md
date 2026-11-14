@@ -12,10 +12,18 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Sleep is the growth wellness category; NDIR CO2 sensors fell under €15; retailers need an advisory service that justifies a visit and drives ventilation, blackout and climate upsell.
 - **The ask:** ~€120k (estimate) to a 1,000-box fleet across 150 shops. Route: pilot fees from 5 shops, then a retailer-partner or angel; leasing to shops makes the hardware a financed asset.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** No precedent anywhere for the core mechanic (a mattress retailer rents out a monitoring box, the customer returns it and gets a report). Every real competitor either sells a consumer sleep tracker outright (Withings, Beautyrest Sleeptracker at about $199) or uses sleep data only as an in-store sales aid (Mattress Firm with SleepScore). **Main risk:** Less "market exists but crowded" than "untested business model": the rental-through-retailer channel is the open question, bigger than competition. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+>
+> **Untested business model found in research (November 2026).** The research found no precedent anywhere for the pack's core mechanic: a mattress or sleep retailer renting out a monitoring box and handing the customer a report. Every real competitor sells a tracker outright or uses sleep data only as an in-store sales aid. Treat the rental-through-retailer channel as the first thing to validate, ahead of the product; the kill question's five mattress shops are the right test, run it before anything else. As researched November 2026 by web search; verify before relying on it.
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
 **Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+> **Untested business model found in research (November 2026).** The research found no precedent anywhere for the pack's core mechanic: a mattress or sleep retailer renting out a monitoring box and handing the customer a report. Every real competitor sells a tracker outright or uses sleep data only as an in-store sales aid. Treat the rental-through-retailer channel as the first thing to validate, ahead of the product; the kill question's five mattress shops are the right test, run it before anything else. As researched November 2026 by web search; verify before relying on it.
 
 ### The gate: this idea's kill question
 
@@ -125,6 +133,21 @@ The science isn't marketing: an observational actigraphy study of 62 adults foun
 | DIY (ESP32 + sensors + Home Assistant) | Hobbyist | Not a retail service |
 
 **Wedge:** the *service*, not the sensor: one button, zero setup, no WiFi needed at the customer's home (data stays on the box, uploads when returned to the shop), a report written for a shop conversation, and fleet management (auto-reset, hygiene wipe checklist, loss tracking). Source for device landscape: [T3 on bedroom monitors](https://t3.com/home-living/smart-home/this-tiny-smart-monitor-tracks-your-bedrooms-air-quality-to-help-improve-your-sleep).
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| RetailWire piece on sleep tech in retail | Retail coverage | No rental-box model found |
+| Sleepace RestOn sold to furniture retailers | Tracker sold outright through retailers | Outright sale, not rental |
+| Beautyrest Sleeptracker launch (about $199) | Consumer tracker | Outright sale |
+| Mattress Firm + SleepScore | Sleep data as an in-store sales aid | Data used to sell mattresses, not sold as a service |
+
+**Verdict as researched: WEAK.** Main risk: Less "market exists but crowded" than "untested business model": the rental-through-retailer channel is the open question, bigger than competition.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: 90 × 90 × 40 mm box, NDIR CO2, SHT3x-class T/RH, ambient-light sensor (lux, with colour-temperature if cheap), MEMS mic → dBA level only (no audio stored), e-paper or LED status, one button, 2,000 mAh Li-ion (7 nights + margin), USB-C. Software: on-box logging; dock/USB or WiFi upload at the shop; report generator (PDF + shop screen) with per-night charts and 3–5 recommendations; fleet console (which box is where, battery, reset, wipe log). Retailer branding on the report.

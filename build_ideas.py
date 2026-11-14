@@ -64,8 +64,9 @@ def market_badge(i):
     mk = build_startpacks.MARKET.get(i["slug"])
     if not mk:
         return ""
-    cls = "likely" if mk["verdict"] == "LIKELY" else "weak"
-    return f'<span class="market-badge {cls}" title="External market check, November 2026: {e(mk["verdict"])}. Verify before relying on it.">Market: {e(mk["verdict"].split()[0].lower())}</span>'
+    word = mk["verdict"].split()[0].lower()
+    cls = word if word in ("likely", "weak", "uncertain") else "weak"
+    return f'<span class="market-badge {cls}" title="External market check, November 2026: {e(mk["verdict"])}. Verify before relying on it.">Market: {e(word)}</span>'
 
 
 def card(i, rank=None):
@@ -192,7 +193,8 @@ def render_idea(i, ideas, boards):
     item("Price (estimate)", f'€{e(i["price_eur_est"])}', "gold")
     mk = build_startpacks.MARKET.get(i["slug"])
     if mk:
-        item("External market check", f'<a href="/startpacks/{e(i["slug"])}.html#market-check">{e(mk["verdict"].title())}</a>' + (' · <strong>audience corrected</strong>' if mk.get("correction") else ""), "gold" if mk["verdict"] == "LIKELY" else "")
+        flag = (' · <strong>audience corrected</strong>' if i.get("kill_question_original") else ' · <strong>flagged</strong>') if mk.get("correction") else ""
+        item("External market check", f'<a href="/startpacks/{e(i["slug"])}.html#market-check">{e(mk["verdict"].title())}</a>' + flag, "gold" if mk["verdict"].startswith("LIKELY") else "")
     item("Built from", f'{len(i["built_from"])} catalogue boards')
     item("Design files", e(i["open_files_share"]))
     if i["slug"] in PACKS:
@@ -277,7 +279,7 @@ def render_idea(i, ideas, boards):
     <h2>Kill question</h2>
     <div class="hans-note">
       <div class="hans-note-label">Answer it for under €500</div>
-      <p>{e(i["kill_question"])}</p>{f'<p class="kq-note"><strong>{e(i["market_correction"]["title"])}.</strong> {e(i["market_correction"]["text"])} Original question: "{e(i["kill_question_original"])}"</p>' if i.get("market_correction") else ""}
+      <p>{e(i["kill_question"])}</p>{f'<p class="kq-note"><strong>{e(i["market_correction"]["title"])}.</strong> {e(i["market_correction"]["text"])}{(" Original question: " + chr(34) + e(i["kill_question_original"]) + chr(34)) if i.get("kill_question_original") else ""}</p>' if i.get("market_correction") else ""}
     </div>
   </section>
 

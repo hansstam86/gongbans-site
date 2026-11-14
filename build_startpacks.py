@@ -245,7 +245,8 @@ def render_pack(slug, md, idea, n_total):
         item("Unit BOM (estimate)", f'€{e(idea["bom_eur_est"])}', "gold")
         item("Price (estimate)", f'€{e(idea["price_eur_est"])}', "gold")
     if mk:
-        item("External market check", f'<a href="#market-check">{e(mk["verdict"].title())}</a>' + (' · <strong>audience corrected</strong>' if mk.get("correction") else ""), "gold" if mk["verdict"] == "LIKELY" else "")
+        flag = (' · <strong>audience corrected</strong>' if idea and idea.get("kill_question_original") else ' · <strong>flagged</strong>') if mk.get("correction") else ""
+        item("External market check", f'<a href="#market-check">{e(mk["verdict"].title())}</a>' + flag, "gold" if mk["verdict"].startswith("LIKELY") else "")
     item("Boards referenced", f'{len(db_links)} catalogue boards')
     item("Source", f'<a href="/startpacks/{e(slug)}.md" download>Download as Markdown ↓</a>')
     first = ' class="first"'

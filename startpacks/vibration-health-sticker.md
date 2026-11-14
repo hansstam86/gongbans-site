@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** LoRaWAN is standard in buildings; MEMS accelerometers at €1–2 do what €200 piezo sensors did; an open ESP32-C6 + LoRa core exists; FM contracts increasingly require "condition-based" maintenance language.
 - **The ask:** ~€100k (estimate) to the first 1,000 nodes; route = paid pilots with 3 facility managers + bootstrap; HVAC service contractors for scale.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** A mature, commercialised category: Monnit ($215–356), Netvox (about AUD 242, subscription) and Advantech ($2,799) all sell vibration and temperature nodes to the same facility-manager buyer today. The €79–99 node undercuts meaningfully. **Main risk:** The no-gateway, LoRaWAN-native deployment story has to be proven, not assumed, to matter against incumbents. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -126,6 +130,20 @@ Who pays vs who uses: the building owner or FM company pays (capex per node + sm
 | DIY (ESP32 + accelerometer + MQTT) | A few FM tech leads | No battery life, no IP65, no trend logic, no CE |
 
 **Wedge:** building-IoT price (€89), 5-year battery, magnet-on-and-walk-away install, on-node trend (tiny payload → battery life → price), a three-colour list instead of spectra, CMMS export, and HVAC contractors as the channel.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Monnit ALTA vibration sensors | About $215–356 | Incumbent |
+| Netvox accelerometer | About AUD 242 plus subscription | Incumbent |
+| Advantech WISE-2410-NB | About $2,799 | Enterprise incumbent |
+
+**Verdict as researched: WEAK.** Main risk: The no-gateway, LoRaWAN-native deployment story has to be proven, not assumed, to matter against incumbents.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: 45 mm puck, IP65, strong magnet base (and an adhesive/strap option for aluminium housings), 3-axis accelerometer (±16 g, 1.6–6.4 kHz ODR for bearing-band energy), surface temperature via the base (NTC) — the "temperature of the housing" is half the diagnosis, ESP32-C6-class MCU + LoRa (from the open C6LoRa core; a lower-power MCU in v2), primary Li-SOCl2 or Li-MnO2 cell for 5 years at 4 measurements/day, BLE for install/config. Firmware: wake 4×/day, capture 2 s at high ODR, compute RMS velocity (ISO 20816-class bands), peak, crest factor, bearing-band energy, temperature; compare to the asset's learned baseline; uplink 12 bytes; red/amber/green thresholds per asset class (pump, fan, compressor) with ISO-derived defaults. Platform: asset list, trend per node, alerts by email/webhook, CSV/CMMS export, LoRaWAN via the building's own network or a bundled gateway (bought-in).

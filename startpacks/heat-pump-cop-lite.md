@@ -12,10 +12,18 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** 2.6–2.9 M residential heat pumps sold in Europe in 2025 alone, ~28 M installed ([EHPA via pv magazine](https://www.pv-magazine.com/2026/03/23/european-residential-heat-pump-sales-increased-in-2025/), [IIR](https://iifiir.org/en/news/european-heat-pump-market-shows-signs-of-recovery-in-2025-after-two-year-decline)); the local-first smart-home crowd is huge; CT clamps and pipe sensors are commodities.
 - **The ask:** ~€75k (estimate) to the first 1,000 units; route = forum pre-orders (the kill question is the funding) + bootstrap.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK.** The technical premise, not only demand, is weak: OpenEnergyMonitor's own documentation states that clip-on current clamps plus flow and return temperature sensors (their "Level 2") are not sufficient for a real COP; true COP needs heat-output metering ("Level 3", about £550, a harder instrument). The active OpenEnergyMonitor community is real evidence of interest, and also exactly the audience most likely to call the "±15% indicative" claim optimistic. **Main risk:** Technical credibility: the most knowledgeable buyers may reject the method before price is discussed. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+>
+> **Technical premise questioned by research (November 2026).** OpenEnergyMonitor, the reference community for exactly this audience, documents that clip-on current plus flow/return temperatures do not give a real COP; that needs a heat meter. The pack sells the kit as "indicative, ±15%", which the research flags as optimistic and as the claim an expert audience will test first. Before the demand test, settle the method: either prove the ±15% against a Level-3 reference on real installations, or reposition the kit as a settings-check tool that does not claim a COP figure. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it.
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
 **Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+> **Technical premise questioned by research (November 2026).** OpenEnergyMonitor, the reference community for exactly this audience, documents that clip-on current plus flow/return temperatures do not give a real COP; that needs a heat meter. The pack sells the kit as "indicative, ±15%", which the research flags as optimistic and as the claim an expert audience will test first. Before the demand test, settle the method: either prove the ±15% against a Level-3 reference on real installations, or reposition the kit as a settings-check tool that does not claim a COP figure. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it.
 
 ### The gate: this idea's kill question
 
@@ -127,6 +135,20 @@ Who pays vs who uses: the owner pays and uses (B2C); installers buy 5–10 as a 
 | DIY: ESP32 + DS18B20 + CT clamp + ESPHome | Thousands do it | No calibration, no clamp accuracy, no installer PDF, no CE |
 
 **Wedge:** €199, no plumber, 30-minute install, honest ±15% label, local-first, installer PDF — and a Pro path (flow meter) for the ones who then want ±5%.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| OpenEnergyMonitor heat-pump monitoring docs | Level 2 (CT + temps) vs Level 3 (heat meter) | States Level 2 is not sufficient for real COP |
+| EmonHP Level 2 PDF | Method description | Same |
+| HeatpumpMonitor.org / GitHub | Community of monitored heat pumps | Interest is real; audience is expert |
+
+**Verdict as researched: WEAK.** Main risk: Technical credibility: the most knowledgeable buyers may reject the method before price is discussed.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 Hardware: hub (ESP32-S3 or -C6, WiFi, RS485 isolated, 2 sensor inputs, CT input, small e-paper or LEDs), two clamp-on pipe temperature sensors (NTC or PT1000 in a spring clamp with thermal pad, insulated cover — contact beats IR on shiny pipes), one split-core CT clamp (certified bought-in part, installer-fitted wording), USB-C PSU. Firmware: flow estimate from pump curve/ΔT with the brand's circulation pump data or a user-entered flow (from the commissioning sheet — many owners have it), daily/weekly indicative efficiency, cycling counter, defrost detection from ΔT patterns, hot-water vs heating split, MQTT/Home Assistant native, optional RS485/Modbus read from pumps and meters that expose it (the Pro way to get real electricity and sometimes real flow), installer PDF.

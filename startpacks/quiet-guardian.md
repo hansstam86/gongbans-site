@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Thread/Zigbee-class radios on €2 silicon with one-year coin-cell life, a thermal-presence sensor as a €10 module, and a demographic cliff that home care cannot staff. Europe has no €149, no-fee, privacy-first kit from a brand the children trust.
 - **The ask:** ~€140k to the first 1,000 kits; hardware is trivial, the money goes into the pattern software, the family UX and the trust (DPIA, consent flow, support).
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Passive, camera-free elderly-monitoring kits for family use are a real, populated category: IvedaCare ($500 + $50 a month), StillWell ($349 + about $49 a month), Blissfull Sense (about €460) and Caregiver Smart Solutions ($147–294 + $4–12 a month) all ship today, all with a subscription. The pack's "€2,500 lamp" reference could not be verified. **Main risk:** Every real competitor charges an ongoing subscription; the near-subscription-free pitch is the differentiator and is unproven against entrenched competitors. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -132,6 +136,22 @@ Sources used: Dutch press on Nobi pricing (€39/month lamp + €19 platform; ~�
 | Smart-home motion sensors with "activity" notifications (Aqara, Ring) | €20–60 | Ecosystem apps, no pattern learning, alert spam |
 
 **Wedge:** a consumer-priced, no-subscription-required kit that a child installs in 15 minutes, says "all normal" once a day, and promises in writing: no camera, no microphone, no data sold, parent can unplug it.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| NCOA Best Monitoring Systems 2025 | Category overview | Category is real and populated |
+| IvedaCare Kit | $500 + $50/month | Incumbent, subscription |
+| StillWell | $349 + about $49/month | Incumbent, subscription |
+| Blissfull Sense | About €460 | Incumbent |
+| Caregiver Smart Solutions | $147–294 + $4–12/month | Incumbent, subscription |
+
+**Verdict as researched: LIKELY.** Main risk: Every real competitor charges an ongoing subscription; the near-subscription-free pitch is the differentiator and is unproven against entrenched competitors.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 
