@@ -545,65 +545,6 @@
    "score_total": 17
   },
   {
-   "slug": "loop-logger-4-20ma",
-   "title": "4–20 mA Loop Logger (LoRaWAN)",
-   "category": "LoRaWAN & building IoT",
-   "pitch": "A DIN-rail or field box that reads any legacy 4–20 mA sensor (level, pressure, flow) and sends it over LoRaWAN, turning thirty-year-old instrumentation into IoT without touching the control loop.",
-   "audience": "Water utilities, greenhouses, breweries, small process plants and system integrators across Europe.",
-   "why_now": "Millions of 4–20 mA transmitters are installed and un-networked; LoRaWAN coverage (public and private) is mature; retrofit beats replacement for budget-constrained operators.",
-   "built_from": [
-    {
-     "board_slug": "m5stack-unit-ain4-20ma",
-     "role": "4–20 mA analogue input reference",
-     "board_name": "M5Stack Unit AIN4-20mA (U162)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-stamp-c6lora",
-     "role": "open ESP32-C6 + LoRa core",
-     "board_name": "M5Stack Stamp C6LoRa (S012)",
-     "issuer": "M5Stack",
-     "open_files": "pcb,schematic"
-    },
-    {
-     "board_slug": "m5stack-unit-lorawan-eu868",
-     "role": "EU868 LoRaWAN module",
-     "board_name": "M5Stack Unit LoRaWAN-EU868 (U184-EU868)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-base-din",
-     "role": "DIN-rail mounting reference",
-     "board_name": "M5Stack Base DIN (M132)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    }
-   ],
-   "whats_new": "Loop-powered or 24 V option, two channels, threshold alarms on the node, standard payload codec, IP65 field variant with 5-year battery.",
-   "effort_weeks_est": "10–14",
-   "bom_eur_est": "25–40",
-   "price_eur_est": "149–199",
-   "certification": "RED (EN 300 220 via module), EMC industrial (EN 61326 class), EN 62368-1 / 61010 depending on wiring, CRA.",
-   "kill_question": "Do 5 system integrators each order a 10-unit pilot at €169 within 6 weeks?",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 3,
-    "buildability": 5,
-    "margin": 4,
-    "speed": 4
-   },
-   "tags": [
-    "lorawan",
-    "industrial",
-    "retrofit",
-    "b2b"
-   ],
-   "open_boards_note": "1 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 16
-  },
-  {
    "slug": "balance-kit",
    "title": "Balance Kit",
    "category": "Industrial & installer tools",
@@ -721,66 +662,6 @@
     "check-licence"
    ],
    "open_boards_note": "4 of 4 boards publish schematic/PCB files",
-   "score_total": 16
-  },
-  {
-   "slug": "classroom-geiger-kit",
-   "title": "Classroom Geiger Kit",
-   "category": "Education & STEM",
-   "pitch": "A Geiger counter kit with a clicker, a big count display and a datalogger for physics lessons on radioactivity — demonstrate background, distance and shielding with potassium salt and a banana.",
-   "audience": "Secondary-school physics departments, science museums, STEM clubs in the EU.",
-   "why_now": "Radioactivity is in every physics curriculum but school counters are 30 years old; open Geiger designs exist and public interest in radiation measurement is high.",
-   "built_from": [
-    {
-     "board_slug": "oshwhub-he-fu-she-jian-ce-yi",
-     "role": "open Geiger-tube radiation detector board",
-     "board_name": "盖革计数器-辐射检测仪",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "m5stack-stickc-plus",
-     "role": "display + battery + BLE for the handheld",
-     "board_name": "M5Stack StickC-Plus (K016-P)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "seeed-grove-4-digit-display",
-     "role": "big count display for the demo variant",
-     "board_name": "Seeed Grove-4-Digit Display",
-     "issuer": "Seeed Studio",
-     "open_files": "schematic"
-    },
-    {
-     "board_slug": "m5stack-unit-buzzer",
-     "role": "the click",
-     "board_name": "M5Stack Unit Buzzer (U132)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    }
-   ],
-   "whats_new": "Classroom experiment cards, logging to the class spreadsheet, safe high-voltage section enclosed, tube supply from EU stock.",
-   "effort_weeks_est": "8–12",
-   "bom_eur_est": "25–40",
-   "price_eur_est": "119–159",
-   "certification": "EMC/LVD (internal HV ≤ 500 V enclosed), EN 62368-1, RED if BLE, Li-ion UN 38.3; measures only, no dosimetry claims.",
-   "kill_question": "Do 10 schools or museums buy at €139 from an educational distributor's catalogue entry within one term?",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 2,
-    "buildability": 5,
-    "margin": 4,
-    "speed": 5
-   },
-   "tags": [
-    "education",
-    "environment",
-    "sensors",
-    "kit",
-    "check-licence"
-   ],
-   "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
    "score_total": 16
   },
   {
@@ -962,67 +843,6 @@
    "score_total": 16
   },
   {
-   "slug": "isolated-interface-kit",
-   "title": "Isolated Field-Tech Interface Kit",
-   "category": "Industrial & installer tools",
-   "pitch": "A rugged pocket set of galvanically isolated USB-to-RS485/RS232/TTL adapters and a 4-port RS485 fan-out, so service technicians can talk to heat pumps, inverters and PLCs without frying a laptop.",
-   "audience": "HVAC, solar and building-automation service technicians; industrial maintenance teams; distributors of installer tools.",
-   "why_now": "Every heat pump and inverter now exposes Modbus; technicians use €5 unisolated dongles and lose laptops. Boring, low-risk, no radio — sellable as a pilot within a month.",
-   "built_from": [
-    {
-     "board_slug": "oshwhub-ge-li-xing-usb-zhuan-485-232-ttl-san-ge-yi",
-     "role": "isolated USB to RS485/RS232/TTL three-in-one",
-     "board_name": "隔离型USB转485,232,TTL三合一",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-ch344q-usb-ji-xian-qi",
-     "role": "USB to 4× RS485 for testing several devices at once",
-     "board_name": "USB转4路485-CH344Q",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-project-xuyxglld",
-     "role": "isolated USB converter with over-current protection",
-     "board_name": "【开源】【彩色丝印】隔离USB转换器",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-lckfb-ch340x-usb-to-ttl-type-c",
-     "role": "protected USB-C to TTL tool",
-     "board_name": "LCKFB-CH340X-USB-TO-TTL-TYPE-C",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    }
-   ],
-   "whats_new": "Metal housing, labelled screw terminals, a cable set for the common heat-pump and inverter connectors, and a bundled Modbus scanner app.",
-   "effort_weeks_est": "4–8",
-   "bom_eur_est": "18–30 per kit",
-   "price_eur_est": "99–149",
-   "certification": "EMC (EN 55032/55035) and LVD self-declaration only — no radio, no battery; CRA for the software.",
-   "kill_question": "Do 20 installers from one regional trade association pre-order at €119 after a 2-minute demo?",
-   "open_files_share": "all open",
-   "scores": {
-    "demand": 3,
-    "buildability": 5,
-    "margin": 3,
-    "speed": 5
-   },
-   "tags": [
-    "industrial",
-    "installer",
-    "rs485",
-    "no-radio",
-    "b2b",
-    "check-licence"
-   ],
-   "open_boards_note": "4 of 4 boards publish schematic/PCB files",
-   "score_total": 16
-  },
-  {
    "slug": "nfc-voice-labels",
    "title": "NFC Voice Labels",
    "category": "Accessibility",
@@ -1079,66 +899,6 @@
     "elderly"
    ],
    "open_boards_note": "1 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 16
-  },
-  {
-   "slug": "one-knob-radio",
-   "title": "One-Knob Radio",
-   "category": "Audio",
-   "pitch": "A beautiful wooden radio with a single big knob (on/volume) and preset stations or carer-loaded playlists, designed for people with dementia and for anyone who hates menus.",
-   "audience": "Families and care homes in DE/NL/UK/Nordics; dementia-care retailers.",
-   "why_now": "Dementia prevalence rises with the age structure; existing simple players cost €100–250 and look clinical. The catalogue provides the sub-€5 speaker electronics.",
-   "built_from": [
-    {
-     "board_slug": "jieli-ac6951c-bt-speaker",
-     "role": "the standard sub-RMB20 Bluetooth-speaker schematic: amp + BT + SD playback",
-     "board_name": "Jieli AC6951C BT speaker standard schematic (标准原理图)",
-     "issuer": "Jieli 杰理",
-     "open_files": "schematic"
-    },
-    {
-     "board_slug": "oshwhub-retro-four-band-radio",
-     "role": "open no-code MW/SW/FM radio for the 'real radio' SKU",
-     "board_name": "简单的怀旧MW/SW/FM 四波段收音机",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "m5stack-unit-audioplayer",
-     "role": "prototype playback",
-     "board_name": "M5Stack Unit AudioPlayer (U197)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-unit-encoder",
-     "role": "the one big knob",
-     "board_name": "M5Stack Unit Encoder (U135)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    }
-   ],
-   "whats_new": "Industrial design (wood, one knob, no visible buttons), carer-side setup via SD card or app, fail-safe 'it always plays something'.",
-   "effort_weeks_est": "10–14",
-   "bom_eur_est": "18–28",
-   "price_eur_est": "129–169",
-   "certification": "RED if Bluetooth/WiFi on (or ship a no-radio SKU: LVD/EMC only), EN 62368-1, RoHS/WEEE. No medical claims.",
-   "kill_question": "Five care-home activity coordinators try a 3D-printed prototype for 2 weeks: do residents use it unprompted, and would they buy 10 at €139?",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 3,
-    "buildability": 5,
-    "margin": 4,
-    "speed": 4
-   },
-   "tags": [
-    "audio",
-    "accessibility",
-    "elderly",
-    "consumer",
-    "check-licence"
-   ],
-   "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
    "score_total": 16
   },
   {
@@ -1320,65 +1080,6 @@
    "score_total": 16
   },
   {
-   "slug": "trap-check",
-   "title": "Trap Check",
-   "category": "LoRaWAN & building IoT",
-   "pitch": "A €39 LoRaWAN sensor that clips onto any snap or box trap and tells the pest controller which traps actually need a visit — a no-poison, no-truck-roll upgrade.",
-   "audience": "Independent pest-control SMEs across Europe; facility managers of food warehouses.",
-   "why_now": "Big pest-control chains have proprietary connected traps that independents cannot buy; EU pressure to reduce permanent rodenticide baiting pushes toward monitored mechanical traps.",
-   "built_from": [
-    {
-     "board_slug": "m5stack-stamp-c6lora",
-     "role": "open ESP32-C6 + LoRa stamp: the node core",
-     "board_name": "M5Stack Stamp C6LoRa (S012)",
-     "issuer": "M5Stack",
-     "open_files": "pcb,schematic"
-    },
-    {
-     "board_slug": "m5stack-unit-lorawan-eu868",
-     "role": "EU868 LoRaWAN module for the prototype run",
-     "board_name": "M5Stack Unit LoRaWAN-EU868 (U184-EU868)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-unit-limit",
-     "role": "mechanical trap-triggered detection",
-     "board_name": "M5Stack Unit Limit (U145)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "seeed-grove-collision-sensor",
-     "role": "alternative shock detection",
-     "board_name": "Seeed Grove-Collision Sensor",
-     "issuer": "Seeed Studio",
-     "open_files": "schematic"
-    }
-   ],
-   "whats_new": "Universal clip, 3–5-year battery firmware, works on public or private LoRaWAN, dead-simple dashboard with export to pest-control CRMs.",
-   "effort_weeks_est": "12–16",
-   "bom_eur_est": "9–14",
-   "price_eur_est": "39–49 per node + €2/node/month",
-   "certification": "RED (EN 300 220 via module, EN 301 489), EMC, CRA, primary-cell transport labelling. Not a trap or biocide.",
-   "kill_question": "Ten calls to regional pest-control firms: €39 per sensor, €2/month, works with your existing traps — how many would you deploy in month one? Pass = average ≥50 nodes.",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 3,
-    "buildability": 5,
-    "margin": 4,
-    "speed": 4
-   },
-   "tags": [
-    "lorawan",
-    "b2b",
-    "pest-control",
-    "sensors"
-   ],
-   "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 16
-  },
-  {
    "slug": "uvb-lamp-checker",
    "title": "UVB Lamp Checker",
    "category": "Pets",
@@ -1437,130 +1138,6 @@
    ],
    "open_boards_note": "3 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
    "score_total": 16
-  },
-  {
-   "slug": "bedroom-audit-box",
-   "title": "Bedroom Audit Box",
-   "category": "Health & wellness",
-   "pitch": "A rental box that logs noise, light, CO2, temperature and humidity in a bedroom for seven nights and produces a plain-language sleep-environment report — rented out by mattress and sleep shops.",
-   "audience": "Mattress and bedding retailers, sleep-coaching services, wellness hotels; consumers via rental.",
-   "why_now": "Sleep is a growth wellness category; sleep trackers measure the body, nobody measures the room; retailers want an advisory service that drives upsell.",
-   "built_from": [
-    {
-     "board_slug": "seeed-grove-loudness-sensor",
-     "role": "noise level reference",
-     "board_name": "Seeed Grove-Loudness Sensor",
-     "issuer": "Seeed Studio",
-     "open_files": "schematic"
-    },
-    {
-     "board_slug": "m5stack-unit-co2l",
-     "role": "CO2 for ventilation assessment",
-     "board_name": "M5Stack Unit CO2L (U104)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-unit-dlight",
-     "role": "ambient light sensor",
-     "board_name": "M5Stack Unit DLight (U136)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "seeed-grove-tempandhumi-sensor-sht31",
-     "role": "temperature/humidity",
-     "board_name": "Seeed Grove-TempAndHumi Sensor-SHT31",
-     "issuer": "Seeed Studio",
-     "open_files": "schematic"
-    }
-   ],
-   "whats_new": "7-night report with recommendations (ventilation, blackout, noise), one-button operation, rental fleet management with auto-reset, no audio recording (levels only).",
-   "effort_weeks_est": "10–14",
-   "bom_eur_est": "40–60",
-   "price_eur_est": "199 (sale) / 25 per week (rental)",
-   "certification": "RED if WiFi/BLE, EMC, EN 62368-1, Li-ion UN 38.3, CRA; GDPR minimal (no audio recording). Wellness only — no sleep-disorder claims.",
-   "kill_question": "Do 5 mattress shops rent out 3 boxes each for 2 months, and does the report change what customers buy?",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 3,
-    "buildability": 5,
-    "margin": 3,
-    "speed": 4
-   },
-   "tags": [
-    "wellness",
-    "air",
-    "sensors",
-    "rental",
-    "retail"
-   ],
-   "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 15,
-   "market_correction": {
-    "title": "Untested business model found in research (November 2026)",
-    "text": "The research found no precedent anywhere for the pack's core mechanic: a mattress or sleep retailer renting out a monitoring box and handing the customer a report. Every real competitor sells a tracker outright or uses sleep data only as an in-store sales aid. Treat the rental-through-retailer channel as the first thing to validate, ahead of the product; the kill question's five mattress shops are the right test, run it before anything else. As researched November 2026 by web search; verify before relying on it."
-   }
-  },
-  {
-   "slug": "club-timing-gates",
-   "title": "Club Timing Gates",
-   "category": "Education & STEM",
-   "pitch": "A pair of laser gates plus a display that time sprints, ski runs or agility courses to the millisecond, wireless, for €199 instead of €1,000+.",
-   "audience": "Athletics, alpine-ski, football and dog-agility clubs across Europe; PE departments.",
-   "why_now": "Incumbents cost €800–3,000; grassroots sports funding exists; cheap DIY designs circulate but no finished €199 product.",
-   "built_from": [
-    {
-     "board_slug": "m5stack-unit-laser-tx",
-     "role": "break-beam transmitter",
-     "board_name": "M5Stack Unit Laser TX (U066)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-unit-laser-rx",
-     "role": "break-beam receiver",
-     "board_name": "M5Stack Unit Laser RX (U065)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-stamp-s3bat",
-     "role": "open ESP32-S3 + battery node; ESP-NOW between gates",
-     "board_name": "M5Stack Stamp-S3Bat (S015)",
-     "issuer": "M5Stack",
-     "open_files": "pcb,schematic"
-    },
-    {
-     "board_slug": "oshwhub-matrixled",
-     "role": "open P3 LED-matrix driver for a big readable time display",
-     "board_name": "MATRIX LED 64*32 P3 全彩显示屏驱动板",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    }
-   ],
-   "whats_new": "Outdoor tripod-mount gates, ±1 ms time-sync protocol, sunlight-immune modulated beam, results app.",
-   "effort_weeks_est": "10–12",
-   "bom_eur_est": "35–50 per pair + display",
-   "price_eur_est": "199–249",
-   "certification": "RED + EN 18031 if app-connected, EMC, laser class 1/2 labelling (EN 60825), Li-ion UN 38.3, CRA.",
-   "kill_question": "Demo at one regional athletics meet and take €199 pre-orders. 15 in a day = go.",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 2,
-    "buildability": 5,
-    "margin": 3,
-    "speed": 5
-   },
-   "tags": [
-    "sports",
-    "education",
-    "display",
-    "consumer",
-    "check-licence"
-   ],
-   "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 15
   },
   {
    "slug": "haccp-fridge-logger",
@@ -1681,66 +1258,6 @@
     "check-licence"
    ],
    "open_boards_note": "1 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 15
-  },
-  {
-   "slug": "trail-talker",
-   "title": "Trail Talker",
-   "category": "Audio",
-   "pitch": "A solar-powered outdoor audio post that plays a local story when a visitor approaches — for nature trails, heritage sites and sculpture parks, with no app and no network.",
-   "audience": "Municipal parks departments, heritage trusts, nature reserves, open-air museums across Europe.",
-   "why_now": "App-based audio guides have single-digit uptake; signage budgets exist; presence sensing and MP3 playback are trivial on the catalogue's boards.",
-   "built_from": [
-    {
-     "board_slug": "seeed-grove-mp3-v2-0",
-     "role": "MP3 playback reference",
-     "board_name": "Seeed Grove-MP3 v2.0",
-     "issuer": "Seeed Studio",
-     "open_files": "schematic"
-    },
-    {
-     "board_slug": "m5stack-unit-tmos-pir",
-     "role": "presence detection, including a standing visitor",
-     "board_name": "M5Stack Unit TMOS PIR (U185)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "oshwhub-tas7454-bi-huan-shuo-zi-gong-fan",
-     "role": "open closed-loop digital amp for a weatherproof speaker",
-     "board_name": "TAS 5754M 闭环数字功放.",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-solar-to-5v-zener-regulator",
-     "role": "solar charge path",
-     "board_name": "solar-to-5v-zener-regulator",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    }
-   ],
-   "whats_new": "IP66 post housing, multilingual button, content loaded by SD or BLE from a caretaker phone, winter power budget.",
-   "effort_weeks_est": "10–14",
-   "bom_eur_est": "45–65",
-   "price_eur_est": "349–449",
-   "certification": "RED if BLE, EMC, EN 62368-1, Li-ion UN 38.3, IP66; no personal data.",
-   "kill_question": "Do 5 parks departments sign a paid 3-post pilot at €399 each within 8 weeks?",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 2,
-    "buildability": 5,
-    "margin": 4,
-    "speed": 4
-   },
-   "tags": [
-    "audio",
-    "outdoor",
-    "solar",
-    "b2b",
-    "check-licence"
-   ],
-   "open_boards_note": "3 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
    "score_total": 15
   },
   {
@@ -1866,66 +1383,6 @@
    "score_total": 14
   },
   {
-   "slug": "control-theory-balance-kit",
-   "title": "Control-Theory Balance Kit",
-   "category": "Education & STEM",
-   "pitch": "A self-balancing reaction-wheel triangle and a BLDC momentum-wheel module with open firmware, so engineering students tune a real PID/LQR loop on their desk instead of in simulation.",
-   "audience": "Universities and universities of applied sciences (control engineering, mechatronics), engineering bootcamps, serious makers.",
-   "why_now": "Control-theory lab hardware costs €2,000+ per station; open ESP32 balancing designs are proven and visually compelling; departments buy class sets.",
-   "built_from": [
-    {
-     "board_slug": "oshwhub-zi-ping-heng-di-lai-luo-san-jiao-10-10-ban-ben",
-     "role": "open self-balancing Reuleaux triangle (ESP32, rechargeable)",
-     "board_name": "自平衡的莱洛三角_esp32_可充电_10*10版本",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-zi-ping-heng-di-lai-luo-san-jiao-10-10-ban-ben-copy",
-     "role": "V2 with brushless drive",
-     "board_name": "莱洛三角V2-esp32-无刷驱动EG2133",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-lai-luo-san-jiao-dong-liang-lun",
-     "role": "momentum-wheel module",
-     "board_name": "莱洛三角动量轮",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "m5stack-unit-bldc-driver",
-     "role": "BLDC driver reference",
-     "board_name": "M5Stack Unit BLDC Driver (U181)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    }
-   ],
-   "whats_new": "Lab manual with 8 experiments, parameter streaming to a web plot, swappable controllers, safety cage; sold as a 10-station class set.",
-   "effort_weeks_est": "10–14",
-   "bom_eur_est": "45–70",
-   "price_eur_est": "249–349",
-   "certification": "EMC, EN 62368-1, RED if WiFi/BLE, Li-ion UN 38.3, CRA.",
-   "kill_question": "Do 5 control-engineering lecturers order a class set at €299 per station for next semester?",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 2,
-    "buildability": 4,
-    "margin": 4,
-    "speed": 4
-   },
-   "tags": [
-    "education",
-    "robotics",
-    "motor",
-    "kit",
-    "check-licence"
-   ],
-   "open_boards_note": "3 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 14
-  },
-  {
    "slug": "farm-shop-self-checkout",
    "title": "Farm-Shop Self-Checkout",
    "category": "Retail & POS",
@@ -2046,122 +1503,6 @@
     "check-licence"
    ],
    "open_boards_note": "3 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 14
-  },
-  {
-   "slug": "heat-pump-cop-lite",
-   "title": "Heat-Pump COP Monitor Lite",
-   "category": "Energy & solar",
-   "pitch": "A clip-on kit (two pipe temperature sensors + one power clamp) that shows your heat pump's real daily efficiency so owners catch bad settings and installers prove their work.",
-   "audience": "Heat-pump owners in DE/NL/UK/Nordics; installers as a diagnostic tool.",
-   "why_now": "Millions of heat pumps installed since 2022; owners obsess over efficiency in forums while manufacturer apps hide it; the existing open-hardware monitor cannot keep up with demand.",
-   "built_from": [
-    {
-     "board_slug": "m5stack-unit-ac-measure",
-     "role": "power measurement reference",
-     "board_name": "M5Stack Unit AC Measure (U164)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "seeed-grove-electricity-sensor",
-     "role": "CT-clamp current sensing reference",
-     "board_name": "Seeed Grove-Electricity Sensor",
-     "issuer": "Seeed Studio",
-     "open_files": "schematic"
-    },
-    {
-     "board_slug": "m5stack-unit-ncir2",
-     "role": "flow/return pipe temperatures",
-     "board_name": "M5Stack Unit NCIR2 (U150)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-unit-rs485-iso",
-     "role": "read Modbus from pumps and meters that expose it",
-     "board_name": "M5Stack Unit RS485-ISO (U094)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    }
-   ],
-   "whats_new": "Efficiency estimate without a heat meter (flow estimated from pump curve and ΔT, clearly labelled ±15%), local-hub native, installer PDF. A Pro SKU would add a bought-in flow meter (not in the catalogue).",
-   "effort_weeks_est": "14–18",
-   "bom_eur_est": "30–45",
-   "price_eur_est": "199–249",
-   "certification": "RED + EN 18031, EMC, EN 62368-1; CT clamps as certified bought-in parts, installer-fitted wording; not MID; CRA.",
-   "kill_question": "Offer the Lite kit at €199 to 100 heat-pump forum members with the ±15% caveat in bold. If they still buy, the market accepts 'indicative'.",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 4,
-    "buildability": 3,
-    "margin": 4,
-    "speed": 3
-   },
-   "tags": [
-    "energy",
-    "heating",
-    "smart-home",
-    "rs485"
-   ],
-   "open_boards_note": "1 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 14,
-   "market_correction": {
-    "title": "Technical premise questioned by research (November 2026)",
-    "text": "OpenEnergyMonitor, the reference community for exactly this audience, documents that clip-on current plus flow/return temperatures do not give a real COP; that needs a heat meter. The pack sells the kit as \"indicative, ±15%\", which the research flags as optimistic and as the claim an expert audience will test first. Before the demand test, settle the method: either prove the ±15% against a Level-3 reference on real installations, or reposition the kit as a settings-check tool that does not claim a COP figure. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it."
-   }
-  },
-  {
-   "slug": "pack-rebuilder-spot-welder",
-   "title": "Pack-Rebuilder Spot Welder",
-   "category": "Maker tools",
-   "pitch": "A compact super-capacitor spot welder with current display and foot switch for rebuilding power-tool, household and solar battery packs — sold with a safety course to repair shops.",
-   "audience": "Battery repair shops, repair cafés, solar-storage DIY builders, vocational schools.",
-   "why_now": "Right-to-repair rules and the Battery Regulation make pack rebuilding a legitimate trade; hobby welders from marketplaces have no documentation or CE file.",
-   "built_from": [
-    {
-     "board_slug": "oshwhub-bipolar-super-capacitor-spot-wel",
-     "role": "open bipolar super-capacitor spot welder with current display",
-     "board_name": "【开源】双极性超级电容点焊机",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-kai-yuan-xiao-gong-lv-fa-la-dian-rong-dian-han-ji",
-     "role": "open low-power capacitor welder (entry SKU)",
-     "board_name": "【开源】小功率法拉电容点焊机",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "m5stack-unit-ina226-10a",
-     "role": "current/voltage logging of weld pulses",
-     "board_name": "M5Stack Unit INA226-10A (U200)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    }
-   ],
-   "whats_new": "Interlocked enclosure, calibrated pulse tables for common nickel strip thicknesses, weld counter and QA log, EU-stocked electrodes.",
-   "effort_weeks_est": "10–14",
-   "bom_eur_est": "35–55",
-   "price_eur_est": "179–249",
-   "certification": "LVD/EMC, EN 62368-1 (energy hazard review for the capacitor bank), RoHS/WEEE; no radio.",
-   "kill_question": "Do 10 battery-repair shops buy at €199 after a live weld demo, and does a lab accept the capacitor energy-hazard design on first review?",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 2,
-    "buildability": 4,
-    "margin": 4,
-    "speed": 4
-   },
-   "tags": [
-    "maker",
-    "battery",
-    "tools",
-    "no-radio",
-    "check-licence"
-   ],
-   "open_boards_note": "2 of 3 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
    "score_total": 14
   },
   {
@@ -2340,66 +1681,6 @@
     "thermal",
     "b2b",
     "check-licence"
-   ],
-   "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 14
-  },
-  {
-   "slug": "vibration-health-sticker",
-   "title": "Vibration Health Sticker",
-   "category": "Industrial & installer tools",
-   "pitch": "A magnet-mount battery sensor that watches vibration and temperature of pumps, fans and compressors and sends a weekly health trend over LoRaWAN — predictive maintenance for buildings that have no maintenance engineer.",
-   "audience": "Facility managers of schools, hospitals' technical services, property managers, HVAC service contractors.",
-   "why_now": "Industrial condition monitoring costs €500+ per point and needs a platform; mid-size buildings have hundreds of motors and zero monitoring; LoRaWAN makes 5-year battery nodes feasible.",
-   "built_from": [
-    {
-     "board_slug": "m5stack-unit-accel",
-     "role": "3-axis accelerometer module",
-     "board_name": "M5Stack Unit Accel (U056)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "seeed-grove-3-axis-digital-accelerometer-lis3dhtr",
-     "role": "low-power accelerometer reference",
-     "board_name": "Seeed Grove-3-Axis-Digital-Accelerometer-LIS3DHTR",
-     "issuer": "Seeed Studio",
-     "open_files": "schematic"
-    },
-    {
-     "board_slug": "m5stack-stamp-c6lora",
-     "role": "open ESP32-C6 + LoRa core",
-     "board_name": "M5Stack Stamp C6LoRa (S012)",
-     "issuer": "M5Stack",
-     "open_files": "pcb,schematic"
-    },
-    {
-     "board_slug": "m5stack-unit-lorawan-eu868",
-     "role": "EU868 LoRaWAN uplink",
-     "board_name": "M5Stack Unit LoRaWAN-EU868 (U184-EU868)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    }
-   ],
-   "whats_new": "On-node RMS/peak/trend computation (no raw data upload), magnet mount, simple red/amber/green per asset, CMMS export.",
-   "effort_weeks_est": "14–18",
-   "bom_eur_est": "14–22",
-   "price_eur_est": "79–99 per node + platform fee",
-   "certification": "RED (EN 300 220), EMC, CRA, primary-cell transport labelling, IP65.",
-   "kill_question": "Do 3 facility managers deploy 20 nodes each in a paid pilot and report at least one caught failure in 6 months?",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 3,
-    "buildability": 4,
-    "margin": 4,
-    "speed": 3
-   },
-   "tags": [
-    "industrial",
-    "lorawan",
-    "building",
-    "maintenance",
-    "b2b"
    ],
    "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
    "score_total": 14
@@ -2590,125 +1871,6 @@
    }
   },
   {
-   "slug": "makerspace-soldering-station",
-   "title": "Makerspace Soldering & Rework Station",
-   "category": "Maker tools",
-   "pitch": "A CE-ready low-voltage soldering station, hot-air controller and DC pre-heater built on open controller boards, sold as a bundle to European makerspaces and schools with a maintenance-friendly design.",
-   "audience": "Makerspaces, FabLabs, vocational schools and university labs in the EU; electronics-education distributors.",
-   "why_now": "Labs buy either €40 no-name stations that die or €400 branded ones; open controller designs with cartridge-tip support exist but lack a European safety file and spare-parts supply.",
-   "built_from": [
-    {
-     "board_slug": "oshwhub-shuo-kong-gao-pin-zhi-neng-han-tai",
-     "role": "open digital soldering-station controller",
-     "board_name": "数控智能焊台",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-re-feng-qiang-kong-zhi-qi-mo-kuai",
-     "role": "open hot-air gun controller main board",
-     "board_name": "54X-AT热风枪控制器主板模块858",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-zhi-liu-di-ya-jia-re-tai-v1",
-     "role": "open DC low-voltage heating plate",
-     "board_name": "直流低压加热台 DC/Mini",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-tps63020",
-     "role": "buck-boost regulator reference",
-     "board_name": "TPS63020",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    }
-   ],
-   "whats_new": "All-DC architecture with one certified external PSU (keeps mains out of the box), ESD-safe metal housing, spare tips and heaters stocked in the EU, classroom lock-out mode.",
-   "effort_weeks_est": "12–16",
-   "bom_eur_est": "45–70 per bundle",
-   "price_eur_est": "199–299",
-   "certification": "LVD/EMC (DC side; PSU carries its own CE), EN 62368-1 heat/touch temperatures, RoHS/WEEE; no radio.",
-   "kill_question": "Do 10 makerspaces pre-order a 5-station class set at €249 per station?",
-   "open_files_share": "all open",
-   "scores": {
-    "demand": 3,
-    "buildability": 4,
-    "margin": 3,
-    "speed": 3
-   },
-   "tags": [
-    "maker",
-    "education",
-    "tools",
-    "no-radio",
-    "check-licence"
-   ],
-   "open_boards_note": "4 of 4 boards publish schematic/PCB files",
-   "score_total": 13
-  },
-  {
-   "slug": "motion-control-slider",
-   "title": "Motion-Control Slider",
-   "category": "Robotics & automation",
-   "pitch": "A silent, repeatable camera slider and pan-tilt head controlled by a motorised knob, for product videos, stop-motion and small studios — keyframes you can feel, not an app you fight.",
-   "audience": "Small online shops shooting product video, content creators, photo studios, schools' media labs in the EU.",
-   "why_now": "Product video is now expected in e-commerce; motion-control rigs cost €1,000+; smart servo motors with RS485/CAN and a knob-with-screen exist in the catalogue.",
-   "built_from": [
-    {
-     "board_slug": "m5stack-unit-roller485",
-     "role": "integrated servo motor with RS485 control",
-     "board_name": "M5Stack Unit Roller485 (U182)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-unit-rollercan",
-     "role": "CAN variant of the smart motor",
-     "board_name": "M5Stack Unit RollerCAN (U188)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-unit-step16",
-     "role": "16-step rotary input reference",
-     "board_name": "M5Stack Unit Step16 (U198)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "m5stack-dial",
-     "role": "knob + round screen controller",
-     "board_name": "M5Stack Dial (K130)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    }
-   ],
-   "whats_new": "Keyframe recording by hand-moving the knob, time-lapse and stop-motion modes, camera shutter trigger, 1 m rail with carbon rods, battery pack.",
-   "effort_weeks_est": "12–16",
-   "bom_eur_est": "90–130",
-   "price_eur_est": "449–599",
-   "certification": "RED (BLE/WiFi) + EN 18031, EMC (motor), EN 62368-1, Li-ion UN 38.3, CRA.",
-   "kill_question": "Do 30 creators pre-order at €499 from a 60-second demo video, and does the rail ship within 8 weeks?",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 2,
-    "buildability": 4,
-    "margin": 4,
-    "speed": 3
-   },
-   "tags": [
-    "robotics",
-    "creator",
-    "motor",
-    "consumer"
-   ],
-   "open_boards_note": "0 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 13
-  },
-  {
    "slug": "new-flat-air-check",
    "title": "New-Flat Air Check",
    "category": "Air & environment",
@@ -2827,70 +1989,6 @@
    ],
    "open_boards_note": "1 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
    "score_total": 13
-  },
-  {
-   "slug": "ros-trainer",
-   "title": "ROS Trainer Robot",
-   "category": "Robotics & automation",
-   "pitch": "A ready-built ROS navigation robot on an open RK3566 board — lidar-ready, camera-ready — sold as a classroom platform for vocational schools and applied universities teaching mobile robotics.",
-   "audience": "Vocational schools, applied universities, robotics bootcamps and corporate training in DE/NL/FR/Nordics.",
-   "why_now": "Industry demands ROS skills; existing education robots cost €3,000+; an open RK3566 ROS trolley design and open SBC exist.",
-   "built_from": [
-    {
-     "board_slug": "oshwhub-taishan-pie-ros-trolley",
-     "role": "open ROS navigation robot built on the Taishan Pi",
-     "board_name": "泰山派ROS小车",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "oshwhub-li-chuang-tai-shan-pai-kai-fa-ban",
-     "role": "open RK3566 SBC (Taishan Pi)",
-     "board_name": "立创·泰山派开发板",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    },
-    {
-     "board_slug": "m5stack-roverc-pro",
-     "role": "small omni-wheel base for the entry kit",
-     "board_name": "M5Stack RoverC-Pro (K036-B)",
-     "issuer": "M5Stack",
-     "open_files": ""
-    },
-    {
-     "board_slug": "oshwhub-sparkbot-45coll",
-     "role": "line-following and wireless-charging references",
-     "board_name": "Sparkbot_45coll版本--无线充电、红外巡线",
-     "issuer": "OSHWHub",
-     "open_files": "schematic,pcb"
-    }
-   ],
-   "whats_new": "English documentation and ROS 2 image, curriculum (SLAM, navigation, perception), swappable sensor deck, charging dock, EU spares.",
-   "effort_weeks_est": "16–22",
-   "bom_eur_est": "180–260",
-   "price_eur_est": "899–1,299",
-   "certification": "RED (WiFi), EMC, EN 62368-1, Li-ion UN 38.3, CRA; Machinery Regulation not applicable to a desktop education robot (check).",
-   "kill_question": "Do 3 schools buy a 5-robot class set at €999 each for the coming semester?",
-   "open_files_share": "mostly open",
-   "scores": {
-    "demand": 3,
-    "buildability": 3,
-    "margin": 4,
-    "speed": 2
-   },
-   "tags": [
-    "robotics",
-    "education",
-    "sbc",
-    "linux",
-    "check-licence"
-   ],
-   "open_boards_note": "3 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
-   "score_total": 12,
-   "market_correction": {
-    "title": "Entrenched incumbent found in research (November 2026)",
-    "text": "TurtleBot has been the default ROS teaching robot for fifteen years, is embedded in university curricula, and sells at $495–1,900, on both sides of this pack's €999. A lower price is not available as the wedge. Before running the kill question, name the differentiator a lecturer would switch for (an open RK3566 board with a published BSP, EU supply and support, a specific curriculum) and test that in the interviews first. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it."
-   }
   },
   {
    "slug": "offline-ai-docent",
@@ -3013,5 +2111,26 @@
    "open_boards_note": "2 of 4 boards publish schematic/PCB files; the rest are off-the-shelf modules or dev kits with documentation only",
    "score_total": 11
   }
- ]
+ ],
+ "removed_after_market_check": {
+  "date": "2026-11-14",
+  "note": "15 ideas with a WEAK external market verdict withdrawn from the site at Hans's request; full records in git history (commit before this change).",
+  "slugs": [
+   "bedroom-audit-box",
+   "classroom-geiger-kit",
+   "club-timing-gates",
+   "control-theory-balance-kit",
+   "heat-pump-cop-lite",
+   "isolated-interface-kit",
+   "loop-logger-4-20ma",
+   "makerspace-soldering-station",
+   "motion-control-slider",
+   "one-knob-radio",
+   "pack-rebuilder-spot-welder",
+   "ros-trainer",
+   "trail-talker",
+   "trap-check",
+   "vibration-health-sticker"
+  ]
+ }
 }

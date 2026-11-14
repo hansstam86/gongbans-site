@@ -377,33 +377,6 @@
     ]
    ]
   },
-  "classroom-geiger-kit": {
-   "verdict": "WEAK TO UNCERTAIN",
-   "summary": "The market splits into a cheap tier ($9.50–27, Flinn) and an expensive tier ($180–1,215, Ward's, Images SI) that bracket the €119–159 target awkwardly, with little found in between. The MightyOhm DIY kit confirms hobbyist precedent but no evidence of school-scale sales.",
-   "risk": "The cheap tier may already satisfy budget-constrained physics departments.",
-   "rows": [
-    [
-     "Flinn Student Geiger Counter",
-     "About $9.50",
-     "Cheap tier"
-    ],
-    [
-     "Ward's Advanced Radioactivity Kit",
-     "About $181",
-     "Expensive tier"
-    ],
-    [
-     "Images SI desktop counter",
-     "About $524",
-     "Expensive tier"
-    ],
-    [
-     "MightyOhm Geiger kit bundle",
-     "DIY kit",
-     "Hobbyist precedent, no school sales evidence"
-    ]
-   ]
-  },
   "fruiting-chamber-controller": {
    "verdict": "LIKELY",
    "summary": "Real DIY precedent: ShroomBox (Blynk) and Raspberry Pi builds combine Inkbird CO2 and humidity controllers to hit the stated RH and CO2 targets, and a documented \"fan and humidifier fighting each other\" failure mode is exactly what a purpose-built controller fixes.",
@@ -460,55 +433,6 @@
     ]
    ]
   },
-  "isolated-interface-kit": {
-   "verdict": "WEAK",
-   "summary": "Isolated USB-to-RS485/RS232/TTL adapters are a mature commodity category at $16–180; Waveshare's $16–24 multibus converter covers the exact use case. No evidence that technicians discuss \"frying a laptop\" as a live pain point.",
-   "risk": "This is a packaging and bundling play on commodity hardware, not a product gap.",
-   "rows": [
-    [
-     "Waveshare Multibus Converter",
-     "About $16–24",
-     "Commodity incumbent covering the same buses"
-    ],
-    [
-     "DFRobot isolated USB-RS485",
-     "About $17",
-     "Commodity incumbent"
-    ],
-    [
-     "StarTech ICUSB422IS",
-     "About €180",
-     "Premium end of the same category"
-    ]
-   ]
-  },
-  "loop-logger-4-20ma": {
-   "verdict": "WEAK",
-   "summary": "An established multi-vendor category: Dragino PS-LB-NA / PS-LS-NA ($79–89), RAK7432, Decentlab DL-DLR2-004 and Radio Bridge all read 4–20 mA over LoRaWAN today at similar prices.",
-   "risk": "Real, direct, already-priced competition; differentiation has to be EU868, DIN-rail form and integrator bundling, not the core function.",
-   "rows": [
-    [
-     "Dragino PS-LB-NA / PS-LS-NA",
-     "About $79–89, LoRaWAN 4–20 mA",
-     "Direct incumbent at the same price"
-    ],
-    [
-     "RAK7432 WisNode Bridge Analog",
-     "LoRaWAN analogue bridge",
-     "Direct incumbent"
-    ],
-    [
-     "Decentlab DL-DLR2-004",
-     "LoRaWAN 4–20 mA datalogger",
-     "Direct incumbent"
-    ],
-    [
-     "Radio Bridge",
-     "LoRaWAN analogue sensors",
-     "Direct incumbent"
-    ]
-   ]
-  },
   "nfc-voice-labels": {
    "verdict": "LIKELY",
    "summary": "PenFriend (RNIB-affiliated, about $180) is the dominant incumbent but is barcode-based, not NFC, which confirms the NFC plus washable-sticker approach as a real gap. A DIY app (VoiceTag) validates the concept's appeal.",
@@ -528,28 +452,6 @@
      "AgriAbility PenFriend listing",
      "Retail listing",
      "Price point of the incumbent"
-    ]
-   ]
-  },
-  "one-knob-radio": {
-   "verdict": "WEAK",
-   "summary": "Already well served: the Alzheimer's Society's own shop, Ravencourt (about £74–79) and Relish (about £149) all sell one-button dementia radios at or below the target price today.",
-   "risk": "The most directly outcompeted idea in this group; carer-loaded playlists is the only uncovered angle found.",
-   "rows": [
-    [
-     "Alzheimer's Society one-button radio",
-     "Charity shop product",
-     "Incumbent at or below target price"
-    ],
-    [
-     "Ravencourt One Button Radio",
-     "About £74–79",
-     "Incumbent, cheaper"
-    ],
-    [
-     "Relish dementia radio",
-     "About £149",
-     "Incumbent at target price"
     ]
    ]
   },
@@ -597,28 +499,6 @@
     ]
    ]
   },
-  "trap-check": {
-   "verdict": "WEAK",
-   "summary": "A crowded, well-funded incumbent market: Anticimex SMART and Rentokil PestConnect (both multinationals) already sell connected-trap monitoring as part of full-service contracts.",
-   "risk": "Competing against entrenched multinationals with existing client relationships, not an open niche; the independent-SME wedge in the pitch has to carry everything.",
-   "rows": [
-    [
-     "Rentokil PestConnect",
-     "Connected traps inside service contracts",
-     "Multinational incumbent"
-    ],
-    [
-     "Anticimex SMART",
-     "Connected traps inside service contracts",
-     "Multinational incumbent"
-    ],
-    [
-     "IoT pest-control overview (Provisioner)",
-     "Trade coverage",
-     "Category is established"
-    ]
-   ]
-  },
   "uvb-lamp-checker": {
    "verdict": "LIKELY (STRONG)",
    "summary": "Solarmeter 6.5R, the established incumbent, sells at about $228–280 (up to about €488 in the EU), three to five times the €59–89 target: a genuine price gap. Lamp fade is the real stated problem and the reason this meter category exists.",
@@ -628,59 +508,6 @@
      "Solarmeter 6.5R (PetSmart $250, Chewy, Walmart $280)",
      "UV-index meter for reptile keepers",
      "Incumbent at 3–5× the target price"
-    ]
-   ]
-  },
-  "bedroom-audit-box": {
-   "verdict": "WEAK",
-   "summary": "No precedent anywhere for the core mechanic (a mattress retailer rents out a monitoring box, the customer returns it and gets a report). Every real competitor either sells a consumer sleep tracker outright (Withings, Beautyrest Sleeptracker at about $199) or uses sleep data only as an in-store sales aid (Mattress Firm with SleepScore).",
-   "risk": "Less \"market exists but crowded\" than \"untested business model\": the rental-through-retailer channel is the open question, bigger than competition.",
-   "rows": [
-    [
-     "RetailWire piece on sleep tech in retail",
-     "Retail coverage",
-     "No rental-box model found"
-    ],
-    [
-     "Sleepace RestOn sold to furniture retailers",
-     "Tracker sold outright through retailers",
-     "Outright sale, not rental"
-    ],
-    [
-     "Beautyrest Sleeptracker launch (about $199)",
-     "Consumer tracker",
-     "Outright sale"
-    ],
-    [
-     "Mattress Firm + SleepScore",
-     "Sleep data as an in-store sales aid",
-     "Data used to sell mattresses, not sold as a service"
-    ]
-   ],
-   "correction": {
-    "title": "Untested business model found in research (November 2026)",
-    "text": "The research found no precedent anywhere for the pack's core mechanic: a mattress or sleep retailer renting out a monitoring box and handing the customer a report. Every real competitor sells a tracker outright or uses sleep data only as an in-store sales aid. Treat the rental-through-retailer channel as the first thing to validate, ahead of the product; the kill question's five mattress shops are the right test, run it before anything else. As researched November 2026 by web search; verify before relying on it."
-   }
-  },
-  "club-timing-gates": {
-   "verdict": "WEAK",
-   "summary": "Freelap's cheapest usable club pack runs about $535–845 and full setups commonly $500–2,500, which overlaps the €199–249 target rather than being beaten five times over as the pitch implies.",
-   "risk": "Incumbents already serve the budget end; the product needs a reason beyond price.",
-   "rows": [
-    [
-     "Freelap packs (SimpliFaster)",
-     "About $535–845 for a club pack",
-     "Budget incumbent, overlapping the target"
-    ],
-    [
-     "Brower Black Box / TCi",
-     "Timing systems, $500–2,500 setups",
-     "Established incumbent"
-    ],
-    [
-     "Buyer's Guide to Sports Timing; Athletics Direct UK",
-     "Market overviews",
-     "Category is served at the budget end"
     ]
    ]
   },
@@ -733,23 +560,6 @@
     ]
    ]
   },
-  "trail-talker": {
-   "verdict": "WEAK TO UNCERTAIN",
-   "summary": "This exact product already exists and is deployed at scale: Blackbox-av (UK) has installations at Vindolanda (24,000+ plays), RSPB Conwy and the Trans Pennine Trail. Not white space; an entrenched single-vendor niche.",
-   "risk": "Needs a specific wedge against Blackbox-av: price, EU-wide reach or faster delivery.",
-   "rows": [
-    [
-     "Blackbox-av: Trans Pennine Trail, Vindolanda, RSPB Conwy",
-     "Solar audio posts, commercially deployed",
-     "Direct incumbent, same product"
-    ],
-    [
-     "Shelley Signs",
-     "Phone-based audio-trail alternative",
-     "Competing approach without hardware"
-    ]
-   ]
-  },
   "workshop-dust-sentinel": {
    "verdict": "UNCERTAIN",
    "summary": "The underlying hazards are well documented (NIOSH and CDC on 3D-printer VOCs in makerspaces), but no regulated indoor-air-quality standard for small workshops was found, which undercuts the \"documentation for health-and-safety visits\" framing.",
@@ -786,28 +596,6 @@
      "Sigma Nortec 18650 tester module; ZB206+",
      "Commercial testers",
      "Component-level substitutes exist"
-    ]
-   ]
-  },
-  "control-theory-balance-kit": {
-   "verdict": "WEAK",
-   "summary": "Quanser's QUBE-Servo (and QUBE-Servo 3) is a direct, established incumbent selling control-education modules, including reaction-wheel experiments, to universities, and is the default in many curricula. Pricing is quote-only, so €299 per station cannot be benchmarked.",
-   "risk": "A curriculum-embedded incumbent; the kit needs a reason a lecturer would switch, not only a lower price.",
-   "rows": [
-    [
-     "Quanser QUBE-Servo 3",
-     "Control-education module",
-     "Direct incumbent, quote-only"
-    ],
-    [
-     "Quanser Introduction to Controls Teaching Lab",
-     "Curriculum package",
-     "Embedded in courses"
-    ],
-    [
-     "NI QUBE-Servo listing",
-     "Distribution listing",
-     "Same"
     ]
    ]
   },
@@ -871,49 +659,6 @@
      "IoT World Today: smart vineyard frost device",
      "Trade coverage",
      "Category is active"
-    ]
-   ]
-  },
-  "heat-pump-cop-lite": {
-   "verdict": "WEAK",
-   "summary": "The technical premise, not only demand, is weak: OpenEnergyMonitor's own documentation states that clip-on current clamps plus flow and return temperature sensors (their \"Level 2\") are not sufficient for a real COP; true COP needs heat-output metering (\"Level 3\", about £550, a harder instrument). The active OpenEnergyMonitor community is real evidence of interest, and also exactly the audience most likely to call the \"±15% indicative\" claim optimistic.",
-   "risk": "Technical credibility: the most knowledgeable buyers may reject the method before price is discussed.",
-   "rows": [
-    [
-     "OpenEnergyMonitor heat-pump monitoring docs",
-     "Level 2 (CT + temps) vs Level 3 (heat meter)",
-     "States Level 2 is not sufficient for real COP"
-    ],
-    [
-     "EmonHP Level 2 PDF",
-     "Method description",
-     "Same"
-    ],
-    [
-     "HeatpumpMonitor.org / GitHub",
-     "Community of monitored heat pumps",
-     "Interest is real; audience is expert"
-    ]
-   ],
-   "correction": {
-    "title": "Technical premise questioned by research (November 2026)",
-    "text": "OpenEnergyMonitor, the reference community for exactly this audience, documents that clip-on current plus flow/return temperatures do not give a real COP; that needs a heat meter. The pack sells the kit as \"indicative, ±15%\", which the research flags as optimistic and as the claim an expert audience will test first. Before the demand test, settle the method: either prove the ±15% against a Level-3 reference on real installations, or reposition the kit as a settings-check tool that does not claim a COP figure. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it."
-   }
-  },
-  "pack-rebuilder-spot-welder": {
-   "verdict": "WEAK",
-   "summary": "A saturated commodity hobbyist market: SUNKKO alone spans about $55–600, and the exact €179–249 tier is already called \"community-validated\" in an existing buyer guide. No evidence that anyone pays extra for a bundled safety course.",
-   "risk": "Commodity competition at every price point; the safety-course bundle is an unproven differentiator.",
-   "rows": [
-    [
-     "SUNKKO pricing roundup",
-     "About $55–600 across the range",
-     "Commodity incumbent"
-    ],
-    [
-     "SUNKKO 788S-PRO (eBay), 737G (Fruugo)",
-     "Listings in the €179–249 tier",
-     "The target tier is already served"
     ]
    ]
   },
@@ -988,28 +733,6 @@
     ]
    ]
   },
-  "vibration-health-sticker": {
-   "verdict": "WEAK",
-   "summary": "A mature, commercialised category: Monnit ($215–356), Netvox (about AUD 242, subscription) and Advantech ($2,799) all sell vibration and temperature nodes to the same facility-manager buyer today. The €79–99 node undercuts meaningfully.",
-   "risk": "The no-gateway, LoRaWAN-native deployment story has to be proven, not assumed, to matter against incumbents.",
-   "rows": [
-    [
-     "Monnit ALTA vibration sensors",
-     "About $215–356",
-     "Incumbent"
-    ],
-    [
-     "Netvox accelerometer",
-     "About AUD 242 plus subscription",
-     "Incumbent"
-    ],
-    [
-     "Advantech WISE-2410-NB",
-     "About $2,799",
-     "Enterprise incumbent"
-    ]
-   ]
-  },
   "footfall-counter": {
    "verdict": "LIKELY",
    "summary": "Camera-free, privacy-safe people counting is an established category (Terabee thermal / time-of-flight, FootfallCam hashing, Ariadne consent-free analytics), and the compliance angle is real and current, with the EU AI Act as a tailwind. No public pricing was found, so \"a third of the incumbents' price\" is unverifiable.",
@@ -1051,50 +774,6 @@
      "Immersion Home Smart Panel concept",
      "Concept page",
      "Interest from haptics vendors"
-    ]
-   ]
-  },
-  "makerspace-soldering-station": {
-   "verdict": "WEAK TO UNCERTAIN",
-   "summary": "Cheap single-kit soldering products for schools exist at $15–40 per kit (CircuitMess, Forward Education, TeacherGeek at about $24.50), far below a €249-per-station bundle. No CE-ready hot-air plus pre-heater bundle was found at this tier, but also no evidence of pent-up demand for the extra capability.",
-   "risk": "The gap is unproven on the demand side; schools may be satisfied with cheap kits.",
-   "rows": [
-    [
-     "TeacherGeek Soldering Package",
-     "About $24.50 per unit",
-     "Cheap education incumbent"
-    ],
-    [
-     "CircuitMess Tools Pack; Forward Education",
-     "About $15–40 per kit",
-     "Same"
-    ],
-    [
-     "SOLDR kit (low-reliability blog source)",
-     "Kit listing",
-     "Weak source, noted as such"
-    ]
-   ]
-  },
-  "motion-control-slider": {
-   "verdict": "WEAK",
-   "summary": "Edelkrone's SliderONE v3 sells at $439–549, under the €499 target rather than beaten by it, while pricier Edelkrone and Rhino rigs serve the high end. \"No app\" is not validated as a differentiator: Edelkrone's whole pitch is app and motion-kit control and no rejection of that model was found. Rental at $75–150 a day is an existing alternative.",
-   "risk": "The weakest-looking idea in this batch: an incumbent under the target price and no evidence the knob-not-app angle is wanted.",
-   "rows": [
-    [
-     "Edelkrone SliderONE v3",
-     "About $439–549",
-     "Incumbent below the target price"
-    ],
-    [
-     "Edelkrone SliderPLUS v6; Rhino",
-     "Higher-end rigs",
-     "Upper tier served"
-    ],
-    [
-     "Cameraboom buying guide (rental $75–150/day)",
-     "Rental market",
-     "Alternative path for the buyer"
     ]
    ]
   },
@@ -1178,27 +857,6 @@
     "text": "The pack treats continuous hot-water temperature logging as a compliance requirement. The research could not confirm that logging itself, rather than periodic Legionella laboratory testing, is legally required; check the TrinkwV §31 text before repeating the claim to a buyer. Techem and Minol already hold the property-manager relationship through their testing services, so the better route may be selling through them rather than direct. Kill question unchanged pending Hans's decision; the three property managers in it are still worth asking, and ask them who they buy testing from. As researched November 2026 by web search; verify before relying on it."
    }
   },
-  "ros-trainer": {
-   "verdict": "WEAK",
-   "summary": "TurtleBot (ROBOTIS / Clearpath) is a deeply entrenched fifteen-year incumbent, the default platform for ROS 2 courses, with university case studies (Waterloo) and prices of about $495–1,900 that bracket the €999 target rather than being beaten by it.",
-   "risk": "Not a price gap but a head-on challenge to a curriculum-embedded market leader; needs a real differentiator before the kill question is worth running.",
-   "rows": [
-    [
-     "TurtleBot (ROBOTIS / Clearpath)",
-     "About $495–1,900, default ROS 2 teaching platform",
-     "Entrenched incumbent bracketing the target price"
-    ],
-    [
-     "University of Waterloo case study",
-     "TurtleBot in a ROS course",
-     "Curriculum embedding"
-    ]
-   ],
-   "correction": {
-    "title": "Entrenched incumbent found in research (November 2026)",
-    "text": "TurtleBot has been the default ROS teaching robot for fifteen years, is embedded in university curricula, and sells at $495–1,900, on both sides of this pack's €999. A lower price is not available as the wedge. Before running the kill question, name the differentiator a lecturer would switch for (an open RK3566 board with a published BSP, EU supply and support, a specific curriculum) and test that in the interviews first. Kill question unchanged pending Hans's decision. As researched November 2026 by web search; verify before relying on it."
-   }
-  },
   "offline-ai-docent": {
    "verdict": "LIKELY",
    "summary": "No fully offline museum kiosk product was found; every real deployment (Intuiface, the Autun Museum chatbot, a Warsaw exhibition chatbot, TimeLens at the Grand Egyptian Museum) depends on a network or cloud call, which supports \"fully offline, no cloud\" as a genuine technical differentiator.",
@@ -1243,5 +901,26 @@
     ]
    ]
   }
+ },
+ "withdrawn": {
+  "date": "2026-11-14",
+  "slugs": [
+   "bedroom-audit-box",
+   "classroom-geiger-kit",
+   "club-timing-gates",
+   "control-theory-balance-kit",
+   "heat-pump-cop-lite",
+   "isolated-interface-kit",
+   "loop-logger-4-20ma",
+   "makerspace-soldering-station",
+   "motion-control-slider",
+   "one-knob-radio",
+   "pack-rebuilder-spot-welder",
+   "ros-trainer",
+   "trail-talker",
+   "trap-check",
+   "vibration-health-sticker"
+  ],
+  "note": "Entries kept in git history."
  }
 }

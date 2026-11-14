@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_playbook.py — /playbook.html, the zero-experience founder playbook shared by all 50 ideas.
+build_playbook.py — /playbook.html, the zero-experience founder playbook shared by all the ideas on the site.
 
 Written as Markdown in PLAYBOOK below and rendered with the start-pack renderer so it looks like the
 packs. Covers what every start pack has in common: the kill question, ordering samples, the first
@@ -13,6 +13,7 @@ public rule (a VAT rate, a directive number) or explicitly an estimate to check.
 Run from the repo root:  python3 build_playbook.py       (build_ideas.py calls build())
 """
 
+import json
 import re
 from pathlib import Path
 
@@ -26,7 +27,7 @@ UPDATED = "November 2026"
 PLAYBOOK = r"""
 ## 0. Read this first
 
-You have shipped software. You have never had a product made. This page is the part of every start pack that is the same for all fifty ideas: the order of operations, the words people will use, the documents you will need, and the mistakes that cost software founders their first production run. Read it once end to end, then come back to the section you are in.
+You have shipped software. You have never had a product made. This page is the part of every start pack that is the same for all {N} ideas: the order of operations, the words people will use, the documents you will need, and the mistakes that cost software founders their first production run. Read it once end to end, then come back to the section you are in.
 
 Three rules carry through everything below:
 
@@ -252,8 +253,13 @@ SECTION_LABELS = {"0": "Read this first", "1": "Week zero · validate demand", "
 ANCHORS = {"1": "validate", "5": "quote", "7": "customs", "8": "logistics", "9": "landed-cost", "10": "emails", "4": "manufacturer"}
 
 
+def n_ideas():
+    return len(json.loads((ROOT / "data" / "ideas.json").read_text(encoding="utf-8"))["ideas"])
+
+
 def render():
-    md = PLAYBOOK
+    N = str(n_ideas())
+    md = PLAYBOOK.replace("{N}", N)
     # inline raw HTML blocks (the glossary <dl>) must pass through untouched: pull them out, render, put back
     raw = {}
     def stash(m):
@@ -281,7 +287,7 @@ def render():
                    f'<h2>{title}{alias}</h2>{p[m.end():]}</section>')
     body = "\n".join(out)
     toc = "".join(f'<a href="#s{k}">{k} · {e(v.split(" · ")[0])}</a>' for k, v in SECTION_LABELS.items())
-    desc = ("The zero-experience founder playbook for the 50 gongban ideas: the kill question, ordering samples, EVT/DVT/PVT, "
+    desc = (f"The zero-experience founder playbook for the {N} gongban ideas: the kill question, ordering samples, EVT/DVT/PVT, "
             "finding and vetting a Shenzhen manufacturer, CE and FCC certification, EU import and customs, logistics, a landed-cost worksheet and the outreach e-mails.")
     return f'''{head("Zero-experience founder playbook — from gongban idea to shipped product · GONGBANS", desc, "playbook.html")}
 <body>
@@ -290,14 +296,14 @@ def render():
 <div class="page-header">
   <div class="page-header-inner">
     <div class="crumbs"><a href="/ideas.html">Ideas</a><span class="sep">/</span><span>Playbook</span></div>
-    <div class="header-id">FOUNDER PLAYBOOK · SHARED BY ALL 50 IDEAS · UPDATED {e(UPDATED.upper())}</div>
+    <div class="header-id">FOUNDER PLAYBOOK · SHARED BY ALL {N} IDEAS · UPDATED {e(UPDATED.upper())}</div>
     <h1>Never built hardware? <em>Start here.</em></h1>
     <p class="sub">What every start pack has in common, for founders who have shipped software and never had a product made: validate demand first, then the order of operations, the words, the paperwork, and who to e-mail in Shenzhen.</p>
   </div>
 </div>
 
 <main class="detail startpack playbook">
-  <div class="idea-disclaimer"><strong>General guidance, not advice.</strong> This page explains the process shared by the 50 ideas. Directive numbers and VAT rates are public rules as of {e(UPDATED)}; every cost, quantity and duration is a rough estimate marked as such, to be replaced by your own quotes. Not legal, tax or investment advice. The companies named in each pack's "Who to contact" section come from gongban.db and are not verified suppliers for any specific idea.</div>
+  <div class="idea-disclaimer"><strong>General guidance, not advice.</strong> This page explains the process shared by the {N} ideas. Directive numbers and VAT rates are public rules as of {e(UPDATED)}; every cost, quantity and duration is a rough estimate marked as such, to be replaced by your own quotes. Not legal, tax or investment advice. The companies named in each pack's "Who to contact" section come from gongban.db and are not verified suppliers for any specific idea.</div>
   <nav class="pb-toc" aria-label="Sections">{toc}</nav>
 
   <article class="pack-body">
@@ -308,7 +314,7 @@ def render():
     <div class="dsection-label">Where next</div>
     <div class="hans-note">
       <div class="hans-note-label">Pick an idea, validate demand, then build</div>
-      <p>The <a href="/ideas.html">50 ideas</a> each have a founder start pack that opens with the demand check (<a href="#validate">section 1 here</a>), then the plan, the boards, the people on file and the two e-mails. If you take one on and want a second pair of eyes on the sourcing, <a href="https://hansstam.eu">talk to Hans via hansstam.eu</a>.</p>
+      <p>The <a href="/ideas.html">{N} ideas</a> each have a founder start pack that opens with the demand check (<a href="#validate">section 1 here</a>), then the plan, the boards, the people on file and the two e-mails. If you take one on and want a second pair of eyes on the sourcing, <a href="https://hansstam.eu">talk to Hans via hansstam.eu</a>.</p>
     </div>
   </section>
 

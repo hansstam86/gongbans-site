@@ -272,7 +272,7 @@ def render_pack(slug, md, idea, n_total):
   <div class="idea-disclaimer"><strong>Concept, not a product.</strong> {e(DISCLAIMER)}</div>
   <div class="detail-meta">{"".join(meta)}</div>
   <nav class="pack-toc" aria-label="Sections">{toc}<a class="dl" href="/startpacks/{e(slug)}.md" download>↓ Markdown</a></nav>
-  <p class="pack-playbook"><strong>Order of operations:</strong> read the summary, then <a href="#s2">validate demand (section 2)</a> with real customers before you touch the start kit or e-mail anyone in <a href="#s5">Who to contact (section 5)</a>. New to hardware? The <a href="/playbook.html">zero-experience founder playbook</a> covers validation, samples, the first quote, CE/FCC, customs and fulfilment for all 50 ideas.</p>
+  <p class="pack-playbook"><strong>Order of operations:</strong> read the summary, then <a href="#s2">validate demand (section 2)</a> with real customers before you touch the start kit or e-mail anyone in <a href="#s5">Who to contact (section 5)</a>. New to hardware? The <a href="/playbook.html">zero-experience founder playbook</a> covers validation, samples, the first quote, CE/FCC, customs and fulfilment for all {n_total} ideas.</p>
 
   <article class="pack-body">
 {body_html}

@@ -13,7 +13,8 @@ gongbans-site/
 ├── issuers.html            ← publishers of the boards + Shenzhen solution-house directory (generated)
 ├── boards-kingbrother.html ← Kingbrother IDH industrial SOM platforms (hand-written)
 ├── what-are-gongbans.html  ← essay
-├── ideas.html              ← 50 product concepts built from catalogue boards (search, tag chips, sort)
+├── ideas.html              ← product concepts built from catalogue boards (search, tag chips, sort); 50 generated,
+│                              15 withdrawn after the Nov 2026 market check (see data/ideas.json → removed_after_market_check)
 ├── ideas/                  ← one HTML page per idea (generated)
 ├── startpacks/             ← founder start packs: <slug>.md (source, downloadable) + <slug>.html (generated);
 │                              section 2 "Validate demand first" (build_validate.py) and section 5 "Who to contact"
