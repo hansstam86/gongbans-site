@@ -25,10 +25,11 @@ ROOT = Path(__file__).parent
 MANIFEST = ROOT / "data" / "gongbans.json"
 ISSUERS = ROOT / "data" / "issuers.json"
 STATS = ROOT / "data" / "stats.json"
+IDEAS = ROOT / "data" / "ideas.json"   # optional: ideas built on the boards (build_ideas.py renders their pages)
 DB_DIR = ROOT / "db"
 DB_DIR.mkdir(exist_ok=True)
 
-ASSET_V = "20261114"
+ASSET_V = "20261114b"
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">')
@@ -99,7 +100,8 @@ ACTIVE = ' class="active"'
 
 def nav(active=""):
     items = [("/what-are-gongbans.html", "What are gongbans?", "what"), ("/boards.html", "Catalogue", "boards"),
-             ("/issuers.html", "Issuers", "issuers"), ("https://hansolo42.gumroad.com/l/gongbans", "The book", ""),
+             ("/issuers.html", "Issuers", "issuers"), ("/ideas.html", "Ideas", "ideas"),
+             ("https://hansolo42.gumroad.com/l/gongbans", "The book", ""),
              ("https://hansstam.eu", "Hans Stam", "")]
     links = "\n".join(f'    <a href="{href}"{ACTIVE if key and key == active else ""}>{label}</a>' for href, label, key in items)
     return f'''<nav class="site-nav">
@@ -113,7 +115,7 @@ def nav(active=""):
 
 
 FOOTER = f'''<footer class="site-footer">
-  <p class="foot-links"><a href="/">Home</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Issuers</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
+  <p class="foot-links"><a href="/">Home</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Issuers</a><a href="/ideas.html">Ideas</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
   <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
 </footer>
 <script src="/assets/site.js?v={ASSET_V}"></script>'''
@@ -331,7 +333,35 @@ def related_section(g, index):
   </section>'''
 
 
-def render_board(g, index):
+def load_ideas_by_board():
+    """board slug -> [(idea, role)] from data/ideas.json; empty if the file is absent."""
+    by_board = defaultdict(list)
+    if not IDEAS.exists():
+        return by_board
+    ideas = json.loads(IDEAS.read_text(encoding="utf-8"))["ideas"]
+    for i in sorted(ideas, key=lambda x: (-x.get("score_total", 0), x["title"])):
+        for b in i.get("built_from", []):
+            by_board[b["board_slug"]].append((i, b.get("role", "")))
+    return by_board
+
+
+def ideas_section(g, ideas_by_board):
+    uses = ideas_by_board.get(g["slug"]) or []
+    if not uses:
+        return ""
+    items = "".join(
+        f'<a class="file-link" href="/ideas/{e(i["slug"])}.html"><span class="file-icon">IDEA</span>'
+        f'<span class="file-name">{e(i["title"])}<small>{e(role)}</small></span></a>' for i, role in uses)
+    return f'''
+  <section class="dsection" id="ideas">
+    <div class="dsection-label">Ideas</div>
+    <h2>Used in ideas</h2>
+    <p>Product concepts from the <a href="/ideas.html">GONGBANS inventor</a> that build on this board — concepts, not products; not validated.</p>
+    <div class="files-list">{items}</div>
+  </section>'''
+
+
+def render_board(g, index, ideas_by_board=None):
     curated = g.get("origin") != "db"
     issuer = g.get("issuer") or ("ATU (Taiwan distributor) · hand-curated kit" if curated else "")
     head_id = g.get("project_no") or g.get("issuer") or ""
@@ -399,7 +429,7 @@ def render_board(g, index):
 {bom_section(g)}
 {source_section(g)}
 {hans_note_section(g)}
-{related_section(g, index)}
+{related_section(g, index)}{ideas_section(g, ideas_by_board or {})}
   <p class="catalogue-note">Entry <code>{e(g["slug"])}</code>{" · status: " + e(status)}. Catalogue entries are indexed from publishers' public pages; the site re-hosts nothing except the hand-curated design packs. Spotted an error? <a href="https://hansstam.eu">Get in touch via hansstam.eu</a>.</p>
 </main>
 
@@ -523,16 +553,17 @@ def main():
     gongbans = manifest["gongbans"]
     stats = json.loads(STATS.read_text(encoding="utf-8"))
     index = RelatedIndex(gongbans)
+    ideas_by_board = load_ideas_by_board()
 
     wanted = set()
     for g in gongbans:
         out = DB_DIR / f"{g['slug']}.html"
         wanted.add(out.name)
-        out.write_text(render_board(g, index), encoding="utf-8")
+        out.write_text(render_board(g, index, ideas_by_board), encoding="utf-8")
     stale = [p for p in DB_DIR.glob("*.html") if p.name not in wanted]
     for p in stale:
         p.unlink()
-    print(f"db/: {len(wanted)} pages written, {len(stale)} stale removed")
+    print(f"db/: {len(wanted)} pages written, {len(stale)} stale removed, {sum(1 for g in gongbans if g['slug'] in ideas_by_board)} with 'Used in ideas'")
 
     issuers = json.loads(ISSUERS.read_text(encoding="utf-8"))
     (ROOT / "issuers.html").write_text(render_issuers(issuers, stats), encoding="utf-8")
