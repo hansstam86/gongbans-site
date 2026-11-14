@@ -1,0 +1,172 @@
+# Frost Sentinel — Founder Start Pack
+
+> A solar-powered post with Cat-M that texts the winegrower when canopy temperature hits the frost threshold — no platform subscription, no €1,400 weather station.
+
+Concept from the GONGBANS inventor. Not validated. All numbers are estimates — check them. Check every board's licence before commercial use.
+
+## 1. Summary
+
+- **Problem:** Spring frost kills a vintage in one night. The grower's choice today is a €1,400+ connected weather station with a yearly fee, a consumer thermometer they check at 3 a.m., or nothing. Small plots don't justify the station; they still lose the crop.
+- **Customer:** Small and medium vineyards and orchards in DE/FR/AT/IT (and hop, berry, fruit growers). The grower pays once; the grower (or whoever is on frost duty) gets the SMS. Crop insurers and growers' associations are the channel.
+- **Product:** A €169 post-mounted sensor: canopy-height temperature + humidity (dew point), solar + Li-ion, Cat-M/NB-IoT, SMS at a threshold the grower sets by replying to a text, a 5-year EU IoT SIM included. No app needed.
+- **Why now:** Cat-M modules are cheap and pre-certified; the "one footprint, three module generations" design is documented; recent frost years pushed insurers toward monitoring; incumbents are quote-only and sell platforms ([Weenat](https://weenat.com/en/?p=289395), [Leova SMART](https://www.nordicsemi.com/Nordic-news/2022/11/the-leova-smart-employs-the-nrf9160-sip)).
+- **The ask:** ~€85k (estimate) to the first 1,000 units; route = deposits at growers' association evenings before the season + bootstrap; an insurer co-marketing deal as the lever.
+
+## 2. Business plan
+
+### Problem & customer
+Frost protection (candles, wind machines, sprinklers, helicopters) only works if you start it in time, at the right plot. Plots differ by 2–3 °C between a hollow and a slope; the official forecast is for the town. The grower with 3–15 ha wants a cheap sensor per plot that wakes them up. They don't want a dashboard, an app, a login, or a yearly invoice.
+
+Who pays vs who uses: the grower pays; the grower or a family member on frost duty uses it; the insurer may discount a policy; the cooperative may bulk-buy.
+
+Segments: (1) winegrowers 2–20 ha (DE/AT/FR/IT — hundreds of thousands of holdings, most small); (2) orchards and berry growers (frost-prone blossom); (3) hop and nursery growers; (4) allotments/garden centres as a consumer spill-over.
+
+### Market size (estimates)
+- EU wine holdings: roughly 2 M holdings, most tiny; estimate **150k commercially active holdings ≥ 2 ha** in frost-prone regions; orchards/berries/hops add ~100k → **250k farms**, 2–4 sensors each → **~700k sensor sites**.
+- **TAM:** 700k × €169 ≈ **€118 M** (one-off) plus SIM renewals after year 5.
+- **SAM:** holdings that actively protect against frost (candles/wind/sprinklers) or are insured for frost — 25% → 175k sites → **€30 M**.
+- **SOM (3 years):** 4% → 7,000 sites → **€1.2 M**, strongly seasonal (orders Dec–Mar).
+
+### Competition
+| Alternative | Notes | Weakness we attack |
+|---|---|---|
+| Connected ag weather stations (Sencrop, Weenat, Leova SMART — quote-only; AgTecher benchmarks field-sensor systems at €200–800 budget, €800–2,000 mid, [AgTecher](https://agtecher.com/fieldsensors/)) | Full platforms, forecasts, many sensors | Price per plot, yearly platform fee, app; built for 50 ha, not 5 |
+| Frost-alarm loggers (HOBO-class kits ~€1,700) | Reliable | Price, dialler-era design |
+| Consumer WiFi/BLE thermometers | €30–60 | No range in a vineyard, no SMS, no solar, no canopy mounting |
+| Regional frost-warning services / forecasts ("do nothing") | Free | Town-level; 2–3 °C off per plot; no 3 a.m. wake-up |
+| DIY LoRa/Cat-M sensor | Makers | No weatherproofing, no SIM logistics, nobody on call |
+
+**Wedge:** the dumbest possible product: a post, a sensor, a text message. €169, SIM included for 5 years, threshold by SMS reply, 3 sensors per 10 ha instead of 1 station.
+
+### Product & value proposition
+Hardware: IP65 enclosure on a 1.5 m fibreglass or aluminium post with a ground spike or a clamp for existing trellis posts; radiation-shielded T/RH sensor at canopy height (shield is critical — radiant cooling fools unshielded sensors by 1–2 °C); 2 W solar panel + 2,000 mAh Li-ion (or LiFePO4 for cold); Cat-M/NB-IoT module with an EU multi-network IoT eSIM; RTC-timed wake (every 10 min in frost season, every hour otherwise), SMS when below threshold, "all clear" SMS at sunrise, daily low in one text, low-battery text. Settings by SMS reply ("SET -1" / "ADD +4917…"). Optional web page with the plot's history for those who want it.
+
+Pricing (estimates): **€169 incl. 5-year SIM** (consumer/grower), 3-pack €449, cooperative/insurer bundles at €129 for 50+. SIM renewal after 5 years €29. No app, no subscription.
+
+### Unit economics (estimates per unit, ex-VAT)
+| Item | 1k units | 5k units |
+|---|---|---|
+| Electronics BOM (Cat-M module €11, MCU €2, SHT3x-class T/RH €3.5, solar panel €3, Li-ion/LiFePO4 €4, charger + RTC + PCB €5) | €28.50 | €23.00 |
+| 5-year IoT eSIM + SMS budget (prepaid) | €12.00 | €9.50 |
+| Assembly & test (SMT, RF test, sensor check, network attach test) | €5.00 | €3.50 |
+| Enclosure + radiation shield + post + clamp | €11.00 | €7.50 |
+| Packaging (tube box, spike, quick card) | €2.50 | €1.80 |
+| Freight + duty to EU (Li-ion DG) | €3.50 | €2.20 |
+| Certification amortised (~€22k: RED via module + EN 301 489-52, safety, UN 38.3, IP65) | €22.00 | €4.40 |
+| **Landed cost** | **€84.50** | **€51.90** |
+| Sell price (direct €169 / bundle €129) | €169 | €129 |
+| **Gross margin** | **€84.50 (50%)** | **€77.10 (60% at bundle)** |
+
+Thin at 1k, acceptable at 5k. The SIM is the margin killer — negotiate hard (multi-network IoT eSIM at <€2/year with an SMS bundle is achievable at volume), and consider the "SIM renewal" as recurring income.
+
+### Go-to-market
+**First 100 customers:** 2–3 growers' association evenings in Jan–Feb (kill question: 8 of 20 say yes with a deposit); the regional wine institute's frost-protection advisers; cooperatives' winter meetings; vineyard-supply dealers (they sell frost candles — add a sensor); a demo video of a −1 °C night with the SMS arriving.
+
+**Scale channels:** crop insurers (premium discount or bundle — the kill question's second half), cooperatives' bulk buys, vineyard and orchard supply catalogues, fruit-growers' associations; after one season, the orchards and hops.
+
+### 12-month plan
+| Quarter | Milestones |
+|---|---|
+| Q1 (Dec–Feb) | Works-like from Unit CatM + SHT31 Grove + a solar reference in an IP65 box on a post; association evenings; 50 deposits; 30 field units through this frost season. |
+| Q2 | Own board (SIMCom footprint for 3 module generations), shield + post tooling, eSIM contract; EVT 50; pre-compliance; season data review. |
+| Q3 | DVT, certification, 300-unit pilot build for next season; insurer conversation with season data. |
+| Q4 | 1,000 units shipped for Dec–Feb selling; cooperative bundles; orchard variant (blossom-height mount). |
+
+**Team:** 1 embedded/RF engineer (cellular, power budget, firmware — full-time), 1 mechanical/industrial designer (shield, post, enclosure — part-time), founder for growers and insurers, a viticulture adviser on contract for the threshold logic and the content. Two and a half people.
+
+**Funding to first 1,000 units (estimates):** NRE €35k (PCB + RF €10k, enclosure/shield/post tooling €15k, firmware + SMS backend €10k) + certification €22k + SIM prepayment for 1,000 (€12k) + 1,000 units landed ~€85k + 9 months overhead €55k ≈ **€209k**; minus deposits/pre-season sales (~€60k) and pilot sales (~€45k) and insurer co-marketing (~€20k) ≈ **~€85k**. Bootstrap + deposits; agricultural innovation grants (regional/EU rural development) often fund the pilot season.
+
+### Top risks
+| Risk | Mitigation |
+|---|---|
+| **Technical:** sensor reads 1–2 °C high under radiant cooling → missed alarm | Proper radiation shield, canopy-height mount, compare against a reference thermometer for a season; publish accuracy |
+| **Technical:** rural Cat-M coverage in hilly plots | Multi-network eSIM, NB-IoT fallback, external antenna option, "no signal" test at install via LED |
+| **Technical:** winter solar budget | LiFePO4 for cold, 10-min duty only in season, deep sleep otherwise; model it, then measure a winter |
+| **Market:** strongly seasonal, small ticket | Sell Dec–Mar, build Jul–Nov; orchards and hops stretch the season; SIM renewals smooth it |
+| **Regulatory:** RED via module still needs EN 301 489-52 and EN 62368-1 on the product; Li-ion → UN 38.3 and battery regulation; CRA | Pre-certified module, keep RF layout to the vendor's reference, removable cell, signed firmware |
+| **Liability:** "your sensor didn't text and I lost the crop" | Wording: an aid, not a guarantee; redundancy advice (2 sensors per plot); SMS delivery is best-effort — say it |
+| **Supply:** cellular module generations change every 2–3 years | The SIMCom compatible-footprint approach — design the PCB to accept three module generations |
+| **Licence:** OSHWHub solar board | Reference only; your own charge circuit |
+
+## 3. Start kit
+
+### Boards to start from
+| Board | Link | What it contributes | Files (catalogue) | Licence note |
+|---|---|---|---|---|
+| M5Stack Unit CatM (U128) | https://www.gongbans.com/db/m5stack-unit-catm.html | Cat-M/NB-IoT uplink for the works-like | enclosure/structure only; electronics not published | Buy; module vendor reference for production |
+| SIMCom A7670/SIM7070/A7672X Compatible Design | https://www.gongbans.com/db/simcom-a7670-sim7070-compat-design.html | How one footprint accepts three cellular module generations | schematic | SIMCom reference — follow the vendor's terms |
+| Seeed Grove TempAndHumi Sensor (SHT31) | https://www.gongbans.com/db/seeed-grove-tempandhumi-sensor-sht31.html | T/RH for dew-point and frost logic | schematic | Seeed wiki resources; check licence |
+| solar-to-5v-zener-regulator (OSHWHub) | https://www.gongbans.com/db/oshwhub-solar-to-5v-zener-regulator.html | Solar charge-path reference | schematic, pcb (EasyEDA Pro on project page) | **OSHWHub — licence varies; read it**; crude regulator — use a proper MPPT-lite charger IC in production |
+
+### Block diagram
+```
+[Shielded SHT3x-class T/RH at canopy height] --I2C--> [low-power MCU + RTC wake]
+                                                           |
+[2 W solar panel] -> [solar charger IC] -> [LiFePO4/Li-ion 2,000 mAh + protection + fuel gauge]
+                                                           |
+                                               [Cat-M/NB-IoT module (3-generation footprint) + eSIM + antenna]
+                                                           |
+                                                  SMS: alarm / all-clear / daily low / settings by reply
+                                               [optional: tiny backend for history page + SIM management]
+```
+**Engineering gap:** the radiation shield and mounting (physics, not electronics), the winter power budget, SMS-based settings UX, the eSIM/SMS commercial deal, and the three-generation module footprint. Electronics are simple.
+
+### Starter BOM (estimates per unit at 1k)
+| Part | Est. cost | Notes |
+|---|---|---|
+| Cat-M/NB-IoT module (SIMCom SIM7070-class or A7672-class) | €11.00 | **Generations change; 3-footprint design**; pre-certified |
+| Low-power MCU (STM32L0/ESP32-C3 in deep sleep) + RTC | €2.50 | |
+| SHT3x-class T/RH sensor | €3.50 | Second-source alternatives on the same footprint |
+| Solar panel 2 W + charger IC | €4.50 | |
+| LiFePO4 or Li-ion cell 2,000 mAh + protection + gauge | €4.50 | UN 38.3 from vendor; LiFePO4 for −20 °C |
+| Antenna (PCB or FPC) + RF passives | €1.20 | Follow module vendor layout |
+| eSIM (MFF2) + 5-year multi-network plan | €12.00 | **The negotiation that decides the margin** |
+| PCB 2–4 layer, passives | €2.50 | |
+| IP65 enclosure + radiation shield + post + clamp | €11.00 | **Shield tooling €6–10k**; post off-the-shelf fibreglass |
+
+### Firmware/software starting point
+- Module control via AT commands; **TinyGSM** (Arduino, exists) supports SIMCom modules for a works-like; in production write a thin AT layer yourself.
+- Sensirion publishes SHT3x drivers on GitHub (exists).
+- SMS logic: send/receive via the module directly, or via the IoT SIM provider's SMS API (more reliable for delivery reports) — search your provider's docs.
+- Dew-point and frost logic: standard formulas; the viticulture adviser sets the defaults (−1 °C wet-bulb, etc.).
+- Backend (optional): a tiny service for history and SIM status; keep it optional so the product works with zero cloud.
+
+### 12-week build plan
+| Weeks | Phase | Exit criteria |
+|---|---|---|
+| 1–2 | Validate | 5 works-like units (Unit CatM + SHT31 + solar board + MCU) in IP65 boxes on posts; **20 growers asked at an association evening — 8 say yes with a €30 deposit** |
+| 3–5 | Works-like | 30 units in the field through cold nights; alarm SMS within 10 min of crossing threshold; sensor within ±0.5 °C of a shielded reference overnight; battery holds through 10 cloudy days |
+| 6–8 | Looks-like + EVT | Own PCB with 3-generation footprint; shield + enclosure T1; 50 units; RF pre-scan; settings-by-SMS tested by 10 growers unaided |
+| 9–10 | DVT + pre-compliance | EN 301 489-52 / EN 62368-1 pre-compliance; IP65 test; UN 38.3 report; power budget modelled vs measured; eSIM contract signed |
+| 11–12 | Pilot batch | 50 units to deposit holders before the next frost window; ≥ 90% of alarms delivered; 0 false "all clear" |
+
+### Certification checklist (EU)
+- **CE under RED** (cellular): module pre-certified, but the product needs **EN 301 489-1/-52**, EN 62311 (RF exposure), and **EN IEC 62368-1**; carrier approval rides on the module. Est. €6–10k RED/EMC + €3–5k safety.
+- **EN 18031:** applies if the device is "internet-connected" — a Cat-M device that sends SMS only is a grey zone; if you add the optional backend it clearly applies (-1, €10–15k). Decide early; a pure SMS product keeps scope narrow — get a notified body's opinion.
+- **Battery:** UN 38.3 for the cell; **EU Battery Regulation** labelling and the 18 Feb 2027 removability rules → removable cell pack.
+- **RoHS, REACH, WEEE**, packaging; **IP65** test (IEC 60529) €1–2k.
+- **CRA:** reporting from 11 Sept 2026, full 11 Dec 2027 — signed firmware, FOTA via cellular, vulnerability contact.
+- **GDPR:** phone numbers of growers are personal data → minimal storage, privacy notice; no camera/mic.
+- **Total certification budget estimate: €12–30k** depending on the EN 18031 decision.
+
+### Validation toolkit
+- **Kill question:** Ask 20 winegrowers at a growers' association evening: €149–169 one-off, SMS at −1 °C, no app — yes or no? Pass = 8 yes with a deposit.
+- **Cheapest experiment (~€600):** 5 works-like units, a 60-second video of a frost night and the SMS arriving, a one-page sheet, and a €30 deposit QR at two association evenings in January.
+- **5-question interview (grower):** 1) What did the last frost cost you, and how did you find out it was freezing? 2) How many plots do you protect, and how do you decide when to start? 3) Who is on frost duty at night, and what do they use? 4) Have you looked at a weather station — why didn't you buy one? 5) €169 once with 5 years of SMS included, threshold set by text message — would you put one on each plot?
+- **Landing page:** headline "Know it's freezing in your vineyard before the forecast does." Bullets: "Canopy-height sensor on a post; a text message at your threshold, and an all-clear at sunrise." / "Solar powered, SIM included for 5 years. No app, no subscription." / "€169. Put one on every plot that behaves differently."
+- **Pass threshold:** 8 of 20 deposits at the first evening, or 100 deposits before 1 March.
+
+### First production checklist
+- Samples: 5 golden samples with sensor calibration, RF attach logs on 3 networks, and a 14-day power log.
+- DFM: shield airflow vs rain ingress, gland for the sensor cable, panel angle, post clamp for 40–80 mm trellis posts, battery door with a seal.
+- MOQ talk: modules 1k (ask for the next generation's sample too), eSIMs 1k with the 5-year plan, cells 1k with UN 38.3, shield + enclosure 1k.
+- QC: AQL II 2.5/4.0; 100% network attach + SMS loop test; 100% sensor plausibility at ambient; 5% IP spray check; 24 h solar/battery soak on 2%.
+- Packaging: UN 3481 marking; post in a tube; quick card with "text SET -1".
+- Incoterms: FOB Shenzhen; air (DG-rated) for 50; sea for the season batch — ship by September to sell in December.
+
+## 4. Next steps (this week)
+1. Order 5× Unit CatM, 5× SHT31 Grove, a prepaid IoT SIM, 5 IP65 boxes and 5 fibreglass posts; have one unit texting you a temperature by day 7.
+2. Find the next 3 growers' association or wine institute evenings in Jan–Feb in your region and get a 10-minute slot; prepare the deposit QR.
+3. Request quotes from three multi-network IoT eSIM providers for 1,000 × 5 years with 500 SMS/year — the answer decides your price point.
+
+Want help sourcing or building this? Talk to us via www.gongbans.com.

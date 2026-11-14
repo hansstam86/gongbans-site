@@ -1,0 +1,174 @@
+# Workshop Air & Noise Sentinel — Founder Start Pack
+
+> A wall unit for makerspaces, school workshops and small joineries that logs VOC, CO2, temperature and noise exposure, shows a traffic light across the room, and produces the documentation small workshops need for a health-and-safety visit.
+
+Concept from the GONGBANS inventor. Not validated. All numbers are estimates — check them. Check every board's licence before commercial use.
+
+## 1. Summary
+
+- **Problem:** Small workshops must document exposure (solvents, dust, noise, ventilation) under occupational-safety rules, but industrial monitors cost €1,000+ and consumer air monitors don't log shifts or trigger extraction.
+- **Customer:** Makerspaces/FabLabs (800+ makerspaces in Europe per the JRC network, ~400 FabLabs by one count — [JRC EU Makerspaces](https://cop-demos.jrc.ec.europa.eu/eu-makerspaces), [IOP Alliance report](https://iop-alliance.github.io/data_reports/reports/make_europe.html)), school and vocational workshops, small joineries, print shops, nail/paint booths. The operator or school pays; the safety officer and the people in the room use it.
+- **Product:** €249–329 wall unit: VOC (BME680-class), true NDIR CO2 (SCD41-class), temperature/humidity, A-weighted noise level, a big traffic light, a relay to start the extraction fan, shift logging and a PDF for the safety officer. PM2.5 is a bought-in add-on (state the gap honestly).
+- **Why now:** The sensors are catalogue parts (open BME680 board, SCD41 Grove, loudness Grove); makerspaces and schools are buying air monitors anyway since 2020; "indicative monitor with documentation" is a slot between €150 consumer gadgets and €1,000 instruments.
+- **The ask:** ~€80k (estimate) to 1,000 units. Route: trial-unit programme (kill question) + bootstrap; education-supply distributors and a maker-community pre-order run.
+
+## 2. Business plan
+
+### Problem & customer
+Three segments, one product:
+1. **Makerspaces/FabLabs/community workshops** — a manager with a small budget and a board that worries about liability. Buys 1–3 units. Talkative community; good for launch.
+2. **School and vocational-training workshops** — the school buys via education-supply catalogues; the safety officer inspects yearly. Buys per workshop (wood, metal, paint). Slow but repeat.
+3. **Small joineries, print shops, nail/paint studios** — the owner buys when the safety inspector or the insurer asks for documentation. Buys 1 unit, wants a PDF.
+
+The pain is twofold: the room is bad (headaches, dust, noise) and nobody can prove anything either way. The traffic light handles the first; the shift log and PDF handle the second.
+
+### Market size (estimates)
+- EU + UK: ~1,200 makerspaces/FabLabs (estimate), ~150k schools with a workshop or lab (vocational and secondary — estimate), ~300k small workshops in wood/metal/print/paint trades (estimate). Call it **450k rooms**.
+- **TAM:** 450k × €289 ≈ **€130 M**.
+- **SAM:** rooms whose operator has faced a safety inspection or insurer question and has a budget ≥ €300 — 20% → 90k → **€26 M**.
+- **SOM (3 years):** 4% → 3,600 units → **€1 M**, plus PM add-on and relay accessories (~15%).
+
+### Competition
+| Alternative | Notes | Weakness we attack |
+|---|---|---|
+| Consumer/prosumer air monitors (CO2 ~$159 [Aranet4-class](https://www.aranet.com/en/pro/blog/aranet4-home-vs-aranet4-pro); multi-sensor $130–250 [Airthings-class](https://smarthomecompared.com/air-quality-monitors/airthings-wave-enhance-vs-aranet-aranet4-home)) | Well made, app-based | No noise exposure, no shift log, no relay, no PDF, no wall-visible traffic light |
+| Business air-quality platforms (multi-sensor + dashboard + subscription) | Office-oriented | Subscription, cloud-dependent, no noise-exposure logic, no extraction relay |
+| Industrial multi-gas / noise dosimeters (€1,000+) | Certified instruments | Price; one parameter each; not continuous wall monitors |
+| CO2 traffic lights for classrooms (€80–150) | Common since 2020 | CO2 only |
+| Paper checklists / "do nothing" | The default | No evidence when the inspector or insurer asks |
+| DIY (ESP32 + sensors + Home Assistant) | Makerspaces do this | No PDF, no relay rating, nobody maintains it; we sell to the ones who tried |
+
+**Wedge:** noise + VOC + CO2 in one wall unit with a room-visible light, an extraction-fan relay, and shift-based documentation; honest "indicative, not a certified instrument" positioning with a calibration-check routine.
+
+### Product & value proposition
+Hardware: 160 × 100 × 40 mm wall unit, 12 V PSU, BME680-class gas/VOC + T/RH, SCD41-class NDIR CO2, MEMS mic → dBA + LAeq per shift (no audio stored), 3-colour LED bar readable at 10 m, 2.9" e-paper or small LCD, relay 10 A for the extraction fan (dry contact), microSD, WiFi/Ethernet optional, BLE for setup. Firmware: thresholds per parameter, traffic light logic (worst-of), shift start/stop (button or schedule), daily/weekly summary, PDF/CSV export via web page or email, PM2.5 add-on over a connector (bought-in laser PM sensor). Wellness/safety-documentation positioning; **not a certified occupational-exposure instrument** — say it everywhere.
+
+Pricing (estimates): **€289 B2C/direct**, €329 with PM2.5 add-on, €249 education pricing, €499 "pro" with Ethernet and 2 relays. B2B via education-supply distributors at 30–35% off.
+
+### Unit economics (estimates per unit, ex-VAT)
+| Item | 1k units | 5k units |
+|---|---|---|
+| Electronics BOM (ESP32-S3 module, BME680-class, SCD41-class, MEMS mic, LED bar, 2.9" e-paper, relay, PSU 12 V, PCB) | €44.00 | €35.00 |
+| Assembly & test (SMT, sensor warm-up test, mic level test, relay test) | €6.50 | €4.50 |
+| Enclosure (2-shell ABS with vents, light diffuser, wall bracket; tooling amortised) | €6.80 | €4.20 |
+| Packaging (box, bracket, screws, PSU) | €3.50 | €2.60 |
+| Freight + duty to EU | €3.20 | €1.90 |
+| Certification amortised (~€30k: RED, EMC, LVD/62368-1 for relay + PSU, EN 18031) | €30.00 | €6.00 |
+| **Landed cost** | **€94.00** | **€54.20** |
+| Sell price (direct €289 / distributor €195) | €289 | €195 |
+| **Gross margin** | **€195.00 (67%)** | **€140.80 (72% at distributor)** |
+
+Solid. The PM2.5 add-on (bought-in laser sensor ~€12–18, sold at €49) adds margin and plugs the gap honestly.
+
+### Go-to-market
+**First 100 customers:** 20 trial units to makerspaces/FabLabs and school workshops (kill question: 10 of 20 buy at €279 after two weeks); maker-community channels (FabLab network forums, makerspace associations, hackerspace mailing lists), vocational-teacher associations, woodworking-trade guilds and their insurers' safety advisers (they recommend equipment), trade fairs for education supply and for woodworking (Ligna-class) — one each.
+
+**Scale channels:** education-supply distributors (catalogues schools order from), occupational-safety consultancies (they sell audits and can resell the unit), trade-guild member offers, extraction-system installers (bundle the relay feature).
+
+### 12-month plan
+| Quarter | Milestones |
+|---|---|
+| Q1 | Works-like from the open BME680 board + SCD41 Grove + loudness Grove + AtomS3; 20 trial units in printed cases; kill question. |
+| Q2 | Custom PCB, tooled case, relay/PSU safety design; EVT 50; PDF/web export; pre-compliance. |
+| Q3 | DVT, certification, 300-unit pilot; education distributor listing; PM add-on. |
+| Q4 | 1,000 units; two distributors; safety-consultancy partner programme. |
+
+**Team:** 1 embedded engineer (sensors, dBA, power — full-time), 1 web/firmware developer (web UI, PDF, shift logic — part-time → full-time), founder for community and distributor sales; an occupational-safety adviser part-time to make the documentation credible. Two and a half people.
+
+**Funding to first 1,000 units (estimates):** NRE €42k (PCB €8k, tooling €14k, software €15k, safety-adviser content €5k) + certification €30k + 1,000 units landed ~€64k + 9 months lean overhead €65k ≈ **€201k**; minus trial-to-sale and pre-orders (~€45k) and pilot batch sales (~€75k) ≈ **~€80k**. Bootstrap + maker-community pre-orders + an education-distributor prepayment. Education/innovation grants exist for "safe learning environments" in several countries.
+
+### Top risks
+| Risk | Mitigation |
+|---|---|
+| **Technical:** metal-oxide VOC sensors give an index, not ppm; buyers expect numbers | Present "VOC index + trend + threshold" honestly; map to "ventilate now" actions; offer the PM add-on for dust, which is what joineries actually need |
+| **Technical:** noise measurement accuracy vs class-2 meters; mic ageing | Factory level calibration with a calibrator; publish ±3 dB; annual self-check routine; never call it a dosimeter |
+| **Market:** "indicative" scares safety officers; "instrument" invites liability | Position as early warning + documentation support; the official measurement remains the consultant's job — partner with them |
+| **Regulatory:** relay switching mains fans → LVD/62368-1 and installer rules | Dry-contact relay only; fan contactor installed by an electrician; or ship a certified plug-in relay socket |
+| **Regulatory:** EN 18031 + CRA for a connected device | Pre-certified module, local-first design, budget it |
+| **Supply:** SCD41-class and BME680-class have had allocation issues; e-paper lead times | Second-source footprints; order panels early |
+| **Licence:** the open BME680 board is OSHWHub | Read the licence; it's a breakout — redraw your own |
+
+## 3. Start kit
+
+### Boards to start from
+| Board | Link | What it contributes | Files (catalogue) | Licence note |
+|---|---|---|---|---|
+| BME680 gas sensor board (OSHWHub) | https://www.gongbans.com/db/oshwhub-bme680.html | Open BME680 gas/VOC + T/RH breakout reference | schematic, pcb (EasyEDA) | **OSHWHub licence varies — read it**; trivial to redraw |
+| Seeed Grove CO2-Temperature-Humidity Sensor (SCD41) | https://www.gongbans.com/db/seeed-grove-co2-temperature-humidity-sensor-scd41.html | True NDIR CO2 reference | schematic | Seeed wiki resources; check licence |
+| Seeed Grove Loudness Sensor | https://www.gongbans.com/db/seeed-grove-loudness-sensor.html | Noise-level front-end (prototype only; production uses a MEMS mic + DSP) | schematic | Seeed wiki resources |
+| M5Stack AtomS3 (C123) | https://www.gongbans.com/db/m5stack-atoms3.html | ESP32-S3 with small display for the works-like | enclosure/structure only | Buy; your own board later |
+
+**Board-fact note:** no particulate (PM2.5) sensor exists in the catalogue. The PM add-on is a bought-in laser-scattering module from a sensor vendor.
+
+### Block diagram
+```
+[BME680-class VOC/T/RH] [SCD41-class NDIR CO2] [MEMS mic -> dBA/LAeq on MCU] [PM2.5 add-on connector]
+         \                    |                    |                            /
+          ---------------- I2C / I2S --------------+---------------------------
+                                     [ESP32-S3] -> [LED bar: green/amber/red] [2.9" e-paper]
+                                         |-> [relay 10 A dry contact -> extraction fan contactor]
+                                         |-> [microSD shift log] [WiFi/BLE -> web page: PDF/CSV, settings]
+                                     [12 V PSU (certified adapter)]
+```
+**Engineering gap:** sensors and MCU exist; the product is the exposure logic (shift LAeq, thresholds, traffic-light rules), the dBA DSP, the relay/PSU safety design, the web UI and PDF, and a case with proper airflow past the sensors without self-heating. Sensor placement and the documentation content are the real work.
+
+### Starter BOM (estimates per unit at 1k)
+| Part | Est. cost | Notes |
+|---|---|---|
+| ESP32-S3 module | €2.60 | Pre-certified |
+| BME680/BME688-class gas sensor | €6.50 | **Single-vendor family**; alternative MOX VOC sensor on a second footprint |
+| SCD4x-class NDIR CO2 | €14.00 | **Allocation risk**; second family qualified |
+| MEMS microphone I2S | €0.90 | Multi-source |
+| LED bar (12× RGB, diffused) | €1.20 | |
+| 2.9" e-paper + driver | €7.50 | Lead time 6–10 weeks |
+| Relay 10 A + driver + terminal block | €1.80 | Dry contact only |
+| 12 V 1 A certified PSU adapter | €2.50 | Buy certified; don't design mains |
+| PCB 4-layer, passives, SD slot, USB-C, buttons | €4.50 | |
+| Enclosure 2-shell + diffuser + bracket | €6.80 | **Tooling €10–16k** |
+| PM2.5 laser sensor (add-on, optional) | €12–18 | Bought-in; limited vendors |
+
+### Firmware/software starting point
+- ESP-IDF; Bosch publishes the BSEC library for BME680/688 (binary, licence terms apply — read them; the raw-resistance route is licence-free but cruder); Sensirion publishes SCD4x drivers on GitHub.
+- dBA/LAeq: open ESP32 I2S sound-level-meter projects exist (search "ESP32 I2S sound level meter A-weighting"); implement LAeq integration per shift yourself.
+- Web UI + PDF: ESP32 web server + a JS PDF library (search "jsPDF") so the PDF renders in the browser; CSV from SD.
+- Home Assistant/MQTT output is a cheap bonus the makerspace crowd will ask for.
+
+### 12-week build plan
+| Weeks | Phase | Exit criteria |
+|---|---|---|
+| 1–2 | Validate | 20 works-like units (open BME680 board + SCD41 Grove + loudness Grove + AtomS3 in printed cases) placed as two-week trials; **10 of 20 buy at €279** (runs to W6) |
+| 3–5 | Works-like | Traffic light + shift log + CSV on SD; dBA within ±3 dB of a class-2 meter; CO2 within ±50 ppm; relay triggers a test fan |
+| 6–8 | Looks-like + EVT | Custom PCB v1, tooled case T1 with validated airflow (sensor self-heating < 1 °C); 50 units; web UI + PDF; EMC pre-scan |
+| 9–10 | DVT + pre-compliance | RED/EMC pre-compliance; EN IEC 62368-1 review of the relay/PSU; EN 18031 self-assessment; documentation reviewed by an occupational-safety adviser |
+| 11–12 | Pilot batch | 50 units to trial converts + 10 schools; safety-officer feedback from ≥ 3 inspections; relay in use at ≥ 5 sites |
+
+### Certification checklist (EU)
+- **CE under RED** (WiFi/BLE): EN 300 328, EN 301 489-1/-17, EN 62311; **EN IEC 62368-1** (relay contacts, PSU — using a certified adapter keeps mains out of your box; the relay's dry contact must be rated and the terminal block finger-safe); **EN 18031-1** (internet-connected, mandatory since 1 Aug 2025; -2 if staff names are logged). Est. €6–9k RED/EMC, €4–6k safety, €10–18k EN 18031.
+- **RoHS, REACH, WEEE** per country; **Packaging** registration.
+- **Battery regulation:** none if mains-only (keep it mains-only; a backup cell adds UN 38.3 and the 2027 removability rules).
+- **CRA:** reporting from 11 Sept 2026, full 11 Dec 2027; signed firmware, OTA via web upload, SBOM, vulnerability contact.
+- **GDPR:** noise *levels* only, no audio; shift logs may include a person's name if you let users tag shifts — avoid or add a privacy notice; schools are sensitive.
+- **Not an occupational-exposure instrument** (no IEC 61672 class claim, no gas-detector EN 50271 claim); it supports documentation, it doesn't replace the measurement a safety consultant does. **Not a toy** (schools: fine, it's equipment).
+- **Total certification budget estimate: €22–35k.**
+
+### Validation toolkit
+- **Kill question:** Do 10 makerspaces or school workshops buy at €279 after a two-week trial unit?
+- **Cheapest experiment (~€1,800):** 20 works-like units in printed cases shipped with a return label and a one-page "what the light means" sheet; a buy-or-return email at day 14. Count buys.
+- **5-question interview (workshop manager / safety officer):** 1) When was your last safety inspection and what did they ask to see? 2) What's the worst thing about the air or noise in your workshop, and when? 3) Do you have extraction, and who switches it on? 4) Would a traffic light on the wall change behaviour in the room? 5) €279 for the unit with shift logs and a PDF — whose budget, and what would stop the purchase?
+- **Landing page:** headline "Know when the workshop air is bad — and prove it." Bullets: "VOC, CO2, temperature and noise exposure, with a traffic light the whole room can see." / "Starts your extraction fan automatically; logs every shift to a PDF for the safety officer." / "€279. Indicative monitor — early warning and documentation, not a lab instrument."
+- **Pass threshold:** 10 of 20 trial units bought, or 100 pre-orders at €249 from the maker community in 4 weeks.
+
+### First production checklist
+- Samples: 5 golden samples with sensor calibration records (CO2 at 2 points, mic level with a calibrator) and relay test.
+- DFM: vent geometry, sensor isolation from the PSU heat, diffuser uniformity, wall-bracket keyholes; test jig with reference CO2 and a tone source.
+- MOQ talk: CO2 sensor 500–1k; gas sensor reel 1k; e-paper 1k; case 1k; certified PSU 1k.
+- QC: AQL II 2.5/4.0; 100% sensor plausibility + mic level + relay test; 24 h burn-in on 5%; 2% re-check CO2 after burn-in.
+- Packaging: box with bracket, screws, PSU, quick sheet; no lithium.
+- Incoterms: FOB Shenzhen; air for the first 300; sea after.
+
+## 4. Next steps (this week)
+1. Order 20 sets (open BME680 board fabbed or a BME680 breakout, SCD41 Grove, loudness Grove, AtomS3) and print 20 cases; have one unit showing a traffic light by day 7.
+2. List 40 makerspaces, FabLabs and school workshops in your language area and write the two-week trial email (unit, return label, buy-or-return at day 14).
+3. Read your country's small-workshop occupational-safety guidance (noise, solvents, ventilation) and turn the limits into the threshold table — and have a safety adviser sanity-check it.
+
+Want help sourcing or building this? Talk to us via www.gongbans.com.

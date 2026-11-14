@@ -15,6 +15,7 @@ gongbans-site/
 ├── what-are-gongbans.html  ← essay
 ├── ideas.html              ← 50 product concepts built from catalogue boards (search, tag chips, sort)
 ├── ideas/                  ← one HTML page per idea (generated)
+├── startpacks/             ← founder start packs: <slug>.md (source, downloadable) + <slug>.html (generated)
 ├── data/ideas.json         ← the ideas (from the gongban-inventor workspace; every number is an estimate)
 ├── data/gongbans.json      ← the database (single source of truth; curated + imported entries)
 ├── data/catalog.json       ← slim copy for the grid (generated, do not edit)
@@ -49,7 +50,7 @@ stylesheet is linked as `/assets/style.css`.)
 ```bash
 python3 build_catalog.py        # reads ~/Projects/gongban-db/gongban.db (or pass a path)
 python3 build_detail_pages.py   # regenerates db/*.html + issuers.html, patches stats, removes stale pages
-python3 build_ideas.py          # regenerates ideas.html + ideas/*.html from data/ideas.json, patches index.html
+python3 build_ideas.py          # regenerates ideas.html + ideas/*.html + startpacks/*.html, patches index.html
 ```
 
 ## Ideas

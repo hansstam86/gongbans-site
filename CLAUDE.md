@@ -9,7 +9,9 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
   (one page per board, generated), `issuers.html` (publishers + solution-house directory, generated),
   `boards-kingbrother.html` (hand-written Kingbrother SOM page), `what-are-gongbans.html` (essay),
   `ideas.html` + `ideas/<slug>.html` (50 product concepts built from catalogue boards, generated from `data/ideas.json`
-  by `build_ideas.py`; board pages get a "Used in ideas" block from the same JSON).
+  by `build_ideas.py`; board pages get a "Used in ideas" block from the same JSON),
+  `startpacks/<slug>.html` + `startpacks/<slug>.md` (founder start packs: business plan + start kit per idea, rendered by
+  `build_startpacks.py` from the Markdown, called by `build_ideas.py`; the .md is the "Download as Markdown" source).
 - One shared stylesheet: `assets/style.css` (palette/fonts of the original landing page: deep green
   `#021e14`, gold `#c9a84c`, copper `#b87333`, cream `#f5f2eb`; DM Serif Display / IBM Plex Sans / IBM Plex Mono).
   Every page links it; keep page-specific CSS in there too, not inline.
@@ -28,6 +30,11 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
   every number as an estimate, never add medical, shared-mobility or vehicle-tracking ideas, and keep the
   `check-licence` tag on anything that uses OSHWHub boards. Source of truth: `data/ideas.json`
   (copied from `agent-assistant/.../gongban-inventor/ideas/ideas50.json`).
+- Start packs: `startpacks/<slug>.md` is copied from `agent-assistant/.../gongban-inventor/startpacks/` (one per idea slug;
+  `_progress-*` files stay out). Edit the Markdown, never the generated HTML; rerun `python3 build_ideas.py`. The renderer
+  (`build_startpacks.py`) is stdlib-only and supports headings, lists, pipe tables, fenced blocks (diagrams → `<pre>`),
+  bold/italic/code/links; `www.gongbans.com/...` links become site-relative. Every pack page carries the disclaimer at the
+  top; a pack without an idea page aborts the build. `.nojekyll` is required so GitHub Pages serves the `.md` files as-is.
 - The database itself is private and must never be committed. Never export: `contacts`, `outreach`, `fetch_log`,
   `fairs`, `sources.notes`, `solution_houses.wechat/email/notes/district`, rows with `solution_houses.excluded` set,
   anything ride-sharing / vehicle-tracking / micromobility (see `MOBILITY_RE`), e-mail addresses, personal names, WeChat IDs,

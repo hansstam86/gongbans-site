@@ -22,6 +22,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 from build_detail_pages import ASSET_V, FOOTER, e, head, nav
+import build_startpacks
 
 ROOT = Path(__file__).parent
 IDEAS_JSON = ROOT / "data" / "ideas.json"
@@ -35,6 +36,7 @@ SCORE_KEYS = [("demand", "Demand", "How many European buyers want it"), ("builda
               ("margin", "Margin", "Room between estimated BOM and price"), ("speed", "Speed", "How fast a small team ships V1")]
 OPEN_KINDS = {"schematic", "pcb", "gerber"}
 TAG_CHIPS = 14
+PACKS = set()  # slugs that have a founder start pack (filled by main())
 
 
 def load():
@@ -59,9 +61,9 @@ def card(i, rank=None):
     hay = " ".join([i["title"], i["pitch"], i["audience"], i["category"], tags] + [b["board_name"] for b in i["built_from"]]).lower()
     sc = i["scores"]
     return f'''
-    <a class="board idea" href="/ideas/{e(i["slug"])}.html" data-cat="{e(i["category"])}" data-tags="{e(tags)}" data-score="{i["score_total"]}" data-d="{sc["demand"]}" data-b="{sc["buildability"]}" data-m="{sc["margin"]}" data-s="{sc["speed"]}" data-title="{e(i["title"].lower())}" data-hay="{e(hay)}">
+    <a class="board idea{" has-pack" if i["slug"] in PACKS else ""}" href="/ideas/{e(i["slug"])}.html" data-pack="{int(i["slug"] in PACKS)}" data-cat="{e(i["category"])}" data-tags="{e(tags)}" data-score="{i["score_total"]}" data-d="{sc["demand"]}" data-b="{sc["buildability"]}" data-m="{sc["margin"]}" data-s="{sc["speed"]}" data-title="{e(i["title"].lower())}" data-hay="{e(hay)}">
       <div class="board-id">{f"#{rank} · " if rank else ""}{e(i["category"].upper())}</div>
-      <h3 class="board-name">{e(i["title"])}</h3>
+      <h3 class="board-name">{e(i["title"])}{'<span class="pack-badge" title="Founder start pack: business plan + start kit">Start pack</span>' if i["slug"] in PACKS else ""}</h3>
       <div class="board-tag">{e(" · ".join(sorted(i["tags"])[:4]))}</div>
       <div class="board-desc clamp">{e(i["pitch"])}</div>
       {score_pills(i)}
@@ -82,6 +84,15 @@ def render_index(data, ideas):
     desc = (f"{len(ideas)} product concepts a European team could build mainly from boards in the gongban catalogue — smart home, energy, "
             "installer tools, accessibility, agri, LoRaWAN and more — each with the boards it uses, rough estimates, the certification path and a kill question.")
     extra = f'\n<script defer src="/assets/ideas.js?v={ASSET_V}"></script>'
+    n_packs = sum(i["slug"] in PACKS for i in ideas)
+    first = next((i for i in ideas if i["slug"] in PACKS), None)
+    explainer = (f'''<section class="startpack-explainer" id="startpacks" aria-label="Founder start packs">
+  <div>
+    <h2>Founder start packs</h2>
+    <p>Ideas marked <span class="pack-badge" style="margin-left:0">Start pack</span> come with a founder start pack: a one-page summary, a business plan (customer, market size, competition, unit economics, go-to-market, 12-month plan, funding, risks) and a start kit (the catalogue boards to copy from, a block diagram, a starter BOM, firmware starting points, a 12-week build plan, the EU certification checklist, a validation toolkit and a first-production checklist), ending with three things to do this week. Every pack is downloadable as Markdown. Same rule as the ideas: concepts, not products; every number is an estimate to check.{f' Example: <a href="/startpacks/{e(first["slug"])}.html">{e(first["title"])} →</a>' if first else ""}</p>
+  </div>
+  <div class="n">{n_packs}<small>start packs</small></div>
+</section>''' if n_packs else "")
     return f'''{head(f"Ideas — {len(ideas)} product concepts built from gongbans — GONGBANS", desc, "ideas.html", "website", extra=extra)}
 <body>
 {nav("ideas")}
@@ -106,6 +117,8 @@ def render_index(data, ideas):
 <main class="catalogue">
 
 <div class="idea-disclaimer"><strong>Disclaimer.</strong> {e(DISCLAIMER)}</div>
+
+{explainer}
 
 <section class="filter-bar" aria-label="Filters">
   <div class="filter-group scroll" role="group" aria-label="Category"><span class="filter-label">Category</span><span id="chips-cat" class="filter-group">{cat_chips}</span></div>
@@ -167,6 +180,8 @@ def render_idea(i, ideas, boards):
     item("Price (estimate)", f'€{e(i["price_eur_est"])}', "gold")
     item("Built from", f'{len(i["built_from"])} catalogue boards')
     item("Design files", e(i["open_files_share"]))
+    if i["slug"] in PACKS:
+        item("Founder start pack", f'<a href="/startpacks/{e(i["slug"])}.html">Business plan + start kit →</a>')
 
     boards_html = "".join(board_item(b, boards) for b in i["built_from"])
     est_rows = "".join(f'<tr><td>{e(lbl)}</td><td>{e(val)}<span class="est">estimate</span></td></tr>' for lbl, val in [
@@ -185,6 +200,11 @@ def render_idea(i, ideas, boards):
     lic = ('<p><strong>Licence check.</strong> This concept uses community (OSHWHub) boards whose licences vary and may exclude commercial use — read each project\'s licence before building on it.</p>'
            if "check-licence" in i["tags"] else "")
     title = f'{i["title"]} — idea built from {len(i["built_from"])} gongbans · GONGBANS'
+    pack_cta = (f'''<div class="pack-cta" id="startpack">
+    <a class="btn primary" href="/startpacks/{e(i["slug"])}.html">Founder start pack →</a>
+    <p><strong>Business plan + start kit for this idea.</strong> Customer, market size, competition, unit economics, go-to-market, 12-month plan, funding and risks; then the boards to copy from, block diagram, starter BOM, 12-week build plan, EU certification checklist and validation toolkit. Estimates, not quotes.</p>
+    <a class="md" href="/startpacks/{e(i["slug"])}.md" download>↓ Markdown</a>
+  </div>''' if i["slug"] in PACKS else "")
     return f'''{head(title, i["pitch"][:200], f"ideas/{i['slug']}.html")}
 <body>
 {nav("ideas")}
@@ -201,6 +221,7 @@ def render_idea(i, ideas, boards):
 <main class="detail">
   <div class="idea-disclaimer"><strong>Concept, not a product.</strong> {e(DISCLAIMER)}</div>
   <div class="detail-meta">{"".join(meta)}</div>
+  {pack_cta}
 
   <section class="dsection" id="market">
     <div class="dsection-label">Who buys · why now</div>
@@ -280,6 +301,7 @@ def patch_index(ideas):
 
 def main():
     data, ideas, boards = load()
+    PACKS.update(build_startpacks.build(ideas))
     (ROOT / "ideas.html").write_text(render_index(data, ideas), encoding="utf-8")
     wanted = set()
     for i in ideas:
