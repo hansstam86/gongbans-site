@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Dynamic tariffs are mass-market in NL and every German supplier must offer one since January 2025; dynamic grid fees arrive in 2026. Searches (ours and this one) found only web-page "Strompreis-Ampel" pages — no physical price lamp on the shelf.
 - **The ask:** ~€45–60k to get through certification and a first 1,000 units (math in §3), ideally half of it from pre-orders and a retailer co-branding deal.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** No standalone competing product was found (Tibber Pulse's light shows connection status, not price), while several independent DIY builds do exactly this, and dynamic tariffs are a real, growing NL/DE category (Tibber, EDF FreePhase, Nord Pool-indexed contracts). **Main risk:** Technical users can DIY it with a cheap smart bulb and Home Assistant; the product has to beat "just buy a smart plug" on simplicity. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -132,6 +136,23 @@ Sources used for the tariff numbers: ACM/Bright.nl (NL >1.1M dynamic contracts),
 | Retailer hardware (Tibber Pulse, HomeWizard P1) | Meter readers, not price indicators | Complementary — our solar-surplus mode can read their local API |
 
 **Wedge:** the only standalone, zero-setup physical price indicator. Works out of the box with public day-ahead data; no account needed for the basic mode.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Tibber Pulse (meter reader with status light) | Light indicates connection status only, not price | Confirms the gap: no retailer hardware shows the price itself |
+| Home Assistant forum thread "Preparing for a Dynamic Energy Contract with Color Awareness" | DIY colour-by-price build | Demand signal: people build this themselves |
+| GitHub gist for Amber (Australia) price light | DIY build on another market's dynamic tariff | Same need re-invented elsewhere |
+| Aqara forum "traffic light" post | DIY price traffic light | Same |
+| Homey community thread asking for exactly this | User asked for a price lamp and was told to build it | Unmet demand stated by a user |
+| Dynamic tariff providers: Tibber, EDF FreePhase, Nord Pool-indexed contracts | The category the lamp depends on | Real and growing in NL/DE |
+
+**Verdict as researched: LIKELY.** Main risk: Technical users can DIY it with a cheap smart bulb and Home Assistant; the product has to beat "just buy a smart plug" on simplicity.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

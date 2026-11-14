@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Installers are asked about dynamic tariffs weekly and answer with a Shelly and a Home Assistant forum thread. Energy-manager systems cost "several hundred to over €1,000 plus a monthly fee" (Utopia). A €149 box that does one thing fills the hole.
 - **The ask:** ~€70k to a certified first 1,000; installer pre-commitments carry a big share.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** SG-Ready is confirmed as a real certified German standard (BWP) supported by most EU heat-pump makers (NIBE, Viessmann, Vaillant). Installers and owners actively discuss wiring dynamic-tariff logic to SG-Ready with DIY tools (Shelly relay + Home Assistant, evcc, the Tibber app) on HaustechnikDialog and in the simon42 / evcc communities. Germany's BEG funding rules reportedly require a digital grid-control interface on new heat pumps from July 2027. **Main risk:** A cheap DIY substitute already exists (Shelly relay at roughly €30–40 plus free Home Assistant or evcc), and one forum voice called plain SG-Ready "not very useful" without extra conditions. The real market is installers wanting a no-fuss, no-cloud box to resell, which matches the pack's B2B kill question. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -131,6 +135,21 @@ SG-Ready is a two-contact interface: four states (blocked, normal, recommended-o
 | Smart-dog / solar-dog hobby HEMS | Niche DIY | Same as HA |
 
 **Wedge:** installer-friendly, brand-agnostic, no cloud account, one job. The spare relays make it a "cheap-hour box" for the boiler and the pool pump too.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| SG-Ready standard (BWP), supported by NIBE, Viessmann, Vaillant and most EU makers | The interface the box drives | Real and widespread |
+| HaustechnikDialog, simon42 and evcc community threads | Installers and owners wiring tariff logic to SG-Ready with Shelly + Home Assistant, evcc, Tibber | Demand signal and the DIY substitute at once |
+| Shelly relay (roughly €30–40) + Home Assistant / evcc | Free-software DIY route | The cheap substitute to beat on simplicity |
+| BEG funding rules (reported) | Digital grid-control interface required on new heat pumps from July 2027 | Regulatory tailwind; verify the wording |
+
+**Verdict as researched: LIKELY.** Main risk: A cheap DIY substitute already exists (Shelly relay at roughly €30–40 plus free Home Assistant or evcc), and one forum voice called plain SG-Ready "not very useful" without extra conditions. The real market is installers wanting a no-fuss, no-cloud box to resell, which matches the pack's B2B kill question.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

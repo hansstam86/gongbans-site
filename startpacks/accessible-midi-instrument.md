@@ -12,6 +12,10 @@
 - **Why now:** MIDI, synth, fader and encoder units are off-the-shelf catalogue parts; inclusive music is funded by arts councils and schools; the price gap between €300 and €3,000 is empty.
 - **The ask:** ~€60k to the first 1,000 units; school/charity pre-orders fund a third.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Direct competitors are active: Skoog (about £180–230), Cosmo / Filisia (about $199 per dot), AptiPlay (open source, pitched as the cheaper DIY alternative) and the older Device One / One6 from Drake Music Project NI. The OHMI Trust (UK, Arts Council-funded) exists because adapted instruments are not cheap, confirming a funding-constrained institutional buyer class looking for lower-cost options. €299 sits above Skoog and Cosmo but far below Soundbeam (£2,505–4,595 for a full kit). **Main risk:** Skoog and Cosmo already occupy this niche at lower prices; €299 has to clearly beat a $199 Skoog, not match it. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -126,6 +130,23 @@ Who pays: special-needs schools (equipment budgets, often with charity top-ups),
 | Do nothing — tambourine | €10 | — |
 
 **Wedge:** tactile, rugged, self-sounding, switch-ready, quantised, €299. Sell to the therapist who wants three, not the grant committee.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Skoog | About £180–230 | Direct competitor, cheaper |
+| Cosmo / Filisia | About $199 per dot | Direct competitor, cheaper |
+| AptiPlay | Open source, pitched as the cheaper DIY alternative | Free substitute for makers |
+| Device One / One6 (Drake Music Project NI) | Older accessible instruments | Precedent |
+| Soundbeam | £2,505–4,595 full kit | The expensive end of the market |
+| OHMI Trust (Arts Council-funded) | Exists because adapted instruments are not cheap | Confirms the buyer class and its budget constraint |
+
+**Verdict as researched: LIKELY.** Main risk: Skoog and Cosmo already occupy this niche at lower prices; €299 has to clearly beat a $199 Skoog, not match it.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 - **Hardware:** 300 × 200 mm ABS/aluminium box; 4× 60 mm faders with big caps, 4 encoders with RGB rings, 1 joystick (spring return), 2× 60 mm arcade buttons, 2× 3.5 mm assistive-switch jacks (plus 1 expression-pedal jack), built-in GM synth + 3 W speaker, line out, USB-C (USB MIDI class device + power), 5-pin MIDI out, BLE MIDI as a later SKU, tray/stand mounting inserts.

@@ -487,3 +487,10 @@ main.detail.playbook{max-width:900px}
 .playbook .glossary dd{color:var(--text-mid);margin:2px 0 0 0;line-height:1.6}
 .pack-toc a.first{border-color:var(--copper);color:var(--copper);font-weight:600}
 .pack-toc a.first:hover{background:var(--copper);color:#fff}
+.market-badge{display:inline-block;font-family:var(--font-mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:3px;margin-left:6px;vertical-align:middle;white-space:nowrap;border:1px solid}
+.market-badge.likely{color:var(--green-deeper);border-color:var(--green-deeper);background:rgba(2,30,20,0.06)}
+.market-badge.weak{color:var(--red);border-color:var(--red);background:var(--red-bg)}
+.pack-body blockquote.market-check{border-left-color:var(--green-deeper);background:rgba(2,30,20,0.04)}
+.pack-body blockquote.market-check.correction{border-left-color:var(--red);background:var(--red-bg)}
+.kq-note{font-size:14px;color:var(--text-mid);border-top:1px solid rgba(0,0,0,0.08);margin-top:14px;padding-top:12px;line-height:1.6}
+.kq-note strong{color:var(--red)}

@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** E-paper panels and ESP32 are cheap; an open community (OpenEPaperLink) has shown that ESL hardware is commodity; the small-shop segment is unserved because nobody sells it as a buy-once consumer-grade product.
 - **The ask:** ~€70k to a certified first 1,000 signs; a 20-shop doorstep test answers the kill question for the price of a train ticket.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Enterprise ESL vendors (Pricer, Hanshow) target chains with thousands of SKUs; independent-grocer sources (DUMAC, RetailWire) name upfront cost as the top objection because independents cannot spread it like chains. A Shopify Community thread confirms no plug-and-play, no-subscription ESL kit exists today. Bare e-paper hardware costs about $47–113; enterprise gateways (not needed here) add $300–400, which makes a €119 finished no-gateway unit plausible on margin. **Main risk:** Nothing confirms an underserved category at scale, only that the big players do not serve it; independents may keep using a €2 chalk sign. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -128,6 +132,21 @@ The baker changes prices twice a week and hours every holiday; the pharmacy post
 | Small LCD/LED digital signage on mains | Bright but wired, power-hungry | No wiring is the point |
 
 **Wedge:** buy-once, phone-first, window-ready e-paper with templates for small shops — and a price point under the "I'll just ask my nephew" threshold.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Pricer, Hanshow | Enterprise ESL for chains with 5,000+ SKUs | Do not serve independents |
+| DUMAC, RetailWire (independent-grocer sources) | Upfront cost is the top objection to ESL | Confirms the price-sensitivity of the target |
+| Shopify Community thread | No plug-and-play, no-subscription ESL kit exists | Confirms the gap |
+| Bare e-paper hardware ($47–113); enterprise gateways ($300–400) | Component and system price points | Supports the €119 no-gateway unit on margin |
+
+**Verdict as researched: LIKELY.** Main risk: Nothing confirms an underserved category at scale, only that the big players do not serve it; independents may keep using a €2 chalk sign.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

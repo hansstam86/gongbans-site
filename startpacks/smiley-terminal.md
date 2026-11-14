@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Public bodies are required or pushed to measure service quality and hate subscriptions; LoRaWAN coverage is now good in NL/DE/BE/FR public and private networks; the hardware is trivially cheap.
 - **The ask:** ~€75k to a certified first 1,000 units; the B2B deposits should fund most of it.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** HappyOrNot, the dominant incumbent, is confirmed subscription-only at roughly $69–100 per kiosk per month (Fox Business, Software Advice, Spendbase); four terminals at $69 a month is about $3,300 a year against a one-off buy, so payback is under two months. No competitor was found selling a comparable buy-once terminal (SurveyStance and AirVote are subscription or freemium). **Main risk:** No public complaints about HappyOrNot's cost or lock-in surfaced (reviews are thin and positive), so the pain point is assumed, not verified; there is no direct evidence facility managers are shopping for a buy-once alternative. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -130,6 +134,21 @@ Four buttons are not a technology problem. They are a business-model problem. Ha
 | DIY: four Grove buttons + ESP32 + Google Sheets | A weekend for a maker | Nobody in facility management does this; no stand, no battery life, no spam filter |
 
 **Wedge:** buy-once hardware with open data. Secondary wedge: LoRaWAN — the terminal works in the washroom in the basement without store WiFi or IT approval.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| HappyOrNot (Fox Business, Software Advice, Spendbase) | Subscription only, roughly $69–100 per kiosk per month | Payback of a €299 one-off terminal under two months at four units |
+| SurveyStance | Subscription / freemium feedback kiosks | No buy-once offer |
+| AirVote | Subscription / freemium feedback | No buy-once offer |
+| HappyOrNot reviews on Software Advice (4.9 stars, 18 reviews) | Thin, positive | Cost pain point not evidenced in public reviews |
+
+**Verdict as researched: LIKELY.** Main risk: No public complaints about HappyOrNot's cost or lock-in surfaced (reviews are thin and positive), so the pain point is assumed, not verified; there is no direct evidence facility managers are shopping for a buy-once alternative.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

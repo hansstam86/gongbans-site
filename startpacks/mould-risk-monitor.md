@@ -12,20 +12,30 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Energy prices, the German "richtig heizen und lüften" campaigns, and a wave of landlord-tenant disputes. Existing B2B sensors (e.g. Sentinum Febris SCW) sit at professional prices and need a platform; no cheap standalone device with a dispute-grade log exists that we found.
 - **The ask:** ~€95k to certification and 1,000 units; half via a housing-association paid pilot and a second via regional building-energy grants.
 
+<!-- market-check:start -->
+> **External market check (November 2026): WEAK TO UNCERTAIN.** A real market for mould sensing exists, but it is B2B/B2G: landlords and housing associations buying fleets of sensors with dashboards (Switchee, Vericon MouldSense, Aico HomeLINK, Connexin, NRLA ResiSure). No evidence was found of DE/NL consumers or tenants buying a single mould-documentation device; cheap humidity sensors (Aqara T1/W100, roughly €15–41) already cover basic alerting. **Main risk:** Tenants may see the device as surveillance: a UK NRLA source notes landlords find tenants often suspect such sensors exist to blame them. German legal sources confirm mould disputes are common and measurement is legally relevant, but nothing shows tenants currently buy devices for this. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+>
+> **Audience mismatch found in research.** The original kill question tested the wrong buyer: a tenant survey about a €59 puck. The research found the buyers who already pay for mould sensing are landlords and housing associations buying fleets with a dashboard, and that tenants may distrust a device that documents their ventilation. The kill question in section 2 now tests the housing-association / landlord buyer first; the tenant-survey version is kept as a secondary signal.
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
 **Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
 
+> **Audience mismatch found in research (November 2026).** The original kill question tested tenants as buyers of a €59 puck. External research found that the buyers who already pay for mould sensing are landlords and housing associations buying fleets with a dashboard (Switchee, Vericon MouldSense, Aico HomeLINK, Connexin, NRLA ResiSure), that no DE/NL evidence shows tenants buying such devices, and that tenants may distrust a device that documents their ventilation. The kill question now tests the housing-association / landlord buyer first; the tenant survey is kept as a secondary signal. As researched November 2026 by web search; verify before relying on it.
+
 ### The gate: this idea's kill question
 
-> Do 30 of 300 tenants in one housing association's survey say they would pay €59 for a device that documents ventilation behaviour?
+> Do 3 housing associations or landlords (500+ units each) sign a paid pilot of 50 wall sensors with the dashboard, at €59–79 per unit plus a per-unit platform fee, within 8 weeks, with tenants told in writing what it measures and why? Pass = 3 signed pilots. Secondary signal only: the original tenant survey (30 of 300 tenants saying they would pay €59).
 
-You pass this section when you can answer that question with evidence you collected yourself, not a guess: a measured conversion on a fake-door landing page for the consumer side and, for the business side, at least three decision-makers who put something on paper: a letter of intent, a paid pilot or a purchase order. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+*Revised after the external market check; the original question was: "Do 30 of 300 tenants in one housing association's survey say they would pay €59 for a device that documents ventilation behaviour?"*
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: written answers from at least ten decision-makers who hold the budget, at least three of whom put something on paper: a signed letter of intent, a paid pilot, or a dated purchase order for the first units. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
 
 ### Who you are looking for
 
-**The audience named in the idea:** German and Dutch tenants and landlords (mould disputes), housing associations, building-energy consultants.
+**The audience named in the idea:** Housing associations and landlords in DE/NL/UK buying sensor fleets with a dashboard (the buyers who already pay for mould sensing); tenants as users, not buyers; building-energy consultants.
 
 **The problem as the pack states it:** Lower heating and less ventilation since 2022 have driven mould complaints in rented flats across Germany and the Netherlands. Disputes come down to "did the tenant ventilate or is the wall badly insulated" — and nobody has data. A €8 hygrometer measures room air, not the cold wall where mould actually grows.
 
@@ -50,8 +60,8 @@ Beyond the named ones, the same four methods work for every idea on this site:
 
 ### The plan: 15–20 conversations, then a fake door
 
-1. **15–20 real conversations** (ten buyers from the business side and ten from the consumer side), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
-2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€59–79, the pack's estimate), and one button. Two buttons: a refundable deposit or waitlist for consumers, "request a pilot" for businesses.
+1. **15–20 real conversations** (ten budget-holders and ten users), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€59–79, the pack's estimate), and one button. For a business buyer the button is "request a pilot" that leads to a short form and a letter of intent.
 3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
 4. **Count** against the kill question. Then decide: go, change the idea, or stop.
 
@@ -60,7 +70,7 @@ Beyond the named ones, the same four methods work for every idea on this site:
 Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
 
 ```email
-Thanks for the time. I am looking into how German and Dutch tenants and landlords, housing associations, building-energy consultants deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+Thanks for the time. I am looking into how housing associations and landlords in DE/NL/UK buying sensor fleets with a dashboard deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
 
 1. Tell me about the last mould or damp problem in one of your flats: how did it start, who noticed, and how was the blame settled?
 2. What do you do about it today, and what does that cost you in money or time per month?
@@ -75,13 +85,13 @@ Close: "If I build this, can I come back to you with a prototype?" A yes with a 
 ### Pre-order / pilot message (forum post or direct message)
 
 ```email
-Subject: Mould-Risk Monitor: would you pay €59–79 for this? Looking for 20 people to tell me I am wrong
+Subject: Mould-Risk Monitor: looking for 3 pilot sites before we build it
 
-I am [your name], [your background]. I am considering building a Mould-Risk Monitor: A wall puck that measures room humidity and the actual surface temperature of the cold outer wall, computes the dew point and tells tenants when to ventilate — before mould appears. Before I order a single part I want to know whether this is a real problem for people like you or only in my head.
+I am [your name], [your background]. We are considering building a Mould-Risk Monitor: A wall puck that measures room humidity and the actual surface temperature of the cold outer wall, computes the dew point and tells tenants when to ventilate — before mould appears. Before we spend money on tooling I want to find out whether this solves a real problem for housing associations and landlords in DE/NL/UK buying sensor fleets with a dashboard.
 
-If you would want one at €59–79, the page at [link] takes a fully refundable €[10–20] deposit (or a waitlist e-mail if you prefer); if twenty people do that, I build it, if not, everyone gets their money back and I have learned something.
+If it would, I am looking for three pilot customers willing to sign a short letter of intent now and pay €59–79 per unit for the first batch, delivered in [month]. The LOI is non-binding on the price; it tells me the problem is real.
 
-Either way, two questions: how do you deal with this today, and what would make you say no? Honest answers are worth more to me than deposits.
+Two questions, no pitch: how do you handle this today, and what would make you say no to the above? Twenty minutes on a call this week, or a reply here, both help.
 ```
 
 ### Reading the signal
@@ -130,6 +140,24 @@ Mould grows when the surface relative humidity at the wall exceeds ~80% for sust
 | Surveyor visit with a Testo | Accurate, once | €150–300 per visit, no history |
 
 **Wedge:** the only device under €80 that measures the wall, not the air, and produces a tamper-evident log both parties accept.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Switchee | Fleet sensors + dashboard sold to UK social landlords | The real buyer exists, and is B2B/B2G |
+| Vericon MouldSense | Mould-risk sensing for landlords | Same |
+| Aico HomeLINK | Connected home-environment sensing for housing providers | Same |
+| Connexin | IoT sensing for housing associations | Same |
+| NRLA ResiSure (UK landlords' association) | Landlord-side sensing offer | NRLA source also notes tenants often suspect such sensors exist to blame them |
+| Aqara T1 / W100 and similar (roughly €15–41) | Generic temperature/humidity sensors | Cover basic alerting at a fraction of the price; the wall-surface measurement is the only differentiator left |
+| German legal sources on mould disputes | Disputes common; measurement legally relevant | Relevance confirmed, but no sign tenants buy devices for it |
+
+**Verdict as researched: WEAK TO UNCERTAIN.** Main risk: Tenants may see the device as surveillance: a UK NRLA source notes landlords find tenants often suspect such sensors exist to blame them. German legal sources confirm mould disputes are common and measurement is legally relevant, but nothing shows tenants currently buy devices for this.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

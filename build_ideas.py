@@ -23,6 +23,7 @@ from urllib.parse import quote
 
 from build_detail_pages import ASSET_V, FOOTER, e, head, nav
 import build_contacts
+import build_market
 import build_playbook
 import build_startpacks
 import build_validate
@@ -59,6 +60,14 @@ def score_pills(i, total_first=False):
     return f'<div class="score-row">{total if total_first else ""}{"".join(pills)}{"" if total_first else total}</div>'
 
 
+def market_badge(i):
+    mk = build_startpacks.MARKET.get(i["slug"])
+    if not mk:
+        return ""
+    cls = "likely" if mk["verdict"] == "LIKELY" else "weak"
+    return f'<span class="market-badge {cls}" title="External market check, November 2026: {e(mk["verdict"])}. Verify before relying on it.">Market: {e(mk["verdict"].split()[0].lower())}</span>'
+
+
 def card(i, rank=None):
     tags = " ".join(sorted(i["tags"]))
     hay = " ".join([i["title"], i["pitch"], i["audience"], i["category"], tags] + [b["board_name"] for b in i["built_from"]]).lower()
@@ -66,7 +75,7 @@ def card(i, rank=None):
     return f'''
     <a class="board idea{" has-pack" if i["slug"] in PACKS else ""}" href="/ideas/{e(i["slug"])}.html" data-pack="{int(i["slug"] in PACKS)}" data-cat="{e(i["category"])}" data-tags="{e(tags)}" data-score="{i["score_total"]}" data-d="{sc["demand"]}" data-b="{sc["buildability"]}" data-m="{sc["margin"]}" data-s="{sc["speed"]}" data-title="{e(i["title"].lower())}" data-hay="{e(hay)}">
       <div class="board-id">{f"#{rank} · " if rank else ""}{e(i["category"].upper())}</div>
-      <h3 class="board-name">{e(i["title"])}{'<span class="pack-badge" title="Founder start pack: business plan + start kit">Start pack</span>' if i["slug"] in PACKS else ""}</h3>
+      <h3 class="board-name">{e(i["title"])}{'<span class="pack-badge" title="Founder start pack: business plan + start kit">Start pack</span>' if i["slug"] in PACKS else ""}{market_badge(i)}</h3>
       <div class="board-tag">{e(" · ".join(sorted(i["tags"])[:4]))}</div>
       <div class="board-desc clamp">{e(i["pitch"])}</div>
       {score_pills(i)}
@@ -181,6 +190,9 @@ def render_idea(i, ideas, boards):
     item("Effort (estimate)", f'{e(i["effort_weeks_est"])} team-weeks', "gold")
     item("Unit BOM (estimate)", f'€{e(i["bom_eur_est"])}', "gold")
     item("Price (estimate)", f'€{e(i["price_eur_est"])}', "gold")
+    mk = build_startpacks.MARKET.get(i["slug"])
+    if mk:
+        item("External market check", f'<a href="/startpacks/{e(i["slug"])}.html#market-check">{e(mk["verdict"].title())}</a>' + (' · <strong>audience corrected</strong>' if mk.get("correction") else ""), "gold" if mk["verdict"] == "LIKELY" else "")
     item("Built from", f'{len(i["built_from"])} catalogue boards')
     item("Design files", e(i["open_files_share"]))
     if i["slug"] in PACKS:
@@ -265,7 +277,7 @@ def render_idea(i, ideas, boards):
     <h2>Kill question</h2>
     <div class="hans-note">
       <div class="hans-note-label">Answer it for under €500</div>
-      <p>{e(i["kill_question"])}</p>
+      <p>{e(i["kill_question"])}</p>{f'<p class="kq-note"><strong>{e(i["market_correction"]["title"])}.</strong> {e(i["market_correction"]["text"])} Original question: "{e(i["kill_question_original"])}"</p>' if i.get("market_correction") else ""}
     </div>
   </section>
 
@@ -306,6 +318,7 @@ def main():
     data, ideas, boards = load()
     build_contacts.patch_packs()
     build_validate.patch_packs()
+    build_market.patch_packs()
     build_playbook.build()
     PACKS.update(build_startpacks.build(ideas))
     (ROOT / "ideas.html").write_text(render_index(data, ideas), encoding="utf-8")

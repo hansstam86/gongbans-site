@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Open P3 matrix driver boards and HUB75 ESP32 libraries make the hard part a download; clubs spend grant money in small chunks; the existing boards have not changed in a decade.
 - **The ask:** ~€70k to a certified first 1,000; pre-orders from one or two regional federations can carry a big share.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** Full-size varsity boards run about $5,000–5,700 (Anthem Sports, School Health / Sportable); mid-tier portable wireless units about $2,089 (First Team FT810W); Daktronics is quote-only. Demand evidence: a Silicon Chip article calls pro boards generally out of reach for amateur and school teams, an Electro-Tech-Online thread shows a club rejecting pre-built units as too costly and asking how to DIY one, and a Make Magazine piece covers a parent building one for the same reason. **Main risk:** All demand evidence is anecdotal; nobody has quantified what clubs will pay. Also: at €399 the board is roughly a fifth of the mid-tier and a twelfth of the full-size price, so the pitch's "a fifth of the price" should name which tier it compares to. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -127,6 +131,23 @@ A hall scoreboard is a capital item few small clubs can justify. Favero's FC50 l
 | DIY: HUB75 panel + ESP32 + open library | €80 of parts | No remote, no housing, no PSU safety, no CE — clubs will not build it |
 
 **Wedge:** a complete, CE-marked, portable kit at the price of a tabletop toy times three, with sport templates and a remote that any parent can use.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Full-size varsity boards (Anthem Sports, School Health / Sportable) | About $5,000–5,700 | €399 is roughly a twelfth of this |
+| First Team FT810W portable wireless | About $2,089 | €399 is roughly a fifth of this; the pitch's comparison tier |
+| Daktronics | Quote-only | No public price found |
+| Silicon Chip article on DIY scoreboards | Pro boards "generally out of reach for amateur and school teams" | Demand signal, anecdotal |
+| Electro-Tech-Online forum thread | Club rejected pre-built units as too costly, asked how to DIY | Demand signal, anecdotal |
+| Make Magazine piece | Parent built one after finding commercial units too expensive | Demand signal, anecdotal |
+
+**Verdict as researched: LIKELY.** Main risk: All demand evidence is anecdotal; nobody has quantified what clubs will pay. Also: at €399 the board is roughly a fifth of the mid-tier and a twelfth of the full-size price, so the pitch's "a fifth of the price" should name which tier it compares to.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

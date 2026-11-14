@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** The open firmware has a large community but no complete product with housing, lighting and mount; a Czech maker sells a bare PoE board. The gap between "board" and "box that works on my meter in 5 minutes" is the business.
 - **The ask:** ~€80k to a certified first 1,000; but the first €700 and two weeks decide everything (licence + recognition test).
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** The DIY precedent is real and active: jomjol's AI-on-the-edge-device (ESP32-CAM + TFLite) has an actively maintained ESP32-S3 successor board covered by CNX Software and Electronics-Lab in 2025. Multi-year German-language threads on ioBroker and heimnetz.de show real users hitting setup friction (digit misreads, ROI and alignment tuning), exactly the gap a finished product fixes. No assembled commercial competitor was found at this price. **Main risk:** Community size could not be confirmed numerically; one forum mentioned possible EU Data Act friction around camera-based meter reading, unverified and worth a legal check before launch. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -129,6 +133,21 @@ The DIY path works for engineers: ESP32-CAM, printed adapter from Printables (th
 | Do nothing (read monthly by hand) | Free | The majority — our ad is "never go to the cellar again" |
 
 **Wedge:** universal mount + controlled lighting + zero-touch recognition. Second wedge: PoE for cellars without WiFi.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| jomjol / AI-on-the-edge-device | Open ESP32-CAM meter reader; ESP32-S3 successor board (CNX Software, Electronics-Lab, 2025) | The DIY precedent the product polishes |
+| ioBroker forum threads (multi-year) | Users struggling with setup, misreads, alignment | "Wants it, can't get it working" demand |
+| heimnetz.de threads (multi-year) | Same | Same |
+| EU Data Act (forum mention) | Possible friction for camera-based meter reading | Unverified; legal check before launch |
+
+**Verdict as researched: LIKELY.** Main risk: Community size could not be confirmed numerically; one forum mentioned possible EU Data Act friction around camera-based meter reading, unverified and worth a legal check before launch.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

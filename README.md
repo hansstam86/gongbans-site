@@ -37,6 +37,8 @@ gongbans-site/
 ├── build_ideas.py          ← data/ideas.json → ideas.html, ideas/*.html, idea list on index.html (also runs
 │                              build_contacts.py, build_playbook.py and build_startpacks.py)
 ├── build_validate.py       ← data/ideas.json → "Validate demand first" blocks in startpacks/*.md
+├── build_market.py         ← data/market-check.json → market-check callout + competitor sub-table in startpacks/*.md
+├── data/market-check.json  ← external market research per idea (top 10 so far, Nov 2026)
 ├── build_contacts.py       ← gongban.db → data/contacts.json + "Who to contact" blocks in startpacks/*.md
 ├── build_playbook.py       ← playbook.html
 └── README.md

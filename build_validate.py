@@ -299,10 +299,17 @@ def section_md(idea, md):
              f"and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first "
              f"and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; {CONVERSATIONS} conversations are cheap.")
     L.append("")
+    corr = idea.get("market_correction")
+    if corr:
+        L.append(f"> **{corr['title']}.** {corr['text']}")
+        L.append("")
     L.append("### The gate: this idea's kill question")
     L.append("")
     L.append(f"> {kq}")
     L.append("")
+    if idea.get("kill_question_original"):
+        L.append(f"*Revised after the external market check; the original question was: \"{idea['kill_question_original']}\"*")
+        L.append("")
     if seg == "b2b":
         evidence = ("written answers from at least ten decision-makers who hold the budget, at least three of whom put something on paper: "
                     "a signed letter of intent, a paid pilot, or a dated purchase order for the first units")

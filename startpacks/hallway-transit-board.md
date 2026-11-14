@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Open transit APIs in these countries are mature; glance e-paper devices (TRMNL at ~$139) proved people pay for "one screen, one job"; searches found no consumer transit board sold in continental Europe — only operator stop displays and operator web widgets for lobbies.
 - **The ask:** ~€60k to certification and the first 1,000 units; a 50-unit hand-built pre-sale answers the kill question first.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** More than ten independent DIY e-paper transit displays were found across UK, DE, CH, US and Canada (busink, pibus, rpi_waiting_time_display, rmv-rpi-display, transit-pi, E-Ink Trainstation, a Swiss CFF display, Munich / BVG / BART / GO Transit plugins for TRMNL): repeated, geographically spread reinvention is a classic pre-product buy signal. No ready-made consumer product fills the gap; B2B stop-display vendors (Luminator, Papercast, ConnectPoint) sell to transit agencies. TRMNL, a general e-ink dashboard with community transit plugins, sells at $149.95–219, which supports the €119–149 band. **Main risk:** Every known instance is a DIY build, not a purchase; willingness to pay for a finished, no-soldering version is unproven. *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -130,6 +134,20 @@ Transit associations already offer "departure monitor" web widgets (VRS, MDV) me
 | Do nothing | — | Reality for 99%; the gift market is the way in |
 
 **Wedge:** zero-config stop picker across 10+ national APIs, a frame that belongs in a hallway, months of battery, and a B2B lobby SKU with a branded header.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| DIY projects: busink, pibus, rpi_waiting_time_display, rmv-rpi-display, transit-pi, E-Ink Trainstation, Swiss CFF display | Hobby e-paper departure boards, UK/DE/CH/US/CA | Repeated reinvention; nobody sells a finished one |
+| TRMNL ($149.95–219) with Munich / BVG / BART / GO Transit community plugins | General e-ink dashboard, transit via plugins | Price-band comparable; not transit-specific |
+| Luminator, Papercast, ConnectPoint | Stop displays for transit agencies | B2B / municipal, not households |
+
+**Verdict as researched: LIKELY.** Main risk: Every known instance is a DIY build, not a purchase; willingness to pay for a finished, no-soldering version is unproven.
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 

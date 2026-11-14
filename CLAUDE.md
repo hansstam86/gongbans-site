@@ -41,6 +41,12 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
   ones we are confident exist, otherwise generic search guidance) and `PROBE` (one problem-first question per idea). Block sits
   between `<!-- validate-demand:start/end -->`; edit the script, not the block. Pack order is fixed: 1 Summary, 2 Validate demand,
   3 Business plan, 4 Start kit, 5 Who to contact, 6 Next steps.
+- External market check: `data/market-check.json` holds web-research findings per idea (verdict, summary, main risk, competitor/
+  source rows; an optional `correction`). `build_market.py` writes a callout at the end of section 1 and an "External market
+  check" sub-table under "### Competition" (markers `market-check` / `market-competitors`). Quote verdicts as given, never
+  stronger; keep the "as researched … verify before relying on it" caveat; cite sources by name, no unverified links. A buyer
+  correction is applied at the source in `data/ideas.json` (`kill_question` revised, `kill_question_original`,
+  `market_correction`, audience/tags) so the idea page and section 2 pick it up; Mould-Risk Monitor is the first case.
 - "Who to contact" (section 5 of every pack) is generated, not hand-written: `build_contacts.py` reads gongban.db and
   rewrites the block between `<!-- who-to-contact:start -->` / `<!-- who-to-contact:end -->` in each `.md` (and writes
   `data/contacts.json`, public columns only). Edit the script, not the block. Only *company* board publishers count as

@@ -12,6 +12,10 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** LoRaWAN door sensors cost €16–78 but ship as generic "open/closed" with no compliance logic or report; building regulations and insurers demand evidence of checks; LoRaWAN reaches stairwells and basements that WiFi never will.
 - **The ask:** ~€70k to a certified first 1,000 doors; paid pilots with three building owners should fund most of it.
 
+<!-- market-check:start -->
+> **External market check (November 2026): LIKELY.** The UK Fire Safety (England) Regulations 2022, regulation 10, legally mandate quarterly fire-door checks in buildings over 11 m, an enforced compliance duty. The market is already populated: Safecility ShutSafe (NB-IoT, subscription), Minol Connect / B.One, Harmony Auro Door, Fireco DorMag Pro and Loxone all sell open-door or gap sensing with remote monitoring today. Harmony claims over a third of fire doors cannot be annually inspected because of access problems, so a gap remains. **Main risk:** Not a novel niche: it needs a clear wedge (no-subscription LoRaWAN) against funded incumbents with existing housing-association relationships. Incumbent per-door pricing could not be confirmed (quote-based). *As researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast. Competitors and sources found: see [the market check in the competition table](#external-market-check).*
+<!-- market-check:end -->
+
 ## 2. Validate demand first
 
 <!-- validate-demand:start -->
@@ -129,6 +133,23 @@ A fire door only works if it is closed. Everyone knows the wedge, the fire extin
 | Fire-alarm system door monitoring (EN 54 ecosystems) | Certified, wired | Costly retrofit; we are the cheap layer for everything the alarm system does not watch |
 
 **Wedge:** vertical compliance product: the report, the thresholds and the "faulty closer" inference, priced per door, deployable by the facility team themselves in an afternoon.
+
+<!-- market-competitors:start -->
+#### External market check
+
+Competitors, demand signals and price comparables found by web search in November 2026. Sources are named as found and not linked; as researched November 2026 by web search; verify before relying on it. Verdicts are a reading of the evidence found, not a forecast.
+
+| Who / source | What it is | What it tells us |
+|---|---|---|
+| Fire Safety (England) Regulations 2022, reg. 10 | Quarterly fire-door checks mandatory in buildings over 11 m | Enforced duty behind the demand |
+| Safecility ShutSafe | NB-IoT fire-door sensor, subscription | Direct incumbent |
+| Minol Connect / B.One | Building IoT incl. door sensing | Direct incumbent |
+| Harmony Auro Door | Fire-door monitoring | Incumbent; claims over a third of doors cannot be annually inspected |
+| Fireco DorMag Pro | Door retainer / monitoring | Incumbent |
+| Loxone | Smart-building platform with door sensing | Incumbent |
+
+**Verdict as researched: LIKELY.** Main risk: Not a novel niche: it needs a clear wedge (no-subscription LoRaWAN) against funded incumbents with existing housing-association relationships. Incumbent per-door pricing could not be confirmed (quote-based).
+<!-- market-competitors:end -->
 
 ### Product & value proposition
 
