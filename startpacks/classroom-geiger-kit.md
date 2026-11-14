@@ -1,0 +1,146 @@
+# Classroom Geiger Kit — Founder Start Pack
+
+> A Geiger counter kit with a clicker, a big count display and a datalogger for physics lessons on radioactivity — show background, distance and shielding with low-sodium salt and a banana.
+>
+> *Concept from the GONGBANS inventor. Not validated. All numbers are estimates — check them. Check every board's licence before commercial use.*
+
+## 1. Summary
+
+- **Problem:** Radioactivity is in every physics curriculum, but school counters are 30 years old, the lab-supplier replacements cost €800–1,200 and are quote-only "dangerous goods" items, and consumer dosimeters have no classroom features (no big display, no logging to the class spreadsheet, no experiment cards).
+- **Customer:** Secondary-school physics departments, science museums, STEM clubs in the EU. The department head pays from the lab budget; the teacher and 15-year-olds use it.
+- **Product:** Open Geiger-tube board in an enclosed case with a click, a 4-digit count display visible from the back row, BLE/USB logging to a spreadsheet, and 8 experiment cards. €139 ex-VAT per unit; demo variant with a 60 mm display.
+- **Why now:** Open Geiger designs exist with schematic + PCB; public interest in radiation measurement is high; schools are re-equipping labs with STEM money.
+- **The ask:** ~€40k to the first 1,000 units; bootstrap plus educational-distributor pre-orders.
+
+## 2. Business plan
+
+### Problem & customer
+A teacher wants to show: background counts, inverse-square distance, shielding with paper/aluminium/lead, and statistics (counts are Poisson — a great maths lesson). That needs a counter the whole class can see and hear, that logs to a CSV without an app store, and that doesn't require a radioactive source licence: potassium chloride (low-sodium salt) and a banana are enough for a measurable K-40 signal with a sensitive tube, and uranium-glazed pottery or granite chips give more.
+
+Who pays: the physics Fachschaft (the same €500–2,000/year budget as the radio kit), museums' education departments, STEM clubs. Educational distributors (the catalogue sellers of lab equipment) are the gatekeepers — schools buy from the catalogue they already have an account with.
+
+### Market size (estimates — check them)
+- **TAM:** ~15,000 secondary physics departments in DE/NL/UK (plus ~25,000 more across FR/IT/ES/PL/Nordics) and ~1,000 science museums/centres. One or two counters each over a 5-year replacement cycle → ~8,000 units/year × €139 ≈ **€1.1 M/year** in the core markets, ~€3 M EU-wide.
+- **SAM:** reachable via 3–4 distributors in DE/NL/UK: ~40% → **~€0.5 M/year**.
+- **SOM (year 2):** 1,200 units ≈ **€170k revenue**. A small, honest niche; the margin and the lack of firmware risk make it worth doing as a second product next to the radio kit, sharing the same distributors.
+
+### Competition (2 searches)
+| Alternative | Price (est.) | Weakness |
+|---|---|---|
+| Lab-supplier school counters (Phywe, LD Didactic, Ward's class) | €800–1,200, quote-only | Expensive, "dangerous goods" shipping restrictions, 1990s UX |
+| MightyOhm Geiger kit | €80–155 | Hobby kit, tiny display, open hardware but no classroom package |
+| GQ GMC-300S | €70–130 | Consumer dosimeter, small screen, no class logging |
+| Radiacode 102 | €229 | Excellent, but a personal scintillation dosimeter with a phone app — not a classroom instrument |
+| Do nothing — YouTube video + old counter | €0 | No hands-on; old counters die one by one |
+
+**Wedge:** classroom features (big display, loud click, CSV logging, experiment cards, no-licence sources) at €139, via the distributors schools already buy from.
+
+### Product & value proposition
+- **Handheld "Class" unit:** open Geiger board (tube + HV supply + pulse shaping) + ESP32 (from the StickC-Plus class of module) + 4-digit 0.56" display + buzzer + USB-C logging; 18650 or 2×AA; enclosed HV section.
+- **Demo variant:** external 60 mm 4-digit display on a stand, 2 m cable — the back row sees the counts.
+- **Software:** counts/CPM/indicative µSv/h; 10 s / 60 s / 10 min integrations; CSV over USB serial and BLE to a browser page (Web Bluetooth) that drops straight into the class spreadsheet; experiment card mode (distance, shielding, Poisson).
+- **Pricing:** €139 ex-VAT per unit to schools (€159 list), demo kit with big display €199, class pack (4 counters + demo display + cards) €699.
+
+### Unit economics (estimates, per unit)
+| Item | 1,000 units | 5,000 units |
+|---|---|---|
+| Electronics BOM (tube €7, HV + board €6, ESP32 module €3, display, buzzer, USB-C, passives) | €22 | €17 |
+| Battery (2×AA holder, or 18650 + charger +€3) | €1.50 | €1.20 |
+| Assembly & test (incl. HV test + count check with a K-salt reference) | €6 | €4 |
+| Enclosure (2-shot ABS, soft tool) | €4.50 | €2.80 |
+| Packaging + experiment cards | €2.50 | €1.60 |
+| Freight + duty to EU | €2.00 | €1.10 |
+| Certification amortised (€12k) | €12 | €2.40 |
+| **Landed cost** | **€50.50** | **€30.10** |
+| Sell price (direct to school, ex-VAT) | €139 | €139 |
+| Via distributor (40% of €159 list → net €95) | — | €95 |
+| **Gross margin direct** | **64%** | **78%** |
+| **Gross margin via distributor** | 47% | 68% |
+
+### Go-to-market
+**First 100 customers:** 20 teachers in the national physics-teacher associations' forums get a loaner for a term in exchange for a lesson write-up; two science museums (holiday workshops); the STEM-club networks; a stall at one teacher conference per country; one video "measure a banana" that teachers can show. Get listed with one educational distributor in DE and one in UK before the autumn term.
+
+**Scale:** 3–4 educational distributors (they want 40% but they bring the catalogue), the same channels as the radio kit (bundle "waves + radioactivity"), museum shops for the consumer variant.
+
+### 12-month plan
+- **Q1:** Build 10 from the open board + StickC-Plus, write 8 experiment cards, 10 teacher trials. Gate: 10 schools/museums order at €139 off a distributor-style catalogue entry within one term.
+- **Q2:** Own PCB (integrate HV board + MCU), enclosure, EMC/safety tests, EU tube stock secured.
+- **Q3:** 500 units, two distributors live, demo-display variant.
+- **Q4:** 1,500 units, class pack, FR/PL distributor talks.
+
+**Team:** one electronics engineer (HV + firmware; part-time after Q2), one physics teacher as didactics partner (freelance), one founder for sales/ops.
+
+**Funding to 1,000 units (estimate):** NRE €18k (PCB integration, enclosure soft tool €8k, test fixture) + certification €12k + 1,000 units × €36 ≈ €36k → **~€66k**; staged in two batches of 500 with distributor pre-orders, peak cash **~€40k**. Bootstrap/pre-orders; a small regional STEM grant is plausible.
+
+### Top risks
+- **Technical — tube supply and HV safety:** the open board likely targets a Chinese/Soviet-type tube (J305/M4011/SBM-20 class — check the schematic); tubes are glass and the HV is ~400 V. Mitigation: hold EU stock of 2,000 tubes, limit HV energy (it is µA-class, which is how EN 62368-1 treats it as limited energy — get the lab to confirm), fully enclose the HV section.
+- **Market — schools buy slowly:** one term per decision. Mitigation: distributors with catalogue cycles; museums and clubs in between.
+- **Regulatory:** BLE → RED; CRA applies if you ship a connected app; Li-ion → UN 38.3. Mitigation: v1 ships USB + 2×AA with BLE as an option; keep the "app" a static web page.
+- **Claims:** measures only; "indicative dose rate" at most. Never say dosimeter or protection. A dosimeter claim drags you into measuring-instrument and PPE territory you don't want.
+- **Licence:** OSHWHub project — check for NC terms before selling.
+
+## 3. Start kit
+
+### Boards to start from
+| Board | Contributes | Files (catalogue) | Licence note |
+|---|---|---|---|
+| [oshwhub-he-fu-she-jian-ce-yi](https://www.gongbans.com/db/oshwhub-he-fu-she-jian-ce-yi.html) | Geiger-tube detector: HV supply, pulse detection | schematic, pcb | OSHWHub — licence varies; check |
+| [m5stack-stickc-plus](https://www.gongbans.com/db/m5stack-stickc-plus.html) | ESP32 + display + battery + BLE for the handheld prototype | enclosure/structure only | Module; buy for prototypes |
+| [seeed-grove-4-digit-display](https://www.gongbans.com/db/seeed-grove-4-digit-display.html) | Big count display circuit for the demo variant | schematic | Seeed wiki — check licence |
+| [m5stack-unit-buzzer](https://www.gongbans.com/db/m5stack-unit-buzzer.html) | The click | enclosure/structure only | Module |
+
+### Block diagram and engineering gap
+```
+[GM tube] <- [HV boost ~400 V, limited energy] 
+   |-> [pulse shaper] -> ESP32 (counts, CPM, log) -> [4-digit display] [buzzer click]
+                                 |-> USB-C serial CSV      |-> BLE -> browser page -> spreadsheet
+[2x AA or 18650] -> power
+```
+Gap: integrate the open HV/detector board with the MCU on one PCB, enclose the HV, pick a tube with EU stock, and write the simple logging firmware plus the experiment cards.
+
+### Starter BOM (per unit, estimates)
+| Part | Est. cost | Note |
+|---|---|---|
+| GM tube (per open design, J305/M4011/SBM-20 class — verify) | €7 | Sole-source class part, glass, 8–12 week lead — stock 2 years |
+| HV boost section (transformer/inductor, MOSFET, diodes, HV caps) | €3 | HV caps rated >600 V |
+| ESP32 module (certified) | €2.80 | — |
+| 4-digit 0.56" display + driver | €1.50 | Demo variant: 60 mm display €6 |
+| Buzzer, USB-C, passives | €1.50 | — |
+| PCB + assembly | €5 | — |
+| Enclosure 2-shot ABS | €4.50 | Soft tool ~€8k |
+| Experiment cards + box | €2.50 | — |
+
+### Firmware/software starting point
+- ESP-IDF/Arduino-ESP32 for counting (interrupt on pulse pin, rolling CPM), USB CDC serial for CSV. A Web Bluetooth page (plain JS) for logging — no app store, no CRA app headaches beyond the device itself.
+- For conversion factors per tube type, search the tube datasheets; keep µSv/h clearly labelled "indicative".
+
+### 12-week build plan
+- **Week 1–2 — validate.** Order 5 of the open Geiger PCBs, 5 StickC-Plus; wire them, measure background, a banana, K-salt, and a granite tile. Send a catalogue-style one-pager to 30 teachers and 5 museums. *Exit:* K-salt clearly above background in 60 s; 10 schools/museums say yes at €139.
+- **Week 3–5 — works-like.** Single PCB (HV + MCU), USB CSV logging, buzzer, display. *Exit:* 5 units count within ±10% of each other on the same source.
+- **Week 6–8 — looks-like + EVT.** 3D-printed enclosure, experiment cards v1, 10 teacher trials. *Exit:* teachers run 3 experiments without calling you.
+- **Week 9–10 — DVT + pre-compliance.** Enclosure soft tool, EMC pre-scan (the HV boost is a noise source — expect to fix it), safety review of HV. *Exit:* pre-scan passes, HV accessible energy confirmed below limits.
+- **Week 11–12 — pilot batch.** 50 units, golden sample, first distributor listing. *Exit:* 30 paid units, two distributor quotes.
+
+### Certification checklist (EU)
+- **EMC/LVD route** if no radio: EN 55032/55035, EN 62368-1 (HV internal, limited-energy — confirm ES class with the lab). **RED** if BLE is enabled: EN 300 328 + EN 301 489. Est. **€8–15k**.
+- **RoHS, WEEE, REACH** (glass tube — check lead content exemptions; the tube is a component so RoHS exemptions may apply — ask the supplier).
+- **EN 18031 / CRA:** only if BLE/WiFi connects to the internet; the browser-logging design keeps you to a "device with digital elements" — plan an SBOM anyway.
+- **Battery:** AA = none; 18650 variant = UN 38.3 + Battery Regulation labels.
+- **Toy Directive:** no — label 14+/education.
+- **GDPR:** none. **No dosimetry/medical/protection claims.**
+
+### Validation toolkit
+- **Kill question:** do 10 schools or museums buy at €139 off a catalogue-style entry within one term? **Cheapest experiment:** €400 — 5 built-up open boards, one video, 35 emails, one teacher-association forum post.
+- **5-question interview:** (1) What do you use for radioactivity practicals today and when did you last buy one? (2) Do you have licensed sources, or would salt/banana/granite be a relief? (3) Big display or logging — which matters more? (4) Which catalogue do you order lab gear from? (5) What price makes this a no-discussion purchase for your department?
+- **Landing-page headline:** "The Geiger counter built for the classroom." Bullets: Hear it, see it from the back row, log it to your spreadsheet · 8 experiments with no licensed source needed · €139, ships with experiment cards.
+- **Pre-order pass:** 30 paid units or 10 institutional purchase orders in 6 weeks.
+
+### First production checklist
+Tube samples from two suppliers with plateau test, golden sample with a calibration reading on a reference source (your own K-salt jar, labelled), DFM review on the HV layout (creepage, slots), MOQ 500 with a 2,000 forecast, QC/AQL Level II plus 100% HV and count test, drop test in packaging, FOB Shenzhen air for the first 500, named EU importer, battery-free SKU first.
+
+## 4. Next steps (this week)
+1. Order 5 open Geiger PCBs + parts and 5 StickC-Plus; buy low-sodium salt and a granite tile.
+2. Write the catalogue-style one-pager and send to 30 physics teachers and 5 museums.
+3. Email two tube suppliers for 2,000-piece pricing and lead time; check the OSHWHub licence.
+
+Want help sourcing or building this? Talk to us via www.gongbans.com.

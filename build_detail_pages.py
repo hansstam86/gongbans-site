@@ -29,7 +29,7 @@ IDEAS = ROOT / "data" / "ideas.json"   # optional: ideas built on the boards (bu
 DB_DIR = ROOT / "db"
 DB_DIR.mkdir(exist_ok=True)
 
-ASSET_V = "20261114b"
+ASSET_V = "20261114c"
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">')
