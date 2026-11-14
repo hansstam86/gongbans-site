@@ -1156,6 +1156,81 @@
      "Incumbent for official gauges, €2–6k class"
     ]
    ]
+  },
+  "emergency-light-logger": {
+   "verdict": "LIKELY",
+   "summary": "EN 50172 / DIN VDE 0108 genuinely require periodic tested-and-logged emergency-lighting checks, and self-test systems (Zumtobel, Legrand and others under IEC 62034) only cover new installations, which confirms the older-luminaire gap.",
+   "risk": "A light-sensor \"it lit\" reading is not the standard's duration test (which concerns battery-backed runtime); whether inspectors accept this log as compliance evidence is a genuinely open question, stated in the pack and asked in the kill question.",
+   "rows": [
+    [
+     "Eaton emergency-lighting inspection and maintenance guide",
+     "Periodic function and duration tests with a log",
+     "Compliance pull confirmed"
+    ],
+    [
+     "DIN VDE 0108 test-log guidance (Whitecroft)",
+     "Log requirements",
+     "Same"
+    ],
+    [
+     "Fagerhult self-test / EN 62034 explainer",
+     "Self-test systems for new luminaires",
+     "Gap for older stock confirmed"
+    ]
+   ]
+  },
+  "tool-check-wand": {
+   "verdict": "LIKELY",
+   "summary": "Van tool theft is a confirmed, large pain point (UK police data: 44,514 incidents in 2023, about £98m stolen). A genuine gap exists between Milwaukee One-Key (cheap but locked to Milwaukee tools) and Hilti ON!Track / Zebra RFD40 (enterprise: readers $900–1,900+, ON!Track about $120 a month).",
+   "risk": "UHF tags on metal tools are a real, unresolved reliability risk; on-metal tags cost more than standard tags, which could undercut the \"tag everything cheaply\" pitch. Needs real-world testing before claiming it works; the pack measures it first.",
+   "rows": [
+    [
+     "Direct Line / Fleetnews tool-theft data",
+     "44,514 incidents, ~£98m stolen (UK, 2023)",
+     "The pain is large and documented"
+    ],
+    [
+     "Hilti ON!Track (pricing discussion)",
+     "Managed service, ~$120/month",
+     "Enterprise incumbent with subscription"
+    ],
+    [
+     "Milwaukee One-Key (tag pricing)",
+     "Cheap tags, Milwaukee tools only",
+     "Brand-locked incumbent"
+    ],
+    [
+     "Zebra RFD40 (pricing)",
+     "$900–1,900+ per reader",
+     "Enterprise incumbent, 4× the target"
+    ]
+   ]
+  },
+  "backstage-relay": {
+   "verdict": "UNCERTAIN",
+   "summary": "Real DIY community interest is confirmed (ControlBooth forum threads, including ultra-low-budget groups open to DIY), but a venue reported in a forum thread that WiFi / ESP-NOW-style paging was \"virtually useless for cueing\" because of latency, a documented failure.",
+   "risk": "Repositioned before building as a paging and show-relay intercom for non-time-critical communication, paired with the cue-light set rather than replacing it; 2.4 GHz interference with wireless microphones stays unverified and needs on-site testing.",
+   "correction": {
+    "title": "Built with the research fix applied (November 2026)",
+    "text": "The research found a venue reporting WiFi-style paging as useless for cueing because of latency. This pack therefore sells the set as a paging and show-relay intercom for announcements and listening in, states the latency, and leaves split-second cues to the cue-light set it pairs with. Coexistence of 2.4 GHz audio with wireless microphones was not resolved by the research and is treated as an on-site test, not an assumption. As researched November 2026 by web search; verify before relying on it."
+   },
+   "rows": [
+    [
+     "ControlBooth forum threads",
+     "Low-budget groups asking for and building show relay / paging",
+     "Demand signal"
+    ],
+    [
+     "Venue report on WiFi / ESP-NOW paging latency",
+     "\"Virtually useless for cueing\"",
+     "Scope fixed: paging, not cues"
+    ],
+    [
+     "Clear-Com / Tecpro show relay",
+     "Professional installed systems, thousands of euros",
+     "Incumbent at a multiple of the target"
+    ]
+   ]
   }
  },
  "withdrawn": {

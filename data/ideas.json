@@ -3006,6 +3006,207 @@
    ],
    "open_boards_note": "3 of 6 boards publish schematic/PCB files",
    "score_total": 15
+  },
+  {
+   "slug": "emergency-light-logger",
+   "title": "Emergency Light Test Logger",
+   "category": "LoRaWAN & building IoT",
+   "pitch": "A stick-on light-sensor node per emergency luminaire that records over LoRaWAN whether the lamp lit during the monthly function test and stayed lit through the annual duration test, producing the test log for older luminaires that have no self-test; evidence of the test, not the test itself.",
+   "audience": "Facility managers of schools, housing blocks, offices and halls with older emergency lighting; electrical contractors who perform and log the tests; housing associations.",
+   "why_now": "EN 50172 / DIN VDE 0108 require periodic, logged emergency-lighting tests, self-test systems (IEC 62034) only come with new installations, and the building stock is full of old luminaires whose test log is a clipboard walked round by an electrician.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-unit-dlight",
+     "role": "ambient-light unit for the first prototype node",
+     "board_name": "M5Stack Unit DLight (U136)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "seeed-grove-digital-light-sensor",
+     "role": "open digital light-sensor reference circuit",
+     "board_name": "Seeed Grove-Digital Light Sensor",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-light",
+     "role": "simple light sensor, second source",
+     "board_name": "M5Stack Unit Light (U021)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-stamp-c6lora",
+     "role": "open ESP32-C6 + LoRa core for the node",
+     "board_name": "M5Stack Stamp C6LoRa (S012)",
+     "issuer": "M5Stack",
+     "open_files": "pcb,schematic"
+    },
+    {
+     "board_slug": "m5stack-unit-lorawan-eu868",
+     "role": "EU868 LoRaWAN module for the prototype run",
+     "board_name": "M5Stack Unit LoRaWAN-EU868 (U184-EU868)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "A coin-cell node with a light sensor and a LoRaWAN core, stuck to each luminaire; it timestamps when the lamp lit and for how long during the test the electrician triggers as before, the server assembles the test log per building; whether inspectors accept it as compliance evidence is an open question the pack states, not settles.",
+   "effort_weeks_est": "8–10",
+   "bom_eur_est": "8–14",
+   "price_eur_est": "49–79",
+   "certification": "RED (EN 300 220) via module, EMC, RoHS, WEEE, CRA; Battery Regulation for the coin cell; the node is a logging accessory, not emergency-lighting equipment under EN 60598-2-22.",
+   "kill_question": "Do 3 facility managers or 2 electrical contractors install a paid pilot of 50 nodes at €59, run one quarterly cycle, and does at least one inspector or insurer accept the generated log alongside the manual record? Pass = 3 pilots and 1 written acceptance in 12 weeks.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 4,
+    "buildability": 5,
+    "margin": 4,
+    "speed": 4
+   },
+   "tags": [
+    "building",
+    "lorawan",
+    "b2b",
+    "compliance",
+    "safety"
+   ],
+   "open_boards_note": "2 of 5 boards publish schematic/PCB files",
+   "score_total": 17
+  },
+  {
+   "slug": "tool-check-wand",
+   "title": "Tool Check Wand",
+   "category": "Industrial & installer tools",
+   "pitch": "A handheld UHF RFID wand that inventories a van's or a workshop's tagged tools in ten seconds and says what is missing before the van drives off, with a local list and no subscription; on-metal tag reliability to be proven in the field before any claim.",
+   "audience": "Trades companies with 3–30 vans (electricians, plumbers, HVAC, builders), workshop managers, tool-hire counters; the owner pays after the second lost or stolen tool.",
+   "why_now": "Van tool theft is large and documented (UK police data: 44,514 incidents in 2023, about £98m stolen), the existing answers are either locked to one tool brand (Milwaukee One-Key) or enterprise-priced (Hilti ON!Track subscription, Zebra readers at $900–1,900+), and the catalogue has a UHF reader unit.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-unit-uhf-rfid",
+     "role": "UHF RFID reader unit: the wand's front end",
+     "board_name": "M5Stack Unit UHF-RFID (U107)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-core2",
+     "role": "touch-screen controller for the prototype wand",
+     "board_name": "M5Stack Core2 (K010)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-cardputer",
+     "role": "keyboard handheld alternative for the list",
+     "board_name": "M5Stack Cardputer (K132)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-buzzer",
+     "role": "missing-tool alert",
+     "board_name": "M5Stack Unit Buzzer (U132)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-stickc-plus",
+     "role": "compact handheld core for a second prototype",
+     "board_name": "M5Stack StickC-Plus (K016-P)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "A wand with a UHF reader and antenna tuned for a van, a local tool list per van and per technician, a ten-second sweep that lists what is missing, a buzzer, and an optional end-of-day check-in; tags are standard UHF where possible and on-metal tags where needed; no cloud account.",
+   "effort_weeks_est": "10–12",
+   "bom_eur_est": "40–60",
+   "price_eur_est": "199–249",
+   "certification": "RED (UHF RFID reader EN 302 208, BLE), EMC, EN 62368-1, RoHS, WEEE, CRA; Battery Regulation / UN 38.3 for the cell.",
+   "kill_question": "Do 10 trades companies tag one van each with 50 tags, achieve a reliable sweep (95%+ of tagged tools read in three sweeps, measured), and buy the wand at €229 after a two-week trial? Pass = 10 purchases and the read-rate met on real vans.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 3,
+    "buildability": 4,
+    "margin": 4,
+    "speed": 4
+   },
+   "tags": [
+    "industrial",
+    "installer",
+    "b2b",
+    "rfid",
+    "tools"
+   ],
+   "open_boards_note": "0 of 5 boards publish schematic/PCB files",
+   "score_total": 15
+  },
+  {
+   "slug": "backstage-relay",
+   "title": "Backstage Relay",
+   "category": "Audio",
+   "pitch": "A paging and show-relay set for small venues and school theatres: one stage microphone station, three battery speakers for dressing rooms and the green room, and a push-to-page button for the stage manager, over WiFi or ESP-NOW; for announcements and listening in, not for calling cues, which stay with the cue lights.",
+   "audience": "Amateur theatres, school and university stages, churches with performances, small event venues; the same buyers as the cue-light set, which this pairs with.",
+   "why_now": "Technical-theatre forums (ControlBooth among them) carry active threads from ultra-low-budget groups asking for exactly this and ready to build it, while professional show-relay and paging systems run into the thousands; WiFi audio over catalogue parts is cheap, as long as it is sold for what it does.",
+   "built_from": [
+    {
+     "board_slug": "m5stack-unit-mic",
+     "role": "microphone unit for the stage talk station",
+     "board_name": "M5Stack Unit MIC (U096)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-mini-pdm",
+     "role": "digital microphone alternative",
+     "board_name": "M5Stack Unit Mini PDM (U089)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "seeed-grove-speaker-plus",
+     "role": "open amplified speaker reference circuit",
+     "board_name": "Seeed Grove-Speaker-Plus",
+     "issuer": "Seeed Studio",
+     "open_files": "schematic"
+    },
+    {
+     "board_slug": "m5stack-atoms3-lite",
+     "role": "ESP32-S3 core for stations and speakers",
+     "board_name": "M5Stack AtomS3-Lite (C124)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    },
+    {
+     "board_slug": "m5stack-unit-button",
+     "role": "push-to-page button",
+     "board_name": "M5Stack Unit Button (U027)",
+     "issuer": "M5Stack",
+     "open_files": ""
+    }
+   ],
+   "whats_new": "A stage station with a microphone and a page button, battery speakers that play the stage feed quietly and switch to a page announcement at full volume, a simple pairing, and a clear positioning: half-second-class latency is fine for 'five minutes to places' and listening to the show, and useless for split-second cues, which the cue-light set handles; 2.4 GHz coexistence with wireless microphones is tested on site, not assumed.",
+   "effort_weeks_est": "10",
+   "bom_eur_est": "60–90",
+   "price_eur_est": "299–399",
+   "certification": "RED via pre-certified ESP32 module (2.4 GHz), EMC, EN 62368-1, RoHS, WEEE, CRA; Battery Regulation / UN 38.3 for the speaker cells.",
+   "kill_question": "Do 10 amateur groups or schools pre-order at €349 after a video demo that states the latency and the 'paging, not cueing' scope, and do 5 of them already own or pre-order the cue-light set? Pass = 10 deposits, 5 paired, in 6 weeks.",
+   "open_files_share": "mostly open",
+   "scores": {
+    "demand": 3,
+    "buildability": 5,
+    "margin": 4,
+    "speed": 5
+   },
+   "tags": [
+    "events",
+    "audio",
+    "education",
+    "b2b",
+    "wifi"
+   ],
+   "open_boards_note": "1 of 5 boards publish schematic/PCB files",
+   "score_total": 17
   }
  ],
  "removed_after_market_check": {
@@ -3033,21 +3234,24 @@
  "rounds": [
   {
    "date": "2026-11-14",
-   "note": "Round 2: 13 ideas added after an external market check of 16 candidates (10 as-is, 3 with the researcher's fix applied; 3 dropped).",
+   "note": "Round 2: 16 ideas added after an external market check of 19 candidates (12 as-is, 4 with the researcher's fix applied; 3 dropped).",
    "slugs": [
-    "dark-sky-meter",
+    "backstage-relay",
     "classroom-noise-light",
     "cue-light-system",
-    "village-stop-display",
+    "dark-sky-meter",
+    "emergency-light-logger",
+    "hall-heat-scheduler",
+    "kiln-mind",
+    "machine-access-box",
     "oil-tank-eye",
     "room-door-sign",
-    "kiln-mind",
-    "vitrine-log",
-    "tree-thirst-sensor",
-    "machine-access-box",
-    "hall-heat-scheduler",
     "shared-laundry-notifier",
-    "stream-level-gauge"
+    "stream-level-gauge",
+    "tool-check-wand",
+    "tree-thirst-sensor",
+    "village-stop-display",
+    "vitrine-log"
    ]
   }
  ]

@@ -8,7 +8,7 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
 - Pages: `index.html` (investor landing), `boards.html` (catalogue, 1,100+ boards, JS grid), `db/<slug>.html`
   (one page per board, generated), `issuers.html` (publishers + solution-house directory, generated),
   `boards-kingbrother.html` (hand-written Kingbrother SOM page), `what-are-gongbans.html` (essay),
-  `ideas.html` + `ideas/<slug>.html` (product concepts built from catalogue boards; 50 generated, 16 withdrawn 2026-11-14 after the external market check (slugs in `data/ideas.json` → `removed_after_market_check`, full records in git history), 13 added the same day in round 2 (`add_ideas_round2.py`, market-checked before building; `data/ideas.json` → `rounds`), generated from `data/ideas.json`
+  `ideas.html` + `ideas/<slug>.html` (product concepts built from catalogue boards; 50 generated, 16 withdrawn 2026-11-14 after the external market check (slugs in `data/ideas.json` → `removed_after_market_check`, full records in git history), 16 added the same day in round 2 (`add_ideas_round2.py`, `add_ideas_round2b.py`; market-checked before building; `data/ideas.json` → `rounds`), generated from `data/ideas.json`
   by `build_ideas.py`; board pages get a "Used in ideas" block from the same JSON),
   `startpacks/<slug>.html` + `startpacks/<slug>.md` (founder start packs: business plan + start kit per idea, rendered by
   `build_startpacks.py` from the Markdown, called by `build_ideas.py`; the .md is the "Download as Markdown" source),

@@ -100,6 +100,7 @@ C = {
     "blueroom": ("The Blue Room (UK)", "https://www.blue-room.org.uk/", "UK technical-theatre forum; DIY cue-light threads live here"),
     "r_sysadmin": ("r/sysadmin", "https://www.reddit.com/r/sysadmin/", "the IT people who approve or block a calendar integration"),
     "r_msp": ("r/msp", "https://www.reddit.com/r/msp/", "managed-service providers: the reseller channel for office devices"),
+    "controlbooth": ("ControlBooth", "https://www.controlbooth.com/", "technical-theatre forum; the show-relay and paging threads live here"),
     "r_pottery": ("r/Pottery", "https://www.reddit.com/r/Pottery/", "hobby potters, many with a home kiln"),
     "digitalfire": ("Digitalfire", "https://digitalfire.com/", "ceramics reference and community; the source on controller safety and insurance"),
     "r_arborists": ("r/arborists", "https://www.reddit.com/r/arborists/", "tree-care professionals, including municipal crews"),
@@ -224,6 +225,9 @@ WHERE = {
     "hall-heat-scheduler": ["dosb", "haustechnik", "zvshk"],
     "shared-laundry-notifier": ["r_propertymanagement", "r_homeassistant", "ha_forum", "gefma"],
     "stream-level-gauge": ["ttn", "r_homeassistant"],
+    "emergency-light-logger": ["ifma", "gefma", "r_electricians", "fpa"],
+    "tool-check-wand": ["r_electricians", "r_plumbing", "r_hvac"],
+    "backstage-relay": ["controlbooth", "r_techtheatre", "blueroom"],
 }
 
 # one problem-first opening question per idea (never mentions the product)
@@ -290,6 +294,9 @@ PROBE = {
     "hall-heat-scheduler": "Who sets the hall heating, when was it last changed, and what did heating cost you last winter?",
     "shared-laundry-notifier": "How do residents find out whether a machine is free, and what do they complain about to you?",
     "stream-level-gauge": "Tell me about the last time the stream flooded: how did you find out, and how early could you have known?",
+    "emergency-light-logger": "How do you test and log the emergency lighting today, how long does a round take, and what did the last inspection say about the log?",
+    "tool-check-wand": "Tell me about the last tool that went missing from a van: when did you notice, what did it cost, and how do you know what is in each van today?",
+    "backstage-relay": "How do the dressing rooms hear the show and the calls today, and what have you improvised that failed?",
     "pollinator-counter": "How do you count pollinators or insects on your site today, who does it, and what do you do with the counts?",
 }
 
