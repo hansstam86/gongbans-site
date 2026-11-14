@@ -234,7 +234,9 @@ def render_pack(slug, md, idea, n_total):
     if mk:
         header_id += f' · MARKET CHECK: {mk["verdict"]}'
     body_html = body_html.replace('<blockquote><p><strong>External market check', '<blockquote class="market-check" id="market-check"><p><strong>External market check', 1)
-    body_html = body_html.replace('<blockquote><p><strong>Audience mismatch found in research', '<blockquote class="market-check correction"><p><strong>Audience mismatch found in research')
+    if idea and idea.get("market_correction"):
+        t = e(idea["market_correction"]["title"])
+        body_html = body_html.replace(f'<blockquote><p><strong>{t}.', f'<blockquote class="market-check correction"><p><strong>{t}.', 1)
     meta = []
     def item(label, value_html, cls=""):
         meta.append(f'<div class="detail-meta-item"><span class="detail-meta-label">{e(label)}</span><span class="detail-meta-value{(" " + cls) if cls else ""}">{value_html}</span></div>')
