@@ -129,6 +129,8 @@ def render_index(data, ideas):
 
 <main class="catalogue">
 
+<p class="start-hint">New to hardware? Read <a href="/start.html">Start here</a> first: what a gongban is, the four steps from idea to production, and the mistakes first-timers make. Then pick an idea below, or bring your own.</p>
+
 <div class="idea-disclaimer"><strong>Disclaimer.</strong> {e(DISCLAIMER)}</div>
 
 {explainer}
@@ -306,14 +308,20 @@ def render_idea(i, ideas, boards):
 
 
 def patch_index(ideas):
-    path = ROOT / "index.html"
-    src = path.read_text(encoding="utf-8")
-    out = re.sub(r'(<span data-stat="ideas"[^>]*>)[^<]*(</span>)', lambda m: f"{m.group(1)}{len(ideas)}{m.group(2)}", src)
+    """Idea count (<span data-stat="ideas">) on index.html and start.html; top-idea list on index.html."""
     top = "".join(f'<a href="/ideas/{e(i["slug"])}.html">{e(i["title"])}<small>{i["score_total"]}</small></a>' for i in ideas[:8])
-    out = re.sub(r"(<!-- idea-top -->).*?(<!-- /idea-top -->)", lambda m: f"{m.group(1)}{top}{m.group(2)}", out, flags=re.S)
-    if out != src:
-        path.write_text(out, encoding="utf-8")
-    return out != src
+    changed = False
+    for name in ("index.html", "start.html"):
+        path = ROOT / name
+        if not path.exists():
+            continue
+        src = path.read_text(encoding="utf-8")
+        out = re.sub(r'(<span data-stat="ideas"[^>]*>)[^<]*(</span>)', lambda m: f"{m.group(1)}{len(ideas)}{m.group(2)}", src)
+        out = re.sub(r"(<!-- idea-top -->).*?(<!-- /idea-top -->)", lambda m: f"{m.group(1)}{top}{m.group(2)}", out, flags=re.S)
+        if out != src:
+            path.write_text(out, encoding="utf-8")
+            changed = True
+    return changed
 
 
 def main():

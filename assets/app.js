@@ -4,8 +4,10 @@
    build_catalog.py), builds the filter chips from the data (category,
    issuer, files, openness), instant search, renders cards 60 at a time
    with "Show more" + auto-load on scroll. Filters live in the URL hash
-   (#cat=IoT&issuer=Espressif&files=schematic&open=open_download&q=esp32)
-   so any view can be linked.
+   (#cat=IoT&issuer=Espressif&files=schematic&open=open_download&q=esp32&beginner=1)
+   so any view can be linked; `?beginner=1` as a query string works too
+   (start.html links to it). Chip/badge wording is plain language for
+   first-time founders; the data keys are unchanged.
    ========================================================== */
 
 (async function () {
@@ -15,7 +17,9 @@
   const showMoreBtn = document.getElementById('show-more');
   const sentinel = document.getElementById('grid-sentinel');
   const resetBtn = document.getElementById('filter-reset');
+  const quickNote = document.getElementById('quick-note');
   const groups = {
+    quick: document.getElementById('chips-quick'),
     cat: document.getElementById('chips-cat'),
     issuer: document.getElementById('chips-issuer'),
     files: document.getElementById('chips-files'),
@@ -28,16 +32,19 @@
   let filtered = [];
   let shown = 0;
 
-  const state = { cat: 'all', issuer: 'all', files: null, open: null, q: '' };
+  const state = { cat: 'all', issuer: 'all', files: null, open: null, q: '', beginner: false };
 
+  const flag = (p, k) => p.has(k) && p.get(k) !== '0' && p.get(k) !== 'false';
   (function readHash() {
     const h = new URLSearchParams(location.hash.replace(/^#/, ''));
+    const qs = new URLSearchParams(location.search);
     if (h.get('cat')) state.cat = h.get('cat');
     if (h.get('issuer')) state.issuer = h.get('issuer');
     if (h.get('files')) state.files = h.get('files');
     if (h.get('status')) state.files = h.get('status');          // old deep links
     if (h.get('open')) state.open = h.get('open');
     if (h.get('q')) state.q = h.get('q');
+    if (flag(h, 'beginner') || flag(qs, 'beginner')) state.beginner = true;
   })();
 
   function writeHash() {
@@ -47,6 +54,7 @@
     if (state.files) h.set('files', state.files);
     if (state.open) h.set('open', state.open);
     if (state.q) h.set('q', state.q);
+    if (state.beginner) h.set('beginner', '1');
     const s = h.toString();
     history.replaceState(null, '', s ? '#' + s : location.pathname);
   }
@@ -75,25 +83,35 @@
   const issuerCounts = count(g => g.issuer);
   const topIssuers = Object.entries(issuerCounts).sort((a, b) => b[1] - a[1]).slice(0, TOP_ISSUERS).map(([k]) => k);
   const otherIssuerCount = all.filter(g => !topIssuers.includes(g.issuer)).length;
+  const FREE = g => g.openness === 'open_download' || g.openness === 'hosted';
+  // Beginner-friendly = free to download AND at least one real design file (schematic, PCB layout or Gerber).
+  // Community boards pass too: they still need a licence check (the note under the chip says so).
+  const BEGINNER = g => FREE(g) && ['schematic', 'pcb', 'gerber'].some(k => g.kinds.includes(k));
+  const nBeginner = all.filter(BEGINNER).length;
   const FILES = [
-    ['full-pack', 'Full pack on this site', g => g.status === 'full-pack'],
-    ['schematic', 'Schematic', g => g.kinds.includes('schematic')],
-    ['pcb', 'PCB layout', g => g.kinds.includes('pcb')],
-    ['gerber-bom', 'Gerber / BOM', g => g.kinds.includes('gerber') || g.kinds.includes('bom')],
-    ['spec', 'Spec / manual', g => g.kinds.includes('spec')],
-    ['links', 'Direct file links', g => g.links > 0],
-    ['metadata-only', 'Catalogue entry only', g => g.status === 'metadata-only']
+    ['full-pack', 'Full design pack on this site', g => g.status === 'full-pack'],
+    ['schematic', 'Schematic (circuit drawing)', g => g.kinds.includes('schematic')],
+    ['pcb', 'PCB layout (board drawing)', g => g.kinds.includes('pcb')],
+    ['gerber-bom', 'Gerber (factory files) / BOM (parts list)', g => g.kinds.includes('gerber') || g.kinds.includes('bom')],
+    ['spec', 'Spec sheet / manual', g => g.kinds.includes('spec')],
+    ['links', 'Direct links to the files', g => g.links > 0],
+    ['metadata-only', 'Specs only, no files', g => g.status === 'metadata-only']
   ];
-  const OPEN = [
-    ['open_download', 'Open download'], ['registration', 'Registration'], ['with_purchase', 'With purchase'],
-    ['contact_atu', 'Via distributor'], ['community', 'Community'], ['hosted', 'Hosted here']
-  ].filter(([k]) => all.some(g => g.openness === k));
+  // same wording as OPENNESS_PLAIN in build_detail_pages.py
+  const OPEN_LABEL = {
+    open_download: 'Free download', registration: 'Free account needed', with_purchase: 'Comes with purchase',
+    contact_atu: 'Ask the distributor', community: 'Community project', hosted: 'Download here (full pack)'
+  };
+  const OPEN = ['open_download', 'hosted', 'registration', 'with_purchase', 'contact_atu', 'community']
+    .filter(k => all.some(g => g.openness === k)).map(k => [k, OPEN_LABEL[k]]);
   const openCounts = count(g => g.openness);
 
-  function chip(type, value, label, n, active) {
-    return `<button class="filter-chip${active ? ' active' : ''}" data-type="${esc(type)}" data-value="${esc(value)}" aria-pressed="${active ? 'true' : 'false'}">${esc(label)}${n != null ? `<small>${fmt(n)}</small>` : ''}</button>`;
+  function chip(type, value, label, n, active, cls) {
+    return `<button class="filter-chip${cls ? ' ' + cls : ''}${active ? ' active' : ''}" data-type="${esc(type)}" data-value="${esc(value)}" aria-pressed="${active ? 'true' : 'false'}">${esc(label)}${n != null ? `<small>${fmt(n)}</small>` : ''}</button>`;
   }
   function buildChips() {
+    if (groups.quick) groups.quick.innerHTML = chip('quick', 'beginner', 'Beginner-friendly (free files)', nBeginner, state.beginner, 'quick');
+    if (quickNote) quickNote.hidden = !state.beginner;
     groups.cat.innerHTML = chip('cat', 'all', 'All', all.length, state.cat === 'all') +
       (data.categories || Object.keys(catCounts)).filter(c => catCounts[c]).map(c => chip('cat', c, c, catCounts[c], state.cat === c)).join('');
     groups.issuer.innerHTML = chip('issuer', 'all', 'All', null, state.issuer === 'all') +
@@ -109,6 +127,7 @@
     const q = state.q.toLowerCase();
     const ff = state.files ? fileFn[state.files] : null;
     return all.filter(g => {
+      if (state.beginner && !BEGINNER(g)) return false;
       if (state.cat !== 'all' && g.category !== state.cat) return false;
       if (state.issuer !== 'all') {
         if (state.issuer === 'other' ? topIssuers.includes(g.issuer) : g.issuer !== state.issuer) return false;
@@ -121,17 +140,23 @@
   }
 
   // ---- cards ----
-  const STATUS_LABEL = { 'full-pack': 'Full design pack', 'source-files': 'Design files at source', 'metadata-only': 'Catalogue entry' };
-  const KIND_SHORT = { schematic: 'SCH', pcb: 'PCB', gerber: 'GBR', bom: 'BOM', spec: 'SPEC', firmware: 'FW', bsp: 'BSP', enclosure: '3D', mech: 'MECH', photos: 'IMG', block_diagram: 'BLK', pcb_lib: 'LIB', sch_lib: 'LIB', artwork: 'ART', presentation: 'PPT', datasheets: 'DS' };
+  const STATUS_LABEL = { 'full-pack': 'Full design pack', 'source-files': 'Files at the maker’s site', 'metadata-only': 'Specs only' };
+  const KIND_LABEL = {
+    schematic: 'Schematic', pcb: 'PCB layout', gerber: 'Gerber', bom: 'BOM', spec: 'Spec sheet', firmware: 'Firmware', bsp: 'BSP',
+    enclosure: '3D enclosure', mech: 'Mechanical', photos: 'Photos', block_diagram: 'Block diagram', pcb_lib: 'Libraries', sch_lib: 'Libraries',
+    artwork: 'Artwork', presentation: 'Slides', datasheets: 'Datasheets'
+  };
+  const kindList = g => g.kinds.map(k => KIND_LABEL[k] || k).filter((v, i, a) => a.indexOf(v) === i);
 
   function renderCard(g) {
     const id = g.project_no || g.issuer || '';
     const tag = [g.category, g.chip || g.hint].filter(Boolean).join(' · ');
-    const desc = g.application || (g.chip ? `${g.chip_brand || ''} ${g.chip}`.trim() : '') || (g.kinds.length ? 'Files published: ' + g.kinds.map(k => KIND_SHORT[k] || k).join(', ') : '');
-    const kinds = g.kinds.length ? g.kinds.map(k => KIND_SHORT[k] || k.toUpperCase()).filter((v, i, a) => a.indexOf(v) === i).join(' ') : '';
+    const kl = kindList(g);
+    const desc = g.application || (g.chip ? `${g.chip_brand || ''} ${g.chip}`.trim() : '') || (kl.length ? 'Files published: ' + kl.join(', ') : '');
+    const kinds = kl.length ? (kl.length > 3 ? kl.slice(0, 3).join(' · ') + ` +${kl.length - 3}` : kl.join(' · ')) : '';
     const right = g.price != null
       ? `CHIP <strong>$${g.price.toFixed(2)}</strong> / 5k`
-      : [kinds, g.openness_label, g.year].filter(Boolean).join(' · ');
+      : [kinds, OPEN_LABEL[g.openness] || g.openness_label, g.year].filter(Boolean).join(' · ');
     return `
       <a class="board ${esc(g.status)}" href="db/${esc(g.slug)}.html">
         <div class="board-id">${esc(id)}</div>
@@ -160,7 +185,7 @@
     const more = filtered.length - shown;
     showMoreBtn.hidden = more <= 0;
     showMoreBtn.textContent = more > 0 ? `Show ${fmt(Math.min(more, PAGE))} more · ${fmt(more)} left` : '';
-    const dirty = state.cat !== 'all' || state.issuer !== 'all' || state.files || state.open || state.q;
+    const dirty = state.cat !== 'all' || state.issuer !== 'all' || state.files || state.open || state.q || state.beginner;
     resetBtn.hidden = !dirty;
   }
 
@@ -185,7 +210,7 @@
   }
 
   // ---- chip clicks (delegated) ----
-  Object.values(groups).forEach(el => el.addEventListener('click', e => {
+  Object.values(groups).filter(Boolean).forEach(el => el.addEventListener('click', e => {
     const b = e.target.closest('.filter-chip');
     if (!b) return;
     const t = b.dataset.type, v = b.dataset.value;
@@ -193,12 +218,13 @@
     else if (t === 'issuer') state.issuer = v;
     else if (t === 'files') state.files = state.files === v ? null : v;
     else if (t === 'open') state.open = state.open === v ? null : v;
+    else if (t === 'quick') state.beginner = !state.beginner;
     buildChips();
     render();
   }));
 
   resetBtn.addEventListener('click', () => {
-    Object.assign(state, { cat: 'all', issuer: 'all', files: null, open: null, q: '' });
+    Object.assign(state, { cat: 'all', issuer: 'all', files: null, open: null, q: '', beginner: false });
     searchInput.value = '';
     buildChips();
     render();
@@ -214,7 +240,7 @@
   });
   window.addEventListener('hashchange', () => {
     const h = new URLSearchParams(location.hash.replace(/^#/, ''));
-    Object.assign(state, { cat: h.get('cat') || 'all', issuer: h.get('issuer') || 'all', files: h.get('files') || null, open: h.get('open') || null, q: h.get('q') || '' });
+    Object.assign(state, { cat: h.get('cat') || 'all', issuer: h.get('issuer') || 'all', files: h.get('files') || null, open: h.get('open') || null, q: h.get('q') || '', beginner: flag(h, 'beginner') });
     searchInput.value = state.q;
     buildChips();
     render();

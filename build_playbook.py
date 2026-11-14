@@ -291,7 +291,7 @@ def render():
             "finding and vetting a Shenzhen manufacturer, CE and FCC certification, EU import and customs, logistics, a landed-cost worksheet and the outreach e-mails.")
     return f'''{head("Zero-experience founder playbook — from gongban idea to shipped product · GONGBANS", desc, "playbook.html")}
 <body>
-{nav("ideas")}
+{nav("playbook")}
 
 <div class="page-header">
   <div class="page-header-inner">
@@ -304,6 +304,7 @@ def render():
 
 <main class="detail startpack playbook">
   <div class="idea-disclaimer"><strong>General guidance, not advice.</strong> This page explains the process shared by the {N} ideas. Directive numbers and VAT rates are public rules as of {e(UPDATED)}; every cost, quantity and duration is a rough estimate marked as such, to be replaced by your own quotes. Not legal, tax or investment advice. The companies named in each pack's "Who to contact" section come from gongban.db and are not verified suppliers for any specific idea.</div>
+  <p class="start-hint">Completely new to this? <a href="/start.html">Start here</a> is the short version: what a gongban is, the four steps, the first-timer mistakes and a glossary. This page is the long one.</p>
   <nav class="pb-toc" aria-label="Sections">{toc}</nav>
 
   <article class="pack-body">
