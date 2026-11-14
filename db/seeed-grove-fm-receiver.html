@@ -3,135 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seeed Grove-FM Receiver — Seeed Studio · GONGBANS DB</title>
+<title>Seeed Grove-FM Receiver — Seeed Studio · GONGBANS catalogue</title>
 <meta name="description" content="Design resources from Seeed wiki (schematic/PCB packages, datasheets).">
-<link rel="stylesheet" href="../assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a3d22'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23d4b06a' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%230a3d22'/%3E%3C/svg%3E">
+<meta property="og:title" content="Seeed Grove-FM Receiver — Seeed Studio · GONGBANS catalogue">
+<meta property="og:description" content="Design resources from Seeed wiki (schematic/PCB packages, datasheets).">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gongbans.com/db/seeed-grove-fm-receiver.html">
+<link rel="canonical" href="https://www.gongbans.com/db/seeed-grove-fm-receiver.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23021e14'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23c9a84c' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23c9a84c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=20261114">
 </head>
 <body>
-
-<header class="site-header">
-  <div class="site-header-inner">
-    <a href="../boards.html" class="brand">
-      <span class="brand-mark">GONGBANS<span style="color: var(--silkscreen);">/</span>DB</span>
-      <span class="brand-sub">公板数据库</span>
-    </a>
-    <nav class="site-nav">
-      <a href="../boards.html">Catalog</a>
-      <a href="../what-are-gongbans.html" class="nav-secondary">What are gongbans?</a>
-      <a href="https://hansolo42.gumroad.com/l/gongbans" target="_blank" rel="noopener">The Book ↗</a>
-      <a href="https://hansstam.eu" target="_blank" rel="noopener">Hans</a>
-    </nav>
+<nav class="site-nav">
+  <a href="/" class="logo">GONGBANS<span>/公板</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
+  <div class="links" id="site-links">
+    <a href="/what-are-gongbans.html">What are gongbans?</a>
+    <a href="/boards.html" class="active">Catalogue</a>
+    <a href="/issuers.html">Issuers</a>
+    <a href="https://hansolo42.gumroad.com/l/gongbans">The book</a>
+    <a href="https://hansstam.eu">Hans Stam</a>
+    <a href="/#download" class="cta">Download PDF</a>
   </div>
-</header>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="crumbs"><a href="/boards.html">Catalogue</a><span class="sep">/</span><a href="/boards.html#cat=Dev%20Board">Dev Board</a><span class="sep">/</span><span>Seeed Studio</span></div>
+    <div class="header-id">Seeed Studio</div>
+    <h1>Seeed Grove-FM Receiver</h1>
+    <p class="sub">Design resources from Seeed wiki (schematic/PCB packages, datasheets).</p>
+  </div>
+</div>
 
 <main class="detail">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="../boards.html">Catalog</a>
-    <span class="breadcrumb-sep">/</span>
-    <a href="../boards.html#cat=Dev+Board">Dev Board</a>
-    <span class="breadcrumb-sep">/</span>
-    <span>Seeed Grove-FM Receiver</span>
-  </nav>
+  <div class="detail-meta"><div class="detail-meta-item"><span class="detail-meta-label">Category</span><span class="detail-meta-value"><a href="/boards.html#cat=Dev%20Board">Dev Board</a></span></div><div class="detail-meta-item"><span class="detail-meta-label">Issuer</span><span class="detail-meta-value"><a href="/boards.html#issuer=Seeed%20Studio">Seeed Studio</a></span></div><div class="detail-meta-item"><span class="detail-meta-label">Openness</span><span class="detail-meta-value"><span class="openness-pill ">Open download</span></span></div><div class="detail-meta-item"><span class="detail-meta-label">Files</span><span class="detail-meta-value">Schematic</span></div><div class="detail-meta-item"><span class="detail-meta-label">Source</span><span class="detail-meta-value"><a href="https://wiki.seeedstudio.com/Grove-FM_Receiver/" target="_blank" rel="noopener">Issuer page ↗</a></span></div></div>
 
-  <span class="detail-projno">Seeed Studio</span>
-  <h1 class="detail-title">Seeed Grove-FM Receiver</h1>
-
-  <div class="detail-meta">
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Category</span>
-      <span class="detail-meta-value">Dev Board</span>
-    </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Issuer</span>
-      <span class="detail-meta-value">Seeed Studio</span>
-    </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Openness</span>
-      <span class="detail-meta-value">Open download</span>
-    </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Source</span>
-      <span class="detail-meta-value"><a href="https://wiki.seeedstudio.com/Grove-FM_Receiver/" target="_blank" rel="noopener" class="ext" style="color: var(--enig-bright); word-break: break-all;">Issuer page</a></span>
-    </div>
-  </div>
-
-  <section class="section" id="application">
-    <h3 class="section-label">Application</h3>
-    <div class="section-body">
-      <p>Design resources from Seeed wiki (schematic/PCB packages, datasheets).</p>
-      <p style='margin-top: 1rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--silkscreen-faded); letter-spacing: 0.08em;'>TAGS: dev_board · open download · community</p>
-    </div>
+  <section class="dsection" id="application">
+    <div class="dsection-label">What it is</div>
+    <h2>Application</h2>
+    <p>Design resources from Seeed wiki (schematic/PCB packages, datasheets).</p>
+    <div class="tags">TAGS · dev_board · open download · community</div>
   </section>
 
-  
-    <section class="section" id="files">
-      <h3 class="section-label">Design files at source</h3>
-      <div class="section-body">
-        <p style="margin-bottom: 1.25rem;">Published by the issuer as: <strong>Schematic</strong>. Links open the issuer's own files — nothing is re-hosted here.</p>
-        <div class="files-list">
-        <a class="file-link" href="https://files.seeedstudio.com/wiki/Grove-FM_Receiver/res/Grove-FM_Receiver_v1.0_eagle.zip" target="_blank" rel="noopener">
-          <span class="file-icon">SCH</span>
-          <span class="file-name" style="word-break: break-all; font-size: 0.8rem;">Grove-FM_Receiver_v1.0_eagle.zip</span>
-        </a>
-        <a class="file-link" href="https://files.seeedstudio.com/wiki/Grove-FM_Receiver/res/Grove-FM_Receiver_v1.0_sch_pdf.pdf" target="_blank" rel="noopener">
-          <span class="file-icon">SCH</span>
-          <span class="file-name" style="word-break: break-all; font-size: 0.8rem;">Grove-FM_Receiver_v1.0_sch_pdf.pdf</span>
-        </a></div>
-        
-      </div>
-    </section>
-  
-  
-    <section class="section" id="source">
-      <h3 class="section-label">Source</h3>
-      <div class="section-body">
-        <table class="bom-table">
-          <tbody><tr><td>Issuer</td><td>Seeed Studio</td></tr><tr><td>Source page</td><td><a href="https://wiki.seeedstudio.com/Grove-FM_Receiver/" target="_blank" rel="noopener" class="ext" style="color: var(--enig-bright); word-break: break-all;">https://wiki.seeedstudio.com/Grove-FM_Receiver/</a></td></tr><tr><td>Source</td><td>Seeed Studio wiki catalog</td></tr><tr><td>Issuer type</td><td>community</td></tr><tr><td>Openness</td><td>Open download</td></tr><tr><td>Region</td><td>CN</td></tr><tr><td>Database category</td><td>dev_board</td></tr></tbody>
-        </table>
-        
-      </div>
-    </section>
-  
-  
-    <section class="section" id="related">
-      <h3 class="section-label">Related Gongbans</h3>
-      <div class="section-body">
-        <p style="margin-bottom: 1.25rem;">
-          Other entries that share this chip, issuer, or application area.
-        </p>
-        <div class="files-list">
-          <a class="file-link" href="seeed-2-8inch-tft-touch-shield-v2-0.html">
-            <span class="file-icon">Seeed Stud</span>
-            <span class="file-name">Seeed 2.8inch TFT Touch Shield v2.0</span>
-          </a>
-          <a class="file-link" href="seeed-2-8inch-tft-touch-shield-v1-0.html">
-            <span class="file-icon">Seeed Stud</span>
-            <span class="file-name">Seeed 2.8inch-TFT Touch Shield V1.0</span>
-          </a>
-          <a class="file-link" href="seeed-4wd-driver-platform-v1-0.html">
-            <span class="file-icon">Seeed Stud</span>
-            <span class="file-name">Seeed 4WD Driver Platform V1.0</span>
-          </a>
-          <a class="file-link" href="seeed-adjustable-dc-dc-power-converter-1v-12v-1-5a.html">
-            <span class="file-icon">Seeed Stud</span>
-            <span class="file-name">Seeed Adjustable DC DC Power Converter 1V-12V-1.5A</span>
-          </a></div>
-      </div>
-    </section>
 
+  <section class="dsection" id="files">
+    <div class="dsection-label">Files · published by the issuer</div>
+    <h2>Design files at source</h2>
+    <p>Published as: <strong>Schematic</strong>. Links open the issuer's own files — nothing is re-hosted here.</p>
+    <div class="files-list"><a class="file-link" href="https://files.seeedstudio.com/wiki/Grove-FM_Receiver/res/Grove-FM_Receiver_v1.0_eagle.zip" target="_blank" rel="noopener"><span class="file-icon">SCH</span><span class="file-name">Grove-FM_Receiver_v1.0_eagle.zip<small>Schematic</small></span></a><a class="file-link" href="https://files.seeedstudio.com/wiki/Grove-FM_Receiver/res/Grove-FM_Receiver_v1.0_sch_pdf.pdf" target="_blank" rel="noopener"><span class="file-icon">SCH</span><span class="file-name">Grove-FM_Receiver_v1.0_sch_pdf.pdf<small>Schematic</small></span></a></div>
+    
+  </section>
+
+
+  <section class="dsection" id="source">
+    <div class="dsection-label">Provenance</div>
+    <h2>Source</h2>
+    <table class="kv-table"><tbody><tr><td>Issuer</td><td>Seeed Studio</td></tr><tr><td>Source page</td><td><a href="https://wiki.seeedstudio.com/Grove-FM_Receiver/" target="_blank" rel="noopener">https://wiki.seeedstudio.com/Grove-FM_Receiver/</a></td></tr><tr><td>Indexed from</td><td>Seeed Studio wiki catalog</td></tr><tr><td>Issuer type</td><td>community</td></tr><tr><td>Openness</td><td>Open download</td></tr><tr><td>Region</td><td>CN</td></tr><tr><td>Database category</td><td>dev_board</td></tr></tbody></table>
+    
+  </section>
+
+
+  <section class="dsection" id="related">
+    <div class="dsection-label">See also</div>
+    <h2>Related boards</h2>
+    <p>Other entries that share this chip, issuer or application area.</p>
+    <div class="boards-grid">
+      <a class="board source-files" href="/db/seeed-2-8inch-tft-touch-shield-v2-0.html">
+        <div class="board-id">Seeed Studio</div>
+        <h3 class="board-name" style="font-size:19px">Seeed 2.8inch TFT Touch Shield v2.0</h3>
+        <div class="board-tag" style="margin-bottom:0">Dev Board</div>
+      </a>
+      <a class="board source-files" href="/db/seeed-2-8inch-tft-touch-shield-v1-0.html">
+        <div class="board-id">Seeed Studio</div>
+        <h3 class="board-name" style="font-size:19px">Seeed 2.8inch-TFT Touch Shield V1.0</h3>
+        <div class="board-tag" style="margin-bottom:0">Dev Board</div>
+      </a>
+      <a class="board source-files" href="/db/seeed-4wd-driver-platform-v1-0.html">
+        <div class="board-id">Seeed Studio</div>
+        <h3 class="board-name" style="font-size:19px">Seeed 4WD Driver Platform V1.0</h3>
+        <div class="board-tag" style="margin-bottom:0">Dev Board</div>
+      </a>
+      <a class="board source-files" href="/db/seeed-adjustable-dc-dc-power-converter-1v-12v-1-5a.html">
+        <div class="board-id">Seeed Studio</div>
+        <h3 class="board-name" style="font-size:19px">Seeed Adjustable DC DC Power Converter 1V-12V-1.5A</h3>
+        <div class="board-tag" style="margin-bottom:0">Dev Board</div>
+      </a></div>
+  </section>
+  <p class="catalogue-note">Entry <code>seeed-grove-fm-receiver</code> · status: source-files. Catalogue entries are indexed from publishers' public pages; the site re-hosts nothing except the hand-curated design packs. Spotted an error? <a href="https://hansstam.eu">Get in touch via hansstam.eu</a>.</p>
 </main>
 
 <footer class="site-footer">
-  <div class="site-footer-inner">
-    <div>
-      Maintained by <a href="https://hansstam.eu" target="_blank" rel="noopener">Hans Stam</a> · Berlin · Shenzhen
-    </div>
-    <div>
-      Companion to <a href="https://hansolo42.gumroad.com/l/gongbans" target="_blank" rel="noopener">GONGBANS — the book</a>
-    </div>
-  </div>
+  <p class="foot-links"><a href="/">Home</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Issuers</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
+  <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
 </footer>
-
+<script src="/assets/site.js?v=20261114"></script>
 </body>
 </html>

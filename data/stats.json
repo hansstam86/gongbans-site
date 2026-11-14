@@ -1,0 +1,92 @@
+{
+ "updated": "2026-11-14",
+ "boards": 1121,
+ "curated": 16,
+ "imported": 1105,
+ "issuers": 22,
+ "solution_houses": 65,
+ "categories": 10,
+ "full_packs": 3,
+ "with_design_files": 738,
+ "with_schematic": 659,
+ "with_pcb": 193,
+ "direct_links": 556,
+ "open_download": 1026,
+ "per_category": [
+  {
+   "name": "IoT",
+   "count": 31
+  },
+  {
+   "name": "Wearable",
+   "count": 13
+  },
+  {
+   "name": "E-Lock",
+   "count": 2
+  },
+  {
+   "name": "Dev Board",
+   "count": 769
+  },
+  {
+   "name": "Community",
+   "count": 169
+  },
+  {
+   "name": "SBC / SOM",
+   "count": 52
+  },
+  {
+   "name": "Module",
+   "count": 28
+  },
+  {
+   "name": "Reference Design",
+   "count": 11
+  },
+  {
+   "name": "Industrial & Auto",
+   "count": 27
+  },
+  {
+   "name": "Consumer",
+   "count": 19
+  }
+ ],
+ "top_issuers": [
+  {
+   "name": "M5Stack",
+   "count": 274
+  },
+  {
+   "name": "DFRobot",
+   "count": 250
+  },
+  {
+   "name": "Seeed Studio",
+   "count": 183
+  },
+  {
+   "name": "OSHWHub",
+   "count": 169
+  },
+  {
+   "name": "WPI ATU",
+   "count": 78
+  },
+  {
+   "name": "Firefly / T-Chip",
+   "count": 50
+  },
+  {
+   "name": "Espressif",
+   "count": 48
+  },
+  {
+   "name": "Wireless-Tag",
+   "count": 18
+  }
+ ],
+ "excluded": 11
+}

@@ -3,170 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boards — The gongban catalogue — GONGBANS</title>
-<meta name="description" content="A searchable catalogue of Chinese reference designs (gongbans / 公板): dev boards, SBCs, modules and solution boards published by chip houses, distributors, module houses and open-hardware communities, plus Hans Stam's hand-curated ATU gongban kits.">
-<meta property="og:title" content="Boards — The gongban catalogue — GONGBANS">
-<meta property="og:description" content="Over a thousand Chinese reference designs, filterable by category and openness, with links to the publishers' own design files.">
+<title>Catalogue — 1,100+ Chinese reference designs (gongbans) — GONGBANS</title>
+<meta name="description" content="A searchable catalogue of Chinese reference designs (gongbans / 公板): dev boards, SBCs and SOMs, modules, chip-house reference designs and solution boards published by chip houses, distributors, module houses and open-hardware communities — plus Hans Stam's hand-curated ATU gongban kits with full design packs.">
+<meta property="og:title" content="Catalogue — the gongban database — GONGBANS">
+<meta property="og:description" content="Over a thousand Chinese reference designs, filterable by category, issuer, files and openness, with links to the publishers' own design files.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://gongbans.com/boards.html">
+<meta property="og:url" content="https://www.gongbans.com/boards.html">
+<link rel="canonical" href="https://www.gongbans.com/boards.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23021e14'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23c9a84c' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23c9a84c'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=20261114">
 <link rel="preload" href="data/catalog.json" as="fetch" crossorigin="anonymous">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --green:#0a6847;
-  --green-dark:#053d2a;
-  --green-deeper:#021e14;
-  --gold:#c9a84c;
-  --gold-dim:#8a7535;
-  --copper:#b87333;
-  --cream:#f5f2eb;
-  --white:#fff;
-  --text:#1a1a18;
-  --text-mid:#4a4a45;
-  --text-light:#7a7a72;
-  --red:#b33a2a;
-  --green-accent:#2e7d32;
-  --navy:#1e2761;
-  --font-display:'DM Serif Display',Georgia,serif;
-  --font-body:'IBM Plex Sans',system-ui,sans-serif;
-  --font-mono:'IBM Plex Mono',monospace;
-}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:var(--font-body);color:var(--text);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-
-/* NAV */
-nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between;background:var(--green-deeper);border-bottom:2px solid var(--gold-dim);backdrop-filter:blur(12px)}
-nav.site-nav .logo{font-family:var(--font-mono);font-weight:500;font-size:14px;color:var(--gold);letter-spacing:2px}
-nav.site-nav .logo span{color:var(--gold-dim)}
-nav.site-nav .links{display:flex;gap:24px;align-items:center}
-nav.site-nav .links a{font-size:13px;color:rgba(255,255,255,0.6);letter-spacing:0.5px;transition:color 0.2s}
-nav.site-nav .links a:hover{color:var(--gold)}
-nav.site-nav .links a.cta{color:var(--green-deeper);background:var(--gold);padding:6px 16px;border-radius:4px;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase}
-nav.site-nav .links a.cta:hover{background:var(--copper)}
-nav.site-nav .links a.active{color:var(--gold)}
-
-/* HEADER */
-.page-header{padding:120px 2rem 60px;background:var(--green-deeper);position:relative;overflow:hidden}
-.page-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(201,168,76,0.04) 39px,rgba(201,168,76,0.04) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(201,168,76,0.04) 39px,rgba(201,168,76,0.04) 40px);pointer-events:none}
-.page-header-inner{max-width:1080px;margin:0 auto;position:relative}
-.page-header-tag{font-family:var(--font-mono);font-size:12px;color:var(--gold-dim);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}
-.page-header h1{font-family:var(--font-display);font-size:clamp(34px,5vw,52px);color:var(--white);line-height:1.15;margin-bottom:20px}
-.page-header h1 em{font-style:normal;color:var(--gold)}
-.page-header .sub{font-size:17px;color:rgba(255,255,255,0.6);max-width:720px;line-height:1.65}
-
-/* CONTEXT BAR */
-.context-bar{background:var(--white);border-bottom:1px solid rgba(0,0,0,0.08);padding:28px 2rem}
-.context-inner{max-width:1080px;margin:0 auto;display:flex;gap:32px;flex-wrap:wrap;align-items:center;justify-content:space-between}
-.context-note{font-size:14px;color:var(--text-mid);max-width:720px;line-height:1.6}
-.context-note strong{color:var(--text)}
-.context-source{font-family:var(--font-mono);font-size:11px;color:var(--text-light);letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap}
-.context-source span{color:var(--gold-dim)}
-
-/* CATEGORY GROUPS */
-main{max-width:1080px;margin:0 auto;padding:48px 2rem 80px}
-.category{margin-bottom:64px}
-.category-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:28px;padding-bottom:14px;border-bottom:2px solid var(--green-deeper)}
-.category-title{font-family:var(--font-display);font-size:clamp(24px,3vw,32px);color:var(--text);line-height:1.2}
-.category-meta{font-family:var(--font-mono);font-size:12px;color:var(--gold-dim);letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
-
-/* BOARD GRID */
-.boards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
-.board{background:var(--white);border-radius:6px;padding:24px 26px;border:1px solid rgba(0,0,0,0.06);transition:all 0.2s;position:relative;overflow:hidden}
-.board:hover{border-color:var(--gold-dim);transform:translateY(-2px);box-shadow:0 12px 32px -16px rgba(0,0,0,0.15)}
-.board::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--gold)}
-.board-id{font-family:var(--font-mono);font-size:11px;color:var(--copper);letter-spacing:1.5px;margin-bottom:8px}
-.board-name{font-family:var(--font-display);font-size:22px;color:var(--text);margin-bottom:6px;line-height:1.25}
-.board-tag{font-family:var(--font-mono);font-size:11px;color:var(--text-light);letter-spacing:1px;margin-bottom:18px;text-transform:uppercase}
-
-.board-perf{background:var(--cream);padding:14px 16px;border-radius:4px;margin-bottom:18px}
-.board-perf-label{font-family:var(--font-mono);font-size:10px;color:var(--gold-dim);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
-.board-perf-spec{font-size:14px;color:var(--text);line-height:1.5;font-weight:500}
-.board-perf-spec em{font-style:normal;color:var(--copper);font-weight:600}
-
-.board-desc{font-size:14px;color:var(--text-mid);line-height:1.6;margin-bottom:18px}
-
-.spec-list{list-style:none;padding:0;margin:0}
-.spec-list li{font-size:13px;color:var(--text-mid);line-height:1.55;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.04);display:flex;justify-content:space-between;gap:16px}
-.spec-list li:last-child{border-bottom:none}
-.spec-list li .label{font-family:var(--font-mono);font-size:11px;color:var(--text-light);letter-spacing:0.5px;text-transform:uppercase;flex-shrink:0}
-.spec-list li .value{color:var(--text);text-align:right;font-weight:500}
-
-.board-section-label{font-family:var(--font-mono);font-size:10px;color:var(--gold-dim);letter-spacing:1.5px;text-transform:uppercase;margin:18px 0 8px}
-
-/* INFO BANNER */
-.info-banner{background:var(--green-deeper);color:var(--white);padding:32px 36px;border-radius:6px;margin-bottom:48px}
-.info-banner h3{font-family:var(--font-display);font-size:22px;margin-bottom:10px;color:var(--white)}
-.info-banner p{font-size:15px;color:rgba(255,255,255,0.7);line-height:1.65;margin-bottom:0}
-.info-banner p + p{margin-top:12px}
-.info-banner a{color:var(--gold);border-bottom:1px solid var(--gold-dim)}
-.info-banner a:hover{color:var(--copper);border-bottom-color:var(--copper)}
-
-/* FOOTER */
-footer{background:var(--green-deeper);color:rgba(255,255,255,0.5);padding:40px 2rem;text-align:center;font-size:13.5px}
-footer a{color:var(--gold-dim);border-bottom:1px solid transparent}
-footer a:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
-
-@media (max-width:720px){
-  nav.site-nav{padding:0 1rem}
-  nav.site-nav .links{gap:12px}
-  nav.site-nav .links a:not(.cta){display:none}
-  main{padding:32px 1rem 60px}
-  .boards-grid{grid-template-columns:1fr}
-  .info-banner{padding:24px 24px}
-  .category-head{flex-direction:column;align-items:flex-start;gap:8px}
-}
-/* CATALOGUE FILTERS */
-.filter-bar{background:var(--white);border:1px solid rgba(0,0,0,0.06);border-radius:6px;padding:18px 22px;margin-bottom:32px;display:flex;flex-direction:column;gap:12px}
-.filter-group{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.filter-label{font-family:var(--font-mono);font-size:11px;color:var(--text-light);letter-spacing:1.5px;text-transform:uppercase;margin-right:6px}
-.filter-chip{font-family:var(--font-mono);font-size:12px;letter-spacing:0.5px;padding:6px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.12);background:var(--cream);color:var(--text-mid);cursor:pointer;transition:all .15s;line-height:1.4}
-.filter-chip:hover{border-color:var(--gold-dim);color:var(--text)}
-.filter-chip.active{background:var(--green-deeper);border-color:var(--green-deeper);color:var(--gold)}
-.search-box{position:relative}
-.search-box input{width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px 12px 40px;border:1px solid rgba(0,0,0,0.12);border-radius:6px;background:var(--cream);color:var(--text);outline:none;-webkit-appearance:none}
-.search-box input:focus{border-color:var(--gold);background:var(--white)}
-.search-box::before{content:'⌕';position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text-light);font-size:18px;pointer-events:none}
-
-/* CATALOGUE CARDS (same .board look, as links) */
-a.board{display:flex;flex-direction:column;color:inherit}
-.board-desc.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1;min-height:0}
-.board-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 12px;padding-top:12px;border-top:1px solid rgba(0,0,0,0.06);font-family:var(--font-mono);font-size:11px;letter-spacing:0.5px;text-transform:uppercase;color:var(--text-light)}
-.board-foot .meta{text-align:right}
-.board-foot strong{color:var(--copper)}
-.status{white-space:nowrap}
-.status::before{content:'●';margin-right:6px;font-size:9px;vertical-align:1px}
-.status.full-pack{color:var(--green-accent)}
-.status.source-files{color:var(--copper)}
-.status.metadata-only{color:var(--text-light)}
-.show-more{display:block;margin:40px auto 0;font-family:var(--font-mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;border:2px solid var(--green-deeper);border-radius:4px;background:transparent;color:var(--green-deeper);cursor:pointer;transition:all .15s}
-.show-more:hover{background:var(--green-deeper);color:var(--gold)}
-.show-more[hidden]{display:none}
-.empty-state{grid-column:1/-1;background:var(--white);border:1px dashed rgba(0,0,0,0.15);border-radius:6px;padding:48px 24px;text-align:center;color:var(--text-mid);font-size:15px}
-.empty-state code{font-family:var(--font-mono);font-size:13px;background:var(--cream);padding:2px 6px;border-radius:3px}
-.grid-sentinel{height:1px}
-.catalogue-note{font-size:13px;color:var(--text-light);margin-top:14px;line-height:1.6}
-.catalogue-note a{color:var(--copper);border-bottom:1px solid transparent}
-.catalogue-note a:hover{border-bottom-color:var(--copper)}
-
-@media (max-width:720px){
-  .filter-bar{padding:14px 16px}
-  .filter-label{width:100%;margin:0 0 -2px}
-  .board-foot{flex-direction:column;align-items:flex-start;gap:6px}
-  .board-foot .meta{text-align:left}
-}
-</style>
 </head>
 <body>
 
 <nav class="site-nav">
   <a href="/" class="logo">GONGBANS<span>/公板</span></a>
-  <div class="links">
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
+  <div class="links" id="site-links">
     <a href="/what-are-gongbans.html">What are gongbans?</a>
-    <a href="/boards.html" class="active">Boards</a>
+    <a href="/boards.html" class="active">Catalogue</a>
+    <a href="/issuers.html">Issuers</a>
     <a href="https://hansolo42.gumroad.com/l/gongbans">The book</a>
     <a href="https://hansstam.eu">Hans Stam</a>
     <a href="/#download" class="cta">Download PDF</a>
@@ -174,47 +33,31 @@ a.board{display:flex;flex-direction:column;color:inherit}
 </nav>
 
 <div class="page-header">
-  <div class="page-header-inner">
-    <div class="page-header-tag">CATALOG · GONGBAN DATABASE</div>
+  <div class="page-header-inner wide">
+    <div class="page-header-tag">Catalogue · gongban database</div>
     <h1>The gongban <em>catalogue</em></h1>
-    <p class="sub">Chinese reference designs — dev boards, SBCs and SOMs, modules, chip-house reference designs and solution boards — as published by chip houses, distributors, module houses and open-hardware communities, alongside Hans's hand-curated ATU gongban kits. Filter by category, search by chip or vendor, and follow each entry to the publisher's own design files.</p>
+    <p class="sub"><span data-stat="boards">1,121</span> Chinese reference designs — dev boards, SBCs and SOMs, modules, chip-house reference designs and solution boards — as published by <span data-stat="issuers">22</span> chip houses, distributors, module houses and open-hardware communities, alongside Hans's <span data-stat="curated">16</span> hand-curated ATU gongban kits. Filter by category, issuer, files or openness; search by chip or product; follow each entry to the publisher's own design files.</p>
   </div>
 </div>
 
 <div class="context-bar">
   <div class="context-inner">
     <div class="context-note">
-      <strong>How to read it:</strong> every card is one board. &ldquo;Full Design Pack&rdquo; entries carry schematic, PCB, Gerber and BOM downloads on this site; &ldquo;Design files at source&rdquo; entries link to the schematic or PCB files the publisher put online; &ldquo;Catalog entry&rdquo; means specs or enclosure files only. Looking for the industrial SOM platforms? See the <a href="/boards-kingbrother.html" style="color:var(--copper);border-bottom:1px solid var(--copper)">Kingbrother IDH catalogue</a>.
+      <strong>How to read it:</strong> every card is one board. <em>Full design pack</em> entries carry schematic, PCB, Gerber and BOM downloads on this site; <em>Design files at source</em> entries link to what the publisher put online; <em>Catalogue entry</em> means specs or enclosure files only. Industrial SOM platforms from Kingbrother have <a href="/boards-kingbrother.html">their own page</a>; the companies behind the boards are on the <a href="/issuers.html">Issuers</a> page.
     </div>
     <div class="context-source">Source · <span>gongban.db · Nov 2026</span></div>
   </div>
 </div>
 
-<main>
+<main class="catalogue">
 
 <section class="filter-bar" aria-label="Filters">
-  <div class="filter-group" role="group" aria-label="Category">
-    <span class="filter-label">Category</span>
-    <button class="filter-chip active" data-filter="category" data-value="all" aria-pressed="true">All</button>
-    <button class="filter-chip" data-filter="category" data-value="IoT">IoT</button>
-    <button class="filter-chip" data-filter="category" data-value="Wearable">Wearable</button>
-    <button class="filter-chip" data-filter="category" data-value="E-Lock">E-Lock</button>
-    <button class="filter-chip" data-filter="category" data-value="Dev Board">Dev Board</button>
-    <button class="filter-chip" data-filter="category" data-value="Community">Community</button>
-    <button class="filter-chip" data-filter="category" data-value="SBC / SOM">SBC / SOM</button>
-    <button class="filter-chip" data-filter="category" data-value="Module">Module</button>
-    <button class="filter-chip" data-filter="category" data-value="Reference Design">Reference Design</button>
-    <button class="filter-chip" data-filter="category" data-value="Industrial &amp; Auto">Industrial &amp; Auto</button>
-    <button class="filter-chip" data-filter="category" data-value="Consumer">Consumer</button>
-  </div>
-  <div class="filter-group" role="group" aria-label="Files">
-    <span class="filter-label">Files</span>
-    <button class="filter-chip" data-filter="files" data-value="full-pack">Full pack</button>
-    <button class="filter-chip" data-filter="files" data-value="source-files">Files at source</button>
-    <button class="filter-chip" data-filter="files" data-value="metadata-only">Catalog only</button>
-  </div>
+  <div class="filter-group scroll" role="group" aria-label="Category"><span class="filter-label">Category</span><span id="chips-cat" class="filter-group"></span></div>
+  <div class="filter-group scroll" role="group" aria-label="Issuer"><span class="filter-label">Issuer</span><span id="chips-issuer" class="filter-group"></span></div>
+  <div class="filter-group scroll" role="group" aria-label="Files"><span class="filter-label">Files</span><span id="chips-files" class="filter-group"></span></div>
+  <div class="filter-group scroll" role="group" aria-label="Openness"><span class="filter-label">Openness</span><span id="chips-open" class="filter-group"></span><button class="filter-reset" id="filter-reset" type="button" hidden>✕ Reset</button></div>
   <div class="search-box">
-    <input type="search" id="search-input" placeholder="Search chip, board, vendor, application…  (press / to focus)" aria-label="Search boards" autocomplete="off">
+    <input type="search" id="search-input" placeholder="Search chip, board, issuer, application…  (press / to focus)" aria-label="Search boards" autocomplete="off">
   </div>
 </section>
 
@@ -224,19 +67,21 @@ a.board{display:flex;flex-direction:column;color:inherit}
     <span class="category-meta" id="entry-count">LOADING…</span>
   </div>
   <div class="boards-grid" id="gongban-grid">
-    <!-- populated by assets/app.js from data/catalog.json -->
+    <noscript><div class="empty-state">The catalogue needs JavaScript to render its 1,100+ cards. The raw data is in <a href="data/catalog.json">data/catalog.json</a>; the Kingbrother SOM platforms are on <a href="/boards-kingbrother.html">a static page</a>.</div></noscript>
   </div>
   <div class="grid-sentinel" id="grid-sentinel" aria-hidden="true"></div>
   <button class="show-more" id="show-more" type="button" hidden>Show more</button>
-  <p class="catalogue-note">Catalogue entries are indexed from publishers' public pages; the site re-hosts nothing except the hand-curated design packs. Spotted an error or own a design that should be here? <a href="https://hansstam.eu">Get in touch via hansstam.eu</a>.</p>
+  <p class="catalogue-note">Catalogue entries are indexed from publishers' public pages; the site re-hosts nothing except the hand-curated design packs. Telematics, vehicle-tracking and micromobility boards are deliberately left out. Spotted an error or own a design that should be here? <a href="https://hansstam.eu">Get in touch via hansstam.eu</a>.</p>
 </section>
 
 </main>
 
-<footer>
+<footer class="site-footer">
+  <p class="foot-links"><a href="/">Home</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Issuers</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
   <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
 </footer>
 
-<script src="assets/app.js"></script>
+<script src="/assets/site.js?v=20261114"></script>
+<script src="/assets/app.js?v=20261114"></script>
 </body>
 </html>

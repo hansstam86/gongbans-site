@@ -3,173 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RK3568 AIoT reference design (OrCAD) — Rockchip · GONGBANS DB</title>
+<title>RK3568 AIoT reference design (OrCAD) — Rockchip · GONGBANS catalogue</title>
 <meta name="description" content="AIoT product line gongban: complete OrCAD .DSN reference schematic + PDF, V10/V11.">
-<link rel="stylesheet" href="../assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a3d22'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23d4b06a' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%230a3d22'/%3E%3C/svg%3E">
+<meta property="og:title" content="RK3568 AIoT reference design (OrCAD) — Rockchip · GONGBANS catalogue">
+<meta property="og:description" content="AIoT product line gongban: complete OrCAD .DSN reference schematic + PDF, V10/V11.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gongbans.com/db/rockchip-rk3568-aiot-ref.html">
+<link rel="canonical" href="https://www.gongbans.com/db/rockchip-rk3568-aiot-ref.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23021e14'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23c9a84c' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23c9a84c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=20261114">
 </head>
 <body>
-
-<header class="site-header">
-  <div class="site-header-inner">
-    <a href="../boards.html" class="brand">
-      <span class="brand-mark">GONGBANS<span style="color: var(--silkscreen);">/</span>DB</span>
-      <span class="brand-sub">公板数据库</span>
-    </a>
-    <nav class="site-nav">
-      <a href="../boards.html">Catalog</a>
-      <a href="../what-are-gongbans.html" class="nav-secondary">What are gongbans?</a>
-      <a href="https://hansolo42.gumroad.com/l/gongbans" target="_blank" rel="noopener">The Book ↗</a>
-      <a href="https://hansstam.eu" target="_blank" rel="noopener">Hans</a>
-    </nav>
+<nav class="site-nav">
+  <a href="/" class="logo">GONGBANS<span>/公板</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
+  <div class="links" id="site-links">
+    <a href="/what-are-gongbans.html">What are gongbans?</a>
+    <a href="/boards.html" class="active">Catalogue</a>
+    <a href="/issuers.html">Issuers</a>
+    <a href="https://hansolo42.gumroad.com/l/gongbans">The book</a>
+    <a href="https://hansstam.eu">Hans Stam</a>
+    <a href="/#download" class="cta">Download PDF</a>
   </div>
-</header>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="crumbs"><a href="/boards.html">Catalogue</a><span class="sep">/</span><a href="/boards.html#cat=Reference%20Design">Reference Design</a><span class="sep">/</span><span>Rockchip</span></div>
+    <div class="header-id">Rockchip</div>
+    <h1>RK3568 AIoT reference design (OrCAD)</h1>
+    <p class="sub">AIoT product line gongban: complete OrCAD .DSN reference schematic + PDF, V10/V11.</p>
+  </div>
+</div>
 
 <main class="detail">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="../boards.html">Catalog</a>
-    <span class="breadcrumb-sep">/</span>
-    <a href="../boards.html#cat=Reference+Design">Reference Design</a>
-    <span class="breadcrumb-sep">/</span>
-    <span>RK3568 AIoT reference design (OrCAD)</span>
-  </nav>
+  <div class="detail-meta"><div class="detail-meta-item"><span class="detail-meta-label">Category</span><span class="detail-meta-value"><a href="/boards.html#cat=Reference%20Design">Reference Design</a></span></div><div class="detail-meta-item"><span class="detail-meta-label">Issuer</span><span class="detail-meta-value"><a href="/boards.html#issuer=Rockchip">Rockchip</a></span></div><div class="detail-meta-item"><span class="detail-meta-label">Chip</span><span class="detail-meta-value gold">RK3568</span></div><div class="detail-meta-item"><span class="detail-meta-label">Openness</span><span class="detail-meta-value"><span class="openness-pill ">Open download</span></span></div><div class="detail-meta-item"><span class="detail-meta-label">Year</span><span class="detail-meta-value">2021</span></div><div class="detail-meta-item"><span class="detail-meta-label">Files</span><span class="detail-meta-value">Schematic</span></div><div class="detail-meta-item"><span class="detail-meta-label">Source</span><span class="detail-meta-value"><a href="https://github.com/hqnicolas/RK3568-hardware-design" target="_blank" rel="noopener">Issuer page ↗</a></span></div></div>
 
-  <span class="detail-projno">Rockchip</span>
-  <h1 class="detail-title">RK3568 AIoT reference design (OrCAD)</h1>
-
-  <div class="detail-meta">
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Category</span>
-      <span class="detail-meta-value">Reference Design</span>
-    </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Issuer</span>
-      <span class="detail-meta-value">Rockchip</span>
-    </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Chip</span>
-      <span class="detail-meta-value gold">RK3568</span>
-    </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Openness</span>
-      <span class="detail-meta-value">Open download</span>
-    </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Year</span>
-      <span class="detail-meta-value">2021</span>
-    </div>
-    <div class="detail-meta-item">
-      <span class="detail-meta-label">Source</span>
-      <span class="detail-meta-value"><a href="https://github.com/hqnicolas/RK3568-hardware-design" target="_blank" rel="noopener" class="ext" style="color: var(--enig-bright); word-break: break-all;">Issuer page</a></span>
-    </div>
-  </div>
-
-  <section class="section" id="application">
-    <h3 class="section-label">Application</h3>
-    <div class="section-body">
-      <p>AIoT product line gongban: complete OrCAD .DSN reference schematic + PDF, V10/V11.</p>
-      <p style='margin-top: 1rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--silkscreen-faded); letter-spacing: 0.08em;'>TAGS: reference_design · open download · chip house</p>
-    </div>
+  <section class="dsection" id="application">
+    <div class="dsection-label">What it is</div>
+    <h2>Application</h2>
+    <p>AIoT product line gongban: complete OrCAD .DSN reference schematic + PDF, V10/V11.</p>
+    <div class="tags">TAGS · reference_design · open download · chip house</div>
   </section>
 
-  <section class="section" id="silicon">
-    <h3 class="section-label">Silicon</h3>
-    <div class="section-body">
-      <div class="card-chip" style="max-width: 360px; margin: 0;">
-        
-        <div class="chip-name">RK3568</div>
-        
-      </div>
-    </div>
-  </section>
-  
-    <section class="section" id="files">
-      <h3 class="section-label">Design files at source</h3>
-      <div class="section-body">
-        <p style="margin-bottom: 1.25rem;">Published by the issuer as: <strong>Schematic</strong>. Links open the issuer's own files — nothing is re-hosted here.</p>
-        <div class="files-list">
-        <a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/03_Reference Design/RK3568_AIoT_REF_SCH/RK3568_AIOT_REF_SCH_V11_20210611_162.DSN" target="_blank" rel="noopener">
-          <span class="file-icon">SCH</span>
-          <span class="file-name" style="word-break: break-all; font-size: 0.8rem;">RK3568_AIOT_REF_SCH_V11_20210611_162.DSN</span>
-        </a>
-        <a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/03_Reference Design/RK3568_AIoT_REF_SCH/RK3568_AIoT_REF_SCH_V11_20210611.DSN" target="_blank" rel="noopener">
-          <span class="file-icon">SCH</span>
-          <span class="file-name" style="word-break: break-all; font-size: 0.8rem;">RK3568_AIoT_REF_SCH_V11_20210611.DSN</span>
-        </a>
-        <a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/03_Reference Design/RK3568_AIoT_REF_SCH/RK3568_AIoT_REF_SCH_V11_20210611.pdf" target="_blank" rel="noopener">
-          <span class="file-icon">SCH</span>
-          <span class="file-name" style="word-break: break-all; font-size: 0.8rem;">RK3568_AIoT_REF_SCH_V11_20210611.pdf</span>
-        </a>
-        <a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/03_Reference Design/RK3568_AIoT_REF_SCH/RK3568_AIoT_REF_SCH_V11_20210611_Modify_Notes_CN.pdf" target="_blank" rel="noopener">
-          <span class="file-icon">SCH</span>
-          <span class="file-name" style="word-break: break-all; font-size: 0.8rem;">RK3568_AIoT_REF_SCH_V11_20210611_Modify_Notes_CN.pdf</span>
-        </a>
-        <a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/Last Release/SCH/V10/RK3568_AIOT_REF_SCH_V10_20210204-162.DSN" target="_blank" rel="noopener">
-          <span class="file-icon">SCH</span>
-          <span class="file-name" style="word-break: break-all; font-size: 0.8rem;">RK3568_AIOT_REF_SCH_V10_20210204-162.DSN</span>
-        </a>
-        <a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/Last Release/SCH/V10/RK3568_AIoT_REF_SCH_V10_20210204.DSN" target="_blank" rel="noopener">
-          <span class="file-icon">SCH</span>
-          <span class="file-name" style="word-break: break-all; font-size: 0.8rem;">RK3568_AIoT_REF_SCH_V10_20210204.DSN</span>
-        </a>
-        <a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/Last Release/SCH/V10/RK3568_AIoT_REF_SCH_V10_20210204.pdf" target="_blank" rel="noopener">
-          <span class="file-icon">SCH</span>
-          <span class="file-name" style="word-break: break-all; font-size: 0.8rem;">RK3568_AIoT_REF_SCH_V10_20210204.pdf</span>
-        </a></div>
-        
-      </div>
-    </section>
-  
-  
-    <section class="section" id="source">
-      <h3 class="section-label">Source</h3>
-      <div class="section-body">
-        <table class="bom-table">
-          <tbody><tr><td>Issuer</td><td>Rockchip</td></tr><tr><td>Source page</td><td><a href="https://github.com/hqnicolas/RK3568-hardware-design" target="_blank" rel="noopener" class="ext" style="color: var(--enig-bright); word-break: break-all;">https://github.com/hqnicolas/RK3568-hardware-design</a></td></tr><tr><td>Source</td><td>Rockchip RK3568 official hardware design package (GitHub mirror)</td></tr><tr><td>Issuer type</td><td>chip house</td></tr><tr><td>Openness</td><td>Open download</td></tr><tr><td>Year</td><td>2021</td></tr><tr><td>Region</td><td>CN</td></tr><tr><td>Database category</td><td>reference_design</td></tr></tbody>
-        </table>
-        
-      </div>
-    </section>
-  
-  
-    <section class="section" id="related">
-      <h3 class="section-label">Related Gongbans</h3>
-      <div class="section-body">
-        <p style="margin-bottom: 1.25rem;">
-          Other entries that share this chip, issuer, or application area.
-        </p>
-        <div class="files-list">
-          <a class="file-link" href="rockchip-rk3568-ddr-templates.html">
-            <span class="file-icon">Rockchip</span>
-            <span class="file-name">RK3568 DDR routing templates (Cadence .brd)</span>
-          </a>
-          <a class="file-link" href="rockchip-rk3568-evb.html">
-            <span class="file-icon">Rockchip</span>
-            <span class="file-name">RK3568 EVB (user guide + hardware design guide)</span>
-          </a>
-          <a class="file-link" href="rockchip-rk3568-nvr-demo-ref.html">
-            <span class="file-icon">Rockchip</span>
-            <span class="file-name">RK3568 NVR demo reference design (OrCAD)</span>
-          </a>
-          <a class="file-link" href="rockchip-rk3568-tablet-ref.html">
-            <span class="file-icon">Rockchip</span>
-            <span class="file-name">RK3568 Tablet reference design (OrCAD)</span>
-          </a></div>
-      </div>
-    </section>
 
+  <section class="dsection" id="files">
+    <div class="dsection-label">Files · published by the issuer</div>
+    <h2>Design files at source</h2>
+    <p>Published as: <strong>Schematic</strong>. Links open the issuer's own files — nothing is re-hosted here.</p>
+    <div class="files-list"><a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/03_Reference Design/RK3568_AIoT_REF_SCH/RK3568_AIOT_REF_SCH_V11_20210611_162.DSN" target="_blank" rel="noopener"><span class="file-icon">SCH</span><span class="file-name">RK3568_AIOT_REF_SCH_V11_20210611_162.DSN<small>Schematic</small></span></a><a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/03_Reference Design/RK3568_AIoT_REF_SCH/RK3568_AIoT_REF_SCH_V11_20210611.DSN" target="_blank" rel="noopener"><span class="file-icon">SCH</span><span class="file-name">RK3568_AIoT_REF_SCH_V11_20210611.DSN<small>Schematic</small></span></a><a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/03_Reference Design/RK3568_AIoT_REF_SCH/RK3568_AIoT_REF_SCH_V11_20210611.pdf" target="_blank" rel="noopener"><span class="file-icon">SCH</span><span class="file-name">RK3568_AIoT_REF_SCH_V11_20210611.pdf<small>Schematic</small></span></a><a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/03_Reference Design/RK3568_AIoT_REF_SCH/RK3568_AIoT_REF_SCH_V11_20210611_Modify_Notes_CN.pdf" target="_blank" rel="noopener"><span class="file-icon">SCH</span><span class="file-name">RK3568_AIoT_REF_SCH_V11_20210611_Modify_Notes_CN.pdf<small>Schematic</small></span></a><a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/Last Release/SCH/V10/RK3568_AIOT_REF_SCH_V10_20210204-162.DSN" target="_blank" rel="noopener"><span class="file-icon">SCH</span><span class="file-name">RK3568_AIOT_REF_SCH_V10_20210204-162.DSN<small>Schematic</small></span></a><a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/Last Release/SCH/V10/RK3568_AIoT_REF_SCH_V10_20210204.DSN" target="_blank" rel="noopener"><span class="file-icon">SCH</span><span class="file-name">RK3568_AIoT_REF_SCH_V10_20210204.DSN<small>Schematic</small></span></a><a class="file-link" href="https://github.com/hqnicolas/RK3568-hardware-design/blob/main/03_Product Line Branch(AIoT)/Last Release/SCH/V10/RK3568_AIoT_REF_SCH_V10_20210204.pdf" target="_blank" rel="noopener"><span class="file-icon">SCH</span><span class="file-name">RK3568_AIoT_REF_SCH_V10_20210204.pdf<small>Schematic</small></span></a></div>
+    
+  </section>
+
+
+  <section class="dsection" id="source">
+    <div class="dsection-label">Provenance</div>
+    <h2>Source</h2>
+    <table class="kv-table"><tbody><tr><td>Issuer</td><td>Rockchip</td></tr><tr><td>Source page</td><td><a href="https://github.com/hqnicolas/RK3568-hardware-design" target="_blank" rel="noopener">https://github.com/hqnicolas/RK3568-hardware-design</a></td></tr><tr><td>Indexed from</td><td>Rockchip RK3568 official hardware design package (GitHub mirror)</td></tr><tr><td>Issuer type</td><td>chip house</td></tr><tr><td>Openness</td><td>Open download</td></tr><tr><td>Year</td><td>2021</td></tr><tr><td>Region</td><td>CN</td></tr><tr><td>Database category</td><td>reference_design</td></tr></tbody></table>
+    
+  </section>
+
+
+  <section class="dsection" id="related">
+    <div class="dsection-label">See also</div>
+    <h2>Related boards</h2>
+    <p>Other entries that share this chip, issuer or application area.</p>
+    <div class="boards-grid">
+      <a class="board source-files" href="/db/rockchip-rk3568-ddr-templates.html">
+        <div class="board-id">Rockchip</div>
+        <h3 class="board-name" style="font-size:19px">RK3568 DDR routing templates (Cadence .brd)</h3>
+        <div class="board-tag" style="margin-bottom:0">Reference Design · RK3568</div>
+      </a>
+      <a class="board source-files" href="/db/rockchip-rk3568-evb.html">
+        <div class="board-id">Rockchip</div>
+        <h3 class="board-name" style="font-size:19px">RK3568 EVB (user guide + hardware design guide)</h3>
+        <div class="board-tag" style="margin-bottom:0">Reference Design · RK3568</div>
+      </a>
+      <a class="board source-files" href="/db/rockchip-rk3568-nvr-demo-ref.html">
+        <div class="board-id">Rockchip</div>
+        <h3 class="board-name" style="font-size:19px">RK3568 NVR demo reference design (OrCAD)</h3>
+        <div class="board-tag" style="margin-bottom:0">Reference Design · RK3568</div>
+      </a>
+      <a class="board source-files" href="/db/rockchip-rk3568-tablet-ref.html">
+        <div class="board-id">Rockchip</div>
+        <h3 class="board-name" style="font-size:19px">RK3568 Tablet reference design (OrCAD)</h3>
+        <div class="board-tag" style="margin-bottom:0">Reference Design · RK3568</div>
+      </a></div>
+  </section>
+  <p class="catalogue-note">Entry <code>rockchip-rk3568-aiot-ref</code> · status: source-files. Catalogue entries are indexed from publishers' public pages; the site re-hosts nothing except the hand-curated design packs. Spotted an error? <a href="https://hansstam.eu">Get in touch via hansstam.eu</a>.</p>
 </main>
 
 <footer class="site-footer">
-  <div class="site-footer-inner">
-    <div>
-      Maintained by <a href="https://hansstam.eu" target="_blank" rel="noopener">Hans Stam</a> · Berlin · Shenzhen
-    </div>
-    <div>
-      Companion to <a href="https://hansolo42.gumroad.com/l/gongbans" target="_blank" rel="noopener">GONGBANS — the book</a>
-    </div>
-  </div>
+  <p class="foot-links"><a href="/">Home</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Issuers</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
+  <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
 </footer>
-
+<script src="/assets/site.js?v=20261114"></script>
 </body>
 </html>
