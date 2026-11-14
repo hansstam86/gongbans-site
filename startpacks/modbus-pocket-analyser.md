@@ -12,7 +12,97 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** The Modbus installed base in homes exploded with heat pumps and PV; the catalogue has a keyboard handheld (Cardputer), an isolated RS485 unit, and an open rechargeable Bluetooth-to-RS485 test box to build from.
 - **The ask:** ~€75k (estimate) to 1,000 units. Route: pre-orders from installer communities + bootstrap; a distributor's prepayment or a wholesaler listing replaces an angel.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> After one day shadowing three technicians, do they say they would carry it instead of the laptop — and pay €249?
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: written answers from at least ten decision-makers who hold the budget, at least three of whom put something on paper: a signed letter of intent, a paid pilot, or a dated purchase order for the first units. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** HVAC and solar service technicians, building-automation integrators, maintenance departments.
+
+**The problem as the pack states it:** Commissioning and fault-finding Modbus RTU devices (heat pumps, PV inverters, energy meters, BMS controllers) means a laptop, a USB-RS485 dongle, a driver that doesn't install, and a spreadsheet of register maps. Handheld protocol analysers that do this exist at ~£1,700–2,000 ([Lineeye LE-3500XR](https://thedebugstore.com/products/lineeye-le-3500xr-v2-e-multi-protocol-serial-analyser-uk)).
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **PLCtalk forum** · https://www.plctalk.net/ — industrial automation technicians and integrators.
+- **r/PLC** · https://www.reddit.com/r/PLC/ — industrial automation engineers and integrators.
+- **Control.com forum** · https://control.com/ — process-control and instrumentation engineers.
+- **r/HVAC** · https://www.reddit.com/r/HVAC/ — HVAC technicians (mostly US); installer mindset.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten budget-holders and ten users), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€199–279, the pack's estimate), and one button. For a business buyer the button is "request a pilot" that leads to a short form and a letter of intent.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how HVAC and solar service technicians, building-automation integrators, maintenance departments deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. Tell me about your last Modbus commissioning problem: what tool did you use to find it, and how long did it take?
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] A handheld with keyboard and screen that plugs into any RS485 bus, auto-detects baud rate and slave IDs, decodes registers of common heat pumps, inverters and meters and logs to SD — no laptop needed. On a scale of one to ten, how likely would you be to buy that at €199–279, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Modbus Pocket Analyser: looking for 3 pilot sites before we build it
+
+I am [your name], [your background]. We are considering building a Modbus Pocket Analyser: A handheld with keyboard and screen that plugs into any RS485 bus, auto-detects baud rate and slave IDs, decodes registers of common heat pumps, inverters and meters and logs to SD — no laptop needed. Before we spend money on tooling I want to find out whether this solves a real problem for HVAC and solar service technicians, building-automation integrators, maintenance departments.
+
+If it would, I am looking for three pilot customers willing to sign a short letter of intent now and pay €199–279 per unit for the first batch, delivered in [month]. The LOI is non-binding on the price; it tells me the problem is real.
+
+Two questions, no pitch: how do you handle this today, and what would make you say no to the above? Twenty minutes on a call this week, or a reply here, both help.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 The user is a service technician who does 4–6 site visits a day. The buyer is the service manager of a 5–50-technician HVAC/solar company, or the technician himself if self-employed. Building-automation integrators (BACnet/Modbus gateways, meters) are the second group; maintenance teams in industry and property management the third. Pain is concrete: 20–40 minutes per visit lost to laptop faff; "no fault found" visits because the register map was wrong; no log to show the manufacturer when claiming warranty.
@@ -82,7 +172,7 @@ A proper tool margin. The risk isn't margin; it's building enough credible profi
 | **Supply:** keyboards are custom and fiddly; LCD models change | Use a dome-sheet + silicone keypad design you own; second-source the LCD by panel size |
 | **Licence:** the open RS485 test box is an OSHWHub project | Read the licence; use as reference for the front-end and redraw your own board |
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 | Board | Link | What it contributes | Files (catalogue) | Licence note |
@@ -154,10 +244,10 @@ RS485 bus (A/B/GND) -> [TVS, PTC] -> [isolated RS485 transceiver] -> [isolated D
 - Packaging: tool box with foam, adapters, printed quick card; lithium labels.
 - Incoterms: FOB Shenzhen; air for the first 300, sea after.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**On file: 1 board publisher (M5Stack).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+**On file: 1 board publisher (M5Stack).** Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
 
 ### Board publishers (direct)
 
@@ -181,7 +271,7 @@ Companies in the gongban.db solution-house directory whose product category over
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -276,7 +366,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 1. Buy a Cardputer and a Unit RS485-ISO; flash a sniff + scan proof-of-concept against any Modbus device you can reach (a cheap energy meter works).
 2. Line up three technicians (HVAC, PV, BMS) for shadow days in the next three weeks; write the observation sheet.
 3. Collect the public Modbus register PDFs of the 10 most common heat-pump and inverter brands in your market and draft the profile format.

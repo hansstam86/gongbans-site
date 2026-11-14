@@ -12,7 +12,97 @@
 - **Why now:** Open one-handed keyboard hardware and mature open firmware (QMK/ZMK) make a modern €149–199 device plausible; the half-QWERTY idea is decades old and the original patents should have expired — verify.
 - **The ask:** ~€40k to the first 1,000 units; bootstrap plus assistive-technology dealer pre-orders.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Do 10 occupational therapists trial it with clients and would 5 recommend it over the €500 incumbents?
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: a measured conversion on a fake-door landing page for the consumer side and, for the business side, at least three decision-makers who put something on paper: a letter of intent, a paid pilot or a purchase order. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** Occupational therapists, rehabilitation clinics, workplace-inclusion budgets, people after stroke or injury in the EU.
+
+**The problem as the pack states it:** After a stroke, a fracture, or with a congenital limb difference, typing with one hand on a standard keyboard is slow and tiring. The dedicated one-handed keyboards cost €500–1,000 and look like they were designed in 1995 — because they were.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **r/ErgoMechKeyboards** · https://www.reddit.com/r/ErgoMechKeyboards/ — ergonomic and one-handed keyboard users and builders.
+- **geekhack** · https://geekhack.org/ — custom keyboard builders and group buys.
+- **r/disability** · https://www.reddit.com/r/disability/ — disabled users and carers.
+- **AbilityNet (UK)** · https://abilitynet.org.uk/ — assistive technology charity.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten buyers from the business side and ten from the consumer side), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€149–199, the pack's estimate), and one button. Two buttons: a refundable deposit or waitlist for consumers, "request a pilot" for businesses.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how occupational therapists, rehabilitation clinics, workplace-inclusion budgets, people after stroke or injury in the EU deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. How do you type today, what have you tried, and what made you abandon the last thing you tried?
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] A compact one-handed keyboard with mirror-layer typing and programmable macros, built from an open one-handed keyboard design, for people with a temporary or permanent single-hand limitation. On a scale of one to ten, how likely would you be to buy that at €149–199, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Half-Keyboard for One-Handed Typing: would you pay €149–199 for this? Looking for 20 people to tell me I am wrong
+
+I am [your name], [your background]. I am considering building a Half-Keyboard for One-Handed Typing: A compact one-handed keyboard with mirror-layer typing and programmable macros, built from an open one-handed keyboard design, for people with a temporary or permanent single-hand limitation. Before I order a single part I want to know whether this is a real problem for people like you or only in my head.
+
+If you would want one at €149–199, the page at [link] takes a fully refundable €[10–20] deposit (or a waitlist e-mail if you prefer); if twenty people do that, I build it, if not, everyone gets their money back and I have learned something.
+
+Either way, two questions: how do you deal with this today, and what would make you say no? Honest answers are worth more to me than deposits.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 Half-QWERTY is simple: you type the home-hand half normally; holding space mirrors the other half onto the same keys, so your existing muscle memory works — people reach 60–80% of their two-handed speed after a few hours. The incumbents prove the demand (Maltron single-hand ~US$540–765; TiPY ~€990 + VAT; Matias Half-Keyboard ~US$595 historically, hard to find in Europe) but the price excludes anyone whose insurer says no, and the temporary-injury market (a broken wrist for 8 weeks) is unserved.
@@ -80,7 +170,7 @@ Who pays: workplace-adaptation schemes (DE: Integrationsamt/Rentenversicherung; 
 - **IP:** the half-QWERTY concept has old patents; they should have expired — do a 2-hour patent search before launch.
 - **Licence:** the open one-handed keyboard project on OSHWHub may be non-commercial; check, and be ready to re-lay your own matrix (it's a weekend).
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 | Board | Contributes | Files (catalogue) | Licence note |
@@ -138,10 +228,10 @@ Gap: left/right PCB variants, switch-access input, QMK mirror layer tuned with O
 ### First production checklist
 Switch and keycap samples (feel test with 3 OTs), golden sample with firmware version label, DFM on plate/base fit and hot-swap socket alignment, MOQ 500 per hand with a 2,000 forecast (left:right split from pre-orders — stroke clients skew to one side, check), QC/AQL Level II + 100% key-press test on a fixture, drop test, FOB Shenzhen, EU importer + WEEE number on the label.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**On file: 1 board publisher (Seeed Studio).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+**On file: 1 board publisher (Seeed Studio).** Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
 
 ### Board publishers (direct)
 
@@ -158,7 +248,7 @@ Switch and keycap samples (feel test with 3 OTs), golden sample with firmware ve
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -253,7 +343,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 1. Open the OSHWHub project page, read the licence, clone the design; order parts for two 48-key boards; flash QMK swap-hands.
 2. Email the assistive-technology special-interest group of the national OT association and book 10 calls.
 3. Spend two hours on a patent search for half-QWERTY/mirror typing and write down what you find.

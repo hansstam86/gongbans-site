@@ -12,7 +12,97 @@
 - **Why now:** GEG §60c makes balancing mandatory for many larger existing buildings by 30 Sept 2027 and a condition for BEG subsidies and every heat-pump install; EU heat-pump sales were ~2.6–2.9 M units in 2025 and every one needs a commissioning check.
 - **The ask:** ~€95k to get to 1,000 kits (first 50 pilot kits ~€25k). Bootstrap plus paid pilots; grant money (German ZIM/EXIST-type programmes) fits because this is energy-efficiency tooling.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Ten 20-minute calls with heating installers: would you pay €699, what do you use today? Fewer than 4/10 saying yes unprompted = kill or pivot to consultants.
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: written answers from at least ten decision-makers who hold the budget, at least three of whom put something on paper: a signed letter of intent, a paid pilot, or a dated purchase order for the first units. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** German heating installers and energy consultants; heat-pump installers across DE/AT/NL/UK.
+
+**The problem as the pack states it:** Hydraulic balancing (hydraulischer Abgleich) is a legal and subsidy requirement in Germany, but the measurement step is done with two clamp thermometers, a notepad and three visits. Labour is 80% of the €650–1,250 the customer pays.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **HaustechnikDialog (DE)** · https://www.haustechnikdialog.de/ — German heating installers and owners; hydronic balancing, heat pumps, legionella.
+- **ZVSHK** · https://www.zvshk.de/ — German plumbing/heating installer federation; the local Innung is the way in.
+- **r/HVAC** · https://www.reddit.com/r/HVAC/ — HVAC technicians (mostly US); installer mindset.
+- **r/heatpumps** · https://www.reddit.com/r/heatpumps/ — heat-pump owners and installers, EU and US.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten budget-holders and ten users), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€599–899 (or €99/month rental), the pack's estimate), and one button. For a business buyer the button is "request a pilot" that leads to a short form and a letter of intent.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how German heating installers and energy consultants deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. Walk me through your last hydronic balancing job: how long it took, what you measured, and how you proved it was done.
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] Eight clip-on flow/return pipe-temperature sensors plus a tablet app that shows every radiator's spread live, so an installer does a hydraulic balance in one visit instead of three. On a scale of one to ten, how likely would you be to buy that at €599–899 (or €99/month rental), and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Balance Kit: looking for 3 pilot sites before we build it
+
+I am [your name], [your background]. We are considering building a Balance Kit: Eight clip-on flow/return pipe-temperature sensors plus a tablet app that shows every radiator's spread live, so an installer does a hydraulic balance in one visit instead of three. Before we spend money on tooling I want to find out whether this solves a real problem for German heating installers and energy consultants.
+
+If it would, I am looking for three pilot customers willing to sign a short letter of intent now and pay €599–899 (or €99/month rental) per unit for the first batch, delivered in [month]. The LOI is non-binding on the price; it tells me the problem is real.
+
+Two questions, no pitch: how do you handle this today, and what would make you say no to the above? Twenty minutes on a call this week, or a reply here, both help.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 The balancing job has two halves: the calculation (Verfahren A or B — software from valve makers does this fine) and the measurement/verification: is every radiator actually getting its design flow? Today the fitter clamps a thermometer on flow and return, reads a delta, moves to the next radiator, comes back the next day when the system has settled. Nobody can see eight radiators at once. A wireless sensor set that shows all spreads simultaneously, logs for an hour, and produces the report turns a 3-visit job into a 1-visit job. On a €650 service that saves maybe €200 of labour per house. The kit pays back in 4 jobs.
@@ -82,7 +172,7 @@ Rental case: €99/month × 12 months = €1,188 per kit per year on a €259 as
 - **Regulatory:** RED for BLE, Li-ion cells → UN 38.3 and Battery Regulation labels, CRA because there is an app. Not a MID instrument (no billing). Mitigation: use a pre-certified module for v1 to lean on the module's RED file; cells from a supplier with UN 38.3 reports.
 - **Supply:** NTC clamps and springs are commodity; the risk is the case and foam, which are tooled parts. Mitigation: start with an off-the-shelf tool case + CNC foam.
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 | Board | Contributes | Files (catalogue) | Licence note |
@@ -142,10 +232,10 @@ Gap: sensor-to-pipe coupling and calibration (±0.5 °C), 8-node BLE sync on con
 ### First production checklist
 Samples (3 rounds), golden sample signed with the EMS, DFM review on the clamp housing (undercuts, spring insertion), MOQ talk (ask for 300 with a 1,000 forecast), QC/AQL (Level II, 0/1.0/2.5), calibration record per kit, packaging drop test, incoterms FOB Shenzhen for air at 1k then FCA/sea at 5k, EU importer of record named on the label.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**On file: 2 board publishers (M5Stack and Seeed Studio).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+**On file: 2 board publishers (M5Stack and Seeed Studio).** Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
 
 ### Board publishers (direct)
 
@@ -169,7 +259,7 @@ Companies in the gongban.db solution-house directory whose product category over
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -264,7 +354,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 1. Order 4× Stamp-S3Bat, 4× NCIR2, 4 NTC clamp probes and a reference clamp thermometer; book a friendly installer's boiler room for a Saturday.
 2. Call the local SHK-Innung and get 10 twenty-minute installer calls in the diary.
 3. Download the current Verfahren A/B subsidy forms and draft the PDF the app must produce — before writing any app code.

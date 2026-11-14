@@ -12,7 +12,97 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Right-to-repair rules and the EU Battery Regulation make pack rebuilding a legitimate trade that needs legitimate tools; two open super-capacitor welder designs with schematics and PCB exist; hobby welders have proven the market at the low end.
 - **The ask:** ~€65k (estimate) to the first 1,000 units; route = live-demo deposits from repair shops + bootstrap; the safety course is the differentiator and a small recurring line.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Do 10 battery-repair shops buy at €199 after a live weld demo, and does a lab accept the capacitor energy-hazard design on first review?
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: a measured conversion on a fake-door landing page for the consumer side and, for the business side, at least three decision-makers who put something on paper: a letter of intent, a paid pilot or a purchase order. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** Battery repair shops, repair cafés, solar-storage DIY builders, vocational schools.
+
+**The problem as the pack states it:** Anyone rebuilding a battery pack in Europe today welds with either a €40 marketplace box with no documentation and no CE file, a car battery and an Arduino kit, or a €500–2,000+ professional capacitive-discharge welder ([pricing guide](https://themakerschest.com/blogs/spot-welding-hub/how-much-does-a-battery-spot-welder-cost-2026-pricing-guide)). Repair shops want the middle: repeatable, documented, legal to put on a bench an employee uses.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **r/18650masterrace** · https://www.reddit.com/r/18650masterrace/ — cell harvesters and pack builders.
+- **Endless Sphere forum** · https://endless-sphere.com/ — e-bike and battery-pack builders.
+- **r/ebikes** · https://www.reddit.com/r/ebikes/ — e-bike owners who rebuild packs.
+- **DIY Solar Power forum** · https://diysolarforum.com/ — home battery and second-life cell builders.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten buyers from the business side and ten from the consumer side), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€179–249, the pack's estimate), and one button. Two buttons: a refundable deposit or waitlist for consumers, "request a pilot" for businesses.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how battery repair shops, repair cafés, solar-storage DIY builders, vocational schools deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. Walk me through the last pack you rebuilt: what did you weld with, and what went wrong?
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] A compact super-capacitor spot welder with current display and foot switch for rebuilding power-tool, household and solar battery packs — sold with a safety course to repair shops. On a scale of one to ten, how likely would you be to buy that at €179–249, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Pack-Rebuilder Spot Welder: would you pay €179–249 for this? Looking for 20 people to tell me I am wrong
+
+I am [your name], [your background]. I am considering building a Pack-Rebuilder Spot Welder: A compact super-capacitor spot welder with current display and foot switch for rebuilding power-tool, household and solar battery packs — sold with a safety course to repair shops. Before I order a single part I want to know whether this is a real problem for people like you or only in my head.
+
+If you would want one at €179–249, the page at [link] takes a fully refundable €[10–20] deposit (or a waitlist e-mail if you prefer); if twenty people do that, I build it, if not, everyone gets their money back and I have learned something.
+
+Either way, two questions: how do you deal with this today, and what would make you say no? Honest answers are worth more to me than deposits.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 Rebuilding a pack means welding 20–100 nickel-strip joints onto cells without overheating them. A bad weld fails later; a hot weld damages the cell; a shorted strip is a fire. Pros use capacitive-discharge welders with calibrated energy; hobbyists use whatever. The repair shop in between — a two-person business fixing power-tool packs, a repair café, a vocational class — wants consistency, a log, and a tool that passes a workplace-safety look.
@@ -85,7 +175,7 @@ Consumables (electrodes, strip) at 50–60% margin make the repeat business.
 | **Supply:** super-caps from few vendors; MOSFETs in allocation cycles | Two cap vendors with the same can size; bridge footprint fits two MOSFET families |
 | **Licence:** both open designs are OSHWHub | Read each licence; your own board — they prove the topology |
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 | Board | Link | What it contributes | Files (catalogue) | Licence note |
@@ -161,10 +251,10 @@ Consumables (electrodes, strip) at 50–60% margin make the repeat business.
 - Packaging: probes and foot switch in the box; course access card; safety sheet; no lithium.
 - Incoterms: FOB Shenzhen; air for 50; sea for 1,000.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**On file: 1 board publisher (M5Stack).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+**On file: 1 board publisher (M5Stack).** Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
 
 ### Board publishers (direct)
 
@@ -187,7 +277,7 @@ Companies in the gongban.db solution-house directory whose product category over
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -282,7 +372,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 1. Fab both OSHWHub boards (or clone the EasyEDA projects), order super-caps, MOSFETs and nickel strip; weld 100 joints and pull-test them by day 10.
 2. Book one hour with a safety lab engineer; bring the block diagram and ask the energy-hazard question explicitly.
 3. List 10 battery-repair shops within driving distance and book live demos for weeks 3–5; print a one-page spec with the course outline.

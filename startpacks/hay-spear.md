@@ -12,7 +12,97 @@
 - **Why now:** Open ESP32-C6 + LoRa core exists with PCB and schematic; LoRaWAN modules are cheap; the one established wireless system is a 10-probe starter kit with a reader and a subscription at a four-figure price.
 - **The ask:** ~€70k to the first 1,000 spears; pre-orders at fairs plus one insurer partnership.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Do 20 farmers at one agricultural fair pre-order at €169, and does one insurer agree to promote it?
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: a measured conversion on a fake-door landing page for the consumer side and, for the business side, at least three decision-makers who put something on paper: a letter of intent, a paid pilot or a purchase order. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** Livestock and arable farms with hay or straw storage in DE/AT/CH/NL/FR; agricultural insurers as channel.
+
+**The problem as the pack states it:** Hay and straw stored too wet heat up by microbial action; above ~50–60 °C the stack can ignite. Farmers probe by hand for a week after harvest, then stop. Barns, machinery and animals burn every summer; insurers in the alpine countries already expect temperature monitoring of self-igniting stores.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **The Farming Forum (UK)** · https://thefarmingforum.co.uk/ — UK farmers; machinery, arable, livestock, farm diversification.
+- **Landtreff (DE)** · https://www.landtreff.de/ — German farmers' forum.
+- **r/farming** · https://www.reddit.com/r/farming/ — working farmers.
+- **r/homestead** · https://www.reddit.com/r/homestead/ — smallholders.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten buyers from the business side and ten from the consumer side), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€149–199 per spear, the pack's estimate), and one button. Two buttons: a refundable deposit or waitlist for consumers, "request a pilot" for businesses.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how livestock and arable farms with hay or straw storage in DE/AT/CH/NL/FR deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. Have you ever had a bale heat up on you? How do you check your stack today, and how often?
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] A one-metre temperature spear with LoRaWAN that lives inside the hay or straw stack and warns the farmer before self-heating turns into a barn fire. On a scale of one to ten, how likely would you be to buy that at €149–199 per spear, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Hay Spear: would you pay €149–199 per spear for this? Looking for 20 people to tell me I am wrong
+
+I am [your name], [your background]. I am considering building a Hay Spear: A one-metre temperature spear with LoRaWAN that lives inside the hay or straw stack and warns the farmer before self-heating turns into a barn fire. Before I order a single part I want to know whether this is a real problem for people like you or only in my head.
+
+If you would want one at €149–199 per spear, the page at [link] takes a fully refundable €[10–20] deposit (or a waitlist e-mail if you prefer); if twenty people do that, I build it, if not, everyone gets their money back and I have learned something.
+
+Either way, two questions: how do you deal with this today, and what would make you say no? Honest answers are worth more to me than deposits.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 Self-heating is slow, invisible and well understood: moisture >18–20% at baling, microbial growth, 40 °C in days, 60 °C in two weeks, and from ~70 °C a real fire risk. Prevention is boring: measure every day for 6–8 weeks after storing. Nobody does — so the stack gets probed when it smells. Insurers' loss-prevention departments know this (self-ignition is ~9–10% of farm fires by number in the sources found; no central statistic exists in Germany) and the Austrian rules quoted by the chambers of agriculture require temperature monitoring of self-igniting materials.
@@ -81,7 +171,7 @@ Gateway bundle: an off-the-shelf indoor LoRaWAN gateway lands at ~€90–120; s
 - **Regulatory:** RED (EN 300 220), EN 301 489, EN 62368-1, IP67, **EN 18031** (it connects to the internet via LoRaWAN — assume yes), CRA, lithium-metal cell transport (UN 38.3, labels) and Battery Regulation. Mitigation: pre-certified LoRa module with a RED file; cells from a supplier with transport docs.
 - **Supply:** the stainless tube and tip are simple; the IP67 head is tooled. Mitigation: first 300 with a machined/printed head.
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 | Board | Contributes | Files (catalogue) | Licence note |
@@ -143,10 +233,10 @@ Gap: mechanical spear and head (sealing, pull-out force, sensor wiring down a tu
 ### First production checklist
 Tube/tip samples (pull and bend test), head samples sealed and dunked, golden sample with join keys printed on a QR label, DFM on the harness routing in the tube, MOQ 300 with a 2,000 forecast and a May delivery date written in the contract, QC/AQL Level II + 100% join test and sensor bath test, long-box drop test, sea freight FOB, lithium-metal transport paperwork, EU importer label, battery labelling per Battery Regulation.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**On file: 2 board publishers (M5Stack and Seeed Studio).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+**On file: 2 board publishers (M5Stack and Seeed Studio).** Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
 
 ### Board publishers (direct)
 
@@ -168,7 +258,7 @@ Companies in the gongban.db solution-house directory whose product category over
 
 ### MOQ and landed cost
 
-Apart from the ManThink reference price above, gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+Apart from the ManThink reference price above, gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -263,7 +353,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 1. Order Stamp C6LoRa, Unit LoRaWAN-EU868, six digital temperature sensors and a 1 m conduit; register on TTN; find a farmer with a stack to push it into.
 2. Call the chamber of agriculture's fire-prevention adviser and one insurer's loss-prevention department; ask for their hay-fire numbers and whether they'd co-fund.
 3. Ask a LoRa module vendor for a module with an EN 300 220 report, and a lab for a RED + EN 18031 quote.

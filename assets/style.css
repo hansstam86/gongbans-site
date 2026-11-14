@@ -485,3 +485,5 @@ main.detail.playbook{max-width:900px}
 .playbook table.kv-table th{font-family:var(--font-mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dim);background:var(--cream)}
 .playbook .glossary dt{font-weight:600;color:var(--text);margin-top:12px}
 .playbook .glossary dd{color:var(--text-mid);margin:2px 0 0 0;line-height:1.6}
+.pack-toc a.first{border-color:var(--copper);color:var(--copper);font-weight:600}
+.pack-toc a.first:hover{background:var(--copper);color:#fff}

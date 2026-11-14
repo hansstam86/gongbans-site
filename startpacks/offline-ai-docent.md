@@ -12,7 +12,96 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Edge LLM modules at €70–90 run 0.5–1.5B-parameter models (Qwen2.5-0.5B/1.5B, Llama3.2-1B listed by the module maker) with Whisper speech recognition and local TTS; retrieval-only prompting makes a small model usable for a bounded exhibition; the AI Act and GDPR make "offline" the easiest compliance story.
 - **The ask:** ~€120k to the first 100 kiosks (a €2,000 product does not need 1,000 units to be a business; the 1,000-unit math is shown for reference); one paid museum pilot first.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Does a 2-week pilot in one museum answer ≥80% of visitor questions acceptably per the curator, and would they pay €1,999?
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: written answers from at least ten decision-makers who hold the budget, at least three of whom put something on paper: a signed letter of intent, a paid pilot, or a dated purchase order for the first units. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** Small and mid-size museums, visitor centres, company showrooms and libraries in the EU.
+
+**The problem as the pack states it:** Visitors ask "where is the toilet", "why is this painting here" and "what did this machine do" — and the one guide is busy. Cloud chatbots exist (Ask Mona-style deployments in France and elsewhere), but a public institution putting visitors' voices into a US cloud triggers GDPR, procurement and AI-Act conversations that take longer than the exhibition runs.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **r/MuseumPros** · https://www.reddit.com/r/MuseumPros/ — museum staff.
+- **MCN, Museum Computer Network** · https://mcn.edu/ — museum technology staff.
+- **NEMO, Network of European Museum Organisations** · https://www.ne-mo.org/ — European museum associations.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten budget-holders and ten users), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€1,499–2,499 per kiosk, the pack's estimate), and one button. For a business buyer the button is "request a pilot" that leads to a short form and a letter of intent.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how small and mid-size museums, visitor centres, company showrooms and libraries in the EU deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. How do visitors ask questions in your galleries today, and what do you know about the questions they do not ask the staff?
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] A tabletop voice kiosk for museums and visitor centres that answers questions about the exhibition from a curated local knowledge base — fully offline, no cloud, no visitor data. On a scale of one to ten, how likely would you be to buy that at €1,499–2,499 per kiosk, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Offline AI Docent: looking for 3 pilot sites before we build it
+
+I am [your name], [your background]. We are considering building a Offline AI Docent: A tabletop voice kiosk for museums and visitor centres that answers questions about the exhibition from a curated local knowledge base — fully offline, no cloud, no visitor data. Before we spend money on tooling I want to find out whether this solves a real problem for small and mid-size museums, visitor centres, company showrooms and libraries in the EU.
+
+If it would, I am looking for three pilot customers willing to sign a short letter of intent now and pay €1,499–2,499 per kiosk per unit for the first batch, delivered in [month]. The LOI is non-binding on the price; it tells me the problem is real.
+
+Two questions, no pitch: how do you handle this today, and what would make you say no to the above? Twenty minutes on a call this week, or a reply here, both help.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 
@@ -93,7 +182,7 @@ At 100 units the certification dominates — which is why you sell the first 100
 - **Supply — the edge-LLM module is a single vendor with a young toolchain.** Mitigation: keep the pipeline portable (ONNX/GGUF), qualify an RK3588-class SBC as plan B (more power, more cost).
 - **Reputation — one viral wrong answer in a Holocaust museum ends the company.** Mitigation: content boundaries per site, refusal behaviour, curator sign-off, and don't sell into sensitive-history exhibitions until the system has a year of track record.
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 
@@ -176,10 +265,10 @@ Nothing stored: audio buffers cleared after each turn; counters only.
 - Packaging: single kiosk box with a printed AI-transparency sticker set and the DPIA template QR.
 - Incoterms: FOB Shenzhen for the module/display kits; final assembly in the EU for the first 100.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**On file: 2 board publishers (M5Stack and Espressif).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+**On file: 2 board publishers (M5Stack and Espressif).** Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
 
 ### Board publishers (direct)
 
@@ -203,7 +292,7 @@ Companies in the gongban.db solution-house directory whose product category over
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -298,7 +387,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 
 1. Order the LLM630 Compute Kit, a Korvo-class far-field board and a Tab5; get Whisper → retrieval → Qwen → TTS running end to end on a table, with your own 20-page PDF as the knowledge base.
 2. Ask one museum or visitor centre you can reach for a 2-week table-top pilot; write the signage and the consent note first.

@@ -12,7 +12,97 @@
 - **Why now:** ~28 M heat pumps and tens of millions of inverters installed in Europe need servicing; all four source boards are fully open; no radio, no battery — a pilot can be on sale in weeks.
 - **The ask:** ~€30k to the first 1,000 kits; bootstrap with trade-association pre-orders.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Do 20 installers from one regional trade association pre-order at €119 after a 2-minute demo?
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: written answers from at least ten decision-makers who hold the budget, at least three of whom put something on paper: a signed letter of intent, a paid pilot, or a dated purchase order for the first units. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** HVAC, solar and building-automation service technicians; industrial maintenance teams; distributors of installer tools.
+
+**The problem as the pack states it:** Every heat pump, inverter, battery and BMS controller now has a Modbus/RS485 service port. Technicians plug in €5 unisolated dongles, get ground loops, kill USB ports and occasionally a laptop, and still don't know which wire is A and which is B.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **r/PLC** · https://www.reddit.com/r/PLC/ — industrial automation engineers and integrators.
+- **PLCtalk forum** · https://www.plctalk.net/ — industrial automation technicians and integrators.
+- **r/embedded** · https://www.reddit.com/r/embedded/ — embedded engineers.
+- **EEVblog forum** · https://www.eevblog.com/forum/ — electronics engineers and serious hobbyists; test-equipment and soldering opinions.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten budget-holders and ten users), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€99–149, the pack's estimate), and one button. For a business buyer the button is "request a pilot" that leads to a short form and a letter of intent.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how HVAC, solar and building-automation service technicians deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. Tell me about the last time a serial link to a machine damaged a laptop or a port, or behaved strangely on site.
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] A rugged pocket set of galvanically isolated USB-to-RS485/RS232/TTL adapters and a 4-port RS485 fan-out, so service technicians can talk to heat pumps, inverters and PLCs without frying a laptop. On a scale of one to ten, how likely would you be to buy that at €99–149, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Isolated Field-Tech Interface Kit: looking for 3 pilot sites before we build it
+
+I am [your name], [your background]. We are considering building a Isolated Field-Tech Interface Kit: A rugged pocket set of galvanically isolated USB-to-RS485/RS232/TTL adapters and a 4-port RS485 fan-out, so service technicians can talk to heat pumps, inverters and PLCs without frying a laptop. Before we spend money on tooling I want to find out whether this solves a real problem for HVAC, solar and building-automation service technicians.
+
+If it would, I am looking for three pilot customers willing to sign a short letter of intent now and pay €99–149 per unit for the first batch, delivered in [month]. The LOI is non-binding on the price; it tells me the problem is real.
+
+Two questions, no pitch: how do you handle this today, and what would make you say no to the above? Twenty minutes on a call this week, or a reply here, both help.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 The pro-grade isolated adapters exist (Moxa UPort 1150I ~€192 ex-VAT; StarTech isolated ~US$150–180) but they are IT products: DB9 connectors, no screw terminals, no cable for the inverter's RJ45 service port, no help finding the Modbus parameters. The cheap end (Waveshare isolated ~€14–30; no-name unisolated €5) works on the bench and fails in the field: no protection against 48 V on the bus, no over-current on the USB side, and drivers that fight with Windows. Between the two sits the technician, who wants one labelled box in the van that just works with the three devices he sees most.
@@ -81,7 +171,7 @@ Who pays: the service company (tool budget per van is €2–5k a year); the sol
 - **Supply:** the digital isolator in the open isolated-USB design (ADuM-class) is a single-vendor part with occasional allocation; Mitigation: qualify a second-source isolator footprint on the merged PCB.
 - **Licence:** all four boards are OSHWHub — check each licence; if NC, re-draw the schematic yourself (these are datasheet reference circuits).
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 | Board | Contributes | Files (catalogue) | Licence note |
@@ -140,10 +230,10 @@ Gap: merge the three designs into one PCB with one isolation barrier, decide the
 ### First production checklist
 Chip samples from authorised distributors (the USB bridge market is full of clones), golden sample with hipot and loopback report, DFM on the extrusion (slot tolerance for the PCB), MOQ 500 with a 2,000 forecast, QC/AQL Level II + 100% loopback on 3 interfaces + hipot sample per lot, cable pull test, FOB Shenzhen air for 500, EU importer + WEEE number on the case label.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**No verified company contact on file yet for this idea.** Every board it is built from is a community design on OSHWHub, where the author is an individual, not a supplier. Nothing has been invented to fill the gap: use the manufacturing houses and the directory entries below, follow the [zero-experience founder playbook](/playbook.html), and treat the first quote you get as the real data. Company websites only; no personal contacts are published.
+**No verified company contact on file yet for this idea.** Every board it is built from is a community design on OSHWHub, where the author is an individual, not a supplier. Nothing has been invented to fill the gap: once section 2 (validate demand) has passed, use the manufacturing houses and the directory entries below, follow the [zero-experience founder playbook](/playbook.html), and treat the first quote you get as the real data. Company websites only; no personal contacts are published.
 
 ### Open-hardware boards without a company behind them
 
@@ -163,7 +253,7 @@ Companies in the gongban.db solution-house directory whose product category over
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -214,7 +304,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 1. Order 10 each of the four open boards from the fab and five aluminium project cases; write the pymodbus scan script tonight.
 2. Call the regional heating or solar trade association and get 10 minutes at the next meeting.
 3. Check all four OSHWHub licences; list which chips in each are single-source.

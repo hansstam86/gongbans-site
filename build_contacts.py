@@ -46,7 +46,7 @@ PACK_DIR = ROOT / "startpacks"
 START = "<!-- who-to-contact:start -->"
 END = "<!-- who-to-contact:end -->"
 SECTION_RE = re.compile(r"^## 4\. Who to contact\s*$", re.M)
-NEXT_RE = re.compile(r"^## [45]\. Next steps", re.M)
+NEXT_RE = re.compile(r"^## \d\. Next steps", re.M)
 
 # issuer (boards.issuer / catalog issuer) → how it is presented. Only facts that are in the db.
 PUBLISHER_KIND = {
@@ -311,13 +311,13 @@ def section_md(idea, m, data):
     if m["status"] == "matched":
         who = " and ".join(data["publishers"][i]["label"] for i in m["company"])
         L.append(f"**On file: {n_company} board publisher{'s' if n_company != 1 else ''} ({who}).** "
-                 "Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards "
+                 "Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards "
                  "this idea is built from, the manufacturers on file, and directory entries in the same product category. "
                  "None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. "
                  "Company websites only; no personal contacts are published.")
     else:
         L.append("**No verified company contact on file yet for this idea.** Every board it is built from is a community design on OSHWHub, "
-                 "where the author is an individual, not a supplier. Nothing has been invented to fill the gap: use the manufacturing houses "
+                 "where the author is an individual, not a supplier. Nothing has been invented to fill the gap: once section 2 (validate demand) has passed, use the manufacturing houses "
                  "and the directory entries below, follow the [zero-experience founder playbook](/playbook.html), and treat the first quote "
                  "you get as the real data. Company websites only; no personal contacts are published.")
     L.append("")
@@ -384,7 +384,7 @@ def section_md(idea, m, data):
     L.append(("Apart from the ManThink reference price above, " if has_mt else "") +
              "gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. "
              "Get the numbers from the quote (the e-mail below asks for them) and run them through the "
-             "[landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.")
+             "[landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.")
     L.append("")
     L.append("### Outreach e-mail, ready to send")
     L.append("")

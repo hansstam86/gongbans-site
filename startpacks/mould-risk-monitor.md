@@ -12,7 +12,98 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Energy prices, the German "richtig heizen und lüften" campaigns, and a wave of landlord-tenant disputes. Existing B2B sensors (e.g. Sentinum Febris SCW) sit at professional prices and need a platform; no cheap standalone device with a dispute-grade log exists that we found.
 - **The ask:** ~€95k to certification and 1,000 units; half via a housing-association paid pilot and a second via regional building-energy grants.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Do 30 of 300 tenants in one housing association's survey say they would pay €59 for a device that documents ventilation behaviour?
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: a measured conversion on a fake-door landing page for the consumer side and, for the business side, at least three decision-makers who put something on paper: a letter of intent, a paid pilot or a purchase order. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** German and Dutch tenants and landlords (mould disputes), housing associations, building-energy consultants.
+
+**The problem as the pack states it:** Lower heating and less ventilation since 2022 have driven mould complaints in rented flats across Germany and the Netherlands. Disputes come down to "did the tenant ventilate or is the wall badly insulated" — and nobody has data. A €8 hygrometer measures room air, not the cold wall where mould actually grows.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **r/HomeImprovement** · https://www.reddit.com/r/HomeImprovement/ — homeowners with damp, mould and air problems.
+- **HaustechnikDialog (DE)** · https://www.haustechnikdialog.de/ — German heating installers and owners; hydronic balancing, heat pumps, legionella.
+- **Tweakers forum (NL)** · https://gathering.tweakers.net/ — Dutch tech forum with active energy, domotica and smart-meter sections.
+- **r/Landlord** · https://www.reddit.com/r/Landlord/ — small landlords.
+- **r/PropertyManagement** · https://www.reddit.com/r/PropertyManagement/ — property and facility managers.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten buyers from the business side and ten from the consumer side), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€59–79, the pack's estimate), and one button. Two buttons: a refundable deposit or waitlist for consumers, "request a pilot" for businesses.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how German and Dutch tenants and landlords, housing associations, building-energy consultants deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. Tell me about the last mould or damp problem in one of your flats: how did it start, who noticed, and how was the blame settled?
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] A wall puck that measures room humidity and the actual surface temperature of the cold outer wall, computes the dew point and tells tenants when to ventilate — before mould appears. On a scale of one to ten, how likely would you be to buy that at €59–79, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Mould-Risk Monitor: would you pay €59–79 for this? Looking for 20 people to tell me I am wrong
+
+I am [your name], [your background]. I am considering building a Mould-Risk Monitor: A wall puck that measures room humidity and the actual surface temperature of the cold outer wall, computes the dew point and tells tenants when to ventilate — before mould appears. Before I order a single part I want to know whether this is a real problem for people like you or only in my head.
+
+If you would want one at €59–79, the page at [link] takes a fully refundable €[10–20] deposit (or a waitlist e-mail if you prefer); if twenty people do that, I build it, if not, everyone gets their money back and I have learned something.
+
+Either way, two questions: how do you deal with this today, and what would make you say no? Honest answers are worth more to me than deposits.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 
@@ -93,7 +184,7 @@ The IR sensor is the BOM lever: a factory-calibrated MLX90614-class part is €4
 
 No medical claims: this is building physics and comfort. Say "mould risk", never "health".
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 
@@ -177,10 +268,10 @@ BLE ──► phone web-app (PDF export, hashed) ; optional LoRaWAN uplink hourl
 - Packaging: AA batteries included → battery labelling; drop test.
 - Incoterms: FOB Shenzhen; batteries change the shipping paperwork even for alkaline (declare).
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**On file: 2 board publishers (Seeed Studio and M5Stack).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+**On file: 2 board publishers (Seeed Studio and M5Stack).** Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
 
 ### Board publishers (direct)
 
@@ -202,7 +293,7 @@ Companies in the gongban.db solution-house directory whose product category over
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -297,7 +388,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 
 1. Call the technical manager of one housing association you can reach and ask for a newsletter survey plus 10 pilot flats; draft the 5 survey questions today.
 2. Order Stamp-C3, Unit NCIR2, Unit ENV-Pro and a Grove SHT31; build one puck and tape it to the coldest corner you know; log a week against a contact thermometer.

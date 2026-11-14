@@ -12,7 +12,97 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Thread/Zigbee-class radios on €2 silicon with one-year coin-cell life, a thermal-presence sensor as a €10 module, and a demographic cliff that home care cannot staff. Europe has no €149, no-fee, privacy-first kit from a brand the children trust.
 - **The ask:** ~€140k to the first 1,000 kits; hardware is trivial, the money goes into the pattern software, the family UX and the trust (DPIA, consent flow, support).
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Put a mock-up in 5 real homes for 3 weeks: do the children still open the daily 'all normal' message in week 3?
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: a measured conversion on a fake-door landing page for the consumer side and, for the business side, at least three decision-makers who put something on paper: a letter of intent, a paid pilot or a purchase order. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** Adult children (45–65) of parents living alone in NL/DE/UK/Nordics; home-care organisations.
+
+**The problem as the pack states it:** Millions of Europeans over 75 live alone; their children call at 19:00 and worry the other 23 hours. The products on offer are a pendant the parent won't wear, a camera the parent won't accept, or a care-grade lamp at ~€97–116/month in NL (Nobi + platform) that is aimed at care organisations, not families.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **r/AgingParents** · https://www.reddit.com/r/AgingParents/ — adult children caring for parents: the buyer for most elderly-care devices.
+- **r/dementia** · https://www.reddit.com/r/dementia/ — families living with dementia.
+- **Alzheimer's Society Dementia Support Forum (UK, formerly Talking Point)** · https://forum.alzheimers.org.uk/ — families and carers of people with dementia.
+- **Carers UK forum** · https://www.carersuk.org/forum/ — family carers in the UK.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten buyers from the business side and ten from the consumer side), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€149 + optional €4.99/month, the pack's estimate), and one button. Two buttons: a refundable deposit or waitlist for consumers, "request a pilot" for businesses.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how adult children of parents living alone in NL/DE/UK/Nordics deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. How do you know today that your parent got up this morning, and what did you do the last time you could not reach them?
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] Three stick-on sensors (presence, front door, kitchen) that learn an elderly parent's daily rhythm and quietly tell the family when the pattern breaks — no camera, no wearable, no €2,500 lamp. On a scale of one to ten, how likely would you be to buy that at €149 + optional €4.99/month, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Quiet Guardian: would you pay €149 + optional €4.99/month for this? Looking for 20 people to tell me I am wrong
+
+I am [your name], [your background]. I am considering building a Quiet Guardian: Three stick-on sensors (presence, front door, kitchen) that learn an elderly parent's daily rhythm and quietly tell the family when the pattern breaks — no camera, no wearable, no €2,500 lamp. Before I order a single part I want to know whether this is a real problem for people like you or only in my head.
+
+If you would want one at €149 + optional €4.99/month, the page at [link] takes a fully refundable €[10–20] deposit (or a waitlist e-mail if you prefer); if twenty people do that, I build it, if not, everyone gets their money back and I have learned something.
+
+Either way, two questions: how do you deal with this today, and what would make you say no? Honest answers are worth more to me than deposits.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 
@@ -94,7 +184,7 @@ Hardware margin at 1k is thin; the first 1,000 kits are a software-and-trust inv
 - **Supply — presence sensor single-vendor.** Mitigation: qualify a mmWave alternative module for the same footprint; buy 3k sensors with production.
 - **Support cost.** Mitigation: installation video, chat support, a "test my sensors" button; budget 0.5 FTE support per 2,000 homes.
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 
@@ -174,10 +264,10 @@ Daily: "all normal" at 10:00. Alerts: no presence by X, door at night, fridge ga
 - Packaging: gift box, pre-paired nodes, stickers, a printed consent card for the parent.
 - Incoterms: FOB Shenzhen; alkaline cells inside — declare, no DG.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**On file: 3 board publishers (M5Stack and Seeed Studio and Espressif).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+**On file: 3 board publishers (M5Stack and Seeed Studio and Espressif).** Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
 
 ### Board publishers (direct)
 
@@ -200,7 +290,7 @@ Companies in the gongban.db solution-house directory whose product category over
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -295,7 +385,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 
 1. Buy 5 sets of off-the-shelf Zigbee door/motion sensors and 5 mini-PCs; recruit 5 families from your own network and install the mock-ups this weekend with the consent card.
 2. Order the TMOS PIR unit, two ESP32-H2 dev kits and a C6 dev kit; measure the sleepy-end-device current and the thermal sensor's response to a seated person at 5 m.

@@ -12,7 +12,96 @@
 - **Why now:** The gourmet-mushroom wave is real (grow-kit market estimates US$0.4–1.2 B globally in 2025, Europe ~28%); incumbents are US-centric and not built for saturated humidity; every part exists in the catalogue.
 - **The ask:** ~€45k to the first 1,000 units; pre-orders from grower communities fund half.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Post in the three biggest German/Dutch mushroom-growing groups with a €139 pre-order: 60 deposits in two weeks = go.
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: a fake-door landing page that home and urban mushroom growers and micro-farms in DE/NL/FR/UK actually visited, with a measured conversion to a waitlist or refundable deposit, plus the interview notes behind it. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** Home and urban mushroom growers and micro-farms in DE/NL/FR/UK; grow-shop retailers.
+
+**The problem as the pack states it:** Gourmet mushrooms (oyster, lion's mane, shiitake) fruit well only at 85–95% RH with fresh air. Hobby and micro-farm growers hack together a humidity plug, a timer fan and a US-import controller whose sensor is rated to 85% RH — exactly where mushrooms start.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **r/MushroomGrowers** · https://www.reddit.com/r/MushroomGrowers/ — hobby and small-farm mushroom growers.
+- **Shroomery** · https://www.shroomery.org/forums/ — long-running mushroom-cultivation forum.
+- **r/mycology** · https://www.reddit.com/r/mycology/ — mycology hobbyists.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (twenty people from the audience line), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€129–199, the pack's estimate), and one button. For a consumer the button takes a refundable deposit or a waitlist e-mail; a deposit is worth ten e-mails.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how home and urban mushroom growers and micro-farms in DE/NL/FR/UK deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. Tell me about your last failed flush: what do you think went wrong with humidity, CO2 or temperature, and how would you have known earlier?
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] One box that holds a mushroom fruiting chamber at 85–95% humidity and under 1,000 ppm CO2 by driving a fogger and a fan — plug-and-play, European plugs, no US-only app. On a scale of one to ten, how likely would you be to buy that at €129–199, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Fruiting-Chamber Controller: would you pay €129–199 for this? Looking for 20 people to tell me I am wrong
+
+I am [your name], [your background]. I am considering building a Fruiting-Chamber Controller: One box that holds a mushroom fruiting chamber at 85–95% humidity and under 1,000 ppm CO2 by driving a fogger and a fan — plug-and-play, European plugs, no US-only app. Before I order a single part I want to know whether this is a real problem for people like you or only in my head.
+
+If you would want one at €129–199, the page at [link] takes a fully refundable €[10–20] deposit (or a waitlist e-mail if you prefer); if twenty people do that, I build it, if not, everyone gets their money back and I have learned something.
+
+Either way, two questions: how do you deal with this today, and what would make you say no? Honest answers are worth more to me than deposits.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 A fruiting chamber (a tub, a tent, a converted fridge, or a 10 m² room in a micro-farm) needs three things controlled: humidity (fogger/humidifier on-off), CO2 (fresh-air exchange fan), and sometimes temperature. The hobby solution is an Inkbird humidity controller (€50–85) that switches a mains humidifier and a timer-driven fan, with no CO2 sensing — so growers either over-ventilate (dry pins) or under-ventilate (long stems, small caps). The US controller brands offer good apps but their T/RH probes are rated to 85% RH, no CO2 at the hobby price, US plugs on grey imports, and no EU support.
@@ -80,7 +169,7 @@ Lesson: at 1k units sell direct only; the grow-shop channel works from 5k. The b
 - **Regulatory:** RED + EN 18031 if WiFi; EMC; EN 62368-1 at low voltage only (the PSU carries its own CE); CRA for the connected version. Mitigation: ship v1 offline-capable; WiFi as a firmware option after EN 18031.
 - **Supply:** SCD41 is a sole-source part with 8–16 week lead times at times. Mitigation: order 2,000 early; design the pod footprint to accept the cheaper SCD40 too.
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 | Board | Contributes | Files (catalogue) | Licence note |
@@ -142,10 +231,10 @@ Gap: the pod (condensation survival), fungi control logic and presets, DC-only p
 ### First production checklist
 Sensor samples from the distributor (not grey market — fakes exist), golden sample with logged 7-day RH/CO2 trace, DFM on the pod (membrane welding, strain relief), MOQ 500 with a 2,000 forecast, QC/AQL Level II + 100% functional test in ambient CO2, drop/humidity packaging test, FOB Shenzhen, EU importer on the label, PSU batch certificates filed.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**On file: 3 board publishers (Seeed Studio and M5Stack and Espressif).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+**On file: 3 board publishers (Seeed Studio and M5Stack and Espressif).** Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
 
 ### Board publishers (direct)
 
@@ -166,7 +255,7 @@ Companies in the gongban.db solution-house directory whose product category over
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -261,7 +350,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 1. Order the Grove SCD41, C3 devkit, Unit Fan, a 24 V fogger disc and a 60 L tub; start an oyster block.
 2. Draft the pre-order post and page (€139, ships in 16 weeks) and get admin permission in three grower groups.
 3. Email the SCD41 distributor for 2,000-piece lead time and price; ask a lab for a RED-vs-EMC quote.

@@ -12,7 +12,98 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Four open scope/voltmeter designs with schematics and PCB exist in the catalogue, including a small handheld and an STM32H750-class portable; pocket scopes have proven the price point (FNIRSI DSO152 at ~€27–37, [eleshop](https://eleshop.eu/fnirsi-dso152-oscilloscope.html), [aio.lv](https://aio.lv/en/product--fnirsi-dso152--11618311.md)) but not the classroom; curricula push measurement and data literacy.
 - **The ask:** ~€90k (estimate) to the first 1,000 units; route = teacher trials → class-set pre-orders + bootstrap; education distributors for scale.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Do 10 physics teachers order a 16-unit class set at €69 each after a one-lesson trial?
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: a measured conversion on a fake-door landing page for the consumer side and, for the business side, at least three decision-makers who put something on paper: a letter of intent, a paid pilot or a purchase order. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** Secondary-school physics departments and vocational schools in DE/NL/UK/Nordics; educational distributors.
+
+**The problem as the pack states it:** Schools replace their dying analogue scopes with €30 pocket scopes that students can't operate and teachers can't teach with, or with €400+ bench scopes they can't afford sixteen of. Nobody designs a measurement tool for a 15-year-old and a 45-minute lesson.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **r/ScienceTeachers** · https://www.reddit.com/r/ScienceTeachers/ — secondary-school science teachers.
+- **AAPT** · https://www.aapt.org/ — American Association of Physics Teachers.
+- **IOP, Institute of Physics (UK)** · https://www.iop.org/ — UK physics teacher network and conferences.
+- **MNU (DE)** · https://www.mnu.de/ — German association of maths and science teachers; regional conferences.
+- **Tes Community (UK)** · https://community.tes.com/ — UK teachers' forum.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten buyers from the business side and ten from the consumer side), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€59–89, the pack's estimate), and one button. Two buttons: a refundable deposit or waitlist for consumers, "request a pilot" for businesses.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how secondary-school physics departments and vocational schools in DE/NL/UK/Nordics deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. What do your students use to look at a signal today, how many of those do you have working, and who repairs them?
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] A €59 pocket oscilloscope + voltmeter kit designed for physics classrooms: safe banana inputs, pre-loaded experiments and a teacher dashboard instead of a 200-page manual. On a scale of one to ten, how likely would you be to buy that at €59–89, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: School Scope: would you pay €59–89 for this? Looking for 20 people to tell me I am wrong
+
+I am [your name], [your background]. I am considering building a School Scope: A €59 pocket oscilloscope + voltmeter kit designed for physics classrooms: safe banana inputs, pre-loaded experiments and a teacher dashboard instead of a 200-page manual. Before I order a single part I want to know whether this is a real problem for people like you or only in my head.
+
+If you would want one at €59–89, the page at [link] takes a fully refundable €[10–20] deposit (or a waitlist e-mail if you prefer); if twenty people do that, I build it, if not, everyone gets their money back and I have learned something.
+
+Either way, two questions: how do you deal with this today, and what would make you say no? Honest answers are worth more to me than deposits.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 The physics teacher has 16 benches, one lesson, 30 students and a cupboard of scopes from 1990. They need every bench to see a waveform in 3 minutes, students to record a value without breaking anything, and a worksheet that matches the device. The department head signs for €1,000–1,500 a year; a class set has to fit that. The distributor needs a catalogue SKU with CE, a spare-parts line, and a 3-year warranty.
@@ -85,7 +176,7 @@ Honest: at 1k units this is thin. The class-set box (~€40 BOM, sold at €150 
 | **Supply:** 2.8" LCD panels change often | Two panels on one connector; buy a year ahead for the class sets |
 | **Licence:** four OSHWHub designs | Read each licence; they are references — your own schematic, your own firmware |
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 | Board | Link | What it contributes | Files (catalogue) | Licence note |
@@ -157,10 +248,10 @@ Honest: at 1k units this is thin. The class-set box (~€40 BOM, sold at €150 
 - Packaging: UN 3481 marking; class-set box with labelled unit slots (1–16) and spares.
 - Incoterms: FOB Shenzhen; air for samples; sea for the term batch — order 6 months before September.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**No verified company contact on file yet for this idea.** Every board it is built from is a community design on OSHWHub, where the author is an individual, not a supplier. Nothing has been invented to fill the gap: use the manufacturing houses and the directory entries below, follow the [zero-experience founder playbook](/playbook.html), and treat the first quote you get as the real data. Company websites only; no personal contacts are published.
+**No verified company contact on file yet for this idea.** Every board it is built from is a community design on OSHWHub, where the author is an individual, not a supplier. Nothing has been invented to fill the gap: once section 2 (validate demand) has passed, use the manufacturing houses and the directory entries below, follow the [zero-experience founder playbook](/playbook.html), and treat the first quote you get as the real data. Company websites only; no personal contacts are published.
 
 ### Open-hardware boards without a company behind them
 
@@ -173,7 +264,7 @@ Honest: at 1k units this is thin. The class-set box (~€40 BOM, sold at €150 
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -224,7 +315,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 1. Fab the mini handheld open design and the simple scope, add a protection breadboard; show an RC-charging curve on one by day 10.
 2. Write 4 one-page worksheets (RC charging, AC vs DC, sound, rectifier) with a physics teacher; print them.
 3. Contact your national physics-teacher association for the next conference date and email 20 teachers a one-lesson trial offer.

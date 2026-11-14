@@ -25,6 +25,7 @@ from build_detail_pages import ASSET_V, FOOTER, e, head, nav
 import build_contacts
 import build_playbook
 import build_startpacks
+import build_validate
 
 ROOT = Path(__file__).parent
 IDEAS_JSON = ROOT / "data" / "ideas.json"
@@ -91,7 +92,7 @@ def render_index(data, ideas):
     explainer = (f'''<section class="startpack-explainer" id="startpacks" aria-label="Founder start packs">
   <div>
     <h2>Founder start packs</h2>
-    <p>Ideas marked <span class="pack-badge" style="margin-left:0">Start pack</span> come with a founder start pack: a one-page summary, a business plan (customer, market size, competition, unit economics, go-to-market, 12-month plan, funding, risks) and a start kit (the catalogue boards to copy from, a block diagram, a starter BOM, firmware starting points, a 12-week build plan, the EU certification checklist, a validation toolkit and a first-production checklist), ending with three things to do this week. Since November 2026 every pack also has a <strong>Who to contact</strong> section: the companies on file in gongban.db that publish the boards, the PCBA houses, and ready-to-send outreach e-mails in English and Chinese. Every pack is downloadable as Markdown. Same rule as the ideas: concepts, not products; every number is an estimate to check. Never built hardware? Read the <a href="/playbook.html">zero-experience founder playbook</a> first.{f' Example: <a href="/startpacks/{e(first["slug"])}.html">{e(first["title"])} →</a>' if first else ""}</p>
+    <p>Ideas marked <span class="pack-badge" style="margin-left:0">Start pack</span> come with a founder start pack: a one-page summary, a business plan (customer, market size, competition, unit economics, go-to-market, 12-month plan, funding, risks) and a start kit (the catalogue boards to copy from, a block diagram, a starter BOM, firmware starting points, a 12-week build plan, the EU certification checklist, a validation toolkit and a first-production checklist), ending with three things to do this week. Every pack opens with <strong>Validate demand first</strong>: the idea's kill question as a go/no-go gate, where to find that specific audience, a problem-first interview script and a pre-order message, to be done before any sourcing (<a href="/playbook.html#validate">why and how →</a>). Every pack also has a <strong>Who to contact</strong> section: the companies on file in gongban.db that publish the boards, the PCBA houses, and ready-to-send outreach e-mails in English and Chinese. Every pack is downloadable as Markdown. Same rule as the ideas: concepts, not products; every number is an estimate to check. Never built hardware? Read the <a href="/playbook.html">zero-experience founder playbook</a> first.{f' Example: <a href="/startpacks/{e(first["slug"])}.html">{e(first["title"])} →</a>' if first else ""}</p>
   </div>
   <div class="n">{n_packs}<small>start packs</small></div>
 </section>''' if n_packs else "")
@@ -204,7 +205,7 @@ def render_idea(i, ideas, boards):
     title = f'{i["title"]} — idea built from {len(i["built_from"])} gongbans · GONGBANS'
     pack_cta = (f'''<div class="pack-cta" id="startpack">
     <a class="btn primary" href="/startpacks/{e(i["slug"])}.html">Founder start pack →</a>
-    <p><strong>Business plan + start kit for this idea.</strong> Customer, market size, competition, unit economics, go-to-market, 12-month plan, funding and risks; then the boards to copy from, block diagram, starter BOM, 12-week build plan, EU certification checklist and validation toolkit. Estimates, not quotes.</p>
+    <p><strong>Start with the demand check, not the parts list.</strong> The pack opens with this idea's kill question as a gate, where to find the audience and an interview script (<a href="/startpacks/{e(i["slug"])}.html#s2">validate demand →</a>); then business plan, start kit, who to contact in Shenzhen and the outreach e-mails. Estimates, not quotes.</p>
     <a class="md" href="/startpacks/{e(i["slug"])}.md" download>↓ Markdown</a>
   </div>''' if i["slug"] in PACKS else "")
     return f'''{head(title, i["pitch"][:200], f"ideas/{i['slug']}.html")}
@@ -304,6 +305,7 @@ def patch_index(ideas):
 def main():
     data, ideas, boards = load()
     build_contacts.patch_packs()
+    build_validate.patch_packs()
     build_playbook.build()
     PACKS.update(build_startpacks.build(ideas))
     (ROOT / "ideas.html").write_text(render_index(data, ideas), encoding="utf-8")

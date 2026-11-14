@@ -34,26 +34,51 @@ Three rules carry through everything below:
 - **Every number on this site is an estimate** until a supplier writes it in a quote. BOM costs, MOQs, lead times and certification fees in the packs are there so you can plan; the quote replaces them.
 - **Check the licence before anything commercial.** Boards tagged `check-licence` come from community projects; some licences forbid commercial use or require you to publish your changes. Read the licence on the board's page, and ask when it is unclear.
 
-Where the people are: every start pack has a **Who to contact** section (section 4) that names the companies on file in gongban.db for that idea. This page tells you what to do with them.
+Where the people are: every start pack has a **Who to contact** section (section 5) that names the companies on file in gongban.db for that idea, and a **Validate demand** section (section 2) that comes first. This page tells you what to do with both.
 
-## 1. Week zero: the kill question
+## 1. Week zero: validate demand {#validate}
 
-Every idea on this site carries a *kill question*: one measurable test that, if it fails, tells you to stop before you spend money on hardware. It is the hardware equivalent of a landing-page test, and it comes first because hardware mistakes are slow and expensive to undo.
+Every idea on this site carries a *kill question*: one measurable test that, if it fails, tells you to stop before you spend money on hardware. Section 2 of every start pack turns it into a gate with that idea's audience, places to find them, an interview script and a pre-order message. This is the worksheet behind it. The order matters: demand first, then the plan, then the boards, then the factory. The beginner mistake is the reverse, and it is only discovered after the tooling invoice.
 
-How to run one in a week:
+**1. Define the segment.** Write one sentence: *who* (job title or life situation, country), *when* (the moment the problem bites), *what they do today* (the workaround and what it costs). The pack's audience line is the starting point; narrow it until you could list twenty named people or companies. "Households" is not a segment; "Dutch households on a dynamic tariff with a P1 meter reader" is.
 
-1. **Build the fake product.** A landing page with a rendered image or a cardboard mock-up photographed well, the price from the pack, and a button that takes a refundable deposit or a signed letter of intent. No code, no boards.
-2. **Put it in front of the exact customer named in the pack.** The forum, the trade association, the ten facility managers, the WhatsApp group of installers. Not your friends.
-3. **Count.** The pack states the pass mark (a conversion rate, a number of deposits, a number of yes-answers). Hit it or don't.
-4. **Talk to ten who said no.** Their reasons are your spec changes or your reason to pick another idea.
+**2. Talk to 15–20 of them before writing any code or ordering any sample.** Fifteen minutes each, problem first, product last (the pack has the script). Ten buyers and ten users when they are different people. Write each one up the same day in their words: the last time it happened, what it cost, what they tried, what they said at the price. Stop early only when the first ten all say the same thing and it is "no".
 
-If it passes, keep the deposits list: those people are your first beta units and your first reviews. If it fails, you have lost a week and learned what a hardware company would have taken a year to learn.
+**3. Build the fake door.** One landing page, before anything exists: the pitch as the headline, a rendered image or a well-photographed mock-up, the price from the pack, one button. Consumer: a refundable deposit (best) or a waitlist e-mail. Business: "request a pilot" leading to a short form and a letter of intent. No code, no boards. Send it to everyone you interviewed and post the problem question, with the link, where the audience talks (the pack names the places we are confident about). Run it for two to four weeks on cold traffic.
+
+**4. Read the signal honestly.**
+
+| Counts as demand | Does not count |
+|---|---|
+| Refundable deposits, signed letters of intent, a paid pilot, a date in the calendar to see the prototype | "Sounds cool", "I'd buy that", likes, upvotes, newsletter opens |
+| Problems described unprompted, in detail, with numbers | Agreement with your description of the problem |
+| Money already spent on a workaround | Never tried anything, not bothered |
+| Conversion from strangers | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker | An enthusiastic user who cannot sign |
+
+Waitlist e-mails convert to purchases at a small fraction; refundable deposits and LOIs at a large one. Plan on the pessimistic end and treat the pack's pass mark as a floor, not a target. <span class="est">estimate</span>
+
+**5. Go / no-go, tied to the kill question.** *Go* when the pack's kill question is met by your own numbers, the 15–20 conversations are written up, and you hold at least one item from the left column per segment you plan to sell to. *Change the idea* when the problem is real but the price, buyer or form factor is wrong: the interviews say which; rewrite the pitch and run the door again (a week, not a quarter). *Stop* when the kill question fails on honest numbers or nobody has paid for a workaround. Only on *go* do the start kit, the samples and the "Who to contact" section apply.
+
+Worksheet, one line each, to be filled in before section 2:
+
+```
+  Segment (who / when / what they do today)             ______________________
+  Conversations done: users ___  buyers ___  (target 15–20)
+  Fake door live from ____ to ____   visitors ____  from cold traffic ____
+  Deposits ___   LOIs ___   pilots ___   waitlist ___
+  Kill question pass mark (from the pack)               ______________________
+  Our number                                            ______________________
+  Decision: GO / CHANGE / STOP      because             ______________________
+```
+
+If it passes, keep the deposit list: those people are your first beta units and your first reviews. If it fails, you have lost a few weeks and learned what a hardware company would have taken a year to learn.
 
 ## 2. Order the sample boards
 
-The start kit (section 3 of each pack) lists catalogue boards to copy from. Before you design anything, buy them and make the product work on your desk with the real modules, even if it is held together with tape.
+The start kit (section 4 of each pack) lists catalogue boards to copy from. Before you design anything, buy them and make the product work on your desk with the real modules, even if it is held together with tape.
 
-- **Where.** The board's page in the [catalogue](/boards.html) links to the publisher's own files. The publisher (M5Stack, Seeed Studio, Espressif and the others named in section 4 of the pack) sells the physical boards through its own shop and through the usual distributors. Three of each board is a good number: one to use, one to break, one to compare against.
+- **Where.** The board's page in the [catalogue](/boards.html) links to the publisher's own files. The publisher (M5Stack, Seeed Studio, Espressif and the others named in section 5 of the pack) sells the physical boards through its own shop and through the usual distributors. Three of each board is a good number: one to use, one to break, one to compare against.
 - **Open-hardware boards** (OSHWHub projects) have no shop behind them. You order the bare PCB and parts from a prototype fab using the published Gerber and BOM files, or you pick the nearest commercial module that does the same job. The pack usually names one.
 - **Chinese marketplaces.** Many gongban kits exist as finished boards on 1688 and Taobao, the physical kit market the catalogue records as a source. Buying there needs a Chinese address and payment method or a purchasing agent; for a first prototype the publisher's international shop is faster and the parts are traceable.
 - **What arrives.** Boards, sometimes a cable, rarely documentation. The documentation is on the board's page. Expect one to three weeks including customs for a small parcel into the EU. <span class="est">estimate</span>
@@ -82,7 +107,7 @@ Two more words you will hear in the first week:
 
 ## 4. Find the manufacturer
 
-There are three kinds of company behind every idea on this site, and the first e-mail to each is different. Section 4 of the pack tells you which exist on file for your idea.
+There are three kinds of company behind every idea on this site, and the first e-mail to each is different. Section 5 of the pack tells you which exist on file for your idea.
 
 **The board publisher** (M5Stack, Seeed Studio, Espressif, SIMCom, WPI's application unit). They designed the board and sell it. What they are good for: sample units, volume pricing of the module as-is, sometimes a customised variant (your connector, your enclosure, firmware pre-loaded). What to send them: template A from the pack. What they are not: your contract manufacturer for the whole product.
 
@@ -103,7 +128,7 @@ Red flags, from twenty years of this: a quote that comes back within an hour wit
 
 ## 5. The first quote, and how to read it {#quote}
 
-Your e-mail (templates in section 4 of the pack) asks for samples, volume pricing, NRE, lead time, certification documents and terms. A real quote answers all six. Read it like this:
+Your e-mail (templates in section 5 of the pack) asks for samples, volume pricing, NRE, lead time, certification documents and terms. A real quote answers all six. Read it like this:
 
 - **Unit price at each quantity break.** Note the currency and whether it includes components, packaging and testing. A PCBA quote often excludes a few "customer-supplied" parts: ask.
 - **MOQ** (minimum order quantity). This is negotiable for a first order, especially if you pay a higher unit price. The MOQ of the *components* matters as much as the factory's: one chip only sold on a reel of 3,000 sets your real minimum.
@@ -190,7 +215,7 @@ Rules of thumb that hold for the ideas here, every one of them an estimate until
 
 ## 10. The outreach e-mails {#emails}
 
-Every start pack carries two e-mails in section 4, pre-filled with that idea's boards and pitch, each in English and Chinese:
+Every start pack carries two e-mails in section 5, pre-filled with that idea's boards and pitch, each in English and Chinese:
 
 - **A. To a board publisher**: samples, volume pricing, customisation, radio test reports, payment terms.
 - **B. To a PCBA / EMS house**: fabrication and assembly quote from the open files, NRE, lead time, QC, box build, Incoterms.
@@ -217,14 +242,14 @@ How to use them: fill the brackets, attach nothing on the first mail except a li
 <dt>FCC ID / modular approval</dt><dd>US radio authorisation; a module with modular approval carries its own FCC ID.</dd>
 <dt>UN 38.3</dt><dd>The transport safety test every lithium battery needs before it may fly or sail.</dd>
 <dt>3PL</dt><dd>Third-party logistics warehouse that stores and ships your stock.</dd>
-<dt>Kill question</dt><dd>The one measurable test in each idea that tells you to stop. See section 1.</dd>
+<dt>Kill question / fake door</dt><dd>The one measurable test in each idea that tells you to stop, and the landing-page test that measures it. See section 1.</dd>
 </dl>
 """
 
-SECTION_LABELS = {"0": "Read this first", "1": "Week zero · kill question", "2": "Samples", "3": "Prototype → production",
+SECTION_LABELS = {"0": "Read this first", "1": "Week zero · validate demand", "2": "Samples", "3": "Prototype → production",
                   "4": "The manufacturer", "5": "The first quote", "6": "Certification · CE / FCC", "7": "Import & customs",
                   "8": "Logistics & fulfilment", "9": "Landed-cost worksheet", "10": "Outreach e-mails", "11": "Glossary"}
-ANCHORS = {"5": "quote", "7": "customs", "8": "logistics", "9": "landed-cost", "10": "emails", "4": "manufacturer"}
+ANCHORS = {"1": "validate", "5": "quote", "7": "customs", "8": "logistics", "9": "landed-cost", "10": "emails", "4": "manufacturer"}
 
 
 def render():
@@ -267,7 +292,7 @@ def render():
     <div class="crumbs"><a href="/ideas.html">Ideas</a><span class="sep">/</span><span>Playbook</span></div>
     <div class="header-id">FOUNDER PLAYBOOK · SHARED BY ALL 50 IDEAS · UPDATED {e(UPDATED.upper())}</div>
     <h1>Never built hardware? <em>Start here.</em></h1>
-    <p class="sub">What every start pack has in common, for founders who have shipped software and never had a product made: the order of operations, the words, the paperwork, and who to e-mail in Shenzhen.</p>
+    <p class="sub">What every start pack has in common, for founders who have shipped software and never had a product made: validate demand first, then the order of operations, the words, the paperwork, and who to e-mail in Shenzhen.</p>
   </div>
 </div>
 
@@ -282,8 +307,8 @@ def render():
   <section class="dsection" id="help">
     <div class="dsection-label">Where next</div>
     <div class="hans-note">
-      <div class="hans-note-label">Pick an idea, run its kill question</div>
-      <p>The <a href="/ideas.html">50 ideas</a> each have a founder start pack with the boards, the plan, the people on file and the two e-mails. If you take one on and want a second pair of eyes on the sourcing, <a href="https://hansstam.eu">talk to Hans via hansstam.eu</a>.</p>
+      <div class="hans-note-label">Pick an idea, validate demand, then build</div>
+      <p>The <a href="/ideas.html">50 ideas</a> each have a founder start pack that opens with the demand check (<a href="#validate">section 1 here</a>), then the plan, the boards, the people on file and the two e-mails. If you take one on and want a second pair of eyes on the sourcing, <a href="https://hansstam.eu">talk to Hans via hansstam.eu</a>.</p>
     </div>
   </section>
 

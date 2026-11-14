@@ -12,7 +12,95 @@ Concept from the GONGBANS inventor. Not validated. All numbers are estimates —
 - **Why now:** Open P3 matrix driver boards and HUB75 ESP32 libraries make the hard part a download; clubs spend grant money in small chunks; the existing boards have not changed in a decade.
 - **The ask:** ~€70k to a certified first 1,000; pre-orders from one or two regional federations can carry a big share.
 
-## 2. Business plan
+## 2. Validate demand first
+
+<!-- validate-demand:start -->
+**Do this before anything else in this pack: before the business plan, before you order a sample board, and long before you e-mail a factory (section 5).** The classic first-time mistake is to source and build first and find out later that nobody wanted it. Hardware mistakes are slow and expensive to undo; 15–20 conversations are cheap.
+
+### The gate: this idea's kill question
+
+> Do 10 clubs from one regional federation pre-order at €399 after a demo at a tournament weekend?
+
+You pass this section when you can answer that question with evidence you collected yourself, not a guess: written answers from at least ten decision-makers who hold the budget, at least three of whom put something on paper: a signed letter of intent, a paid pilot, or a dated purchase order for the first units. Until then: no factory e-mail, no sample order, no firmware, no logo. If the answer is no, you have lost a few weeks and saved the rest.
+
+### Who you are looking for
+
+**The audience named in the idea:** Amateur sports clubs, school gyms, municipal sports halls across Europe.
+
+**The problem as the pack states it:** Hall scoreboards from Favero, Stramatel or Mobatime list at €1,050–3,200+ ex VAT before the console, radio option and installation; most small clubs and school gyms still flip cardboard numbers or use a €149 tabletop toy nobody can read from the stands.
+
+Talk to the people who have the problem *and* the people who pay; in B2B they are often not the same person, and the one who pays decides.
+
+### Where to find them
+
+Communities and associations where this audience actually talks, as far as we know them in November 2026. Confirm each is still active and read its rules on self-promotion before posting; most allow a genuine question about a problem and ban a pitch.
+
+- **DOSB (DE)** · https://www.dosb.de/ — German sports confederation; the regional Landessportbund reaches the clubs.
+- **r/trackandfield** · https://www.reddit.com/r/trackandfield/ — athletes and coaches.
+
+Beyond the named ones, the same four methods work for every idea on this site:
+
+- **Search for communities around the problem, not the product:** forums, Facebook groups, Discord servers and newsletters in your own country for the terms in the audience line above. Many of the best groups are national and in the local language; a Dutch or German group beats a global English one for an EU launch.
+- **Trade associations and their regional meetings** for the B2B audiences: one meeting puts twenty buyers in a room, and the association newsletter will often run a short survey for a member.
+- **LinkedIn:** search people by the job titles in the audience line, message ten a day with one question (not a pitch), and ask for twenty minutes. Expect one in five to say yes.
+- **Your deposit list from the kill question** and anyone who replied to the fake door: those are the first interviews, not the last.
+
+### The plan: 15–20 conversations, then a fake door
+
+1. **15–20 real conversations** (ten budget-holders and ten users), fifteen minutes each, using the script below. Before writing a line of code or ordering a board. Write up each one the same day: the problem in their words, what they do today, what it costs them, what they said when you named the price.
+2. **A fake door.** One page: the pitch as the headline, a rendered image or a photo of a cardboard mock-up, the price (€349–499, the pack's estimate), and one button. For a business buyer the button is "request a pilot" that leads to a short form and a letter of intent.
+3. **Send it** to everyone you interviewed and post it, with the problem question first, in the communities above. Run it for two to four weeks.
+4. **Count** against the kill question. Then decide: go, change the idea, or stop.
+
+### Interview script (fifteen minutes, problem first)
+
+Ask, then be quiet. Do not describe the product until question 5; if you pitch first you will only hear politeness.
+
+```email
+Thanks for the time. I am looking into how amateur sports clubs, school gyms, municipal sports halls across Europe deal with [the problem in their words]; I have not built anything yet and I am trying to find out whether it is worth building.
+
+1. Walk me through how the score is shown at your home games today, and what happened the last time it went wrong.
+2. What do you do about it today, and what does that cost you in money or time per month?
+3. What have you already tried or bought, and why did you stop using it?
+4. If this went away tomorrow, what would change for you? (If the answer is "not much", you have your answer.)
+5. [Only now describe it in one sentence:] A bright 64×32 LED-matrix scoreboard with a wireless handheld controller for amateur football, handball, volleyball and school sports, at a fifth of the price of sports-hall boards. On a scale of one to ten, how likely would you be to buy that at €349–499, and what would make it a ten?
+6. Who else should I talk to about this? (Ask for two names.)
+
+Close: "If I build this, can I come back to you with a prototype?" A yes with a calendar date is worth more than any compliment.
+```
+
+### Pre-order / pilot message (forum post or direct message)
+
+```email
+Subject: Club Scoreboard: looking for 3 pilot sites before we build it
+
+I am [your name], [your background]. We are considering building a Club Scoreboard: A bright 64×32 LED-matrix scoreboard with a wireless handheld controller for amateur football, handball, volleyball and school sports, at a fifth of the price of sports-hall boards. Before we spend money on tooling I want to find out whether this solves a real problem for amateur sports clubs, school gyms, municipal sports halls across Europe.
+
+If it would, I am looking for three pilot customers willing to sign a short letter of intent now and pay €349–499 per unit for the first batch, delivered in [month]. The LOI is non-binding on the price; it tells me the problem is real.
+
+Two questions, no pitch: how do you handle this today, and what would make you say no to the above? Twenty minutes on a call this week, or a reply here, both help.
+```
+
+### Reading the signal
+
+| Real signal | False positive |
+|---|---|
+| A refundable deposit, a signed LOI, a paid pilot, a calendar invite for the prototype | "Sounds cool", "I would totally buy that", likes and upvotes |
+| They describe the problem unprompted and in detail, with numbers | They agree with your description of the problem |
+| They have already paid for a workaround (a product, a service, their own time) | They have never tried anything and are not bothered |
+| Landing-page conversion to deposit or form above the pack's pass mark, from cold traffic | Conversion from friends, family and your own network |
+| A named budget and a named decision-maker (B2B) | An enthusiastic user who cannot buy |
+
+### Go / no-go
+
+- **Go to section 3 (business plan) and section 4 (start kit)** when the kill question above is met by your own numbers, you have 15–20 written-up conversations, and at least one real signal from the left column per segment you plan to sell to. Only then does section 5 (Who to contact) apply.
+- **Change the idea** when the problem is real but the price, the buyer or the form factor in the pitch is wrong: the interviews will tell you which. Rewrite the pitch and run the fake door again; this is normal and costs a week.
+- **Stop** when the kill question fails on honest numbers, or when nobody you talked to has paid for a workaround. Pick another idea on this site; the boards in the start kit are not wasted, only unused.
+
+The full worksheet, with how to define the segment and run the fake door, is in the [playbook → validate demand](/playbook.html#validate).
+<!-- validate-demand:end -->
+
+## 3. Business plan
 
 ### Problem & customer
 
@@ -94,7 +182,7 @@ The LED panel is a commodity (dozens of Shenzhen makers); the certified PSU is w
 
 Not a toy: it is sports equipment for adults to operate; avoid marketing it to children to stay clear of the toy directive.
 
-## 3. Start kit
+## 4. Start kit
 
 ### Boards to start from
 
@@ -177,10 +265,10 @@ Add-on: 4-digit shot-clock display on a cable (Grove-style)
 - Packaging: ISTA 1A; panel-face protection; EU DoC + WEEE marks; PSU certificate copy on file.
 - Incoterms: FOB Shenzhen sea; pilot batch by air DAP; HS code for LED display assembly vs scoreboard — ask the broker.
 
-## 4. Who to contact
+## 5. Who to contact
 
 <!-- who-to-contact:start -->
-**On file: 2 board publishers (M5Stack and Seeed Studio).** Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
+**On file: 2 board publishers (M5Stack and Seeed Studio).** Only useful once section 2 (validate demand) has passed. Everything below comes from gongban.db, the directory behind this site. It names the companies that publish the boards this idea is built from, the manufacturers on file, and directory entries in the same product category. None of it is a verified supplier relationship for this specific idea: nobody has quoted it yet. Company websites only; no personal contacts are published.
 
 ### Board publishers (direct)
 
@@ -204,7 +292,7 @@ Companies in the gongban.db solution-house directory whose product category over
 
 ### MOQ and landed cost
 
-gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in section 3 is an estimate, not a quote.
+gongban.db holds no MOQ, unit-price or tariff data for these companies, so none is shown. Get the numbers from the quote (the e-mail below asks for them) and run them through the [landed-cost worksheet in the playbook](/playbook.html#landed-cost). The starter BOM in the start kit section is an estimate, not a quote.
 
 ### Outreach e-mail, ready to send
 
@@ -299,7 +387,7 @@ Best regards,
 ```
 <!-- who-to-contact:end -->
 
-## 5. Next steps (this week)
+## 6. Next steps (this week)
 
 1. Order the open matrix driver PCB from the OSHWHub project (JLC one-click) or breadboard an ESP32-S3 with a HUB75 cable, buy one P6 64×32 panel and an AtomS3-Lite; get a score counting with two buttons.
 2. Find the next regional youth handball or volleyball tournament in 4–6 weeks and ask the organiser for a table; prepare a €50 deposit page.
