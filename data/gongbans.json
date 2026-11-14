@@ -28374,6 +28374,71 @@
    "hint": ""
   },
   {
+   "slug": "manthink-gd6-lorawan-gateway",
+   "db_slug": "manthink-gd6-lorawan-gateway",
+   "project_no": "",
+   "name": "ManThink GD6 open-source LoRaWAN gateway",
+   "category": "Module",
+   "tags": [
+    "module_board",
+    "open download",
+    "solution house"
+   ],
+   "chip": "ESP32-S3 + Semtech SX1302",
+   "chip_brand": "",
+   "chip_role": "",
+   "datasheet_url": "",
+   "chip_price_5k_usd": null,
+   "application": "Open-source LoRaWAN gateway, submitted by ManThink for GONGBANS (Nov 2026). ESP32-S3 (WROOM-1 N8R8) + Semtech SX1302 concentrator with dual SX1250; W5500 Ethernet primary uplink, optional 4G (A7670C, PPP) and Wi-Fi STA failover; Semtech packet forwarder, optional BasicStation; web console + REST API, MQTT remote config. Hardware: EasyEDA Pro project (schematic+PCB) and BOM in repo; firmware PlatformIO/ESP-IDF 5.5. MIT licence. For buildings, environmental monitoring, industrial IoT. Pairs with ThinkLink, ManThink's free self-hosted LoRaWAN network server / IoT platform (Docker, Linux x64, no device limit): https://www.think-link.net/ . Supplier reference price (Nov 2026, GD61 indoor, 8 channels): basic Ethernet/Wi-Fi US$50; 4G+PoE US$70; global 4G+PoE US$87; power kit +US$5. EU band/cellular config per country; MOQ/lead time on request. Product page: https://www.think-link.net/devices/gd6/",
+   "files_available": false,
+   "hans_notes": "",
+   "origin": "db",
+   "issuer": "ManThink",
+   "issuer_type": "solution_house",
+   "source_name": "ManThink (direct submission)",
+   "source_url": "https://github.com/ManThink/gd6-open",
+   "source_note": "",
+   "db_category": "module_board",
+   "openness": "open_download",
+   "openness_label": "Open download",
+   "year": 2026,
+   "region": "CN",
+   "license": "MIT",
+   "files_avail": [
+    "schematic",
+    "pcb",
+    "bom",
+    "firmware",
+    "spec"
+   ],
+   "files_at_source": [
+    {
+     "kind": "bom",
+     "url": "https://github.com/ManThink/gd6-open/blob/HEAD/hardware/BOM_GD61x_V1.9.xls",
+     "name": "BOM_GD61x_V1.9.xls"
+    },
+    {
+     "kind": "firmware",
+     "url": "https://github.com/ManThink/gd6-open",
+     "name": "gd6-open"
+    },
+    {
+     "kind": "pcb",
+     "url": "https://github.com/ManThink/gd6-open/blob/HEAD/hardware/GD61x.eprj2",
+     "name": "GD61x.eprj2"
+    },
+    {
+     "kind": "spec",
+     "url": "https://www.think-link.net/devices/gd6/",
+     "name": "gd6"
+    }
+   ],
+   "files_at_source_more": 0,
+   "status": "source-files",
+   "notes": "Open-source LoRaWAN gateway, submitted by ManThink for GONGBANS (Nov 2026). ESP32-S3 (WROOM-1 N8R8) + Semtech SX1302 concentrator with dual SX1250; W5500 Ethernet primary uplink, optional 4G (A7670C, PPP) and Wi-Fi STA failover; Semtech packet forwarder, optional BasicStation; web console + REST API, MQTT remote config. Hardware: EasyEDA Pro project (schematic+PCB) and BOM in repo; firmware PlatformIO/ESP-IDF 5.5. MIT licence. For buildings, environmental monitoring, industrial IoT. Pairs with ThinkLink, ManThink's free self-hosted LoRaWAN network server / IoT platform (Docker, Linux x64, no device limit): https://www.think-link.net/ . Supplier reference price (Nov 2026, GD61 indoor, 8 channels): basic Ethernet/Wi-Fi US$50; 4G+PoE US$70; global 4G+PoE US$87; power kit +US$5. EU band/cellular config per country; MOQ/lead time on request. Product page: https://www.think-link.net/devices/gd6/",
+   "hint": ""
+  },
+  {
    "slug": "mediatek-genio-350-evk",
    "db_slug": "mediatek-genio-350-evk",
    "project_no": "",

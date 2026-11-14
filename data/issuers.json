@@ -345,6 +345,22 @@
    "region": "CN"
   },
   {
+   "name": "ManThink",
+   "type": "solution_house",
+   "type_label": "Solution house",
+   "count": 1,
+   "sources": [
+    {
+     "name": "ManThink (direct submission)",
+     "url": "https://www.manthink.cn/"
+    }
+   ],
+   "categories": [
+    "Module"
+   ],
+   "region": "CN"
+  },
+  {
    "name": "Tianwang 天网互联",
    "type": "solution_house",
    "type_label": "Solution house",

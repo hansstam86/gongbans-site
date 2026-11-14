@@ -1,17 +1,17 @@
 {
  "updated": "2026-11-14",
- "boards": 1121,
+ "boards": 1122,
  "curated": 16,
- "imported": 1105,
- "issuers": 22,
+ "imported": 1106,
+ "issuers": 23,
  "solution_houses": 65,
  "categories": 10,
  "full_packs": 3,
- "with_design_files": 738,
- "with_schematic": 659,
- "with_pcb": 193,
- "direct_links": 556,
- "open_download": 1026,
+ "with_design_files": 739,
+ "with_schematic": 660,
+ "with_pcb": 194,
+ "direct_links": 557,
+ "open_download": 1027,
  "per_category": [
   {
    "name": "IoT",
@@ -39,7 +39,7 @@
   },
   {
    "name": "Module",
-   "count": 28
+   "count": 29
   },
   {
    "name": "Reference Design",
