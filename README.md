@@ -13,6 +13,9 @@ gongbans-site/
 ├── issuers.html            ← publishers of the boards + Shenzhen solution-house directory (generated)
 ├── boards-kingbrother.html ← Kingbrother IDH industrial SOM platforms (hand-written)
 ├── what-are-gongbans.html  ← essay
+├── ideas.html              ← 50 product concepts built from catalogue boards (search, tag chips, sort)
+├── ideas/                  ← one HTML page per idea (generated)
+├── data/ideas.json         ← the ideas (from the gongban-inventor workspace; every number is an estimate)
 ├── data/gongbans.json      ← the database (single source of truth; curated + imported entries)
 ├── data/catalog.json       ← slim copy for the grid (generated, do not edit)
 ├── data/issuers.json       ← publishers + solution houses, public fields only (generated)
@@ -22,9 +25,11 @@ gongbans-site/
 ├── assets/
 │   ├── style.css           ← the one shared stylesheet (light theme of the landing page)
 │   ├── app.js              ← catalogue filter / search / incremental render (vanilla)
+│   ├── ideas.js            ← ideas filter / search / sort (vanilla)
 │   └── site.js             ← mobile nav + scroll reveal
 ├── build_catalog.py        ← gongban.db → data/*.json
 ├── build_detail_pages.py   ← data/*.json → db/*.html, issuers.html, stats in the hand-written pages
+├── build_ideas.py          ← data/ideas.json → ideas.html, ideas/*.html, idea list on index.html
 └── README.md
 ```
 
@@ -44,7 +49,19 @@ stylesheet is linked as `/assets/style.css`.)
 ```bash
 python3 build_catalog.py        # reads ~/Projects/gongban-db/gongban.db (or pass a path)
 python3 build_detail_pages.py   # regenerates db/*.html + issuers.html, patches stats, removes stale pages
+python3 build_ideas.py          # regenerates ideas.html + ideas/*.html from data/ideas.json, patches index.html
 ```
+
+## Ideas
+
+`ideas.html` lists 50 product concepts that a European team could build mainly from boards in the catalogue, generated
+by the gongban-inventor (an AI assistant working from `catalogue.txt`, a flat export of `data/catalog.json`). Each idea
+names 2–4 real boards (validated against the catalogue) with their role, the buyer, why now, what is genuinely new,
+effort/BOM/price **estimates**, the EU certification path, a kill question and four 1–5 scores. Every idea page carries
+the disclaimer: concepts, not products; not validated; estimates are rough; check each board's licence before commercial
+use. Ideas that rely on OSHWHub community boards (licences vary, often non-commercial) are tagged `check-licence`.
+Board pages show a "Used in ideas" block linking back. To update: edit `data/ideas.json`, then run both build scripts.
+
 
 `build_catalog.py` keeps every hand-curated entry (anything without `"origin": "db"`) byte-for-byte,
 drops and re-imports all database entries, and writes `data/gongbans.json`, the slim `data/catalog.json`
