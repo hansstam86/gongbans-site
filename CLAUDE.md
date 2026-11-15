@@ -62,3 +62,6 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
   OSHWHub author handles. `build_catalog.py` enforces these; keep its exclusion lists when editing.
 - Old URLs must keep resolving: `boards.html` (now the catalogue), the 16 curated `db/*.html`, `index.html`,
   `what-are-gongbans.html`, `ideas.html`. Kingbrother's former `boards.html` content lives at `boards-kingbrother.html`.
+- WPI ATU 2016 catalogue (added 2026-11-15): 100 `wpi-atu-<code>-…` rows in gongban.db (source `wpi_atu_catalogue_2016`, metadata only, imported by
+  `~/Projects/gongban-db/scripts/import_atu_2016.py` from two private PDFs that must never be published or hosted). 90 are published; the 10 that
+  describe a hand-curated ATU kit (same project code) are listed in `DUPLICATE_SLUGS` in `build_catalog.py`. No designer / team-member names anywhere.

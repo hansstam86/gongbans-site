@@ -98,7 +98,13 @@ ISSUER_TYPE_LABEL = {
 # ---------------------------------------------------------------------------
 # Exclusions
 # ---------------------------------------------------------------------------
-DUPLICATE_SLUGS = {"atu-p15-090-ble", "atu-p15-096-uv-sensor", "atu-p15-097-gesture-hub"}
+DUPLICATE_SLUGS = {"atu-p15-090-ble", "atu-p15-096-uv-sensor", "atu-p15-097-gesture-hub",
+                   # WPI ATU 2016 catalogue rows that describe a hand-curated ATU kit (same project code)
+                   "wpi-atu-p15-043-wifi-zigbee-gateway-lpc54102", "wpi-atu-p15-080-fis1100-sports-wearable",
+                   "wpi-atu-p15-087-zigbee-pir-sensor", "wpi-atu-p15-094-quark-d2000-smart-home-hub",
+                   "wpi-atu-p15-098-vcnl4020-proximity-demo", "wpi-atu-p15-099-veml6040-rgbw-demo",
+                   "wpi-atu-p16-008-isd9160-voice-recognition-board", "wpi-atu-p16-016-qn9022-ble-module",
+                   "wpi-atu-p16-037-zigbee-light-module", "wpi-atu-p16-052-zigbee-module-base-board"}
 
 MOBILITY_RE = re.compile(
     r"scooter|e-?bike|ebike|gps[\s-]?track|\btracker\b|telematic|shared[\s-]?mobility|"
