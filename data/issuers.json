@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14",
+ "updated": "2026-11-15",
  "board_issuers": [
   {
    "name": "M5Stack",
@@ -69,7 +69,7 @@
    "name": "WPI ATU",
    "type": "distributor",
    "type_label": "Distributor",
-   "count": 78,
+   "count": 168,
    "sources": [
     {
      "name": "WPI ATU solution pages (WPG hot channel / tech-highlights / press releases)",
@@ -77,15 +77,16 @@
     }
    ],
    "categories": [
+    "Consumer",
     "Industrial & Auto",
     "IoT",
-    "Consumer",
+    "Dev Board",
     "Wearable",
     "SBC / SOM",
-    "Dev Board",
+    "Reference Design",
     "Module"
    ],
-   "region": "CN/TW"
+   "region": "TW/CN"
   },
   {
    "name": "Firefly / T-Chip",
