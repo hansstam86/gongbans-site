@@ -313,7 +313,8 @@ def credit_section(g):
     c = g.get("credit")
     if not c:
         return ""
-    links = " · ".join(ext_link(l["url"], l["label"] + " ↗") for l in c.get("links", []))
+    links = " · ".join(f'<a href="{e(l["url"])}">{e(l["label"])} →</a>' if l["url"].startswith("/") else ext_link(l["url"], l["label"] + " ↗")
+                       for l in c.get("links", []))
     return f'''
   <section class="dsection" id="credit">
     <div class="dsection-label">Credit</div>
@@ -530,6 +531,15 @@ def render_board(g, index, ideas_by_board=None):
 # ---------------------------------------------------------------------------
 # issuers page
 # ---------------------------------------------------------------------------
+# issuer name → (url, label) of a site guide shown on the issuer's card
+ISSUER_GUIDES = {"Tuya": ("/guides/build-with-tuya.html", "Guide: Build it with Tuya →")}
+
+
+def guide_html(name):
+    g = ISSUER_GUIDES.get(name)
+    return f'\n      <div class="issuer-products"><a href="{e(g[0])}">{e(g[1])}</a></div>' if g else ""
+
+
 def render_issuers(data, stats):
     cards = []
     for it in data["board_issuers"]:
@@ -540,7 +550,7 @@ def render_issuers(data, stats):
     <article class="issuer">
       <div class="issuer-type">{e(it["type_label"])}{region}</div>
       <div class="issuer-name">{e(it["name"])}</div>
-      <div class="issuer-products">{e(cats)}</div>
+      <div class="issuer-products">{e(cats)}</div>{guide_html(it["name"])}
       <div class="issuer-foot"><span><a href="/boards.html#issuer={quote(it["name"])}"><strong>{it["count"]:,}</strong> board{"s" if it["count"] != 1 else ""} →</a></span><span>{srcs}</span></div>
     </article>''')
 
@@ -675,6 +685,9 @@ def main():
     issuers = json.loads(ISSUERS.read_text(encoding="utf-8"))
     (ROOT / "issuers.html").write_text(render_issuers(issuers, stats), encoding="utf-8")
     print(f"issuers.html: {len(issuers['board_issuers'])} publishers, {len(issuers['solution_houses'])} solution houses")
+
+    import build_guides                     # lazy: build_guides imports nav/head/FOOTER from this module
+    build_guides.build()
 
     for name, (active, extra) in STATIC_PAGES.items():
         k = patch_chrome(ROOT / name, active, extra)

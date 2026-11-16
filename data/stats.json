@@ -1,9 +1,9 @@
 {
  "updated": "2026-11-16",
- "boards": 1367,
+ "boards": 1518,
  "curated": 16,
- "imported": 1351,
- "issuers": 24,
+ "imported": 1502,
+ "issuers": 25,
  "solution_houses": 66,
  "categories": 10,
  "full_packs": 3,
@@ -39,7 +39,7 @@
   },
   {
    "name": "Module",
-   "count": 187
+   "count": 338
   },
   {
    "name": "Reference Design",
@@ -80,12 +80,12 @@
    "count": 155
   },
   {
-   "name": "Firefly / T-Chip",
-   "count": 50
+   "name": "Tuya",
+   "count": 151
   },
   {
-   "name": "Espressif",
-   "count": 48
+   "name": "Firefly / T-Chip",
+   "count": 50
   }
  ],
  "excluded": 21

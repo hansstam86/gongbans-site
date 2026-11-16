@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build it with Tuya: when a Tuya module fits, and when it doesn&#x27;t · GONGBANS</title>
+<meta name="description" content="Build it with Tuya: what a Tuya module is, when it fits a connected consumer product, when it does not (own cloud, data residency, CRA and EN 18031 duties), and how to start: dev kit, Tuya platform, module, certification.">
+<meta property="og:title" content="Build it with Tuya: when a Tuya module fits, and when it doesn&#x27;t · GONGBANS">
+<meta property="og:description" content="Build it with Tuya: what a Tuya module is, when it fits a connected consumer product, when it does not (own cloud, data residency, CRA and EN 18031 duties), and how to start: dev kit, Tuya platform, module, certification.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gongbans.com/guides/build-with-tuya.html">
+<link rel="canonical" href="https://www.gongbans.com/guides/build-with-tuya.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23021e14'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23c9a84c' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23c9a84c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=20261116a">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="/" class="logo">GONGBANS<span>/公板</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
+  <div class="links" id="site-links">
+    <a href="/start.html">Start here</a>
+    <a href="/what-are-gongbans.html">What are gongbans?</a>
+    <a href="/boards.html">Catalogue</a>
+    <a href="/issuers.html" class="active">Who makes them</a>
+    <a href="/ideas.html">Ideas</a>
+    <a href="/playbook.html">Playbook</a>
+    <a href="https://hansolo42.gumroad.com/l/gongbans">The book</a>
+    <a href="https://hansstam.eu">Hans Stam</a>
+    <a href="/#download" class="cta">Download PDF</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="crumbs"><a href="/issuers.html">Who makes them</a><span class="sep">/</span><a href="/boards.html#issuer=Tuya">Tuya</a><span class="sep">/</span><span>Guide</span></div>
+    <div class="header-id">GUIDE · TUYA MODULES · UPDATED NOVEMBER 2026</div>
+    <h1>Build it with <em>Tuya</em></h1>
+    <p class="sub">The fastest way to put a connected consumer product on the market, and the trade-offs that come with it.</p>
+  </div>
+</div>
+
+<main class="detail startpack playbook">
+  <div class="idea-disclaimer"><strong>General guidance, not advice.</strong> Listed from Tuya's public documentation; Tuya is not affiliated with GONGBANS unless stated. Check Tuya's own documentation and current terms before you decide. Not legal advice.</div>
+
+  <article class="pack-body">
+<p>A Tuya module is a small radio board (Wi-Fi, Bluetooth, Zigbee, Thread, Sub-G or cellular) that comes with Tuya&#x27;s firmware on it and a place in Tuya&#x27;s cloud. You solder it onto your PCB, set up your product on Tuya&#x27;s developer platform, and your device shows up in Tuya&#x27;s Smart Life app, or in a white-label app with your logo. No backend team, no app team. That is the pitch, and for the right product it is a good one.</p>
+<h2 id="when-it-fits">When it fits</h2>
+<ul><li>You want a connected consumer product on the shelf fast: plugs, lights, sensors, heaters, pet feeders, small appliances.</li><li>The product is the hardware, not the software. You are fine with &quot;the app&quot; being an off-the-shelf app with your brand on it.</li><li>You want voice assistants and the usual smart-home integrations without negotiating each one yourself.</li><li>Your factory already knows Tuya. Most Shenzhen smart-home factories do, and that alone saves you weeks.</li></ul>
+<h2 id="when-it-does-not">When it does not</h2>
+<ul><li><strong>You want your own cloud, your own firmware, your own data.</strong> On the standard path the device runs Tuya&#x27;s firmware and talks to Tuya&#x27;s cloud. You can go deeper with TuyaOS and the SDKs, but you are building on their platform, not yours.</li><li><strong>Your customers ask where the data lives.</strong> Tuya runs regional data centres. The GDPR questions are still yours: who is controller, who is processor, which data processing agreement. Sort it before launch, not when the first big buyer asks.</li><li><strong>You think the module makes you compliant.</strong> It doesn&#x27;t. Under the EU Cyber Resilience Act and EN 18031 (the cybersecurity standard under the Radio Equipment Directive) you, the maker, carry the duty: security updates, vulnerability handling, the technical file. A certified module helps with your radio tests. It does not sign your declaration of conformity.</li><li><strong>You plan to raise money on &quot;our platform&quot;.</strong> Investors will ask what you own. On a Tuya product the honest answer is the brand, the hardware and the customer.</li></ul>
+<h2 id="how-to-start">How to start</h2>
+<ol><li><strong>Buy a dev kit.</strong> Tuya sells demo boards for its main module families. Play with one for a weekend before you design anything.</li><li><strong>Create the product on the Tuya developer platform</strong> (platform.tuya.com). Pick the category, define the functions, and choose: no-code (the module runs everything) or MCU mode (your own microcontroller talks to the module over a serial link).</li><li><strong>Pick the module.</strong> Match radio, size, pins and antenna to your enclosure. Every Tuya module in our catalogue links to its official datasheet.</li><li><strong>Certification.</strong> Check which radio certificates the module already has, then plan your own CE (RED), EN 18031 and, for the US, FCC. Plan time for it. It is never the quick part.</li></ol>
+<p>Then build a small batch, put it in real homes, and only then order volume.</p>
+  </article>
+
+  <section class="dsection" id="modules">
+    <div class="dsection-label">Next</div>
+    <div class="hans-note">
+      <div class="hans-note-label">Pick a module</div>
+      <p>All <a href="/boards.html#issuer=Tuya">Tuya modules in the catalogue</a>, each with its chip, radio, size and a link to Tuya's official datasheet. Never had a product made? Read <a href="/start.html">Start here</a> and the <a href="/playbook.html">founder playbook</a> first.</p>
+    </div>
+  </section>
+
+  <section class="dsection" id="credit">
+    <div class="dsection-label">Credit</div>
+    <h2>Content credit</h2>
+    <p>Credit: Tuya Smart (tuya.com). Listed from Tuya's public documentation; Tuya is not affiliated with GONGBANS unless stated.</p>
+    <p><a href="https://www.tuya.com" target="_blank" rel="noopener">tuya.com ↗</a> · <a href="https://developer.tuya.com/en/docs/iot/network-module-overview?id=Ka4z12ojepber" target="_blank" rel="noopener">Tuya network modules ↗</a></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="foot-links"><a href="/">Home</a><a href="/start.html">Start here</a><a href="/what-are-gongbans.html">What are gongbans?</a><a href="/boards.html">Catalogue</a><a href="/issuers.html">Who makes them</a><a href="/ideas.html">Ideas</a><a href="/playbook.html">Playbook</a><a href="/boards-kingbrother.html">Kingbrother SOMs</a></p>
+  <p><a href="https://hansstam.eu">Hans Stam</a> · Berlin / Shenzhen · 20 years in China manufacturing · Author of <a href="https://hansolo42.gumroad.com/l/gongbans">GONGBANS</a> · <a href="mailto:hans.stam@gmail.com">hans.stam@gmail.com</a></p>
+</footer>
+<script src="/assets/site.js?v=20261116a"></script>
+</body>
+</html>

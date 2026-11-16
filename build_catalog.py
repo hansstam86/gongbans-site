@@ -68,6 +68,9 @@ CATEGORY_MAP = {
     "fingerprint_module": "Module", "imu_module": "Module", "ac_dc_power_module": "Module",
     "dc_dc_power_module": "Module", "power_supply": "Module", "comms_isolation_module": "Module",
     "other_module": "Module",
+    # platform module catalogues (Tuya, Nov 2026)
+    "zigbee_module": "Module", "thread_module": "Module", "subg_module": "Module", "plc_module": "Module",
+    "cellular_module": "Module",
 }
 CATEGORY_ORDER = ["IoT", "Wearable", "E-Lock", "Dev Board", "Community", "SBC / SOM",
                   "Module", "Reference Design", "Industrial & Auto", "Consumer"]
@@ -101,6 +104,7 @@ ISSUER_TYPE_LABEL = {
     "chip_house": "Chip house", "distributor": "Distributor", "solution_house": "Solution house",
     "community": "Community / maker brand", "leak_channel": "Circulating design",
     "module_maker": "Module maker",
+    "platform_module_maker": "IoT platform + module maker",
 }
 # Per-source credit shown on every board page of that source (permission-based listings).
 SOURCE_CREDIT = {
@@ -111,7 +115,26 @@ SOURCE_CREDIT = {
         "links": [{"label": "hlktech.com", "url": "https://www.hlktech.com"},
                   {"label": "Hi-Link datasheets & downloads", "url": "https://d.hlktech.net/Mobile/Download"}],
     },
+    "tuya_public_docs_2026": {
+        "text": ("Credit: Tuya Smart (tuya.com). Listed from Tuya's public documentation; Tuya is not affiliated with GONGBANS "
+                 "unless stated. This page holds metadata and our own short summary only: no copied text, no hosted PDFs or images, "
+                 "no prices. The official datasheet on developer.tuya.com is the reference for every number."),
+        "datasheet_link": "Official Tuya datasheet",
+        "links": [{"label": "tuya.com", "url": "https://www.tuya.com"},
+                  {"label": "Tuya network modules (all families)", "url": "https://developer.tuya.com/en/docs/iot/network-module-overview?id=Ka4z12ojepber"},
+                  {"label": "Guide: Build it with Tuya", "url": "/guides/build-with-tuya.html"}],
+    },
 }
+
+
+def credit_for(source_id, source_url, name):
+    c = SOURCE_CREDIT.get(source_id)
+    if not c:
+        return None
+    out = {"text": c["text"], "links": list(c["links"])}
+    if c.get("datasheet_link") and source_url:
+        out["links"].insert(0, {"label": f"{c['datasheet_link']}: {name}", "url": source_url})
+    return out
 
 # ---------------------------------------------------------------------------
 # Exclusions
@@ -355,7 +378,7 @@ def main():
             "status": status,
             "notes": scrub(b["notes"]),
             "hint": hint,
-            "credit": SOURCE_CREDIT.get(b["source_id"]),
+            "credit": credit_for(b["source_id"], source_url, name),
         })
 
     # ---- issuers of the boards ----
