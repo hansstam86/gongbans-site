@@ -65,7 +65,8 @@ PUBLISHER_LABEL = {
     "Jieli 杰理": "Jieli Technology (杰理)", "ATU kit (curated)": "WPI ATU (distributor kits)", "DFRobot": "DFRobot", "OSHWHub": "OSHWHub community designs",
 }
 ISSUER_TYPE_LABEL = {"chip_house": "Chip house", "distributor": "Distributor", "solution_house": "Solution house",
-                     "community": "Community / maker brand", "leak_channel": "Circulating schematic (not an official release)"}
+                     "community": "Community / maker brand", "leak_channel": "Circulating schematic (not an official release)",
+                     "module_maker": "Module maker"}
 WHAT_TO_ASK = {
     "company": "sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.",
 }

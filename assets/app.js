@@ -100,9 +100,10 @@
   // same wording as OPENNESS_PLAIN in build_detail_pages.py
   const OPEN_LABEL = {
     open_download: 'Free download', registration: 'Free account needed', with_purchase: 'Comes with purchase',
-    contact_atu: 'Ask the distributor', community: 'Community project', hosted: 'Download here (full pack)'
+    contact_atu: 'Ask the distributor', community: 'Community project', hosted: 'Download here (full pack)',
+    contact_issuer: 'Datasheet public, files via maker'
   };
-  const OPEN = ['open_download', 'hosted', 'registration', 'with_purchase', 'contact_atu', 'community']
+  const OPEN = ['open_download', 'hosted', 'registration', 'with_purchase', 'contact_atu', 'contact_issuer', 'community']
     .filter(k => all.some(g => g.openness === k)).map(k => [k, OPEN_LABEL[k]]);
   const openCounts = count(g => g.openness);
 
