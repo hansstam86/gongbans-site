@@ -105,6 +105,22 @@
    "region": "CN"
   },
   {
+   "name": "Tuya",
+   "type": "platform_module_maker",
+   "type_label": "IoT platform + module maker",
+   "count": 151,
+   "sources": [
+    {
+     "name": "Tuya Smart public module documentation",
+     "url": "https://developer.tuya.com/en/docs/iot/network-module-overview?id=Ka4z12ojepber"
+    }
+   ],
+   "categories": [
+    "Module"
+   ],
+   "region": "CN"
+  },
+  {
    "name": "Firefly / T-Chip",
    "type": "solution_house",
    "type_label": "Solution house",
