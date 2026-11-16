@@ -29,7 +29,7 @@ IDEAS = ROOT / "data" / "ideas.json"   # optional: ideas built on the boards (bu
 DB_DIR = ROOT / "db"
 DB_DIR.mkdir(exist_ok=True)
 
-ASSET_V = "20261114e"
+ASSET_V = "20261116a"
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">')
@@ -56,11 +56,13 @@ OPENNESS_TEXT = {
     "with_purchase": "Design files are handed over with a purchase of the board.",
     "contact_atu": "Design files are released through the distributor's field-application channel (WPI / ATU), not published openly.",
     "community": "Circulates through community channels rather than an official publication.",
+    "contact_issuer": "The maker publishes datasheets; schematics, PCB files and SDKs are not public. Ask the maker for design support.",
 }
-OPENNESS_CLASS = {"open_download": "", "community": "neutral", "registration": "gated", "with_purchase": "gated", "contact_atu": "gated", "hosted": ""}
+OPENNESS_CLASS = {"open_download": "", "community": "neutral", "registration": "gated", "with_purchase": "gated", "contact_atu": "gated", "hosted": "", "contact_issuer": "gated"}
 # plain-language labels (same wording as the catalogue chips in assets/app.js)
 OPENNESS_PLAIN = {"open_download": "Free download", "registration": "Free account needed", "with_purchase": "Comes with purchase",
-                  "contact_atu": "Ask the distributor (ATU)", "community": "Community project", "hosted": "Download here (full pack)"}
+                  "contact_atu": "Ask the distributor (ATU)", "community": "Community project", "hosted": "Download here (full pack)",
+                  "contact_issuer": "Datasheet public, files via maker"}
 CURATED_FILE_TYPES = [
     ("schematic", "SCH", "Schematic", "Protel / Altium .sch"),
     ("pcb", "PCB", "PCB layout", "Protel / Altium .pcb"),
@@ -307,6 +309,20 @@ def source_section(g):
   </section>'''
 
 
+def credit_section(g):
+    c = g.get("credit")
+    if not c:
+        return ""
+    links = " · ".join(ext_link(l["url"], l["label"] + " ↗") for l in c.get("links", []))
+    return f'''
+  <section class="dsection" id="credit">
+    <div class="dsection-label">Credit</div>
+    <h2>Content credit</h2>
+    <p>{e(c["text"])}</p>
+    {f"<p>{links}</p>" if links else ""}
+  </section>'''
+
+
 def hans_note_section(g):
     note = (g.get("hans_notes") or "").strip()
     if not note:
@@ -495,6 +511,7 @@ def render_board(g, index, ideas_by_board=None):
     {f'<div class="tags">TAGS · {tags}</div>' if tags else ''}
   </section>
 {silicon_section(g)}
+{credit_section(g)}
 {files_html}
 {bom_section(g)}
 {source_section(g)}

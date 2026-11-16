@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15",
+ "updated": "2026-11-16",
  "board_issuers": [
   {
    "name": "M5Stack",
@@ -87,6 +87,22 @@
     "Module"
    ],
    "region": "TW/CN"
+  },
+  {
+   "name": "Hi-Link",
+   "type": "module_maker",
+   "type_label": "Module maker",
+   "count": 155,
+   "sources": [
+    {
+     "name": "Hi-Link (Shenzhen Hi-Link Electronic) product catalogue",
+     "url": "https://www.hlktech.com"
+    }
+   ],
+   "categories": [
+    "Module"
+   ],
+   "region": "CN"
   },
   {
    "name": "Firefly / T-Chip",
@@ -627,6 +643,21 @@
     "Air105 MCU",
     "MQTT/TLS",
     "OEM/ODM"
+   ]
+  },
+  {
+   "company_en": "Shenzhen Hi-Link Electronic Co., Ltd.",
+   "company_cn": "深圳市海凌科电子有限公司",
+   "category": "IoT Modules",
+   "subcategory": "WiFi / BLE / radar sensor / power module maker",
+   "website": "hlktech.com",
+   "key_products": [
+    "WiFi & router modules (MT7688/MT7628/WiFi6)",
+    "BLE modules",
+    "5.8/10/24/60/79 GHz mmWave radar sensors",
+    "AC-DC & DC-DC power modules",
+    "face / fingerprint recognition modules",
+    "RS485/CAN isolation transceivers"
    ]
   },
   {

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15",
+ "generated": "2026-11-16",
  "source": "gongban.db (public columns only)",
  "publishers": {
   "M5Stack": {
@@ -1006,6 +1006,22 @@
     "sub-metering IoT",
     "NB-IoT / LoRa",
     "OEM/ODM"
+   ]
+  },
+  "101": {
+   "id": 101,
+   "company_en": "Shenzhen Hi-Link Electronic Co., Ltd.",
+   "company_cn": "深圳市海凌科电子有限公司",
+   "category": "IoT Modules",
+   "subcategory": "WiFi / BLE / radar sensor / power module maker",
+   "website": "hlktech.com",
+   "key_products": [
+    "WiFi & router modules (MT7688/MT7628/WiFi6)",
+    "BLE modules",
+    "5.8/10/24/60/79 GHz mmWave radar sensors",
+    "AC-DC & DC-DC power modules",
+    "face / fingerprint recognition modules",
+    "RS485/CAN isolation transceivers"
    ]
   }
  },

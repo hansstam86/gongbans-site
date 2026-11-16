@@ -62,6 +62,12 @@ CATEGORY_MAP = {
     "smart_lock": "E-Lock",
     "phone": "Consumer", "tv": "Consumer", "pc": "Consumer", "bt_speaker": "Consumer",
     "tws": "Consumer", "power_adapter": "Consumer", "memory": "Consumer",
+    # module-maker catalogues (Hi-Link, Nov 2026)
+    "wifi_module": "Module", "router_module": "Module", "ethernet_module": "Module", "ble_module": "Module",
+    "wifi_ble_module": "Module", "mmwave_radar": "Module", "face_recognition_module": "Module",
+    "fingerprint_module": "Module", "imu_module": "Module", "ac_dc_power_module": "Module",
+    "dc_dc_power_module": "Module", "power_supply": "Module", "comms_isolation_module": "Module",
+    "other_module": "Module",
 }
 CATEGORY_ORDER = ["IoT", "Wearable", "E-Lock", "Dev Board", "Community", "SBC / SOM",
                   "Module", "Reference Design", "Industrial & Auto", "Consumer"]
@@ -84,15 +90,27 @@ OPENNESS_LABEL = {
     "contact_atu": "Via distributor (ATU)",
     "community": "Community",
     "hosted": "Hosted on this site",
+    "contact_issuer": "Datasheet public, design files via maker",
 }
 OPENNESS_SHORT = {
     "open_download": "Open download", "registration": "Registration",
     "with_purchase": "With purchase", "contact_atu": "Via distributor", "community": "Community",
-    "hosted": "Hosted here",
+    "hosted": "Hosted here", "contact_issuer": "Via maker",
 }
 ISSUER_TYPE_LABEL = {
     "chip_house": "Chip house", "distributor": "Distributor", "solution_house": "Solution house",
     "community": "Community / maker brand", "leak_channel": "Circulating design",
+    "module_maker": "Module maker",
+}
+# Per-source credit shown on every board page of that source (permission-based listings).
+SOURCE_CREDIT = {
+    "hilink_brochure_2026": {
+        "text": ("Product information from the English product catalogue of Shenzhen Hi-Link Electronic Co., Ltd. (海凌科), "
+                 "listed here with Hi-Link's permission. Brochure content only: no prices. Schematics, PCB files and SDKs "
+                 "are not public; datasheets are on Hi-Link's download centre."),
+        "links": [{"label": "hlktech.com", "url": "https://www.hlktech.com"},
+                  {"label": "Hi-Link datasheets & downloads", "url": "https://d.hlktech.net/Mobile/Download"}],
+    },
 }
 
 # ---------------------------------------------------------------------------
@@ -337,6 +355,7 @@ def main():
             "status": status,
             "notes": scrub(b["notes"]),
             "hint": hint,
+            "credit": SOURCE_CREDIT.get(b["source_id"]),
         })
 
     # ---- issuers of the boards ----

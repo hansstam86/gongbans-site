@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-15",
- "boards": 1212,
+ "updated": "2026-11-16",
+ "boards": 1367,
  "curated": 16,
- "imported": 1196,
- "issuers": 23,
- "solution_houses": 65,
+ "imported": 1351,
+ "issuers": 24,
+ "solution_houses": 66,
  "categories": 10,
  "full_packs": 3,
  "with_design_files": 739,
@@ -39,7 +39,7 @@
   },
   {
    "name": "Module",
-   "count": 32
+   "count": 187
   },
   {
    "name": "Reference Design",
@@ -76,16 +76,16 @@
    "count": 168
   },
   {
+   "name": "Hi-Link",
+   "count": 155
+  },
+  {
    "name": "Firefly / T-Chip",
    "count": 50
   },
   {
    "name": "Espressif",
    "count": 48
-  },
-  {
-   "name": "Wireless-Tag",
-   "count": 18
   }
  ],
  "excluded": 21

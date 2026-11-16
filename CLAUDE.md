@@ -65,3 +65,9 @@ Static site on GitHub Pages. Managed by the web-master (see ~/Projects/web-maste
 - WPI ATU 2016 catalogue (added 2026-11-15): 100 `wpi-atu-<code>-…` rows in gongban.db (source `wpi_atu_catalogue_2016`, metadata only, imported by
   `~/Projects/gongban-db/scripts/import_atu_2016.py` from two private PDFs that must never be published or hosted). 90 are published; the 10 that
   describe a hand-curated ATU kit (same project code) are listed in `DUPLICATE_SLUGS` in `build_catalog.py`. No designer / team-member names anywhere.
+- Hi-Link catalogue (added 2026-11-16, Hans OK): 155 `hilink-…` rows in gongban.db (source `hilink_brochure_2026`, issuer_type `module_maker`), imported by
+  `~/Projects/gongban-db/scripts/import_hilink_2026.py` from JSON extracts of Hi-Link's English brochure (private, never hosted). Permission (Hi-Link, 16 Nov 2026)
+  covers brochure content + public datasheets + photos only: no prices, no MOQ, no schematics/PCB/SDK, no personal contact data on the site. Every Hi-Link page
+  carries the credit box (`SOURCE_CREDIT` in `build_catalog.py` → `credit_section()` in `build_detail_pages.py`) linking hlktech.com + the download centre.
+  Openness `contact_issuer` = "Datasheet public, files via maker" (also in `assets/app.js`). Vehicle/traffic radars (LD2415L, LD2417, LD2451, LD7902) are
+  excluded (mobility rule). QA: `agent-assistant/.../outputs/gongbans_hilink_qa.py`.
