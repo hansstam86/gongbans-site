@@ -111,6 +111,75 @@
    "source_url": "https://oshwhub.com",
    "boards_in_catalogue": 0,
    "house": null
+  },
+  "Hi-Link": {
+   "label": "Hi-Link (海凌科)",
+   "kind": "company",
+   "issuer_type": "Module maker",
+   "source_name": "Hi-Link (Shenzhen Hi-Link Electronic) product catalogue",
+   "source_url": "https://www.hlktech.com",
+   "boards_in_catalogue": 155,
+   "house": {
+    "id": 101,
+    "company_en": "Shenzhen Hi-Link Electronic Co., Ltd.",
+    "company_cn": "深圳市海凌科电子有限公司",
+    "category": "IoT Modules",
+    "subcategory": "WiFi / BLE / radar sensor / power module maker",
+    "website": "hlktech.com",
+    "key_products": [
+     "WiFi & router modules (MT7688/MT7628/WiFi6)",
+     "BLE modules",
+     "5.8/10/24/60/79 GHz mmWave radar sensors",
+     "AC-DC & DC-DC power modules",
+     "face / fingerprint recognition modules",
+     "RS485/CAN isolation transceivers"
+    ]
+   }
+  },
+  "HopeRF": {
+   "label": "HopeRF (华普微)",
+   "kind": "company",
+   "issuer_type": "Chip house",
+   "source_name": "HopeRF Product Portfolio (GitHub, MIT)",
+   "source_url": "https://github.com/HOPE-MICROELECTRONICS/Product_Portfolio",
+   "boards_in_catalogue": 122,
+   "house": {
+    "id": 102,
+    "company_en": "HopeRF (Shenzhen Hope Microelectronics)",
+    "company_cn": "深圳市华普微电子股份有限公司",
+    "category": "IoT Modules",
+    "subcategory": "RF chip house + module maker",
+    "website": "hoperf.com",
+    "key_products": [
+     "Sub-GHz transmitter/receiver/transceiver ICs (CMT2xxx) and RFM modules",
+     "LoRa modules (RFM9x, RFM6601)",
+     "BLE SoCs + modules",
+     "Matter-over-Thread / Wi-Fi modules",
+     "digital isolators",
+     "pressure + humidity sensors"
+    ]
+   }
+  },
+  "Tuya": {
+   "label": "Tuya Smart (涂鸦智能)",
+   "kind": "company",
+   "issuer_type": "Platform + module maker",
+   "source_name": "Tuya Smart public module documentation",
+   "source_url": "https://developer.tuya.com/en/docs/iot/network-module-overview?id=Ka4z12ojepber",
+   "boards_in_catalogue": 151,
+   "house": {
+    "id": 55,
+    "company_en": "Tuya Smart Module",
+    "company_cn": "涂鸦智能模组部门",
+    "category": "Smart Home / IoT",
+    "subcategory": "WiFi/BT/Zigbee smart home modules",
+    "website": "developer.tuya.com",
+    "key_products": [
+     "CBU / WBR3 / BT3L modules",
+     "Alexa/Google certified",
+     "volume IoT OEM"
+    ]
+   }
   }
  },
  "houses": {
