@@ -1,6 +1,6 @@
 /* ==========================================================
    GONGBANS — ideas (ideas.html)
-   Vanilla JS. The 50 idea cards are static HTML written by
+   Vanilla JS. The idea cards are static HTML written by
    build_ideas.py; this script adds category / tag chips, instant
    search and sorting over the cards' data-* attributes. State lives
    in the URL hash (#cat=Smart%20home&tag=lorawan&q=knob&sort=margin)

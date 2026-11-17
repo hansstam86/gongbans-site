@@ -315,7 +315,7 @@ def render():
     <div class="dsection-label">Where next</div>
     <div class="hans-note">
       <div class="hans-note-label">Pick an idea, validate demand, then build</div>
-      <p>The <a href="/ideas.html">{N} ideas</a> each have a founder start pack that opens with the demand check (<a href="#validate">section 1 here</a>), then the plan, the boards, the people on file and the two e-mails. If you take one on and want a second pair of eyes on the sourcing, <a href="https://hansstam.eu">talk to Hans via hansstam.eu</a>.</p>
+      <p>Of the <a href="/ideas.html">{N} ideas</a>, those marked "Start pack" have a founder start pack that opens with the demand check (<a href="#validate">section 1 here</a>), then the plan, the boards, the people on file and the two e-mails. If you take one on and want a second pair of eyes on the sourcing, <a href="https://hansstam.eu">talk to Hans via hansstam.eu</a>.</p>
     </div>
   </section>
 

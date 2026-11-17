@@ -14,7 +14,7 @@ gongbans-site/
 ├── issuers.html            ← publishers of the boards + Shenzhen solution-house directory (generated)
 ├── boards-kingbrother.html ← Kingbrother IDH industrial SOM platforms (hand-written)
 ├── what-are-gongbans.html  ← essay
-├── ideas.html              ← product concepts built from catalogue boards (search, tag chips, sort); 50 generated,
+├── ideas.html              ← product concepts built from catalogue boards (search, tag chips, sort); 100 generated (50 + 50 in inventor round 2, 17 Nov 2026),
 │                              16 withdrawn after the Nov 2026 market check (data/ideas.json → removed_after_market_check), 16 added in round 2 (add_ideas_round2.py + add_ideas_round2b.py; data/ideas.json → rounds)
 ├── ideas/                  ← one HTML page per idea (generated)
 ├── startpacks/             ← founder start packs: <slug>.md (source, downloadable) + <slug>.html (generated);
@@ -40,7 +40,7 @@ gongbans-site/
 │                              build_contacts.py, build_playbook.py and build_startpacks.py)
 ├── build_validate.py       ← data/ideas.json → "Validate demand first" blocks in startpacks/*.md
 ├── build_market.py         ← data/market-check.json → market-check callout + competitor sub-table in startpacks/*.md
-├── data/market-check.json  ← external market research per idea (all 50, Nov 2026)
+├── data/market-check.json  ← external market research per idea (the first 50, Nov 2026; round-2 ideas not checked yet)
 ├── build_contacts.py       ← gongban.db → data/contacts.json + "Who to contact" blocks in startpacks/*.md
 ├── build_playbook.py       ← playbook.html
 └── README.md
@@ -67,7 +67,7 @@ python3 build_ideas.py          # regenerates ideas.html + ideas/*.html + startp
 
 ## Ideas
 
-`ideas.html` lists 50 product concepts that a European team could build mainly from boards in the catalogue, generated
+`ideas.html` lists 100 product concepts that a European team could build mainly from boards in the catalogue, generated
 by the gongban-inventor (an AI assistant working from `catalogue.txt`, a flat export of `data/catalog.json`). Each idea
 names 2–4 real boards (validated against the catalogue) with their role, the buyer, why now, what is genuinely new,
 effort/BOM/price **estimates**, the EU certification path, a kill question and four 1–5 scores. Every idea page carries
