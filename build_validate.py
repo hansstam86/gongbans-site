@@ -480,7 +480,8 @@ def patch_md(md, section, slug):
 
 
 def patch_packs():
-    ideas = json.loads(IDEAS_JSON.read_text(encoding="utf-8"))["ideas"]
+    # only ideas with a start pack need WHERE/PROBE (round-2 ideas of 17 Nov 2026 have no pack yet)
+    ideas = [i for i in json.loads(IDEAS_JSON.read_text(encoding="utf-8"))["ideas"] if (PACK_DIR / f"{i['slug']}.md").exists()]
     missing_where = [i["slug"] for i in ideas if i["slug"] not in WHERE]
     missing_probe = [i["slug"] for i in ideas if i["slug"] not in PROBE]
     assert not missing_probe, f"no interview probe for: {missing_probe}"
