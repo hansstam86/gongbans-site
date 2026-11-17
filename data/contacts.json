@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16",
+ "generated": "2026-11-17",
  "source": "gongban.db (public columns only)",
  "publishers": {
   "M5Stack": {
@@ -1022,6 +1022,22 @@
     "AC-DC & DC-DC power modules",
     "face / fingerprint recognition modules",
     "RS485/CAN isolation transceivers"
+   ]
+  },
+  "102": {
+   "id": 102,
+   "company_en": "HopeRF (Shenzhen Hope Microelectronics)",
+   "company_cn": "深圳市华普微电子股份有限公司",
+   "category": "IoT Modules",
+   "subcategory": "RF chip house + module maker",
+   "website": "hoperf.com",
+   "key_products": [
+    "Sub-GHz transmitter/receiver/transceiver ICs (CMT2xxx) and RFM modules",
+    "LoRa modules (RFM9x, RFM6601)",
+    "BLE SoCs + modules",
+    "Matter-over-Thread / Wi-Fi modules",
+    "digital isolators",
+    "pressure + humidity sensors"
    ]
   }
  },

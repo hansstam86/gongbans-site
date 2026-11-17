@@ -71,9 +71,14 @@ CATEGORY_MAP = {
     # platform module catalogues (Tuya, Nov 2026)
     "zigbee_module": "Module", "thread_module": "Module", "subg_module": "Module", "plc_module": "Module",
     "cellular_module": "Module",
+    # chip-house portfolios (HopeRF, Nov 2026): bare ICs get their own group
+    "subg_chip": "Chip / IC", "rf24_chip": "Chip / IC", "ble_soc": "Chip / IC", "isolator_ic": "Chip / IC",
+    "gate_driver_ic": "Chip / IC", "sensor_ic": "Chip / IC",
+    "lora_module": "Module", "rf24_module": "Module",
+    "subg_devkit": "Dev Board", "thread_devkit": "Dev Board", "sensor_devkit": "Dev Board",
 }
 CATEGORY_ORDER = ["IoT", "Wearable", "E-Lock", "Dev Board", "Community", "SBC / SOM",
-                  "Module", "Reference Design", "Industrial & Auto", "Consumer"]
+                  "Module", "Chip / IC", "Reference Design", "Industrial & Auto", "Consumer"]
 
 # WPI's archived "hot channel" pages were filed under the page's channel
 # (memory, PC...) rather than the product. Re-file the soft ones by keyword.
@@ -123,6 +128,16 @@ SOURCE_CREDIT = {
         "links": [{"label": "tuya.com", "url": "https://www.tuya.com"},
                   {"label": "Tuya network modules (all families)", "url": "https://developer.tuya.com/en/docs/iot/network-module-overview?id=Ka4z12ojepber"},
                   {"label": "Guide: Build it with Tuya", "url": "/guides/build-with-tuya.html"}],
+    },
+    "hoperf_github_2026": {
+        "text": ("Credit: HopeRF (Shenzhen Hope Microelectronics, hoperf.com). Listed from HopeRF's public Product Portfolio repository on "
+                 "GitHub, which HopeRF pointed us to for this listing; the repository is published under the MIT licence. Files are "
+                 "linked, not re-hosted: datasheets, reference schematics/PCB files, 3D models and demo code are in the product's GitHub "
+                 "folder. This page holds metadata and our own short summary; the datasheet is the reference for every number."),
+        "datasheet_link": "HopeRF GitHub folder",
+        "links": [{"label": "hoperf.com", "url": "https://www.hoperf.com"},
+                  {"label": "HopeRF Product Portfolio on GitHub", "url": "https://github.com/HOPE-MICROELECTRONICS/Product_Portfolio"},
+                  {"label": "MIT licence", "url": "https://github.com/HOPE-MICROELECTRONICS/Product_Portfolio/blob/main/LICENSE"}],
     },
 }
 

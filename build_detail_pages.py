@@ -533,11 +533,27 @@ def render_board(g, index, ideas_by_board=None):
 # ---------------------------------------------------------------------------
 # issuer name → (url, label) of a site guide shown on the issuer's card
 ISSUER_GUIDES = {"Tuya": ("/guides/build-with-tuya.html", "Guide: Build it with Tuya →")}
+# Short credit / licence note on an issuer card (public facts only)
+ISSUER_NOTES = {
+    "HopeRF": ("Credit: HopeRF (hoperf.com). Listed from HopeRF's public Product Portfolio on GitHub (MIT licence), with datasheets, "
+               "reference schematics/PCB files, 3D models and demo code linked per product. The repo also has a schematic/PCB part "
+               "library for its sub-GHz chips (Sub-1GHz/SCH_PCB_Lib, PADS + Protel). End-of-life parts are not listed.",
+               [("Product Portfolio on GitHub", "https://github.com/HOPE-MICROELECTRONICS/Product_Portfolio"),
+                ("MIT licence", "https://github.com/HOPE-MICROELECTRONICS/Product_Portfolio/blob/main/LICENSE"),
+                ("hoperf.com", "https://www.hoperf.com")]),
+}
 
 
 def guide_html(name):
+    out = ""
+    n = ISSUER_NOTES.get(name)
+    if n:
+        links = " · ".join(ext_link(u, l + " ↗") for l, u in n[1])
+        out += f'\n      <div class="issuer-products">{e(n[0])}</div>\n      <div class="issuer-products">{links}</div>'
     g = ISSUER_GUIDES.get(name)
-    return f'\n      <div class="issuer-products"><a href="{e(g[0])}">{e(g[1])}</a></div>' if g else ""
+    if g:
+        out += f'\n      <div class="issuer-products"><a href="{e(g[0])}">{e(g[1])}</a></div>'
+    return out
 
 
 def render_issuers(data, stats):
