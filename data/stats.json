@@ -1,17 +1,17 @@
 {
- "updated": "2026-11-16",
- "boards": 1518,
+ "updated": "2026-11-17",
+ "boards": 1640,
  "curated": 16,
- "imported": 1502,
- "issuers": 25,
- "solution_houses": 66,
- "categories": 10,
+ "imported": 1624,
+ "issuers": 26,
+ "solution_houses": 67,
+ "categories": 11,
  "full_packs": 3,
- "with_design_files": 739,
- "with_schematic": 660,
- "with_pcb": 194,
- "direct_links": 557,
- "open_download": 1027,
+ "with_design_files": 861,
+ "with_schematic": 695,
+ "with_pcb": 217,
+ "direct_links": 679,
+ "open_download": 1149,
  "per_category": [
   {
    "name": "IoT",
@@ -27,7 +27,7 @@
   },
   {
    "name": "Dev Board",
-   "count": 787
+   "count": 790
   },
   {
    "name": "Community",
@@ -39,7 +39,11 @@
   },
   {
    "name": "Module",
-   "count": 338
+   "count": 399
+  },
+  {
+   "name": "Chip / IC",
+   "count": 58
   },
   {
    "name": "Reference Design",
@@ -84,8 +88,8 @@
    "count": 151
   },
   {
-   "name": "Firefly / T-Chip",
-   "count": 50
+   "name": "HopeRF",
+   "count": 122
   }
  ],
  "excluded": 21
