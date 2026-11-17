@@ -52,21 +52,25 @@ NEXT_RE = re.compile(r"^## \d\. Next steps", re.M)
 PUBLISHER_KIND = {
     "M5Stack": "company", "Seeed Studio": "company", "Espressif": "company", "SIMCom": "company",
     "Jieli 杰理": "company", "ATU kit (curated)": "company", "DFRobot": "company", "OSHWHub": "platform",
+    "Hi-Link": "company", "HopeRF": "company", "Tuya": "company",          # round-2 ideas (17 Nov 2026)
 }
 ISSUER_SOURCE = {   # issuer → sources.id (boards in the db carry it; curated ATU kits do not)
     "M5Stack": "m5stack_github", "Seeed Studio": "seeed_wiki", "Espressif": "espressif_github",
     "SIMCom": "simcom", "Jieli 杰理": "jieli_circulating", "ATU kit (curated)": "wpi_atu_pages", "DFRobot": "dfrobot_wiki", "OSHWHub": "oshwhub",
+    "Hi-Link": "hilink_brochure_2026", "HopeRF": "hoperf_github_2026", "Tuya": "tuya_public_docs_2026",
 }
 ISSUER_HOUSE = {    # issuer → solution_houses.id of the same company, when the directory has it
     "Seeed Studio": 97, "Jieli 杰理": 53, "ATU kit (curated)": 62,
+    "Hi-Link": 101, "HopeRF": 102, "Tuya": 55,
 }
 PUBLISHER_LABEL = {
     "M5Stack": "M5Stack", "Seeed Studio": "Seeed Studio", "Espressif": "Espressif", "SIMCom": "SIMCom",
     "Jieli 杰理": "Jieli Technology (杰理)", "ATU kit (curated)": "WPI ATU (distributor kits)", "DFRobot": "DFRobot", "OSHWHub": "OSHWHub community designs",
+    "Hi-Link": "Hi-Link (海凌科)", "HopeRF": "HopeRF (华普微)", "Tuya": "Tuya Smart (涂鸦智能)",
 }
 ISSUER_TYPE_LABEL = {"chip_house": "Chip house", "distributor": "Distributor", "solution_house": "Solution house",
                      "community": "Community / maker brand", "leak_channel": "Circulating schematic (not an official release)",
-                     "module_maker": "Module maker"}
+                     "module_maker": "Module maker", "platform_module_maker": "Platform + module maker"}
 WHAT_TO_ASK = {
     "company": "sample units of the SKUs above, unit pricing at 100 / 500 / 1,000, whether a customised variant is possible (and its NRE and MOQ), and the module's radio test reports if any.",
 }
@@ -88,6 +92,9 @@ DIRECTORY_RULES = [
     ("NFC / RFID readers", lambda i: {"nfc", "rfid"} & set(i["tags"]), [70, 68]),
     ("POS / payment terminals and barcode scanners", lambda i: "pos" in i["tags"], [91, 70]),
     ("Commercial displays / signage", lambda i: "displays" in i["tags"] and "e-paper" not in i["tags"], [67]),
+    ("mmWave radar sensor modules", lambda i: "radar" in i["tags"], [101]),
+    ("LoRa / sub-GHz radio chips and modules", lambda i: {"lora", "sub-ghz"} & set(i["tags"]), [102]),
+    ("Matter / Tuya smart-home modules and app platform", lambda i: {"matter", "tuya-cloud"} & set(i["tags"]), [33, 55]),
 ]
 
 # ---------------------------------------------------------------------------
@@ -178,7 +185,7 @@ def match(idea, data):
     platform = [iss for iss in pubs if data["publishers"].get(iss, {}).get("kind") == "platform"]
     unknown = [iss for iss in pubs if iss not in data["publishers"]]
     directory = []
-    seen = set()
+    seen = {data["publishers"][iss]["house"]["id"] for iss in company if data["publishers"][iss].get("house")}
     for label, pred, ids in DIRECTORY_RULES:
         if pred(idea):
             rows = [data["houses"][i] for i in ids if i in data["houses"]]
@@ -340,6 +347,12 @@ def section_md(idea, m, data):
                 parts.append("The schematic in the catalogue is a circulating standard design, not an official release; ask the company for the current reference design.")
             if iss == "ATU kit (curated)":
                 parts.append("The kit files are hosted here; WPI's application unit published them for its distribution customers.")
+            if iss == "Hi-Link":
+                parts.append("Datasheets are public on hlktech.com (download centre); anything beyond the public datasheets has to be asked from Hi-Link directly.")
+            if iss == "Tuya":
+                parts.append("Listed from Tuya's public developer documentation; Tuya is not affiliated with GONGBANS. Tuya modules can also be ordered through the Tuya developer platform, which covers the app and cloud side.")
+            if iss == "HopeRF":
+                parts.append("HopeRF publishes datasheets and, for some products, schematic and PCB files in its public GitHub portfolio (MIT licence).")
             boards = "; ".join(f"{board_link(b)} ({b['role']})" for b in m["boards"][iss])
             parts.append(f"Boards used here: {boards}.")
             parts.append(f"What to ask for: {WHAT_TO_ASK['company']}")
@@ -445,6 +458,10 @@ def patch_packs():
         assert not EMAIL_RE.search(new[new.index(START):new.index(END)]), f"{idea['slug']}: e-mail address in generated section"
         if new != md:
             path.write_text(new, encoding="utf-8")
+    packed = [i["slug"] for i in ideas if (PACK_DIR / f"{i['slug']}.md").exists()]
+    no_block = [s for s in packed if START not in (PACK_DIR / f"{s}.md").read_text(encoding="utf-8")]
+    assert not no_block, f"'Who to contact' missing in: {no_block}"
+    assert len(matched) + len(unmatched) == len(packed)
     print(f"startpacks/: 'Who to contact' in {len(matched) + len(unmatched)} packs — {len(matched)} with a company publisher on file, "
           f"{len(unmatched)} with the no-verified-contact note ({', '.join(unmatched)})")
     return matched, unmatched
